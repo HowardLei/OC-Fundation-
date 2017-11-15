@@ -13,19 +13,18 @@
     NSString * _gunType;
     int  _bulletCount;
 }
--(void)shoot:(Gun * )Gun;
+-(void)shoot;
 
 @end
 //MARK:实现枪类
 @implementation Gun
 
--(void)shoot:(Gun *)Gun{
+-(void)shoot{
     if (_bulletCount >=1) {
          NSLog(@"%@开火了，还剩%d发子弹",_gunType,--_bulletCount);//'--'这是自减运算
     } else {
         NSLog(@"都没子了还开火");
     }
-   
 }
 @end
 
@@ -59,6 +58,7 @@
 }
 -(void)fireByGun:(Gun *)Gun{
     NSLog(@"%@拿起珍贵的%@,瞄准800里外的鬼子",_name,Gun->_gunType);
+    [Gun shoot];
 }
 -(void)jump{
     NSLog(@"%@跳",_name);
@@ -66,7 +66,6 @@
 -(void)walk{
     NSLog(@"%@慢慢走",_name);
 }
-
 @end
 
 int main(int argc, const char * argv[]) {
@@ -75,7 +74,7 @@ int main(int argc, const char * argv[]) {
         Gun * ak = [Gun new];
         ak->_gunType = @"AK47";
         ak->_bulletCount = 30;
-        [ak shoot:ak];
+        [ak shoot];
         //创建一个人
         human * zhangsan = [human new];
         zhangsan->_name = @"张三丰";
