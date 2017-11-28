@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E53CCF21FCD906F00B336FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CCF11FCD906F00B336FE /* main.m */; };
+		6E53CCF81FCD95C500B336FE /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CCF71FCD95C500B336FE /* Store.m */; };
+		6E53CCFB1FCD95D100B336FE /* Shelf.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CCFA1FCD95D100B336FE /* Shelf.m */; };
+		6E53CCFE1FCD95DC00B336FE /* Goods.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CCFD1FCD95DC00B336FE /* Goods.m */; };
+		6E53CD011FCD95EC00B336FE /* iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CD001FCD95EC00B336FE /* iPhone.m */; };
+		6E53CD041FCD95FA00B336FE /* iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CD031FCD95FA00B336FE /* iPad.m */; };
+		6E53CD071FCD961000B336FE /* MacSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CD061FCD961000B336FE /* MacSeries.m */; };
+		6E53CD0A1FCD962F00B336FE /* Discount.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CD091FCD962F00B336FE /* Discount.m */; };
+		6E53CD0D1FCD964200B336FE /* SubDiscount.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CD0C1FCD964200B336FE /* SubDiscount.m */; };
+		6E53CD101FCD965E00B336FE /* MxJx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CD0F1FCD965E00B336FE /* MxJx.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6E53CCEC1FCD906F00B336FE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6E53CCEE1FCD906F00B336FE /* AppleStore */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AppleStore; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E53CCF11FCD906F00B336FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6E53CCF61FCD95C500B336FE /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		6E53CCF71FCD95C500B336FE /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
+		6E53CCF91FCD95D100B336FE /* Shelf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shelf.h; sourceTree = "<group>"; };
+		6E53CCFA1FCD95D100B336FE /* Shelf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shelf.m; sourceTree = "<group>"; };
+		6E53CCFC1FCD95DC00B336FE /* Goods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goods.h; sourceTree = "<group>"; };
+		6E53CCFD1FCD95DC00B336FE /* Goods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goods.m; sourceTree = "<group>"; };
+		6E53CCFF1FCD95EC00B336FE /* iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhone.h; sourceTree = "<group>"; };
+		6E53CD001FCD95EC00B336FE /* iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhone.m; sourceTree = "<group>"; };
+		6E53CD021FCD95FA00B336FE /* iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPad.h; sourceTree = "<group>"; };
+		6E53CD031FCD95FA00B336FE /* iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPad.m; sourceTree = "<group>"; };
+		6E53CD051FCD961000B336FE /* MacSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacSeries.h; sourceTree = "<group>"; };
+		6E53CD061FCD961000B336FE /* MacSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacSeries.m; sourceTree = "<group>"; };
+		6E53CD081FCD962F00B336FE /* Discount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Discount.h; sourceTree = "<group>"; };
+		6E53CD091FCD962F00B336FE /* Discount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Discount.m; sourceTree = "<group>"; };
+		6E53CD0B1FCD964200B336FE /* SubDiscount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubDiscount.h; sourceTree = "<group>"; };
+		6E53CD0C1FCD964200B336FE /* SubDiscount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubDiscount.m; sourceTree = "<group>"; };
+		6E53CD0E1FCD965E00B336FE /* MxJx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MxJx.h; sourceTree = "<group>"; };
+		6E53CD0F1FCD965E00B336FE /* MxJx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MxJx.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E53CCEB1FCD906F00B336FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E53CCE31FCD8E7F00B336FE = {
+			isa = PBXGroup;
+			children = (
+				6E53CCF01FCD906F00B336FE /* AppleStore */,
+				6E53CCEF1FCD906F00B336FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6E53CCEF1FCD906F00B336FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E53CCEE1FCD906F00B336FE /* AppleStore */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E53CCF01FCD906F00B336FE /* AppleStore */ = {
+			isa = PBXGroup;
+			children = (
+				6E53CCF11FCD906F00B336FE /* main.m */,
+				6E53CD0E1FCD965E00B336FE /* MxJx.h */,
+				6E53CD0F1FCD965E00B336FE /* MxJx.m */,
+				6E53CD081FCD962F00B336FE /* Discount.h */,
+				6E53CD091FCD962F00B336FE /* Discount.m */,
+				6E53CD0B1FCD964200B336FE /* SubDiscount.h */,
+				6E53CD0C1FCD964200B336FE /* SubDiscount.m */,
+				6E53CCFC1FCD95DC00B336FE /* Goods.h */,
+				6E53CCFD1FCD95DC00B336FE /* Goods.m */,
+				6E53CD051FCD961000B336FE /* MacSeries.h */,
+				6E53CD061FCD961000B336FE /* MacSeries.m */,
+				6E53CD021FCD95FA00B336FE /* iPad.h */,
+				6E53CD031FCD95FA00B336FE /* iPad.m */,
+				6E53CCFF1FCD95EC00B336FE /* iPhone.h */,
+				6E53CD001FCD95EC00B336FE /* iPhone.m */,
+				6E53CCF91FCD95D100B336FE /* Shelf.h */,
+				6E53CCFA1FCD95D100B336FE /* Shelf.m */,
+				6E53CCF61FCD95C500B336FE /* Store.h */,
+				6E53CCF71FCD95C500B336FE /* Store.m */,
+			);
+			path = AppleStore;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E53CCED1FCD906F00B336FE /* AppleStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E53CCF31FCD906F00B336FE /* Build configuration list for PBXNativeTarget "AppleStore" */;
+			buildPhases = (
+				6E53CCEA1FCD906F00B336FE /* Sources */,
+				6E53CCEB1FCD906F00B336FE /* Frameworks */,
+				6E53CCEC1FCD906F00B336FE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppleStore;
+			productName = AppleStore;
+			productReference = 6E53CCEE1FCD906F00B336FE /* AppleStore */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E53CCE41FCD8E7F00B336FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				TargetAttributes = {
+					6E53CCED1FCD906F00B336FE = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6E53CCE71FCD8E7F00B336FE /* Build configuration list for PBXProject "day6" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6E53CCE31FCD8E7F00B336FE;
+			productRefGroup = 6E53CCEF1FCD906F00B336FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E53CCED1FCD906F00B336FE /* AppleStore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E53CCEA1FCD906F00B336FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E53CD101FCD965E00B336FE /* MxJx.m in Sources */,
+				6E53CD071FCD961000B336FE /* MacSeries.m in Sources */,
+				6E53CCFB1FCD95D100B336FE /* Shelf.m in Sources */,
+				6E53CD041FCD95FA00B336FE /* iPad.m in Sources */,
+				6E53CCF21FCD906F00B336FE /* main.m in Sources */,
+				6E53CD0D1FCD964200B336FE /* SubDiscount.m in Sources */,
+				6E53CCFE1FCD95DC00B336FE /* Goods.m in Sources */,
+				6E53CD011FCD95EC00B336FE /* iPhone.m in Sources */,
+				6E53CD0A1FCD962F00B336FE /* Discount.m in Sources */,
+				6E53CCF81FCD95C500B336FE /* Store.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6E53CCE81FCD8E7F00B336FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		6E53CCE91FCD8E7F00B336FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		6E53CCF41FCD906F00B336FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6E53CCF51FCD906F00B336FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E53CCE71FCD8E7F00B336FE /* Build configuration list for PBXProject "day6" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E53CCE81FCD8E7F00B336FE /* Debug */,
+				6E53CCE91FCD8E7F00B336FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E53CCF31FCD906F00B336FE /* Build configuration list for PBXNativeTarget "AppleStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E53CCF41FCD906F00B336FE /* Debug */,
+				6E53CCF51FCD906F00B336FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6E53CCE41FCD8E7F00B336FE /* Project object */;
+}
