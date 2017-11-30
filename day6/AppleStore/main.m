@@ -15,10 +15,13 @@
  6.类:子类:打几折、每满300减50
  */
 #import <Foundation/Foundation.h>
-
+#import "Store.h"
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
+        //需求：只要创建一个Store，所有的东西就都初始化成功了
+        Store * store = [[Store alloc]init];
+        [store helloWorld];
     }
     return 0;
 }
+//Mac无法够买，买的话就直接崩掉

@@ -13,7 +13,7 @@
 		6E53CCFE1FCD95DC00B336FE /* Goods.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CCFD1FCD95DC00B336FE /* Goods.m */; };
 		6E53CD011FCD95EC00B336FE /* iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CD001FCD95EC00B336FE /* iPhone.m */; };
 		6E53CD041FCD95FA00B336FE /* iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CD031FCD95FA00B336FE /* iPad.m */; };
-		6E53CD071FCD961000B336FE /* MacSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CD061FCD961000B336FE /* MacSeries.m */; };
+		6E53CD071FCD961000B336FE /* Mac.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CD061FCD961000B336FE /* Mac.m */; };
 		6E53CD0A1FCD962F00B336FE /* Discount.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CD091FCD962F00B336FE /* Discount.m */; };
 		6E53CD0D1FCD964200B336FE /* SubDiscount.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CD0C1FCD964200B336FE /* SubDiscount.m */; };
 		6E53CD101FCD965E00B336FE /* MxJx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CD0F1FCD965E00B336FE /* MxJx.m */; };
@@ -44,8 +44,8 @@
 		6E53CD001FCD95EC00B336FE /* iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhone.m; sourceTree = "<group>"; };
 		6E53CD021FCD95FA00B336FE /* iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPad.h; sourceTree = "<group>"; };
 		6E53CD031FCD95FA00B336FE /* iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPad.m; sourceTree = "<group>"; };
-		6E53CD051FCD961000B336FE /* MacSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacSeries.h; sourceTree = "<group>"; };
-		6E53CD061FCD961000B336FE /* MacSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacSeries.m; sourceTree = "<group>"; };
+		6E53CD051FCD961000B336FE /* Mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mac.h; sourceTree = "<group>"; };
+		6E53CD061FCD961000B336FE /* Mac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mac.m; sourceTree = "<group>"; };
 		6E53CD081FCD962F00B336FE /* Discount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Discount.h; sourceTree = "<group>"; };
 		6E53CD091FCD962F00B336FE /* Discount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Discount.m; sourceTree = "<group>"; };
 		6E53CD0B1FCD964200B336FE /* SubDiscount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubDiscount.h; sourceTree = "<group>"; };
@@ -93,8 +93,8 @@
 				6E53CD0C1FCD964200B336FE /* SubDiscount.m */,
 				6E53CCFC1FCD95DC00B336FE /* Goods.h */,
 				6E53CCFD1FCD95DC00B336FE /* Goods.m */,
-				6E53CD051FCD961000B336FE /* MacSeries.h */,
-				6E53CD061FCD961000B336FE /* MacSeries.m */,
+				6E53CD051FCD961000B336FE /* Mac.h */,
+				6E53CD061FCD961000B336FE /* Mac.m */,
 				6E53CD021FCD95FA00B336FE /* iPad.h */,
 				6E53CD031FCD95FA00B336FE /* iPad.m */,
 				6E53CCFF1FCD95EC00B336FE /* iPhone.h */,
@@ -164,7 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E53CD101FCD965E00B336FE /* MxJx.m in Sources */,
-				6E53CD071FCD961000B336FE /* MacSeries.m in Sources */,
+				6E53CD071FCD961000B336FE /* Mac.m in Sources */,
 				6E53CCFB1FCD95D100B336FE /* Shelf.m in Sources */,
 				6E53CD041FCD95FA00B336FE /* iPad.m in Sources */,
 				6E53CCF21FCD906F00B336FE /* main.m in Sources */,
@@ -301,6 +301,7 @@
 				6E53CCF51FCD906F00B336FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
