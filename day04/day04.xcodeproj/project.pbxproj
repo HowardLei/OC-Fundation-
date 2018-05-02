@@ -15,6 +15,10 @@
 		6EC31FAA208E16B900255E4E /* Fruit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC31FA9208E16B900255E4E /* Fruit.m */; };
 		6EC31FAD208E16C500255E4E /* Apple.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC31FAC208E16C500255E4E /* Apple.m */; };
 		6EC31FB0208E172200255E4E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC31FAF208E172200255E4E /* Person.m */; };
+		6EDCD1602099D9B70096C368 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDCD15F2099D9B70096C368 /* Person.m */; };
+		6EDCD1632099D9C10096C368 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDCD1622099D9C10096C368 /* Animal.m */; };
+		6EDCD1662099DAD60096C368 /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDCD1652099DAD60096C368 /* Cat.m */; };
+		6EDCD1692099DADE0096C368 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDCD1682099DADE0096C368 /* Dog.m */; };
 		6EE2417720920EC7008B42C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2417620920EC7008B42C0 /* main.m */; };
 		6EEF7F4A2091C1B40036401E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEF7F492091C1B40036401E /* main.m */; };
 		6EEF7F502091C4810036401E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEF7F4F2091C4810036401E /* Person.m */; };
@@ -77,6 +81,14 @@
 		6EC31FAC208E16C500255E4E /* Apple.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Apple.m; sourceTree = "<group>"; };
 		6EC31FAE208E172200255E4E /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		6EC31FAF208E172200255E4E /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		6EDCD15E2099D9B70096C368 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		6EDCD15F2099D9B70096C368 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		6EDCD1612099D9C10096C368 /* Animal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		6EDCD1622099D9C10096C368 /* Animal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
+		6EDCD1642099DAD60096C368 /* Cat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cat.h; sourceTree = "<group>"; };
+		6EDCD1652099DAD60096C368 /* Cat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cat.m; sourceTree = "<group>"; };
+		6EDCD1672099DADE0096C368 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		6EDCD1682099DADE0096C368 /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
 		6EE2417420920EC7008B42C0 /* 多态 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "多态"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE2417620920EC7008B42C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6EEF7F472091C1B40036401E /* 成员变量修饰符 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "成员变量修饰符"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +185,14 @@
 			isa = PBXGroup;
 			children = (
 				6EE2417620920EC7008B42C0 /* main.m */,
+				6EDCD15E2099D9B70096C368 /* Person.h */,
+				6EDCD15F2099D9B70096C368 /* Person.m */,
+				6EDCD1612099D9C10096C368 /* Animal.h */,
+				6EDCD1622099D9C10096C368 /* Animal.m */,
+				6EDCD1642099DAD60096C368 /* Cat.h */,
+				6EDCD1652099DAD60096C368 /* Cat.m */,
+				6EDCD1672099DADE0096C368 /* Dog.h */,
+				6EDCD1682099DADE0096C368 /* Dog.m */,
 			);
 			path = "多态";
 			sourceTree = "<group>";
@@ -329,6 +349,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EDCD1662099DAD60096C368 /* Cat.m in Sources */,
+				6EDCD1632099D9C10096C368 /* Animal.m in Sources */,
+				6EDCD1692099DADE0096C368 /* Dog.m in Sources */,
+				6EDCD1602099D9B70096C368 /* Person.m in Sources */,
 				6EE2417720920EC7008B42C0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
