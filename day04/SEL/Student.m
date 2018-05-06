@@ -2,7 +2,7 @@
 
 @implementation Student
 -(void)play{
-    NSLog(@"大家一起玩");
+    NSLog(@"学生一起玩");
 }
 -(NSString *)description{
     return @"学生";
