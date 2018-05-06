@@ -14,15 +14,13 @@ void car(){
      * 一个对象方法跟其他车子比较车速，返回速度差
      * 一个类方法比较两辆车的车速，返回速度差
      */
-    Car *a = [[Tesla alloc] init];
-    Car *b = [[Trunk alloc] init];
-    a.speed = 180.0;
-    b.speed = 100.2;
-    double s = [a compareSpeed:a.speed withSpeed:b.speed];
-    NSLog(@"%@和%@的速度差为%g", a, b, s);
-    Class tesla = [Car class];
-    Class trunk = [Car class];
-    // FIXME: 不知道类对象中的成员变量如何添加
+    Car *a = [[Trunk alloc] init];
+    Car *b = [[Tesla alloc] init];
+    a.speed = 122.23;
+    b.speed = 180;
+    Class c = [Car class];
+    NSLog(@"%@与%@之间的车速相差%g", a, b, [a compareSpeedWithOtherCar:b]);
+    NSLog(@"%g", [c compareCar:a WithCar:b]);
 }
 int main(int argc, const char * argv[]) {
     @autoreleasepool {

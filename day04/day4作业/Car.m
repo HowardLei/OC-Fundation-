@@ -1,19 +1,14 @@
 #import "Car.h"
 
 @implementation Car
-- (double)compareSpeed:(double)speed1 withSpeed:(double)speed2{
-    if (speed1 < speed2) {
-        return speed2 - speed1;
+- (double)compareSpeedWithOtherCar:(Car *)car{
+    return [Car compareCar:self WithCar:car];
+}
++ (double)compareCar:(Car *)car1 WithCar:(Car *)car2{
+    if (car1.speed < car2.speed) {
+        return car2.speed - car1.speed;
     } else {
-        return speed1 - speed2;
+        return car1.speed - car2.speed;
     }
 }
-+ (double)compareCarSpeed:(double)speed1 withSpeed:(double)speed2{
-    if (speed1 < speed2) {
-        return speed2 - speed1;
-    } else {
-        return speed1 - speed2;
-    }
-}
-
 @end
