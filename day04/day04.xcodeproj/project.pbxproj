@@ -35,6 +35,9 @@
 		6EDCD1632099D9C10096C368 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDCD1622099D9C10096C368 /* Animal.m */; };
 		6EDCD1662099DAD60096C368 /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDCD1652099DAD60096C368 /* Cat.m */; };
 		6EDCD1692099DADE0096C368 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDCD1682099DADE0096C368 /* Dog.m */; };
+		6EDEC9C320A1D63F00E65FF3 /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDEC9C220A1D63F00E65FF3 /* Human.m */; };
+		6EDEC9C620A1D66800E65FF3 /* Fat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDEC9C520A1D66800E65FF3 /* Fat.m */; };
+		6EDEC9C920A1D67B00E65FF3 /* Thin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDEC9C820A1D67B00E65FF3 /* Thin.m */; };
 		6EE2417720920EC7008B42C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2417620920EC7008B42C0 /* main.m */; };
 		6EEF7F4A2091C1B40036401E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEF7F492091C1B40036401E /* main.m */; };
 		6EEF7F502091C4810036401E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEF7F4F2091C4810036401E /* Person.m */; };
@@ -182,6 +185,12 @@
 		6EDCD1652099DAD60096C368 /* Cat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cat.m; sourceTree = "<group>"; };
 		6EDCD1672099DADE0096C368 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		6EDCD1682099DADE0096C368 /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		6EDEC9C120A1D63F00E65FF3 /* Human.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
+		6EDEC9C220A1D63F00E65FF3 /* Human.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Human.m; sourceTree = "<group>"; };
+		6EDEC9C420A1D66800E65FF3 /* Fat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fat.h; sourceTree = "<group>"; };
+		6EDEC9C520A1D66800E65FF3 /* Fat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fat.m; sourceTree = "<group>"; };
+		6EDEC9C720A1D67B00E65FF3 /* Thin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Thin.h; sourceTree = "<group>"; };
+		6EDEC9C820A1D67B00E65FF3 /* Thin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Thin.m; sourceTree = "<group>"; };
 		6EE2417420920EC7008B42C0 /* 多态 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "多态"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE2417620920EC7008B42C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6EEF7F472091C1B40036401E /* 成员变量修饰符 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "成员变量修饰符"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -325,6 +334,12 @@
 			isa = PBXGroup;
 			children = (
 				6E5F85AF209EA530008FB784 /* main.m */,
+				6EDEC9C120A1D63F00E65FF3 /* Human.h */,
+				6EDEC9C220A1D63F00E65FF3 /* Human.m */,
+				6EDEC9C420A1D66800E65FF3 /* Fat.h */,
+				6EDEC9C520A1D66800E65FF3 /* Fat.m */,
+				6EDEC9C720A1D67B00E65FF3 /* Thin.h */,
+				6EDEC9C820A1D67B00E65FF3 /* Thin.m */,
 				6E5F85B7209EA753008FB784 /* Trunk.h */,
 				6E5F85B8209EA753008FB784 /* Trunk.m */,
 				6E5F85B4209EA549008FB784 /* Car.h */,
@@ -685,6 +700,9 @@
 			files = (
 				6E5F85B9209EA753008FB784 /* Trunk.m in Sources */,
 				6E5F85B6209EA549008FB784 /* Car.m in Sources */,
+				6EDEC9C920A1D67B00E65FF3 /* Thin.m in Sources */,
+				6EDEC9C320A1D63F00E65FF3 /* Human.m in Sources */,
+				6EDEC9C620A1D66800E65FF3 /* Fat.m in Sources */,
 				6E5F85B0209EA530008FB784 /* main.m in Sources */,
 				6E5F85BC209EA760008FB784 /* Tesla.m in Sources */,
 			);

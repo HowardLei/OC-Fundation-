@@ -2,6 +2,9 @@
 #import "Car.h"
 #import "Tesla.h"
 #import "Trunk.h"
+#import "Human.h"
+#import "Fat.h"
+#import "Thin.h"
 // MARK: 设计car类
 void car(){
     /*
@@ -22,9 +25,17 @@ void car(){
     NSLog(@"%@与%@之间的车速相差%g", a, b, [a compareSpeedWithOtherCar:b]);
     NSLog(@"%g", [c compareCar:a WithCar:b]);
 }
+// MARK: 设计人类
+void human(){
+    Human *f = [[Fat alloc] init];
+    Human *t = [[Thin alloc] init];
+    NSLog(@"%@与%@之间差%g千克",f , t, [f compareWeightWith:t]);
+    NSLog(@"%@与%@之间差%g千克",f , t, [Human compareWeightBetween:f AndHuman:t]);
+}
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        car();
+//        car();
+        human();
     }
     return 0;
 }
