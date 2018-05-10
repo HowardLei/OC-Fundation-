@@ -1,4 +1,3 @@
-
 #import <Foundation/Foundation.h>
 
 //定义一个结构体
@@ -15,6 +14,10 @@ struct rect {
     int width;
     int height;
 };
+typedef struct car {
+    double speed;
+    char *name;
+} Car;
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         //利用结构体类型定义变量有2种形式
@@ -26,6 +29,10 @@ int main(int argc, const char * argv[]) {
         //定义两个结构体变量(最笨的方法)
         struct point1 p1;
         struct point1 p2;
+        Car car1;
+        car1.name = "王尼玛";
+        car1.speed = 120;
+        NSLog(@"%s,%g", car1.name, car1.speed);
         //简单方法
         //方法1：使用#define预编译指令定义一个简短的字符串
     }
