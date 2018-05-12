@@ -15,7 +15,7 @@ void ramFoundation(){
      因为他是创建在堆区。无法自动释放。
      */
 }
-// MARK: 内存管理原理及分类
+// MARK: 内存管理原理、分类及原则
 void ramAdmin(){
     /*
      1、基础概念
@@ -28,8 +28,10 @@ void ramAdmin(){
             每个OC对象都有自己的引用计数器，是一个整数表示对象被引用的次数（有多少个所有者
             ），即现在有多少东西在使用这个对象。对象刚被创建时，默认计数器值为1，当计数器的值
             为0时，则对象销毁。
+            如何判断对象是否被释放。看系统是否调用了 dealloc 方法
             在每个OC对象内部,都专门有8个字节的存储空间来存储引用计数器。
             用 retainCount 方法查找引用计数器内的数量
+     2、内存管理原则：谁 retain ，谁 release
      */
 }
 // MARK: ARC 与 MRC
@@ -60,7 +62,7 @@ void demo2(){
     // 现在这个人对象应该是有 2 个指针拥有它的所有权
     NSLog(@"现在引用计数为%lu", [p retainCount]);
     // 现在让 s 指针释放他对内存数据的所有权，引用数 -1
-    [s release];
+    [p release];
     // 现在这个人对象应该是有 1 个人拥有它的所有权。即：p
     NSLog(@"现在引用计数为%lu", [p retainCount]);
     // 让 p 指针 释放他对内存的使用权，引用数 -1
@@ -73,15 +75,9 @@ void demo2(){
     // 当他是空指针的时候，调用方法都没事。
     NSLog(@"现在引用计数为%lu", [p retainCount]);
 }
-void try(){
-    Dog *d = [Dog new];
-    Dog *s = d;
-    NSLog(@"%lu",[d retainCount]);
-}
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        demo2();
-//        try();
+//        demo2()
     }
     return 0;
 }
