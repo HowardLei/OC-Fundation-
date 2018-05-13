@@ -9,7 +9,7 @@
     return self;
 }
 - (void)dealloc{
-    NSLog(@"房间没人用，删除房间");
+    NSLog(@"%d号房间没人用，删除房间", self.no);
     [super dealloc];
 }
 @end

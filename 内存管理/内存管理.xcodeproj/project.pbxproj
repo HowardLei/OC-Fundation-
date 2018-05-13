@@ -13,6 +13,9 @@
 		6E2244AF20A68CC100F0ED92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2244AE20A68CC100F0ED92 /* main.m */; };
 		6E2244B520A68CFD00F0ED92 /* Gamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2244B420A68CFD00F0ED92 /* Gamer.m */; };
 		6E2244B820A68D0500F0ED92 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2244B720A68D0500F0ED92 /* Room.m */; };
+		6EE6D28920A82E7800F67EC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE6D28820A82E7800F67EC4 /* main.m */; };
+		6EE6D28F20A82E9900F67EC4 /* Gamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE6D28E20A82E9900F67EC4 /* Gamer.m */; };
+		6EE6D29220A82EA300F67EC4 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE6D29120A82EA300F67EC4 /* Room.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +29,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		6E2244AA20A68CC100F0ED92 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		6EE6D28420A82E7700F67EC4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -49,6 +61,12 @@
 		6E2244B420A68CFD00F0ED92 /* Gamer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Gamer.m; sourceTree = "<group>"; };
 		6E2244B620A68D0500F0ED92 /* Room.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
 		6E2244B720A68D0500F0ED92 /* Room.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
+		6EE6D28620A82E7700F67EC4 /* @property参数 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "@property参数"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EE6D28820A82E7800F67EC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6EE6D28D20A82E9900F67EC4 /* Gamer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gamer.h; sourceTree = "<group>"; };
+		6EE6D28E20A82E9900F67EC4 /* Gamer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Gamer.m; sourceTree = "<group>"; };
+		6EE6D29020A82EA300F67EC4 /* Room.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		6EE6D29120A82EA300F67EC4 /* Room.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +84,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6EE6D28320A82E7700F67EC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -74,6 +99,7 @@
 			children = (
 				6E1A7D9820A44A3B004C00A4 /* 1、内存管理的基本概念及范围 */,
 				6E2244AD20A68CC100F0ED92 /* 2、多对象的内存管理 */,
+				6EE6D28720A82E7800F67EC4 /* @property参数 */,
 				6E1A7D9720A44A3B004C00A4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,6 +109,7 @@
 			children = (
 				6E1A7D9620A44A3B004C00A4 /* 1、内存管理的基本概念及范围 */,
 				6E2244AC20A68CC100F0ED92 /* 2、多对象的内存管理 */,
+				6EE6D28620A82E7700F67EC4 /* @property参数 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +136,18 @@
 				6E2244B720A68D0500F0ED92 /* Room.m */,
 			);
 			path = "2、多对象的内存管理";
+			sourceTree = "<group>";
+		};
+		6EE6D28720A82E7800F67EC4 /* @property参数 */ = {
+			isa = PBXGroup;
+			children = (
+				6EE6D28820A82E7800F67EC4 /* main.m */,
+				6EE6D28D20A82E9900F67EC4 /* Gamer.h */,
+				6EE6D28E20A82E9900F67EC4 /* Gamer.m */,
+				6EE6D29020A82EA300F67EC4 /* Room.h */,
+				6EE6D29120A82EA300F67EC4 /* Room.m */,
+			);
+			path = "@property参数";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +187,23 @@
 			productReference = 6E2244AC20A68CC100F0ED92 /* 2、多对象的内存管理 */;
 			productType = "com.apple.product-type.tool";
 		};
+		6EE6D28520A82E7700F67EC4 /* @property参数 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EE6D28C20A82E7800F67EC4 /* Build configuration list for PBXNativeTarget "@property参数" */;
+			buildPhases = (
+				6EE6D28220A82E7700F67EC4 /* Sources */,
+				6EE6D28320A82E7700F67EC4 /* Frameworks */,
+				6EE6D28420A82E7700F67EC4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "@property参数";
+			productName = "@property参数";
+			productReference = 6EE6D28620A82E7700F67EC4 /* @property参数 */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -160,6 +216,9 @@
 						CreatedOnToolsVersion = 9.3;
 					};
 					6E2244AB20A68CC100F0ED92 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					6EE6D28520A82E7700F67EC4 = {
 						CreatedOnToolsVersion = 9.3;
 					};
 				};
@@ -178,6 +237,7 @@
 			targets = (
 				6E1A7D9520A44A3B004C00A4 /* 1、内存管理的基本概念及范围 */,
 				6E2244AB20A68CC100F0ED92 /* 2、多对象的内存管理 */,
+				6EE6D28520A82E7700F67EC4 /* @property参数 */,
 			);
 		};
 /* End PBXProject section */
@@ -200,6 +260,16 @@
 				6E2244B820A68D0500F0ED92 /* Room.m in Sources */,
 				6E2244B520A68CFD00F0ED92 /* Gamer.m in Sources */,
 				6E2244AF20A68CC100F0ED92 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EE6D28220A82E7700F67EC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EE6D29220A82EA300F67EC4 /* Room.m in Sources */,
+				6EE6D28F20A82E9900F67EC4 /* Gamer.m in Sources */,
+				6EE6D28920A82E7800F67EC4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +518,121 @@
 			};
 			name = Release;
 		};
+		6EE6D28A20A82E7800F67EC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = V9C6R6LR63;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6EE6D28B20A82E7800F67EC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = V9C6R6LR63;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -474,6 +659,15 @@
 			buildConfigurations = (
 				6E2244B020A68CC100F0ED92 /* Debug */,
 				6E2244B120A68CC100F0ED92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EE6D28C20A82E7800F67EC4 /* Build configuration list for PBXNativeTarget "@property参数" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EE6D28A20A82E7800F67EC4 /* Debug */,
+				6EE6D28B20A82E7800F67EC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
