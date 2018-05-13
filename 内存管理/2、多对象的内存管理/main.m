@@ -11,13 +11,20 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // 先创建玩家与房间
         Gamer *wangnima = [[Gamer alloc] init];
+        Gamer *zhangsan = [[Gamer alloc] init];
         Room *room = [[Room alloc] init];
         // 让王尼玛进入房间
         wangnima.room = room;
+        zhangsan.room = room;
         NSLog(@"房间的引用计数为：%lu", [room retainCount]);
         // 王尼玛退出房间
         [wangnima leaveRoom:room];
         NSLog(@"房间的引用计数为：%lu", [room retainCount]);
+        [wangnima release];
+        [zhangsan release];
+        if ([room retainCount] == 1) {
+            [room release];
+        }
     }
     return 0;
 }

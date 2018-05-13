@@ -12,5 +12,10 @@
 - (void)leaveRoom:(Room *)room{
     // 当人离开了这个房间，相当于这个房间少了一个所有者，所以房间的引用计数的时候需要 -1
     [room release];
+    self.room = nil;
+}
+- (void)dealloc{
+    [self leaveRoom:self.room];
+    [super dealloc];
 }
 @end
