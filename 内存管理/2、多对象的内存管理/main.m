@@ -40,11 +40,21 @@ void demo3(){
     [room1 release];
     [room2 release];
 }
+void try(){
+    Gamer *zhaosi = [[Gamer alloc] init];
+    Room *r = [[Room alloc] init];
+    zhaosi.room = r;
+    [r release]; //其实这个方法相当于这个，人离开了房间，让房间的所有者 -1
+    zhaosi.room = r;
+    NSLog(@"%lu", r.retainCount);
+    [zhaosi release];
+}
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 //        demo1();
-        demo2();
+//        demo2();
 //        demo3();
+        try();
     }
     return 0;
 }

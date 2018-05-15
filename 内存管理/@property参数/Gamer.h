@@ -24,6 +24,9 @@
     }
     @end
  */
-
 @property(nonatomic, retain) Room *room;
+@property(nonatomic, copy) NSString *name;
+@property(nonatomic, assign) int age;
+@property(nonatomic, assign, getter = isVip) BOOL vip;
+@property(atomic, copy, readonly) NSString *slogan;
 @end
