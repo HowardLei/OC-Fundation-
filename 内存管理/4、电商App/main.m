@@ -6,9 +6,9 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // 创建一个买家
-        Person *buyer = [[Buyer alloc] init];
+        Buyer *buyer = [[Buyer alloc] init];
         // 创建一个卖家
-        Person *seller =  [[Seller alloc] init];
+        Seller *seller =  [[Seller alloc] init];
         // 创建一个商品类
         Goods *goods = [[Goods alloc] init];
         // MARK: 买家信息
@@ -17,16 +17,19 @@ int main(int argc, const char * argv[]) {
         buyer.gender = 1;
         buyer.height = 183.2;
         // MARK: 卖家信息
-        seller.name = @"世界";
+        seller.name = @"商店";
         seller.age = 18;
         seller.gender = 1;
         seller.height = 175;
-        id i = seller;
-        [i setGoods:goods];
+        seller.goods = goods;
         // MARK: 货品信息
         goods.price = 99.9;
         goods.weight = 5.1;
-        
+        goods.produceDate = (MyDate){2018,5,15};
+
+        [goods release];
+        [buyer release];
+        [seller release];
     }
     return 0;
 }
