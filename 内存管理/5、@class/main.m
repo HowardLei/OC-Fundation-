@@ -16,6 +16,7 @@
  2、效率上：如果有上百个头文件都#import了同一个文件，或者这些文件依次被#import，那么一旦最开始的头文件稍有改动,后面引用到这个文件的所有类都需要重新编译一遍,相对来讲编译效率非常低，使用@class方式就不会出现这种问题了。
  */
 // 注意：在进行循环引用的时候，不要两个方法的 @property 参数都为 retain 。会导致最后无法释放。
+// 应该在写的时候注意：一端 retain ，一端 assign 。
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Person *p = [[Person alloc] init];
