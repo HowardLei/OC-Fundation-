@@ -25,8 +25,8 @@ int main(int argc, const char * argv[]) {
         // MARK: 货品信息
         goods.price = 99.9;
         goods.weight = 5.1;
-        goods.produceDate = (MyDate){2018,5,15};
-
+        goods.produceDate = (MyDate){2018, 5, 15}; // 这个地方需要进行强转才能实现，因为这里'.'编译器理解为点语法。这个 setter 方法本身只有一个参数。需要将日期转换成结构体才行。
+        goods.expireDate = (MyDate){2018, 5, 16};
         [goods release];
         [buyer release];
         [seller release];
