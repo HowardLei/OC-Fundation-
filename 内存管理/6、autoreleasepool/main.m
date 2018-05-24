@@ -19,6 +19,12 @@
  5、使用 autorelease 的好处
     (1)不需要再关心对象释放的时间
     (2)不需要再关心什么时候调用release
+ 6、如何创建 autoreleasepool ？
+ iOS 5之前 NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+      之后 @autoreleasepool{对象写在这里面} 出了大括号，池子销毁，对加入到池子里面的对象都做一次 release
+ 7、autoreleasepool 注意事项
+    （1）自己创建对象后,手动调用release操作,这样释放池并不会对对象进行release操作.
+    （2）对象可以在释放池外部创建,只要在释放池内部调用autorelease方法,就是把对象加入到了释放池中.
  */
 // MARK: 创建一个人对象
 Person* demo1(){
@@ -29,7 +35,7 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Person *s = demo1();
         NSLog(@"%lu", [s retainCount]);
-        Person *p = [[Person new] autorelease];
+        Person *p = [[[Person alloc] init] autorelease];
         p.name = @"王尼玛";
 // 如果这个时候还写 [p retain]; 则会导致最后出大括号的时候 p 没法销毁，造成内存泄露。
         NSLog(@"%@", p.name);
