@@ -1,6 +1,7 @@
 #import "ViewController.h"
 
 // 这就是类扩展 (extension)
+// 将所有线都拖到类扩展里，保证程序的封装性。
 @interface ViewController ()
 // 第一个 TextField
 @property (weak, nonatomic) IBOutlet UITextField *txtNum1;
@@ -33,6 +34,13 @@
     // 将结果的数据传给结果的 Label 。即 lblResult 。接受值的 label 不要忘了调用 text 方法。
     // 注意：传回去的值是 NSString 型的数据。需要调用 stringWithFormat 的类方法。
     self.lblResult.text = [NSString stringWithFormat:@"%d", num1 + num2];
+    // 关闭键盘
+    /*
+     第一种方法：将这个 view endEditing。
+     第二种方法：第一响应者 resignFirstResponder
+     */
+    // 第一种方法
+    [self.view endEditing:YES];
 }
 
 @end
