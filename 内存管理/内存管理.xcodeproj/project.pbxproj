@@ -216,10 +216,8 @@
 			children = (
 				6E1A7D9820A44A3B004C00A4 /* 1、内存管理的基本概念及范围 */,
 				6E2244AD20A68CC100F0ED92 /* 2、多对象的内存管理 */,
-				6EE6D28720A82E7800F67EC4 /* @property参数 */,
 				6E70CCB420AAAE4300C71AD3 /* 4、电商App */,
 				6E083BE720AD74D100C34D28 /* 5、@class */,
-				6E083BF820AD819400C34D28 /* NSString类的内存管理 */,
 				6ED919E320AEE68D00FE2588 /* 6、autoreleasepool */,
 				6E1A7D9720A44A3B004C00A4 /* Products */,
 			);
@@ -254,6 +252,7 @@
 		6E2244AD20A68CC100F0ED92 /* 2、多对象的内存管理 */ = {
 			isa = PBXGroup;
 			children = (
+				6EE6D28720A82E7800F67EC4 /* @property参数 */,
 				6E2244AE20A68CC100F0ED92 /* main.m */,
 				6E2244B320A68CFD00F0ED92 /* Gamer.h */,
 				6E2244B420A68CFD00F0ED92 /* Gamer.m */,
@@ -292,6 +291,7 @@
 		6EE6D28720A82E7800F67EC4 /* @property参数 */ = {
 			isa = PBXGroup;
 			children = (
+				6E083BF820AD819400C34D28 /* NSString类的内存管理 */,
 				6EE6D28820A82E7800F67EC4 /* main.m */,
 				6EE6D28D20A82E9900F67EC4 /* Gamer.h */,
 				6EE6D28E20A82E9900F67EC4 /* Gamer.m */,
