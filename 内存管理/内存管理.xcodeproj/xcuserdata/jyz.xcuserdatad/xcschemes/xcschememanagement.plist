@@ -7,7 +7,7 @@
 		<key>1、内存管理的基本概念及范围.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<true />
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
@@ -24,12 +24,22 @@
 		<key>5、@class.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
 		<key>6、autoreleasepool.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>7</integer>
+		</dict>
+		<key>7、MRC转ARC.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>8、strong &amp; weak.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>@property参数.xcscheme</key>
 		<dict>
@@ -47,32 +57,37 @@
 		<key>6E083BDA20AD749300C34D28</key>
 		<dict>
 			<key>primary</key>
-			<true />
+			<true/>
 		</dict>
 		<key>6E083BF620AD819400C34D28</key>
 		<dict>
 			<key>primary</key>
-			<true />
+			<true/>
 		</dict>
 		<key>6E1A7D9520A44A3B004C00A4</key>
 		<dict>
 			<key>primary</key>
-			<true />
+			<true/>
 		</dict>
 		<key>6E2244AB20A68CC100F0ED92</key>
 		<dict>
 			<key>primary</key>
-			<true />
+			<true/>
 		</dict>
 		<key>6E70CCB220AAAE4300C71AD3</key>
 		<dict>
 			<key>primary</key>
-			<true />
+			<true/>
+		</dict>
+		<key>6E976A6020BAB135000104E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 		<key>6EE6D28520A82E7700F67EC4</key>
 		<dict>
 			<key>primary</key>
-			<true />
+			<true/>
 		</dict>
 	</dict>
 </dict>
