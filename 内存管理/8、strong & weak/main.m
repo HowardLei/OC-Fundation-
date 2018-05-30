@@ -10,6 +10,10 @@
     1）weak 型的指针变量仍然可以指向一个对象，但不属于对象的拥有者。
     2）weak 指针主要用于“父-子”关系，父类拥有一个子类的 strong 指针，因此父类是子类的所有者；但为了阻止所有权循环,子类需要使用weak指针指向父类。
     3）weak 指针不能直接初始化对象，一旦初始化则会直接释放。并且指针自动指向 nil 。
+ 2、@property 的 strong 与 weak 参数（注意：这些参数全部用于修饰对象）
+    在 ARC 中的 strong 相当与 MRC 中的 retain
+    在 ARC 中的 weak 相当于 MRC 中的 assign
+    在 ARC 中修饰基本数据类型依然用 assign
  */
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
