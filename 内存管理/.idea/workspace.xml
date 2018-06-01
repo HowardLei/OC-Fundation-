@@ -17,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/8、strong &amp; weak/main.m">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="567">
-              <caret line="24" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="24" />
+              <caret line="25" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="25" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -55,7 +55,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Cidr.FilesView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -77,7 +77,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -148,19 +148,19 @@
       <updated>1527252746631</updated>
       <workItem from="1527252751012" duration="126000" />
       <workItem from="1527423711555" duration="240000" />
+      <workItem from="1527852730212" duration="6000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="366000" />
+    <option name="totallyTimeSpent" value="372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="740" y="276" width="1400" height="1000" extended-state="0" />
     <layout>
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5007143" side_tool="true" visible="true" weight="0.17818575" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
@@ -173,9 +173,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="7" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +191,16 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/8、strong &amp; weak/main.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="24" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/1、内存管理的基本概念及范围/main.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1185">
@@ -207,7 +218,7 @@
     <entry file="file://$PROJECT_DIR$/8、strong &amp; weak/main.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
-          <caret line="24" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="24" />
+          <caret line="25" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="25" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
