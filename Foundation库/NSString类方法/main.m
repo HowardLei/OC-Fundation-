@@ -6,7 +6,7 @@ void add() {
     // 1、从文本文件中获取字符串
     //NSString *str = NSString stringWithContentsOfFile:路径地址（注意：里面是NSString类型） encoding:编码格式(代码) error:NSError类型的二级指针
     // 先创建一个 err 对象
-    NSError *err = nil;
+    NSError *err;
     // 这个地方为啥 error 是在用二级指针，因为这个方法需要判断这个文件到底存在不存在。如果存在，则 err 判断为0，则在下边判断的时候加个非即为真。否则输出错误的信息。
     NSString *str = [NSString stringWithContentsOfFile:@"/Users/jyz/Desktop/a.m" encoding:NSUTF8StringEncoding error:&err];
     if (!err) {
@@ -15,6 +15,7 @@ void add() {
         NSLog(@"%@", err);
     }
     // 2、通过 URL 获取字符串（URL:统一资源定位符,用于定位网上的资源。构成：协议://主机:端口/路径?参数）
+
 }
 // MARK: 字符串的删除
 void delete() {
