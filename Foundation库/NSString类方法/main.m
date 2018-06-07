@@ -53,7 +53,7 @@ void search() {
     NSString *str4 = @"ABC";
     NSString *str5 = @"https://www.baidu.com/";
     NSString *str6 = @"/Users/jyz/Desktop";
-    //A、OC 中比较两个字符串的方法：1、isEqualToString 方法 2、compare 方法
+    // A、OC 中比较两个字符串的方法：1、isEqualToString 方法 2、compare 方法
     // 1、用 isEqualToString 方法 返回值为 BOOL 类型 （注意：BOOL 类型中 1 为真，0 为假）
     BOOL a = [str1 isEqualToString:str2];
     NSLog(@"%@", myBlock(a));
@@ -62,11 +62,12 @@ void search() {
     NSComparisonResult c = [str3 compare:str4 options:1];
     NSLog(@"%ld", c);
     NSLog(@"%ld", b);
-    //B、查找字符串中是不是有前缀后缀。查前缀  hasPrefix 方法，查后缀 hasSuffix 方法。返回值同样是 BOOL
+    // B、查找字符串中是不是有前缀后缀。查前缀  hasPrefix 方法，查后缀 hasSuffix 方法。返回值同样是 BOOL
     BOOL d = [str5 hasPrefix:@"https://"];
     BOOL e = [str6 hasSuffix:@"Desktop"];
     NSLog(@"%@,%@", myBlock(d), myBlock(e));
-    //C、在字符串中搜索字符串 rangeOfString ，返回值为：NSRange 类型（NSRange 本事是结构体，有 location 值：即子字符串在主字符串中第1次出现的下标，length 值：即匹配到了多少个长度的字符）。注意：默认从前往后搜，如果从后往前搜，那就在后面的参数上加option :2
+    // C、在字符串中搜索字符串 rangeOfString ，返回值为：NSRange 类型（NSRange 本事是结构体，有 location 值：即子字符串在主字符串中第1次出现的下标，length 值：即匹配到了多少个长度的字符）。注意：默认从前往后搜，如果从后往前搜，那就在后面的参数上加option :2
+    // 如果需要查找的字符串在所查的字符串中不存在，则他的 location 值为 NSNotFound。（即 unsigned long 的最大值）, length 值为 0
     NSRange f = [str5 rangeOfString:@"baidu"];
     NSLog(@"baidu在str5这个字符串的位置为：%lu，长度为：%lu", f.location, f.length);
     NSRange g = [str6 rangeOfString:@"Desktop" options:2];
@@ -76,12 +77,29 @@ void search() {
 void others() {
 
 }
+// MARK: NSRange 结构体的补充。
+void NSRangeExtension() {
+    // 先创建一个 NSRange 的结构体，注意：NSRange 是 Foundation 框架下定义的结构体。
+    NSRange a = {3, 4};
+    // 为 a 赋值有一下五种方法
+    // 1、点操作符赋值
+    a.location = 300; a.length = 20;
+    // 2、初始化的时候就赋值
+    // 3、通过 NSMakeRange 方法赋值
+    a = NSMakeRange(230, 213);
+    // 4、初始化赋值方法2
+    NSRange b = {.location = 7, .length = 29};
+    // 在输出 NSRange 的数据的时候，可以先将其转换为 NSString 类型，再进行输出。调用 NSStringFromRange 函数
+    NSLog(@"%@", NSStringFromRange(a));
+    NSLog(@"%@", NSStringFromRange(b));
+}
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // 1、NSString 类的构造方法
 //        add();
-        search();
+//        search();
         others();
+        NSRangeExtension();
     }
     return 0;
 }
