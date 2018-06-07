@@ -44,10 +44,8 @@ void search() {
     NSString *str1 = @"132";
     NSString *str2 = @"123";
     NSString *str3 = @"132";
-    BOOL a = [str1 isEqualToString:str2];
-    BOOL b = [str1 isEqualToString:str3];
-    BOOL c = [str2 isEqualToString:str3];
-    NSLog(@"%d %d %d", a, b, c);
+    NSComparisonResult a = [str1 compare:str3];
+    NSLog(@"%ld", a);
 }
 // MARK: 字符串的其他方法
 void others() {
