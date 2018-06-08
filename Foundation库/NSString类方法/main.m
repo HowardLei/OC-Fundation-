@@ -72,6 +72,11 @@ void search() {
     NSLog(@"baidu在str5这个字符串的位置为：%lu，长度为：%lu", f.location, f.length);
     NSRange g = [str6 rangeOfString:@"Desktop" options:2];
     NSLog(@"%lu", g.length);
+    // D、字符串的截取
+    NSString *str7 = @"我爱张梦灿";
+    // 从第几个开始截取 方法：substringFromIndex: 参数输入的即为从第几个开始一直截取到字符串结束的子字符串。
+    NSString *subStr = [str7 substringFromIndex:2];
+    NSLog(@"%@", subStr);
 }
 // MARK: 字符串的其他方法
 void others() {
@@ -97,9 +102,9 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // 1、NSString 类的构造方法
 //        add();
-//        search();
-        others();
-        NSRangeExtension();
+        search();
+//        others();
+//        NSRangeExtension();
     }
     return 0;
 }
