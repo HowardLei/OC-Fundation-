@@ -42,6 +42,9 @@ void add() {
     // 4、从 C 语言获得字符串，并将其转化为 OC 字符串
     NSString *str3 = getNSString();
     NSLog(@"%@", str3);
+    // 与它相对的是将 OC 的字符串转换为 C 语言的字符串。（注意：接收的时候是用 const char *来接收）
+    const char *str4 = str3.UTF8String;
+    NSLog(@"%s", str4);
 }
 // MARK: 字符串的删除（NSString 中没有）
 // MARK: 字符串的修改（NSString 中没法修改）
@@ -75,12 +78,50 @@ void search() {
     // D、字符串的截取
     NSString *str7 = @"我爱张梦灿";
     // 从第几个开始截取 方法：substringFromIndex: 参数输入的即为从第几个开始一直截取到字符串结束的子字符串。
-    NSString *subStr = [str7 substringFromIndex:2];
-    NSLog(@"%@", subStr);
+    NSString *subStr1 = [str7 substringFromIndex:2];
+    // 从头截取，一直到第几个 方法：substringToIndex: 参数输入截取的字符数
+    NSString *subStr2 = [str7 substringToIndex:2];
+    // 从中间截取 方法：substringFromRange 参数：NSRange 。
+    NSString *subStr3 = [str7 substringWithRange:NSMakeRange(2, 3)];
+    NSLog(@"%@,%@", subStr2, subStr1);
+    NSLog(@"%@", subStr3);
+    // E、字符串的替换 方法：stringByReplacingOccurrencesOfString:需要替换部分的字符串 withString:替换部分 的字符串。（注意：新串在方法的返回值中，需要用一个字符串进行接收）
+    NSString *str8 = @"我爱北京天安门";
+    str8 = [str8 stringByReplacingOccurrencesOfString:@"北京天安门" withString:@"广州"];
+    NSLog(@"%@", str8);
+    // F、字符串的类型转换。需要转换成什么类型就写xxxValue.（注意：从头开始转换，能转换多少是多少，到遇到不能转换的时候就停止转换。）
+    NSString *str9 = @"123541";
+    NSString *str10 = @"1234.23415";
+    int num1 = str9.intValue;
+    double num2 = str10.doubleValue;
+    NSLog(@"%d, %lf", num1, num2);
 }
 // MARK: 字符串的其他方法
 void others() {
-
+    // 1、查看字符串的长度 xxx.length
+    NSString *str1 = @"123";
+    NSLog(@"%lu", str1.length);
+    // 2、将字符串中的大写转小写字母，小写转大写字母。方法：uppercaseString lowercaseString（注意：转换完的字符串是返回值，需要用字符串来接收它。不是调用了方法就会转换的）
+    NSString *str2 = @"i love peking";
+    str2 = [str2 uppercaseString];
+    NSLog(@"%@", str2);
+    str2 = [str2 lowercaseString];
+    NSLog(@"%@", str2);
+    // 3、去除字符串中的前后空格或者是特殊符号 方法：stringByTrimmingCharactersInSet:(NSCharacterSet *)（注意：这个参数是 NSCharacterSet 类，里面有很多字符集，需要去掉啥自己选择即可）。
+    NSString *str3 = @"   asdfaafd   ";
+    str3 = [str3 stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    NSLog(@"%@", str3);
+    // 注意：在去除这个字符串的首尾指定字符串的时候，只要含字符串中的字符就可以去除，不区分顺序。
+    NSString *str4 = @"sdfsaffgfkjasdkfjasd aslkdiuioqawfklasdfh opsdffak";
+    str4 = [str4 stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"asdfk"]];
+    NSLog(@"%@", str4);
+    // 4、去除首尾字符串的大/小写字母。
+    NSString *str5 = @"asfdjklj SAFJKLJGAL LKGA sjbfkdjkgl";
+    str5 = [str5 stringByTrimmingCharactersInSet:[NSCharacterSet lowercaseLetterCharacterSet]];
+    NSLog(@"%@", str5);
+    NSString *str6 = @"SDGFJWASJKLGzsdfghasfdASF";
+    str6 = [str6 stringByTrimmingCharactersInSet:[NSCharacterSet uppercaseLetterCharacterSet]];
+    NSLog(@"%@", str6);
 }
 // MARK: NSRange 结构体的补充。
 void NSRangeExtension() {
@@ -102,8 +143,8 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // 1、NSString 类的构造方法
 //        add();
-        search();
-//        others();
+//        search();
+        others();
 //        NSRangeExtension();
     }
     return 0;

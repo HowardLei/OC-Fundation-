@@ -7,11 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E49430020CBE73600AD065D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4942FF20CBE73600AD065D /* main.m */; };
 		6E6C094520C2382D008DD57F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C094420C2382D008DD57F /* main.m */; };
 		6E6C095020C24901008DD57F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C094F20C24901008DD57F /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		6E4942FB20CBE73600AD065D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		6E6C093F20C2382D008DD57F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +43,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6E4942FD20CBE73600AD065D /* NSMutableString方法 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "NSMutableString方法"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E4942FF20CBE73600AD065D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6E6C094120C2382D008DD57F /* Foundation简介 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Foundation简介"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E6C094420C2382D008DD57F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6E6C094D20C24901008DD57F /* NSString类方法 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "NSString类方法"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +52,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6E4942FA20CBE73600AD065D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E6C093E20C2382D008DD57F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,11 +76,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E4942FE20CBE73600AD065D /* NSMutableString方法 */ = {
+			isa = PBXGroup;
+			children = (
+				6E4942FF20CBE73600AD065D /* main.m */,
+			);
+			path = "NSMutableString方法";
+			sourceTree = "<group>";
+		};
 		6E6C093620C23812008DD57F = {
 			isa = PBXGroup;
 			children = (
 				6E6C094320C2382D008DD57F /* Foundation简介 */,
 				6E6C094E20C24901008DD57F /* NSString类方法 */,
+				6E4942FE20CBE73600AD065D /* NSMutableString方法 */,
 				6E6C094220C2382D008DD57F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +99,7 @@
 			children = (
 				6E6C094120C2382D008DD57F /* Foundation简介 */,
 				6E6C094D20C24901008DD57F /* NSString类方法 */,
+				6E4942FD20CBE73600AD065D /* NSMutableString方法 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +123,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6E4942FC20CBE73600AD065D /* NSMutableString方法 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E49430320CBE73600AD065D /* Build configuration list for PBXNativeTarget "NSMutableString方法" */;
+			buildPhases = (
+				6E4942F920CBE73600AD065D /* Sources */,
+				6E4942FA20CBE73600AD065D /* Frameworks */,
+				6E4942FB20CBE73600AD065D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NSMutableString方法";
+			productName = "NSMutableString方法";
+			productReference = 6E4942FD20CBE73600AD065D /* NSMutableString方法 */;
+			productType = "com.apple.product-type.tool";
+		};
 		6E6C094020C2382D008DD57F /* Foundation简介 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E6C094620C2382D008DD57F /* Build configuration list for PBXNativeTarget "Foundation简介" */;
@@ -136,6 +182,9 @@
 			attributes = {
 				LastUpgradeCheck = 0940;
 				TargetAttributes = {
+					6E4942FC20CBE73600AD065D = {
+						CreatedOnToolsVersion = 9.4;
+					};
 					6E6C094020C2382D008DD57F = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
@@ -158,11 +207,20 @@
 			targets = (
 				6E6C094020C2382D008DD57F /* Foundation简介 */,
 				6E6C094C20C24901008DD57F /* NSString类方法 */,
+				6E4942FC20CBE73600AD065D /* NSMutableString方法 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6E4942F920CBE73600AD065D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E49430020CBE73600AD065D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E6C093D20C2382D008DD57F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -182,6 +240,73 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		6E49430120CBE73600AD065D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = V9C6R6LR63;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6E49430220CBE73600AD065D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = V9C6R6LR63;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		6E6C093B20C23812008DD57F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -479,6 +604,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6E49430320CBE73600AD065D /* Build configuration list for PBXNativeTarget "NSMutableString方法" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E49430120CBE73600AD065D /* Debug */,
+				6E49430220CBE73600AD065D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6E6C093A20C23812008DD57F /* Build configuration list for PBXProject "Foundation库" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
