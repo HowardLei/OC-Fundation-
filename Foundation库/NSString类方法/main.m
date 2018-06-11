@@ -15,7 +15,7 @@ NSString *(^myBlock)(BOOL) = ^(BOOL a) {
     }
 };
 // MARK: 字符串的添加
-void add() {
+void append() {
     // 1、从文本文件中获取字符串
     //NSString *str = NSString stringWithContentsOfFile:路径地址（注意：里面是NSString类型） encoding:编码格式(代码) error:NSError类型的二级指针
     // 先创建一个 err 对象
@@ -142,7 +142,7 @@ void NSRangeExtension() {
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // 1、NSString 类的构造方法
-//        add();
+        append();
 //        search();
         others();
 //        NSRangeExtension();
