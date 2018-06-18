@@ -16,8 +16,12 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSString *str = @"王尼玛";
+        NSMutableString *varStr = [NSMutableString stringWithString:str];
+        for (int i = 0; i < str.length; i++) {
+            [varStr appendFormat:@"%d", i];
+        }
+        NSLog(@"%@", varStr);
         NSLog(@"%ld", [str length]);
-
     }
     return 0;
 }
