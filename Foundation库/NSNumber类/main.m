@@ -10,12 +10,6 @@
  3、将 NSNumber 类包装的对象中的内容转换成基础数据类型 转换成啥数据类型就是 xxxValue
  4、将基础数据类型的数据包装成 OC 对象，在将其存储进 NSArray 中即可
  */
-void test1() {
-    NSSize size = NSMakeSize(23.32, 321);
-    NSLog(@"%@", NSStringFromSize(size));
-    NSRect rect = NSMakeRect(20, 40, 12, 12);
-    NSLog(@"%@", NSStringFromRect(rect));
-}
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         test1();
