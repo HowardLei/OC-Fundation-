@@ -10,6 +10,10 @@
  4、创建单元素数组 NSArray *arr = [NSArray arrayWithObject:对象];
  5、创建多元素数组 a) NSArray *arr = [NSArray arrayWithObjects:@"123", @"456", @"789", nil]; 这种创建方式不要忘记最后加 nil。否则系统会报错，认为元素没添加完。
                 b) NSArray *arr = @[objects, ...]; 这种创建方式不用在后边加 nil 。因为 nil 本身代表 0 （OC 对象字面值）值的类型为 int 型。
+ 6、将数组导出到文件中，再将文件中保存好的数组读取回来
+    保存文件方法：- (BOOL)writeToFile:(NSString *)path atomically:(BOOL)useAuxiliaryFile;
+    保存的文件为 plist 文件（属性列表文件）这个文件可以保存各种集合
+    读取文件方法：+ (nullable NSArray<ObjectType> *)arrayWithContentsOfFile:(NSString *)path;
  */
 NSString *(^myBlock)(BOOL) = ^(BOOL a) {
     if (a){
@@ -92,9 +96,26 @@ void sortAnArray() {
     }];
     NSLog(@"%@", arr2);
 }
+// MARK: 数组的持久保存
+void arraySaveInFile() {
+    NSArray *arr = @[@123, @456, @789, @"王尼玛"];
+    // 将数组中的元素保存在 plist 文件中，方法：writeToFile:文件路径 atomically:默认为 NO ;
+    BOOL a = [arr writeToFile:@"/Users/apple/Desktop/abc.plist" atomically:NO];
+    if (a) {
+        NSLog(@"文件写入成功");
+    } else {
+        NSLog(@"文件写入失败");
+    }
+    // 从文件中读出数组 方法：arrayWithContentsOfFile:文件目录;
+    NSArray *arr1 = [NSArray arrayWithContentsOfFile:@"/Users/apple/Desktop/abc.plist"];
+    for (id obj in arr1) {
+        NSLog(@"%@", obj);
+    }
+}
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        sortAnArray();
+//        sortAnArray();
+        arraySaveInFile();
     }
     return 0;
 }
