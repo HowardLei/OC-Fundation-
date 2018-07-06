@@ -14,18 +14,51 @@
     (1)、直接创建，创建一个空的 NSDictionary
     NSDictionary *dict = [NSDictionary dictionary];
     (2)、创建一对键值对的 NSDictionary
-    NSD
+    NSDictionary *dict1 = [NSDictionary dictionaryWithObject:@123 forKey:@"num"];
+    (3)、直接创建一个 NSDictionary 对象
+    NSDictionary *dict = @{key: object, ...};
+ 3、访问字典中的元素
+ (1)、取出字典中的所有键或值 ：allKeys，allValues
+ (2)、
  */
+// MARK: 字典的创建
+void create() {
+    // 1、直接创建一个空 dict （没有实际意义）
+    NSDictionary *dict1 = [NSDictionary dictionary];
+    // 2、创建一个含一个键值对的 dict 方法： dictionaryWithObject:value值 forKey:key值
+    NSDictionary *dict2 = [NSDictionary dictionaryWithObject:@123 forKey:@"num"];
+    // 3、创建一个含多个键值对的 dict 方法： initWithObjects: value值构成的数组 forKeys: key值构成的数组
+    NSDictionary *dict3 = [[NSDictionary alloc] initWithObjects:@[@123, @456] forKeys:@[@"yyy", @"hhh"]];
+    // 4、一般创建方式： NSDictionary *dict = @{key: object, ...};即一个键，一个值。
+    NSDictionary *dict4 = @{@"key": @"value"};
+    NSLog(@"dict1 = %@, dict2 = %@, dict3 = %@, dict4 = %@", dict1, dict2, dict3, dict4);
+}
+// MARK: 字典的查找
+void search() {
+    NSDictionary *dict = @{@"num": @123, @"name": @"wangnima"};
+    // 1、取出单个键对应的值：写法类似于数组，但是下标是 key 值： dict[键名] 等价方法：objectForKey:键名
+    NSLog(@"%@", dict[@"name"]);
+    // 2、计算出所有键值对的数量 方法：count 方法
+    NSUInteger num = dict.count;
+    NSLog(@"dict.count = %lu", num);
+    // 3、取出字典中的所有键与所有值 方法：allKeys, allValues 返回值均为 NSArray
+    NSArray *allDictKeys = dict.allKeys;
+    NSArray *allDictValues = dict.allValues;
+    NSLog(@"allKeys = %@,allValues = %@", allDictKeys, allDictValues);
+    // 4、遍历字典中的所有元素（注意：不能用普通的 for 循环，因为字典的下标不是数字，是键值。）用 for in 循环，先遍历键，通过键的下标遍历值。
+    for (id key in dict) {
+        NSLog(@"key = %@, value = %@", key, dict[key]);
+    }
+    NSLog(@"-------");
+    // 5、用块遍历字典 方法：enumerateKeysAndObjectsUsingBlock:指定的代码块
+    [dict enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop) {
+        NSLog(@"key = %@, value = %@", key, value);
+    }];
+}
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // 1、直接创建一个空 dict （没有实际意义）
-        NSDictionary *dict = [NSDictionary dictionary];
-        // 2、创建一个含一个键值对的 dict 方法： dictionaryWithObject:value值 forKey:key值
-        NSDictionary *dict1 = [NSDictionary dictionaryWithObject:@123 forKey:@"num"];
-        // 3、创建一个含多个键值对的 dict 方法： initWithObjects: value值构成的数组 forKeys: key值构成的数组
-        NSDictionary *dict2 = [[NSDictionary alloc] initWithObjects:@[@123, @456] forKeys:@[@"yyy", @"hhh"]];
-        NSLog(@"%@", dict2);
-        NSLog(@"allKeys = %@, allValues = %@", dict2.allKeys, dict2.allValues);
+//        create();
+        search();
     }
     return 0;
 }
