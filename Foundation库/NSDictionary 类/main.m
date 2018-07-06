@@ -19,7 +19,10 @@
     NSDictionary *dict = @{key: object, ...};
  3、访问字典中的元素
  (1)、取出字典中的所有键或值 ：allKeys，allValues
- (2)、
+ (2)、遍历数组的元素：for in 循环、Block 方法
+ (3)、字典的文件方法。（读、写）
+ 4、对字典里面的 Key 值进行排序
+ (1)、块方法，根据 value 的长度进行排序，如果 value1 的长度比 value2 的短的话，则进行倒序排列，否则按升序排列。如果长度相同，则根据遍历顺序进行排序，即先遍历到的在前面。
  */
 // MARK: 字典的创建
 void create() {
@@ -54,11 +57,37 @@ void search() {
     [dict enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop) {
         NSLog(@"key = %@, value = %@", key, value);
     }];
+    // 6、将字典中的数据保存在文件中 方法：writeToFile: 文件路径 atomically: 默认写 NO
+    [dict writeToFile:@"/Users/jyz/Desktop/abc.plist" atomically:NO];
+    // 7、从文件中读取字典中的数据 方法：dictionaryZWithContenesOfFile: 文件路径
+    NSDictionary *newDict = [NSDictionary dictionaryWithContentsOfFile:@"/Users/jyz/Desktop/abc.plist"];
+    NSLog(@"%@", newDict);
+}
+// MARK: 字典的排序（对 KEY 值进行排序）
+void keySort() {
+    NSDictionary *dict = @{@"num": @"one",
+                           @"name": @"wangnima",
+                           @"School": @"Havard",
+                           @"Property": @"nonatomic"
+                           };
+    NSArray *arr = [dict keysSortedByValueUsingComparator:^NSComparisonResult(id value1, id value2) {
+        if ([value1 length] < [value2 length]) {
+            return NSOrderedAscending;
+        }
+        if ([value1 length] > [value2 length]) {
+            return NSOrderedDescending;
+        }
+        return NSOrderedSame;
+    }];
+    for (NSString *elements in arr) {
+        NSLog(@"key = %@, value = %@", elements, dict[elements]);
+    }
 }
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 //        create();
-        search();
+//        search();
+        keySort();
     }
     return 0;
 }
