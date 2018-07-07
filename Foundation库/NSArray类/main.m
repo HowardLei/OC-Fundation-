@@ -85,14 +85,14 @@ void sortAnArray() {
     NSLog(@"%@", arr1);
     // 2、通过 block 排序 方法：sortedArrayUsingComparator: 参数为一个描述 NSComparisonResult 的块，这个块能得到一个枚举值。通过这个枚举值可以知道如何对数组进行排序，整个方法的返回值为一个已经排序好的 NSArray 数组
     // FIXME: 现在同样面临一个问题，就是通过块没法倒序排列数组。
-    NSArray *arr2 = [arr sortedArrayUsingComparator:^(id obj1, id obj2) {
-        if ([obj1 intValue] < [obj2 intValue]) {
-            return NSOrderedAscending;
-        } else if ([obj1 intValue] > [obj2 intValue]) {
+    NSArray *arr2 = [arr sortedArrayUsingComparator:^(NSNumber *obj1, NSNumber *obj2) {
+        if (obj1.intValue > obj2.intValue) {
             return NSOrderedDescending;
-        } else {
-            return NSOrderedSame;
         }
+        if (obj1.intValue < obj2.intValue) {
+            return NSOrderedAscending;
+        }
+        return NSOrderedSame;
     }];
     NSLog(@"%@", arr2);
 }
@@ -114,8 +114,8 @@ void arraySaveInFile() {
 }
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-//        sortAnArray();
-        arraySaveInFile();
+        sortAnArray();
+//        arraySaveInFile();
     }
     return 0;
 }

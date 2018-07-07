@@ -67,10 +67,21 @@ void search() {
 void keySort() {
     NSDictionary *dict = @{@"num": @"one",
                            @"name": @"wangnima",
-                           @"School": @"Havard",
+                           @"School": @"Oxford",
                            @"Property": @"nonatomic"
                            };
-    NSArray *arr = [dict keysSortedByValueUsingComparator:^NSComparisonResult(id value1, id value2) {
+    // FIXME:为什么这个地方比较的是 key 的顺序？
+    NSArray *arr1 = [dict keysSortedByValueUsingComparator:^NSComparisonResult(NSString *key1, NSString *key2) {
+        if ([key1 compare:key2] == -1) {
+            return NSOrderedDescending;
+        }
+        if ([key1 compare:key2] == 1) {
+            return NSOrderedAscending;
+        }
+        return NSOrderedSame;
+    }];
+    // FIXME:为什么这个地方比较的是 value 的长度？
+    NSArray *arr2 = [dict keysSortedByValueUsingComparator:^NSComparisonResult(NSString *value1,  NSString *value2) {
         if ([value1 length] < [value2 length]) {
             return NSOrderedAscending;
         }
@@ -79,9 +90,10 @@ void keySort() {
         }
         return NSOrderedSame;
     }];
-    for (NSString *elements in arr) {
+    for (NSString *elements in arr1) {
         NSLog(@"key = %@, value = %@", elements, dict[elements]);
     }
+//    [arr writeToFile:@"/Users/jyz/Desktop/abc.plist" atomically:NO];
 }
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
