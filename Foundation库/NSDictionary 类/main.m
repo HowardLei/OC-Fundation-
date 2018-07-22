@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "Person.h"
 /*
  NSDictionary 类
  1、为什么会出现 NSDictionary 类
@@ -95,11 +96,49 @@ void keySort() {
     }
 //    [arr writeToFile:@"/Users/jyz/Desktop/abc.plist" atomically:NO];
 }
+// MARK: 字典的存储的方法
+void store() {
+    /*
+     在字典存储到内存的时候，不是按照输入顺序存储的，是将 key 的值通过哈希算法计算得到的值，将这个值存储在对应内存的下标处。
+     在取值的时候，同样根据 key 经过一个 哈希算法进行计算得到下表结果，然后直接找到这个下标并且取出数据即可。
+     
+     与 NSArray 对比
+     NSArray 在存储数据的时候，将数据一个个挨着存储在数组当中。
+     而字典是先经过哈希算法将数据存储在对应下标处。
+     读写效率
+     写方面：NSArray 快（因为直接按照顺序写）
+     读方面：看情况
+            如果是查找所有的值，那么 NSArray 快（不用经过哈希算法）
+            如果是查找个别值，那么字典快。
+     */
+    Person *p1 = [[Person alloc] initWithName:@"Jack1"];
+    Person *p2 = [[Person alloc] initWithName:@"Jack2"];
+    Person *p3 = [[Person alloc] initWithName:@"Jack3"];
+    Person *p4 = [[Person alloc] initWithName:@"Jack4"];
+    Person *p5 = [[Person alloc] initWithName:@"Jack5"];
+    // 创建一个数组，将对象全部保存在数组中
+    NSArray *arr = @[p1, p2, p3, p4, p5];
+    for (id person in arr) {
+        if ([[person name] isEqualToString:@"Jack3"]) {
+            NSLog(@"Find it");
+            break;
+        } else {
+            NSLog(@"404");
+        }
+    }
+    NSDictionary *dict = @{p1.name: p1,
+                           p2.name: p2,
+                           p3.name: p3,
+                           p4.name: p4,
+                           p5.name: p5
+                           };
+}
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 //        create();
 //        search();
-        keySort();
+//        keySort();
+        store();
     }
     return 0;
 }
