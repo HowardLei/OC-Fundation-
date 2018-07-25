@@ -24,6 +24,8 @@
  (3)、字典的文件方法。（读、写）
  4、对字典里面的 Key 值进行排序
  (1)、块方法，根据 value 的长度进行排序，如果 value1 的长度比 value2 的短的话，则进行倒序排列，否则按升序排列。如果长度相同，则根据遍历顺序进行排序，即先遍历到的在前面。
+ (2)、
+ 5、
  */
 // MARK: 字典的创建
 void create() {
@@ -133,12 +135,31 @@ void store() {
                            p5.name: p5
                            };
 }
+// MARK: 字典的持久化（将字典中的数据转换到文件中）
+void writeInFile() {
+    NSDictionary *dict = @{@"name": @"wangnima",
+                           @"city": @"NYC",
+                           @"college": @"MIT"
+                           };
+    BOOL a = [dict writeToFile:@"/Users/apple/Desktop/dict.plist" atomically:NO];
+    if (a == YES) {
+        NSLog(@"Success");
+    } else {
+        NSLog(@"Error");
+    }
+}
+// MARK: 从文件中得到字典数据
+void readFromFile() {
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:@"/Users/apple/Desktop/dict.plist"];
+    NSLog(@"%@", dict);
+}
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 //        create();
 //        search();
 //        keySort();
-        store();
+//        store();
+        readFromFile();
     }
     return 0;
 }
