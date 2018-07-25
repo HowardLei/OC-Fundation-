@@ -90,11 +90,33 @@ void create() {
         NSLog(@"文件/夹删除失败");
     }
 }
+// MARK: 一个小 demo
+void demo() {
+    // 文件终结者 删除一个文件夹中的所有文件。
+    while (1) {
+        NSFileManager *manager = [NSFileManager defaultManager];
+        NSError *err;
+        NSString *path = @"/Users/apple/Desktop/万能破坏文件夹/";
+        NSArray *arr = [manager subpathsOfDirectoryAtPath:path error:&err];
+        if (arr.count > 0) {
+            for (NSString *p in arr) {
+                NSString *newPath = [NSString stringWithFormat:@"%@%@",path,p];
+                if ([manager isDeletableFileAtPath:newPath]) {
+                    [manager removeItemAtPath:newPath error:&err];
+                }
+            }
+        }
+        NSLog(@"扫描成功");
+        // 暂停 3s 再执行
+        [NSThread sleepForTimeInterval:3];
+    }
+}
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 //        judge();
 //        getInfo();
-        create();
+//        create();
+        demo();
     }
     return 0;
 }
