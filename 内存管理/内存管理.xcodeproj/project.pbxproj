@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		183DC66A2109CC130088A617 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DC6692109CC130088A617 /* Person.m */; };
+		183DC66D2109DADD0088A617 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DC66C2109DADD0088A617 /* Person.m */; };
 		6E083BE920AD74D100C34D28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E083BE820AD74D100C34D28 /* main.m */; };
 		6E083BEF20AD74EB00C34D28 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E083BEE20AD74EB00C34D28 /* Person.m */; };
 		6E083BF220AD74F400C34D28 /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E083BF120AD74F400C34D28 /* Cat.m */; };
@@ -122,6 +123,8 @@
 /* Begin PBXFileReference section */
 		183DC6682109CC130088A617 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		183DC6692109CC130088A617 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		183DC66B2109DADD0088A617 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		183DC66C2109DADD0088A617 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		6E083BE620AD74D100C34D28 /* 5、@class */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "5、@class"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E083BE820AD74D100C34D28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6E083BED20AD74EB00C34D28 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -379,6 +382,8 @@
 			isa = PBXGroup;
 			children = (
 				6EE6D28820A82E7800F67EC4 /* main.m */,
+				183DC66B2109DADD0088A617 /* Person.h */,
+				183DC66C2109DADD0088A617 /* Person.m */,
 				6EE6D28D20A82E9900F67EC4 /* Gamer.h */,
 				6EE6D28E20A82E9900F67EC4 /* Gamer.m */,
 				6EE6D29020A82EA300F67EC4 /* Room.h */,
@@ -691,6 +696,7 @@
 			files = (
 				6EE6D29220A82EA300F67EC4 /* Room.m in Sources */,
 				6EE6D28F20A82E9900F67EC4 /* Gamer.m in Sources */,
+				183DC66D2109DADD0088A617 /* Person.m in Sources */,
 				6EE6D28920A82E7800F67EC4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

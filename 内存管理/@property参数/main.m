@@ -1,6 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "Gamer.h"
 #import "Room.h"
+#import "Person.h"
 /*
  @property 参数
  1、atomic/nonatomic 多线程管理参数
@@ -28,6 +29,8 @@
  
  6、copy 参数
     在 @property 中，为了防止属性随便改变，参数需写 copy。
+ 7、自定义类实现对象的 copy。
+    注意：copy 方法是在 NSObject 类下的方法，但是调用这个方法的时候，同时调用了 copyWithZone: 方法。这个方法需要遵守 NSCopying 协议，所以说对象在创建的时候需要遵守 NSCopying 协议
  */
 // MARK: 用 @property 中的 retain 参数来进行创建 setter 和 getter 方法，结果与之前创建的手写的效果代码一样。
 void retain(){
@@ -49,7 +52,7 @@ void copy(){
     NSString *str2 = str1.copy;
     NSLog(@"%p,%p", str1, str2);
     // 结论：NSString 类的 copy 方法为浅拷贝
-    
+    [str1 copyWithZone:NSDefaultMallocZone()];
     // 2、测试 NSMutableString 的 copy 方法
     NSMutableString *varStr1 = [NSMutableString stringWithString:str1];
     NSMutableString *varStr2 = varStr1.copy;
@@ -61,7 +64,10 @@ void copy(){
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 //        demo1();
-        copy();
+//        copy();
+        Person *p = [[Person alloc] init];
+        Person *p1 = p.copy;
+        NSLog(@"%p,%p", p, p1);
     }
     return 0;
 }
