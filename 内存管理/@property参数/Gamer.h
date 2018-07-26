@@ -26,6 +26,18 @@
  */
 @property(nonatomic, retain) Room *room;
 @property(nonatomic, copy) NSString *name;
+/*
+ @property (copy)等效代码如下
+ {
+    NSString *_name;
+ }
+ - (void)setName:(NSString *)name {
+    _name = name.copy;
+ }
+ -(NSString *)name {
+    return _name;
+ }
+ */
 @property(nonatomic, assign) int age;
 @property(nonatomic, assign, getter = isVip) BOOL vip;
 @property(atomic, copy, readonly) NSString *slogan;
