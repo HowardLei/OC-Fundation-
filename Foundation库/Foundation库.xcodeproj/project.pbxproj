@@ -13,6 +13,7 @@
 		181D53DC21057EC200FFA96D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D53DB21057EC200FFA96D /* Person.m */; };
 		181D53E92105A7D900FFA96D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D53E82105A7D900FFA96D /* main.m */; };
 		189703B420D7DC5E0089B0FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 189703B320D7DC5E0089B0FC /* main.m */; };
+		18A2364721098E0900C4D1CD /* NSDate+newProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2364621098E0900C4D1CD /* NSDate+newProperty.m */; };
 		18AFD8212108A70E009B1671 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AFD8202108A70E009B1671 /* main.m */; };
 		18D36D7220D7A9380071BC82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D36D7120D7A9380071BC82 /* main.m */; };
 		18D36D7D20D7BA6E0071BC82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D36D7C20D7BA6E0071BC82 /* main.m */; };
@@ -158,6 +159,8 @@
 		181D53E82105A7D900FFA96D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		189703B120D7DC5E0089B0FC /* NSDictionary 类 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "NSDictionary 类"; sourceTree = BUILT_PRODUCTS_DIR; };
 		189703B320D7DC5E0089B0FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18A2364521098E0900C4D1CD /* NSDate+newProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+newProperty.h"; sourceTree = "<group>"; };
+		18A2364621098E0900C4D1CD /* NSDate+newProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+newProperty.m"; sourceTree = "<group>"; };
 		18AFD81E2108A70E009B1671 /* NSValue 类 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "NSValue 类"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18AFD8202108A70E009B1671 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18D36D6F20D7A9370071BC82 /* Foundation框架下的常用结构体 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Foundation框架下的常用结构体"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -331,6 +334,8 @@
 			isa = PBXGroup;
 			children = (
 				18D36D7C20D7BA6E0071BC82 /* main.m */,
+				18A2364521098E0900C4D1CD /* NSDate+newProperty.h */,
+				18A2364621098E0900C4D1CD /* NSDate+newProperty.m */,
 			);
 			path = "NSDate 类";
 			sourceTree = "<group>";
@@ -783,6 +788,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A2364721098E0900C4D1CD /* NSDate+newProperty.m in Sources */,
 				18D36D7D20D7BA6E0071BC82 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
