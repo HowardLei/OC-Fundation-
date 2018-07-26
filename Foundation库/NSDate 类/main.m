@@ -1,8 +1,21 @@
 #import <Foundation/Foundation.h>
 /*
  NSDate 类是负责处理日期类数据
- 
- */
+ 1、显示当前时间
+    NSDate *date = [NSDate date];
+ 2、将 NSDate 与 NSString 互相转化
+    中间通过日期格式化对象来进行转换。（注意：是 NSDateFormatter 类，别写成 NSFormatter 类）
+    注意：在统一格式化的时候，一定要将 formatter 制定好格式
+    YYYY 代表年 有几位就调用几位
+    MM 代表月份
+    dd 代表日
+    HH 代表时间
+    mm 代表分
+    ss 代表秒
+ 3、时间计算
+
+*/
+// MARK: 时间计算总结
 void demo1() {
     // 1、创建一个 NSDate 对象，对象里面的数据即为当前日期。
     NSDate *date1 = [NSDate date];
@@ -16,11 +29,22 @@ void demo1() {
     // 4、创建一个 NSDate 对象，获取过去一个不可到达的时间点
     date3 = NSDate.distantPast;
     NSLog(@"%@", date3);
-    
+    // 5、计算两个时间点的差距 方法：- (double)timeIntervalSinceDate: NSDate 对象;
+    double time = [date2 timeIntervalSinceDate:date1];
+    NSLog(@"%g", time);
+}
+// MARK: 提取 NSDate 中的数据
+void getCalendarData() {
+    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:60 * 60 * 3];
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    formatter.dateFormat = @"YYYY年MM月dd日 HH点mm分ss秒";
+    NSString *strDate = [formatter stringFromDate:date];
+    NSLog(@"%@, %@", strDate, date);
 }
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         demo1();
+//        getCalendarData();
     }
     return 0;
 }
