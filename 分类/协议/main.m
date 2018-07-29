@@ -1,5 +1,8 @@
 #import <Foundation/Foundation.h>
 #import "Person.h"
+#import "extraProtocol.h"
+#import "MyProtocol.h"
+#import "Student.h"
 /*
  1、协议：专门声明一大堆方法（不能声明属性，也不能实现方法）
       只要某个类遵守协议，就相当于有了协议中所有的方法的声明。
@@ -37,13 +40,20 @@
         如果一个类遵守这个协议，则他就拥有了这个协议中的所有方法的声明。
  8、规范
     要求所有的协议都必须直接或间接的继承 NSObject 基协议。
+ 9、协议的类型限制
+    1）声明一个指针，可以指向任意对象。但是要求指向的对象必须遵守指定的协议。否则最起码要一个警告。
+        例如：创建一个 NSObject 类，使其指向遵守协议的对象。即在类后边添加协议即可。
+        NSObject<extraProtocol> *obj = @"wangnima";
+        这样写编译器就会检查这个对象有没有遵守这个协议，如果没有遵守的话就会报警告。
+    2）声明一个指针，使其指向的对象必须遵守多个协议。如果不遵守，继续报警告。
+        id<MyProtocol, AnotherProtocol> stu1 = [[Student alloc] init];
+    3）声明一个指针，指向遵守了 MyProtocol 的学生对象。
+        id<MyProtocol> stu = [[Student alloc] init];
  */
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        Person *p = [[Person alloc] init];
-        [p jump];
-        [p eat];
-        [p add];
+        Student *stu = [[Student alloc] init];
+        [stu jump];
     }
     return 0;
 }
