@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-// 查看最大最小值调用 Limits.h 头文件即可，里面有定义好的最大值的宏
+// 查看最大最小值调用 limits.h 头文件即可，里面有定义好的最大值的宏
 #import <limits.h>
 #import "Boy.h"
 #import "Girl.h"
