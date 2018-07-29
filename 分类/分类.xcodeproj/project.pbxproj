@@ -76,6 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		18583EDF210D642B001C3294 /* extraProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = extraProtocol.h; sourceTree = "<group>"; };
 		186EA165210B3A0D00AFA9A6 /* 协议 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "协议"; sourceTree = BUILT_PRODUCTS_DIR; };
 		186EA167210B3A0D00AFA9A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		186EA16C210B3A4600AFA9A6 /* MyProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyProtocol.h; sourceTree = "<group>"; };
@@ -158,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				186EA167210B3A0D00AFA9A6 /* main.m */,
+				18583EDF210D642B001C3294 /* extraProtocol.h */,
 				186EA16D210B3B3900AFA9A6 /* Person.h */,
 				186EA16E210B3B3900AFA9A6 /* Person.m */,
 				186EA16C210B3A4600AFA9A6 /* MyProtocol.h */,

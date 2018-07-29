@@ -7,4 +7,8 @@
 - (void)jump {
     NSLog(@"跳跳跳");
 }
+- (void)add {
+    NSLog(@"加点东西");
+}
+
 @end
