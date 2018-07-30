@@ -9,6 +9,7 @@
         点击以后就是 highlighted：可以设置一套另外的样式。
         按钮被选中以后的状态是 selected。
         如果按钮被禁用，则状态是 disabled 。
+    5、代码创建按钮 如果想要设置不同状态的样式，需要分别进行设置，代码量较大。
  */
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *Wangnima;
