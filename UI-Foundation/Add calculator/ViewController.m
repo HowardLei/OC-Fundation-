@@ -13,6 +13,8 @@
 - (IBAction)touchToCalc;
 @end
 
+- (IBAction)changeNameButton:(UIButton *)sender {
+}
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -39,8 +41,11 @@
      第一种方法：将这个 view endEditing。
      第二种方法：第一响应者 resignFirstResponder
      */
-    // 第一种方法
+    // 第一种方法，简单粗暴，在 textField 多的地方使用特别好。
     [self.view endEditing:YES];
+    // 第二种方法 各个控制，注意：控制的是活跃的文本框，不是整个 view 。
+//    [self.txtNum1 resignFirstResponder];
+//    [self.txtNum2 resignFirstResponder];
 }
 
 @end

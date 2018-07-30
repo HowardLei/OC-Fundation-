@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1800858D210DCF810032073E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800858C210DCF810032073E /* main.m */; };
+		18008593210EAAC10032073E /* Baby.m in Sources */ = {isa = PBXBuildFile; fileRef = 18008592210EAAC10032073E /* Baby.m */; };
+		18008597210EABBC0032073E /* CarePerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 18008596210EABBC0032073E /* CarePerson.m */; };
 		1816EF86210DC069000FDC01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816EF85210DC069000FDC01 /* main.m */; };
 		1816EF8D210DC452000FDC01 /* Girl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816EF8C210DC452000FDC01 /* Girl.m */; };
 		1816EF90210DC781000FDC01 /* Boy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816EF8F210DC781000FDC01 /* Boy.m */; };
@@ -32,6 +35,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		18008588210DCF810032073E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		1816EF81210DC069000FDC01 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,6 +101,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1800858A210DCF810032073E /* 协议的实践作业 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "协议的实践作业"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1800858C210DCF810032073E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18008591210EAAC10032073E /* Baby.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Baby.h; sourceTree = "<group>"; };
+		18008592210EAAC10032073E /* Baby.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Baby.m; sourceTree = "<group>"; };
+		18008594210EAAD90032073E /* CareProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CareProtocol.h; sourceTree = "<group>"; };
+		18008595210EABBC0032073E /* CarePerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarePerson.h; sourceTree = "<group>"; };
+		18008596210EABBC0032073E /* CarePerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarePerson.m; sourceTree = "<group>"; };
 		1816EF83210DC069000FDC01 /* 代理案例：找女朋友 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "代理案例：找女朋友"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1816EF85210DC069000FDC01 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1816EF8A210DC368000FDC01 /* GirlFriendProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GirlFriendProtocol.h; sourceTree = "<group>"; };
@@ -140,6 +159,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		18008587210DCF810032073E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1816EF80210DC069000FDC01 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -185,6 +211,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1800858B210DCF810032073E /* 协议的实践作业 */ = {
+			isa = PBXGroup;
+			children = (
+				1800858C210DCF810032073E /* main.m */,
+				18008595210EABBC0032073E /* CarePerson.h */,
+				18008596210EABBC0032073E /* CarePerson.m */,
+				18008594210EAAD90032073E /* CareProtocol.h */,
+				18008591210EAAC10032073E /* Baby.h */,
+				18008592210EAAC10032073E /* Baby.m */,
+			);
+			path = "协议的实践作业";
+			sourceTree = "<group>";
+		};
 		1816EF84210DC069000FDC01 /* 代理案例：找女朋友 */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +261,7 @@
 				6E536D2A20BD7752004A154C /* 类扩展 */,
 				186EA166210B3A0D00AFA9A6 /* 协议 */,
 				1816EF84210DC069000FDC01 /* 代理案例：找女朋友 */,
+				1800858B210DCF810032073E /* 协议的实践作业 */,
 				6E40A6EB20BBA82400F9C60F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -235,6 +275,7 @@
 				6E536D2920BD7752004A154C /* 类扩展 */,
 				186EA165210B3A0D00AFA9A6 /* 协议 */,
 				1816EF83210DC069000FDC01 /* 代理案例：找女朋友 */,
+				1800858A210DCF810032073E /* 协议的实践作业 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -298,6 +339,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		18008589210DCF810032073E /* 协议的实践作业 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18008590210DCF810032073E /* Build configuration list for PBXNativeTarget "协议的实践作业" */;
+			buildPhases = (
+				18008586210DCF810032073E /* Sources */,
+				18008587210DCF810032073E /* Frameworks */,
+				18008588210DCF810032073E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "协议的实践作业";
+			productName = "协议的实践作业";
+			productReference = 1800858A210DCF810032073E /* 协议的实践作业 */;
+			productType = "com.apple.product-type.tool";
+		};
 		1816EF82210DC069000FDC01 /* 代理案例：找女朋友 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1816EF89210DC069000FDC01 /* Build configuration list for PBXNativeTarget "代理案例：找女朋友" */;
@@ -408,6 +466,9 @@
 			attributes = {
 				LastUpgradeCheck = 0940;
 				TargetAttributes = {
+					18008589210DCF810032073E = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					1816EF82210DC069000FDC01 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -446,11 +507,22 @@
 				6E536D2820BD7752004A154C /* 类扩展 */,
 				186EA164210B3A0D00AFA9A6 /* 协议 */,
 				1816EF82210DC069000FDC01 /* 代理案例：找女朋友 */,
+				18008589210DCF810032073E /* 协议的实践作业 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		18008586210DCF810032073E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1800858D210DCF810032073E /* main.m in Sources */,
+				18008593210EAAC10032073E /* Baby.m in Sources */,
+				18008597210EABBC0032073E /* CarePerson.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1816EF7F210DC069000FDC01 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -518,6 +590,73 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		1800858E210DCF810032073E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = V9C6R6LR63;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1800858F210DCF810032073E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = V9C6R6LR63;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		1816EF87210DC069000FDC01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1227,6 +1366,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		18008590210DCF810032073E /* Build configuration list for PBXNativeTarget "协议的实践作业" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1800858E210DCF810032073E /* Debug */,
+				1800858F210DCF810032073E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1816EF89210DC069000FDC01 /* Build configuration list for PBXNativeTarget "代理案例：找女朋友" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
