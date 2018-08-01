@@ -32,10 +32,8 @@
 @end
 
 @implementation ViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-
 }
 // MARK: 图片的旋转
 - (IBAction)rotate:(UIButton *)sender {
@@ -49,12 +47,14 @@
 - (IBAction)transition:(UIButton *)sender {
     self.wangnima.transform = CGAffineTransformTranslate(self.wangnima.transform, 0, 20);
 }
--(IBAction)restore:(UIButton *)sender {
-    self.wangnima.transform = CGAffineTransformIdentity;
+// MARK: 恢复控件位置
+- (IBAction)restore:(UIButton *)sender {
+    [UIView animateWithDuration:3 animations:^{
+        self.wangnima.transform = CGAffineTransformIdentity;
+    }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-
 }
 
 @end
