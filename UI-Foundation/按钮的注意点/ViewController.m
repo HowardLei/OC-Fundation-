@@ -18,6 +18,12 @@
 @end
 
 @implementation ViewController
+- (IBAction)claerPasscode:(UIButton *)sender {
+}
+- (IBAction)clearQQNumber:(UIButton *)sender {
+}
+- (IBAction)clearPasscode:(id)sender {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,7 +40,16 @@
     [btn setBackgroundImage:Image forState:UIControlStateNormal];
     btn.frame = CGRectMake(145, 44, 124, 121);
     [self.view addSubview:btn];
-    
+    // 为这个按钮添加点击事件。方法：- (void)addTarget:默认为 self action:@selector(方法名) forControlEvents:点击事件;
+    [btn addTarget:self action:@selector(doSth) forControlEvents:UIControlEventTouchUpInside];
+}
+- (void)doSth {
+    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
+    lbl.text = @"王尼玛死全家";
+    lbl.textColor = [UIColor redColor];
+    // 将 Label 里面的数据全部在这个 label 中显示出来。（注意：这里面的字体大小是系统自动调节以适应 label 的大小）属性：adjustsFontSizeToFitWidth 默认是 NO
+    lbl.adjustsFontSizeToFitWidth = YES;
+    [self.view addSubview:lbl];
 }
 
 - (void)didReceiveMemoryWarning {
