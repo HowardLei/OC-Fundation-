@@ -78,6 +78,16 @@
                                     <action selector="moveView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OvM-8b-KYM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4HM-fl-KFV">
+                                <rect key="frame" x="141" y="524" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="删除所有控件">
+                                    <color key="titleColor" red="1" green="0.75918444009999997" blue="0.18076544929999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeAllViews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jim-zU-ufX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.55568990529443507" green="0.51752988340363992" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

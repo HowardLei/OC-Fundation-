@@ -6,6 +6,7 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *greenView;
 @property (weak, nonatomic) IBOutlet UIButton *changeFatherViewColor;
+- (IBAction)nextPicture:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *changeFatherViewColorIntoRandomColor;
 @property (weak, nonatomic) IBOutlet UIButton *createView;
 @property (weak, nonatomic) IBOutlet UIButton *moveView;
@@ -14,6 +15,8 @@
 
 @implementation ViewController
 
+- (IBAction)nextPicture:(UIButton *)sender {
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
@@ -44,6 +47,8 @@
     newView.backgroundColor = [UIColor redColor];
     // 3、将新视图添加到 UIView 当中
     [self.view addSubview:newView];
+}
+- (IBAction)backPicture:(id)sender {
 }
 // MARK: 在这个 GreenView 中创建随机的视图及颜色
 // 思路：先创建色块，在对色块的属性进行调整，最后再添加进入视图即可。
@@ -76,8 +81,17 @@
         moveView.frame = oldRect;
     }];
 }
+// MARK: 删除控件
+- (IBAction)removeAllViews:(UIButton *)sender {
+    // 思路：先进行判断 view 中的所有子空间中的第一个元素有没有，如果有，则将其删除，一直删到没有。
+    while (self.view.subviews.firstObject) {
+        [self.view.subviews.firstObject removeFromSuperview];
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
+- (IBAction)nextPicture:(UIButton *)sender {
+}
 @end
