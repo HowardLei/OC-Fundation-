@@ -30,21 +30,81 @@
                                     <action selector="drink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PK3-ou-fz1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KC-F8-ioO">
+                                <rect key="frame" x="13" y="492" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="eat.png"/>
+                                <connections>
+                                    <action selector="eat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gCZ-3j-ooi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wd-x6-J6t">
+                                <rect key="frame" x="13" y="560" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="fart.png"/>
+                                <connections>
+                                    <action selector="fart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WQS-gu-x8C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZA9-wA-Eob">
+                                <rect key="frame" x="334" y="424" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="pie.png"/>
+                                <connections>
+                                    <action selector="eatPie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="21A-1X-7Rv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4P-Ga-upi">
+                                <rect key="frame" x="334" y="492" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="scratch.png"/>
+                                <connections>
+                                    <action selector="scratchTheScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RRZ-DI-cNs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvg-Yu-vDh">
+                                <rect key="frame" x="334" y="560" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="cymbal.png"/>
+                                <connections>
+                                    <action selector="cymbal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SNf-s4-70d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJw-vl-A6b">
+                                <rect key="frame" x="80" y="117" width="254" height="591"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="knockOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tck-DT-sun"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="cymbal" destination="Jvg-Yu-vDh" id="2SN-ec-7Ad"/>
+                        <outlet property="cymbalButton" destination="Jvg-Yu-vDh" id="dE9-yV-R5m"/>
                         <outlet property="drinkButton" destination="sad-C3-wnk" id="aYn-Tw-85h"/>
+                        <outlet property="eatButton" destination="8KC-F8-ioO" id="D9q-mj-Qw0"/>
+                        <outlet property="fartButton" destination="1wd-x6-J6t" id="DKV-fc-SbD"/>
+                        <outlet property="knockOutButton" destination="GJw-vl-A6b" id="xXd-KU-YjB"/>
+                        <outlet property="pieButton" destination="ZA9-wA-Eob" id="K1k-7b-KmX"/>
+                        <outlet property="scratchButton" destination="K4P-Ga-upi" id="p1M-JD-2zr"/>
                         <outlet property="tom" destination="uDQ-is-zlT" id="7ar-Gs-ZEH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="34.239130434782609"/>
         </scene>
     </scenes>
     <resources>
         <image name="angry_00.jpg" width="640" height="1024"/>
+        <image name="cymbal.png" width="60" height="60"/>
         <image name="drink.png" width="60" height="60"/>
+        <image name="eat.png" width="60" height="60"/>
+        <image name="fart.png" width="60" height="60"/>
+        <image name="pie.png" width="60" height="60"/>
+        <image name="scratch.png" width="60" height="60"/>
     </resources>
 </document>
