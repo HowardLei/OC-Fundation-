@@ -82,8 +82,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="cymbal" destination="Jvg-Yu-vDh" id="2SN-ec-7Ad"/>
-                        <outlet property="cymbalButton" destination="Jvg-Yu-vDh" id="dE9-yV-R5m"/>
+                        <outlet property="cymbalButton" destination="Jvg-Yu-vDh" id="6jn-sW-bnK"/>
                         <outlet property="drinkButton" destination="sad-C3-wnk" id="aYn-Tw-85h"/>
                         <outlet property="eatButton" destination="8KC-F8-ioO" id="D9q-mj-Qw0"/>
                         <outlet property="fartButton" destination="1wd-x6-J6t" id="DKV-fc-SbD"/>
