@@ -87,6 +87,7 @@
 		1879109E2119752D003FE839 /* ITAppView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1879109D2119752D003FE839 /* ITAppView.xib */; };
 		187910A12119754E003FE839 /* ITAppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187910A02119754E003FE839 /* ITAppView.m */; };
 		187910A7211976E4003FE839 /* ITApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 187910A6211976E4003FE839 /* ITApp.m */; };
+		187910AE21199113003FE839 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 187910AD21199113003FE839 /* Default-568h@2x.png */; };
 		187C886821115CC1001E5518 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C886721115CC1001E5518 /* AppDelegate.m */; };
 		187C886B21115CC1001E5518 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C886A21115CC1001E5518 /* ViewController.m */; };
 		187C886E21115CC1001E5518 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187C886C21115CC1001E5518 /* Main.storyboard */; };
@@ -629,6 +630,7 @@
 		18105756211022D80055B868 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18105757211022D80055B868 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1810575C211023370055B868 /* summary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = summary.h; sourceTree = "<group>"; };
+		182423A621199FD6008736B9 /* Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Extension.h; sourceTree = "<group>"; };
 		1879104521197485003FE839 /* buttongreen_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttongreen_highlighted.png; sourceTree = "<group>"; };
 		1879104621197485003FE839 /* app.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = app.plist; path = "../../../第3天/资料/图片/app.plist"; sourceTree = "<group>"; };
 		1879104821197486003FE839 /* icon_00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_00.png; sourceTree = "<group>"; };
@@ -674,6 +676,7 @@
 		187910A02119754E003FE839 /* ITAppView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITAppView.m; sourceTree = "<group>"; };
 		187910A5211976E4003FE839 /* ITApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITApp.h; sourceTree = "<group>"; };
 		187910A6211976E4003FE839 /* ITApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITApp.m; sourceTree = "<group>"; };
+		187910AD21199113003FE839 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		187C886421115CC1001E5518 /* 图片浏览器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "图片浏览器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		187C886621115CC1001E5518 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		187C886721115CC1001E5518 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1341,6 +1344,15 @@
 			path = "MVC设计模式";
 			sourceTree = "<group>";
 		};
+		182423A521199352008736B9 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				1879106A211974D3003FE839 /* AppDelegate.h */,
+				1879106B211974D3003FE839 /* AppDelegate.m */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
 		1879104721197486003FE839 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -1363,11 +1375,12 @@
 		18791069211974D3003FE839 /* 应用管理 (xib版) */ = {
 			isa = PBXGroup;
 			children = (
-				187910AC211985FD003FE839 /* Supporting Files */,
-				187910AB211985D8003FE839 /* Models */,
-				187910AA211985D5003FE839 /* Views */,
-				187910A9211985D2003FE839 /* Controllers */,
-				187910A8211985C9003FE839 /* Others */,
+				187910B32119927C003FE839 /* Views */,
+				187910B22119924A003FE839 /* Models */,
+				187910B02119920D003FE839 /* Supporting Files */,
+				187910B921199328003FE839 /* Controllers */,
+				182423A521199352008736B9 /* Others */,
+				182423A621199FD6008736B9 /* Extension.h */,
 			);
 			path = "应用管理 (xib版)";
 			sourceTree = "<group>";
@@ -1391,25 +1404,30 @@
 			path = Icons;
 			sourceTree = "<group>";
 		};
-		187910A8211985C9003FE839 /* Others */ = {
+		187910B02119920D003FE839 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1879106A211974D3003FE839 /* AppDelegate.h */,
-				1879106B211974D3003FE839 /* AppDelegate.m */,
+				1879108C211974E9003FE839 /* buttongreen_highlighted.png */,
+				1879107E211974E9003FE839 /* buttongreen.png */,
+				18791079211974D4003FE839 /* main.m */,
+				18791073211974D4003FE839 /* Assets.xcassets */,
+				18791078211974D4003FE839 /* Info.plist */,
+				1879107F211974E9003FE839 /* Icons */,
 			);
-			path = Others;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		187910A9211985D2003FE839 /* Controllers */ = {
+		187910B22119924A003FE839 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1879106D211974D3003FE839 /* ViewController.h */,
-				1879106E211974D3003FE839 /* ViewController.m */,
+				1879109B211974FA003FE839 /* app.plist */,
+				187910A5211976E4003FE839 /* ITApp.h */,
+				187910A6211976E4003FE839 /* ITApp.m */,
 			);
-			path = Controllers;
+			name = Models;
 			sourceTree = "<group>";
 		};
-		187910AA211985D5003FE839 /* Views */ = {
+		187910B32119927C003FE839 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				18791070211974D3003FE839 /* Main.storyboard */,
@@ -1418,30 +1436,16 @@
 				1879109F2119754E003FE839 /* ITAppView.h */,
 				187910A02119754E003FE839 /* ITAppView.m */,
 			);
-			path = Views;
+			name = Views;
 			sourceTree = "<group>";
 		};
-		187910AB211985D8003FE839 /* Models */ = {
+		187910B921199328003FE839 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1879109B211974FA003FE839 /* app.plist */,
-				187910A5211976E4003FE839 /* ITApp.h */,
-				187910A6211976E4003FE839 /* ITApp.m */,
+				1879106D211974D3003FE839 /* ViewController.h */,
+				1879106E211974D3003FE839 /* ViewController.m */,
 			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		187910AC211985FD003FE839 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1879108C211974E9003FE839 /* buttongreen_highlighted.png */,
-				1879107E211974E9003FE839 /* buttongreen.png */,
-				18791073211974D4003FE839 /* Assets.xcassets */,
-				18791078211974D4003FE839 /* Info.plist */,
-				18791079211974D4003FE839 /* main.m */,
-				1879107F211974E9003FE839 /* Icons */,
-			);
-			path = "Supporting Files";
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		187C886521115CC1001E5518 /* 图片浏览器 */ = {
@@ -2069,6 +2073,7 @@
 		6ED0443420B174D9003D1855 = {
 			isa = PBXGroup;
 			children = (
+				187910AD21199113003FE839 /* Default-568h@2x.png */,
 				6ED0444120B17503003D1855 /* Add calculator */,
 				1800859D210EC1AC0032073E /* UIKit坐标系 */,
 				180085B7210F0DD20032073E /* 按钮的注意点 */,
@@ -2431,6 +2436,7 @@
 				18791072211974D3003FE839 /* Main.storyboard in Resources */,
 				18791094211974E9003FE839 /* icon_06.png in Resources */,
 				18791092211974E9003FE839 /* icon_04.png in Resources */,
+				187910AE21199113003FE839 /* Default-568h@2x.png in Resources */,
 				18791097211974E9003FE839 /* icon_09.png in Resources */,
 				1879109A211974E9003FE839 /* buttongreen_highlighted.png in Resources */,
 				1879108D211974E9003FE839 /* buttongreen.png in Resources */,
