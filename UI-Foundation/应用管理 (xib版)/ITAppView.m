@@ -1,6 +1,7 @@
 #import "ITAppView.h"
 #import "ITApp.h"
 @interface ITAppView ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *appIconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *appNameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *appDownloadButton;
@@ -23,7 +24,7 @@
     // 1、创建一个 UILabel 对象
     UILabel *downloadingLabel = [[UILabel alloc] init];
     // 2、对这个 downloadingLabel 属性进行赋值
-    // 2.1 调整  label 的透明度——属性为 alpha
+    // 2.1 调整 label 的透明度——属性为 alpha
     downloadingLabel.alpha = 0;
     // 2.2 调整 label 的背景颜色
     downloadingLabel.backgroundColor = [UIColor grayColor];

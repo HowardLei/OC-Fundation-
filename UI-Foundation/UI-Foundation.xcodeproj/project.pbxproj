@@ -87,7 +87,6 @@
 		1879109E2119752D003FE839 /* ITAppView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1879109D2119752D003FE839 /* ITAppView.xib */; };
 		187910A12119754E003FE839 /* ITAppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187910A02119754E003FE839 /* ITAppView.m */; };
 		187910A7211976E4003FE839 /* ITApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 187910A6211976E4003FE839 /* ITApp.m */; };
-		187910AE21199113003FE839 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 187910AD21199113003FE839 /* Default-568h@2x.png */; };
 		187C886821115CC1001E5518 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C886721115CC1001E5518 /* AppDelegate.m */; };
 		187C886B21115CC1001E5518 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C886A21115CC1001E5518 /* ViewController.m */; };
 		187C886E21115CC1001E5518 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187C886C21115CC1001E5518 /* Main.storyboard */; };
@@ -676,7 +675,6 @@
 		187910A02119754E003FE839 /* ITAppView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITAppView.m; sourceTree = "<group>"; };
 		187910A5211976E4003FE839 /* ITApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITApp.h; sourceTree = "<group>"; };
 		187910A6211976E4003FE839 /* ITApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITApp.m; sourceTree = "<group>"; };
-		187910AD21199113003FE839 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		187C886421115CC1001E5518 /* 图片浏览器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "图片浏览器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		187C886621115CC1001E5518 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		187C886721115CC1001E5518 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -2073,7 +2071,6 @@
 		6ED0443420B174D9003D1855 = {
 			isa = PBXGroup;
 			children = (
-				187910AD21199113003FE839 /* Default-568h@2x.png */,
 				6ED0444120B17503003D1855 /* Add calculator */,
 				1800859D210EC1AC0032073E /* UIKit坐标系 */,
 				180085B7210F0DD20032073E /* 按钮的注意点 */,
@@ -2436,7 +2433,6 @@
 				18791072211974D3003FE839 /* Main.storyboard in Resources */,
 				18791094211974E9003FE839 /* icon_06.png in Resources */,
 				18791092211974E9003FE839 /* icon_04.png in Resources */,
-				187910AE21199113003FE839 /* Default-568h@2x.png in Resources */,
 				18791097211974E9003FE839 /* icon_09.png in Resources */,
 				1879109A211974E9003FE839 /* buttongreen_highlighted.png in Resources */,
 				1879108D211974E9003FE839 /* buttongreen.png in Resources */,
