@@ -13,8 +13,6 @@
 - (IBAction)touchToCalc;
 @end
 
-- (IBAction)changeNameButton:(UIButton *)sender {
-}
 @implementation ViewController
 
 - (void)viewDidLoad {
