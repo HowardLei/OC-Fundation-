@@ -26,6 +26,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.53593349800000001" green="0.96620899439999997" blue="0.90417305179999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pof-vo-CNM">
                                 <rect key="frame" x="192" y="451" width="31" height="30"/>

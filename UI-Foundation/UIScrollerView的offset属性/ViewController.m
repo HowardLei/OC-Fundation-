@@ -1,6 +1,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
@@ -8,7 +9,7 @@
 
 @implementation ViewController
 
--(IBAction)scroll:(UIButton *)sender {
+- (IBAction)scroll:(UIButton *)sender {
     // 注意：从属性中的得到的结构体变量不能直接修改
     /*
      原因如下：
@@ -29,7 +30,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.scrollView.contentSize = self.imageView.image.size;
-
+    // 注意：设置 scrollView 的 Inset 的时候，启动的时候如果没有特别指明，依然还是从图片的左上角开始加载。直到拖动的时候才可以拖动出边框。
+    self.scrollView.contentInset = UIEdgeInsetsMake(5, 5, 5, 5);
 }
 
 - (void)didReceiveMemoryWarning {
