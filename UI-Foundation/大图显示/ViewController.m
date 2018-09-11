@@ -6,6 +6,7 @@
  2、contentsOffset。即 UIScrollView 中内容的拖动距离。（设置的值为 CGPoint 结构体）
  3、contentInset。即 UIScrollView 中的内边距。
  4、bounces。即 UIScrollView 是否需要弹簧效果。
+ 5、pagesEnabled。设置 UIScrollView 是否有分页效果。
  */
 @interface ViewController ()
 
