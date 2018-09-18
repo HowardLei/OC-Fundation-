@@ -66,7 +66,7 @@ void getInfo() {
     NSArray * arr1 = [manager contentsOfDirectoryAtPath:@"/Users/apple/desktop" error:&err];
     NSLog(@"%@", arr1);
 }
-// MARK: 创建文件/夹
+// MARK: 操作文件/夹
 void create() {
     NSFileManager *manager = [NSFileManager defaultManager];
     NSError *err = nil;

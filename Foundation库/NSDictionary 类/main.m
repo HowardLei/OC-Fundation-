@@ -159,7 +159,9 @@ int main(int argc, const char * argv[]) {
 //        search();
 //        keySort();
 //        store();
-        readFromFile();
+//        readFromFile();
+        Person *p1 = [[Person alloc] initWithName:@"王尼玛"];
+        NSLog(@"%@", [p1 valueForKey:@"name"]);
     }
     return 0;
 }

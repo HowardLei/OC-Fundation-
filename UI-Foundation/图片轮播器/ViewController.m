@@ -4,6 +4,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (strong, nonatomic) NSTimer *timer;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 @end
 
 @implementation ViewController
@@ -27,7 +28,13 @@
     // 2、设置图片自动滚动
     // 注意：当直接调用 NSTimer 类方法的时候，这个计时器会持续不断的运行。如果中间用户有拖拽这个 View 的时候，如果拖动的时间偏长，就会出现 2 张图片比方法中设计的时间更短的时间经过。
     // 解决方案：当发现用户拖动的时候，停止计时器
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(autoScroll) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(autoScroll) userInfo:nil repeats:YES];
+    // 注意：如果界面上还有其他的滚动控件的时候，如果滚动其他的控件的时候，就会影响图片的自动滚动。
+    // 解决方案：提高 timer 线程的优先级，保证图片能够一直自动滚动。
+    // 获取当前对象的消息循环对象
+    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
+    // 改变 timer 对象的优先级。设置模式为：NSRunLoopCommonModes。
+    [runLoop addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 // MARK: 设置 PageControl 的页码 (通过 scrollView 中的 offset 来判断页码的位置)
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -42,7 +49,7 @@
     // 当发现用户拖动的时候，就调用 invalidate 方法。停止计时器。
     [self.timer invalidate];
     // 当计时器停止了以后，上边的计时器对象就没用了，就需要指向一个新的计时器对象才能重新计时。
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(autoScroll) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(autoScroll) userInfo:nil repeats:YES];
 }
 // MARK: 实现自动滚动
 - (void)autoScroll {
@@ -55,7 +62,6 @@
         page++;
     }
     [self.scrollView setContentOffset:CGPointMake(page * self.scrollView.frame.size.width, 0) animated:YES];
-
 }
 
 - (void)didReceiveMemoryWarning {
