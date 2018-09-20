@@ -11,7 +11,7 @@
     设置每个分组上边显示什么内容。
  5、- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section;
     设置每个分组下边显示什么内容
- 注意：如果4、5两个方法中没有实现任何一个，则在控制器中看不到分组的样式。
+ 注意：如果分组没有显示出来，请修改 UITableView 中的 style 属性设置为 grouped
  */
 @interface ViewController () <UITableViewDataSource>
 
