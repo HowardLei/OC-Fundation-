@@ -1,16 +1,6 @@
 #import "ViewController.h"
 #import "ITHero.h"
-/*
- 有关 UITableViewCell 的属性
- 1、imageView 单元格中有 imageView 对象
- 2、textLabel 单元格中的文本框
- 3、detailTextLabel 细节框中的文本设置。用来展示这行数据的详细信息
- 4、accessoryType 附件类型。如果不设置，默认为 UITableViewCellAccessoryNone （即无控件，需要自定义控件）有一下几种类型
-    { UITableViewCellAccessoryDisclosureIndicator （一般的小尖箭头）
-      UITableViewCellAccessoryDetailDisclosureButton （UITableViewCellAccessoryDetailButton 和 UITableViewCellAccessoryDisclosureIndicator 的结合体）
-      UITableViewCellAccessoryCheckmark （一个勾勾）
-      UITableViewCellAccessoryDetailButton （一个圈中有'i'）
- */
+
 @interface ViewController () <UITableViewDataSource>
 @property (nonatomic, strong) NSArray *arr;
 @property (weak, nonatomic) IBOutlet UITableView *heroesTableView;
