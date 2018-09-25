@@ -9,6 +9,7 @@
     2、在需要一个单元格的时候，先去缓存池中根据“重用 ID ”查找是否有可用的单元格
     3、如果有，则直接从缓冲池中取出这个单元格进行使用（修改这个单元格中的样式以及内容）
        如果没有，此时则需要重新创建一个单元格
+ 对 Cell ID 的优化
  */
 @interface ViewController () <UITableViewDataSource>
 @property (nonatomic, strong) NSArray *arr;
@@ -40,7 +41,8 @@
     // 1、导入数据
     ITHero *model = self.arr[indexPath.row];
     // 2、创建对象
-    NSString *ID = @"HeroID";
+    // 2.1、先创建一个 ID 注意：如果用途十分频繁的 ID，前面最好加 static ,减少变量的压栈弹栈。
+    static NSString *ID = @"HeroID";
     // 根据上边创建的 ID 去缓存区中寻找对应的 Cell，注意：这个操作是由这个方法内部完成的。
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     // 判断缓存区中有没有 cell ，没有则创建一个
