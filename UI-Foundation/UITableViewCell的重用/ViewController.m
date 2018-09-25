@@ -1,5 +1,6 @@
 #import "ViewController.h"
 #import "ITHero.h"
+
 /*
  为什么要对 UITableView 中的 Cell 进行重用？
     因为滚动的时候，都会经历 cell 的创建和回收，不显示的内容删除，显示的对象被创建。这个操作虽然对内存的影响不大，但会不断的进行内存的开辟与销毁，消耗 CPU 的性能。所以需要对 Cell 进行更高效的回收利用。
