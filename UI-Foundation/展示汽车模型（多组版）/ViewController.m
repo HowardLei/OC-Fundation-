@@ -51,7 +51,7 @@
 }
 // MARK: 设置设置右侧索引
 - (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    id test = [self.models valueForKeyPath:NSStringFromSelector(@selector(title))];
+    NSArray *test = [self.models valueForKeyPath:NSStringFromSelector(@selector(title))];
     return test;
 }
 - (void)viewDidLoad {
