@@ -1,7 +1,7 @@
 #import "ViewController.h"
 #import "ITHero.h"
 
-@interface ViewController () <UITableViewDataSource>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *arr;
 @property (weak, nonatomic) IBOutlet UITableView *heroesTableView;
 @end
@@ -39,10 +39,33 @@
     // 3、返回设置好的对象
     return cell;
 }
+// 监听点击按钮的方法
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 1、将模型导入到方法当中
+    ITHero *model = self.arr[indexPath.row];
+    // 2、创建通知
+    // 2.1 设置通知控制器
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"编辑英雄" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    // 2.2 设置通知行为
+    UIAlertAction *editAction = [UIAlertAction actionWithTitle:@"编辑" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        // 获取文本框，注意：每个行为的方法可能有多个文本框，先获得才能操作。
+        UITextField *textField = controller.textFields.firstObject;
+        model.name = textField.text;
+        // 记住：修改完文本以后，记住刷新整个数据
+        [self.heroesTableView reloadData];
+    }];
+    // 设置文本框的内容（注意：这个块里面的代码相当与文本框创建完以后就执行完）
+    [controller addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.text = model.name;
+        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    }];
+    // 2.3 添加事件
+    [controller addAction:editAction];
+    [self presentViewController:controller animated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
-
 
 @end
