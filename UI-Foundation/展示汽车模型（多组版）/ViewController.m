@@ -45,7 +45,15 @@
     ITGroup *model = self.models[section];
     return model.cars.count;
 }
-
+// MARK: 为头部添加数据
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [self.models[section] title];
+}
+// MARK: 设置设置右侧索引
+- (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    id test = [self.models valueForKeyPath:NSStringFromSelector(@selector(title))];
+    return test;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
