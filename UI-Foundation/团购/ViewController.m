@@ -1,13 +1,21 @@
 #import "ViewController.h"
 #import "ITGoods.h"
 #import "ITTableViewCell.h"
-@interface ViewController () <UITableViewDataSource>
-@property (nonatomic, strong) NSArray *modelsArr;
+#import "ITFooterView.h"
+@interface ViewController () <UITableViewDataSource, ITFooterViewDelegate>
+@property (nonatomic, strong) NSMutableArray *modelsArr;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation ViewController
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    ITFooterView *view = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ITFooterView class]) owner:nil options:nil] firstObject];
+    view.delegate = self;
+    self.tableView.tableFooterView = view;
+}
 // 懒加载数据
-- (NSArray *)modelsArr {
+- (NSMutableArray *)modelsArr {
     if (_modelsArr == nil) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"tgs" ofType:@".plist"];
         NSArray *arr = [NSArray arrayWithContentsOfFile:path];
@@ -19,9 +27,6 @@
         _modelsArr = modelArr;
     }
     return _modelsArr;
-}
-- (void)viewDidLoad {
-    [super viewDidLoad];
 }
 // MARK: 设置单元格内容
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -49,5 +54,18 @@
 // MARK:设置每个部分的行数
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.modelsArr.count;
+}
+// MARK: 控制器作为代理对象，实现 ITFooterViewDelegate 协议中的方法
+- (void)addElementInTableView:(ITFooterView *)tableView {
+    // 一、创建一个新模型
+    ITGoods *model = [[ITGoods alloc] init];
+    model.buyCount = @"123";
+    model.icon = @"37e4761e6ecf56a2d78685df7157f097";
+    model.price = @"6";
+    model.title = @"肉夹馍";
+    // 二、将模型中的数据添加到模型数组中
+    [self.modelsArr addObject:model];
+    // 三、刷新数据
+    [self.tableView reloadData];
 }
 @end
