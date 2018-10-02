@@ -35,12 +35,14 @@
      if (!cell) {
      cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
      }
+     注意：如果直接在控制器中写这部分代码，就会造成一下局面
+        1、控制器知道的内容太多，导致一旦单元格中的属性发生变化，则所有有单元格的控制器都需要修改代码，过于依赖控制器。
+        2、单元格本身封装的也并不完整。还需要程序员手动设置属性。
      */
-    ITTableViewCell *cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ITTableViewCell class]) owner:nil options:nil] firstObject];
+    ITTableViewCell *cell = [ITTableViewCell tableViewCellWithTableView:tableView];
     // 3、设置单元格数据
-//    cell.textLabel.text = model.title;
-//    cell.detailTextLabel.text = [NSString stringWithFormat:@"¥ %@    %@人好评", model.price, model.buyCount];
-//    cell.imageView.image = [UIImage imageNamed:model.icon];
+    // 这次是将数据封装到一个属性当中
+    cell.goods = model;
     // 4、返回单元格
     return cell;
 }
