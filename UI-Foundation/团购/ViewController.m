@@ -1,6 +1,7 @@
 #import "ViewController.h"
 #import "ITGoods.h"
 #import "ITTableViewCell.h"
+#import "ITHeaderView.h"
 #import "ITFooterView.h"
 @interface ViewController () <UITableViewDataSource, ITFooterViewDelegate>
 @property (nonatomic, strong) NSMutableArray *modelsArr;
@@ -10,9 +11,11 @@
 @implementation ViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    ITFooterView *view = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ITFooterView class]) owner:nil options:nil] firstObject];
-    view.delegate = self;
-    self.tableView.tableFooterView = view;
+    ITHeaderView *headerView = [ITHeaderView headerViewFromNib:NSStringFromClass([ITHeaderView class])];
+    self.tableView.tableHeaderView = headerView;
+    ITFooterView *footerView = [ITFooterView footerViewFromNib:NSStringFromClass([ITFooterView class])];
+    footerView.delegate = self;
+    self.tableView.tableFooterView = footerView;
 }
 // 懒加载数据
 - (NSMutableArray *)modelsArr {
@@ -65,7 +68,10 @@
     model.title = @"肉夹馍";
     // 二、将模型中的数据添加到模型数组中
     [self.modelsArr addObject:model];
-    // 三、刷新数据
+    // 三、刷新数据（这个地方不能使用 reloadRowsAtIndexPaths:(NSArray<NSIndexPath *> *) withRowAnimation:(UITableViewRowAnimation)这个方法，因为上边这个方法是先在原有的单元格中删除需要操作的单元格数据，再刷新新的数据，没办法添加新的单元格。）
     [self.tableView reloadData];
+    // 四、如果单元格刷新出来的以后超出 tableView 的显示区域，则将显示界面自动向上滚动一行
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.modelsArr.count - 1 inSection:0];
+    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 @end

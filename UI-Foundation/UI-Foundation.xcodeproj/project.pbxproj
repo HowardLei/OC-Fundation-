@@ -567,6 +567,8 @@
 		6E1D644D2161C6C1005D006F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E1D644C2161C6C1005D006F /* Assets.xcassets */; };
 		6E1D64502161C6C1005D006F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E1D644E2161C6C1005D006F /* LaunchScreen.storyboard */; };
 		6E1D64532161C6C1005D006F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1D64522161C6C1005D006F /* main.m */; };
+		6E2AC1A021646A4E00CFC17D /* ITHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2AC19F21646A4E00CFC17D /* ITHeaderView.m */; };
+		6E2AC1A221646A6400CFC17D /* ITHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E2AC1A121646A6400CFC17D /* ITHeaderView.xib */; };
 		6E4997C72158D54900CA996E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4997C62158D54900CA996E /* AppDelegate.m */; };
 		6E4997CA2158D54900CA996E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4997C92158D54900CA996E /* ViewController.m */; };
 		6E4997CD2158D54900CA996E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4997CB2158D54900CA996E /* Main.storyboard */; };
@@ -1275,6 +1277,9 @@
 		6E1D644F2161C6C1005D006F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E1D64512161C6C1005D006F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E1D64522161C6C1005D006F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6E2AC19E21646A4E00CFC17D /* ITHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITHeaderView.h; sourceTree = "<group>"; };
+		6E2AC19F21646A4E00CFC17D /* ITHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITHeaderView.m; sourceTree = "<group>"; };
+		6E2AC1A121646A6400CFC17D /* ITHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ITHeaderView.xib; sourceTree = "<group>"; };
 		6E4997C32158D54900CA996E /* UITableView和UITableViewCell的常见属性.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UITableView和UITableViewCell的常见属性.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E4997C52158D54900CA996E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6E4997C62158D54900CA996E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -2456,6 +2461,7 @@
 				6E1D64492161C6C0005D006F /* Main.storyboard */,
 				6E1D644E2161C6C1005D006F /* LaunchScreen.storyboard */,
 				6E59C7CF2161DFD3005FA3C6 /* ITGoodsCell.xib */,
+				6E2AC1A121646A6400CFC17D /* ITHeaderView.xib */,
 				6ED0BA6D21634FC6007AF281 /* ITFooterView.xib */,
 			);
 			name = View;
@@ -2468,6 +2474,8 @@
 				6E49A0B12161C8B7000BCB98 /* ITGoods.m */,
 				6E59C7D42161E0E5005FA3C6 /* ITTableViewCell.h */,
 				6E59C7D52161E0E5005FA3C6 /* ITTableViewCell.m */,
+				6E2AC19E21646A4E00CFC17D /* ITHeaderView.h */,
+				6E2AC19F21646A4E00CFC17D /* ITHeaderView.m */,
 				6ED0BA6F21635016007AF281 /* ITFooterView.h */,
 				6ED0BA7021635016007AF281 /* ITFooterView.m */,
 			);
@@ -4242,6 +4250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E2AC1A221646A6400CFC17D /* ITHeaderView.xib in Resources */,
 				6ED0BA6E21634FC6007AF281 /* ITFooterView.xib in Resources */,
 				6E59C7D02161DFD3005FA3C6 /* ITGoodsCell.xib in Resources */,
 				6E1D64502161C6C1005D006F /* LaunchScreen.storyboard in Resources */,
@@ -4496,6 +4505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E2AC1A021646A4E00CFC17D /* ITHeaderView.m in Sources */,
 				6E59C7D62161E0E5005FA3C6 /* ITTableViewCell.m in Sources */,
 				6E1D64482161C6C0005D006F /* ViewController.m in Sources */,
 				6E49A0B22161C8B7000BCB98 /* ITGoods.m in Sources */,

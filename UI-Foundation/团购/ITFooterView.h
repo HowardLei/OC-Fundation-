@@ -5,6 +5,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ITFooterView : UIView
 @property (nonatomic, weak) id<ITFooterViewDelegate> delegate;
++ (instancetype)footerViewFromNib:(NSString *)nib;
 @end
 
 @protocol ITFooterViewDelegate <NSObject>
