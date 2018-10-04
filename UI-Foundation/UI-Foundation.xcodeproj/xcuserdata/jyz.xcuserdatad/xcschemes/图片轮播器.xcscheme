@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6E90AD2421467E960002E14B"
-               BuildableName = "&#22270;&#29255;&#36718;&#25773;&#22120;.app"
-               BlueprintName = "&#22270;&#29255;&#36718;&#25773;&#22120;"
+               BlueprintIdentifier = "6EDBE2D82165C05E0055C02B"
+               BuildableName = "&#24494;&#21338;&#26696;&#20363;.app"
+               BlueprintName = "&#24494;&#21338;&#26696;&#20363;"
                ReferencedContainer = "container:UI-Foundation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -55,14 +55,18 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6E90AD2421467E960002E14B"
-            BuildableName = "&#22270;&#29255;&#36718;&#25773;&#22120;.app"
-            BlueprintName = "&#22270;&#29255;&#36718;&#25773;&#22120;"
+            BlueprintIdentifier = "6EDBE2D82165C05E0055C02B"
+            BuildableName = "&#24494;&#21338;&#26696;&#20363;.app"
+            BlueprintName = "&#24494;&#21338;&#26696;&#20363;"
             ReferencedContainer = "container:UI-Foundation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
+      <LocationScenarioReference
+         identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
+         referenceType = "1">
+      </LocationScenarioReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

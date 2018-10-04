@@ -1,4 +1,5 @@
 #import "ITTableViewCell.h"
+#import "ITWeibo.h"
 
 @interface ITTableViewCell ()
 
