@@ -604,6 +604,7 @@
 		6E59C7D02161DFD3005FA3C6 /* ITGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E59C7CF2161DFD3005FA3C6 /* ITGoodsCell.xib */; };
 		6E59C7D62161E0E5005FA3C6 /* ITTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E59C7D52161E0E5005FA3C6 /* ITTableViewCell.m */; };
 		6E751A4C2154A565008D2E8C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE27AFE21548FBD0062CDFB /* ViewController.m */; };
+		6E76ECCE2168980500E74FF8 /* ITTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ECCD2168980500E74FF8 /* ITTableViewController.m */; };
 		6E7793C12144CBB600B0CCE5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7793C02144CBB600B0CCE5 /* AppDelegate.m */; };
 		6E7793C42144CBB600B0CCE5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7793C32144CBB600B0CCE5 /* ViewController.m */; };
 		6E7793C72144CBB600B0CCE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E7793C52144CBB600B0CCE5 /* Main.storyboard */; };
@@ -667,7 +668,6 @@
 		6EDBE2E52165C05E0055C02B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EDBE2E42165C05E0055C02B /* Assets.xcassets */; };
 		6EDBE2E82165C05E0055C02B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EDBE2E62165C05E0055C02B /* LaunchScreen.storyboard */; };
 		6EDBE2EB2165C05E0055C02B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDBE2EA2165C05E0055C02B /* main.m */; };
-		6EDBE2F62165F1D50055C02B /* ITTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDBE2F52165F1D50055C02B /* ITTableViewController.m */; };
 		6EDBE2F92165F3E10055C02B /* ITWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDBE2F82165F3E10055C02B /* ITWeibo.m */; };
 		6EDBE2FB2165F5990055C02B /* weibo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EDBE2FA2165F5990055C02B /* weibo.plist */; };
 		6EE27AFC21548FBD0062CDFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE27AFB21548FBD0062CDFB /* AppDelegate.m */; };
@@ -1345,6 +1345,8 @@
 		6E59C7CF2161DFD3005FA3C6 /* ITGoodsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ITGoodsCell.xib; sourceTree = "<group>"; };
 		6E59C7D42161E0E5005FA3C6 /* ITTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITTableViewCell.h; sourceTree = "<group>"; };
 		6E59C7D52161E0E5005FA3C6 /* ITTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITTableViewCell.m; sourceTree = "<group>"; };
+		6E76ECCC2168980500E74FF8 /* ITTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITTableViewController.h; sourceTree = "<group>"; };
+		6E76ECCD2168980500E74FF8 /* ITTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITTableViewController.m; sourceTree = "<group>"; };
 		6E7793BD2144CBB600B0CCE5 /* 通过代理监听滚动事件.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "通过代理监听滚动事件.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7793BF2144CBB600B0CCE5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6E7793C02144CBB600B0CCE5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1449,8 +1451,6 @@
 		6EDBE2E72165C05E0055C02B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EDBE2E92165C05E0055C02B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EDBE2EA2165C05E0055C02B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6EDBE2F42165F1D50055C02B /* ITTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITTableViewController.h; sourceTree = "<group>"; };
-		6EDBE2F52165F1D50055C02B /* ITTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITTableViewController.m; sourceTree = "<group>"; };
 		6EDBE2F72165F3E10055C02B /* ITWeibo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITWeibo.h; sourceTree = "<group>"; };
 		6EDBE2F82165F3E10055C02B /* ITWeibo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITWeibo.m; sourceTree = "<group>"; };
 		6EDBE2FA2165F5990055C02B /* weibo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = weibo.plist; sourceTree = "<group>"; };
@@ -3111,8 +3111,8 @@
 		6EDBE2EF2165C0690055C02B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6EDBE2F42165F1D50055C02B /* ITTableViewController.h */,
-				6EDBE2F52165F1D50055C02B /* ITTableViewController.m */,
+				6E76ECCC2168980500E74FF8 /* ITTableViewController.h */,
+				6E76ECCD2168980500E74FF8 /* ITTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -4780,9 +4780,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EDBE2EB2165C05E0055C02B /* main.m in Sources */,
-				6EDBE2F62165F1D50055C02B /* ITTableViewController.m in Sources */,
 				6EDBE2DD2165C05E0055C02B /* AppDelegate.m in Sources */,
 				6EDBE2F92165F3E10055C02B /* ITWeibo.m in Sources */,
+				6E76ECCE2168980500E74FF8 /* ITTableViewController.m in Sources */,
 				19D0B366623B53BE0263F943 /* ITTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -7351,7 +7351,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.itcenter.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -7391,7 +7391,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.itcenter.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

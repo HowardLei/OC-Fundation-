@@ -1,7 +1,8 @@
 #import "ITTableViewCell.h"
 #define FONTSIZE
 @interface ITTableViewCell ()
-@property (nonatomic, weak) UILabel *nameLabel;
+// FIXME:为什么这个地方用 weak 就不行？
+@property (weak, nonatomic) UILabel *nameLabel;
 @property (nonatomic, weak) UILabel *contentLabel;
 @property (nonatomic, weak) UIImageView *iconView;
 @property (nonatomic, weak) UIImageView *VIPImageView;
@@ -48,14 +49,16 @@
 // 注意：在这个 setter 方法中，设置数据和 frame
 - (void)setModel:(ITWeibo *)model {
     _model = model;
-    [self setDataFromModel:model];
-    [self setWidgetFrameFromModel:model];
+    [self setDataForModel:model];
+    [self setWidgetFrameForModel:model];
 }
 /**
  设置属性中的数据
  */
-- (void)setDataFromModel:(ITWeibo *)model {
+- (void)setDataForModel:(ITWeibo *)model {
+    self.nameLabel.hidden = NO;
     self.nameLabel.text = model.name;
+    NSLog(@"%@", self.nameLabel.text);
     self.contentLabel.text = model.text;
     if (model.picture == nil) {
         self.imageView.hidden = YES;
@@ -75,7 +78,7 @@
 /**
  设置控件的 frame 大小
  */
-- (void)setWidgetFrameFromModel:(ITWeibo *)model {
+- (void)setWidgetFrameForModel:(ITWeibo *)model {
     // 设置通用的间距
     CGFloat margin = 10;
     // 1、设置头像的 frame

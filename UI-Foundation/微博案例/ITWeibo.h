@@ -6,7 +6,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, copy) NSString *icon;
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, assign, getter=isVip) NSNumber *vip;
+@property (nonatomic, strong, getter=isVip) NSNumber *vip;
 @property (nonatomic, copy) NSString *picture;
 + (instancetype)weiboWithDict:(NSDictionary *)dictionary;
 - (instancetype)initWithDict:(NSDictionary *)dictionary;
