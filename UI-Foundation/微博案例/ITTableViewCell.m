@@ -1,5 +1,5 @@
 #import "ITTableViewCell.h"
-#define FONTSIZE
+
 @interface ITTableViewCell ()
 // FIXME:为什么这个地方用 weak 就不行？
 @property (weak, nonatomic) UILabel *nameLabel;
@@ -19,31 +19,39 @@
     self = [super initWithStyle:style
                 reuseIdentifier:reuseIdentifier];
     if (self) {
-        // 在这里面实现自定义的控件
-        // 添加一个姓名 label
-        UILabel *nameLabel = [[UILabel alloc] init];
-        [self.contentView addSubview:self.nameLabel];
-        self.nameLabel = nameLabel;
-        self.nameLabel.font = [UIFont systemFontOfSize:16];
-        // 添加一个内容 label
-        UILabel *contentLabel = [[UILabel alloc] init];
-        [self.contentView addSubview:self.contentLabel];
-        self.contentLabel = contentLabel;
-        self.contentLabel.font = [UIFont systemFontOfSize:12];
-        // 添加一个 VIP 的标签
-        UIImageView *VIPImageView = [[UIImageView alloc] init];
-        [self.contentView addSubview:self.VIPImageView];
-        self.VIPImageView = VIPImageView;
-        // 添加一个头像
-        UIImageView *iconView = [[UIImageView alloc] init];
-        [self.contentView addSubview:self.iconView];
-        self.iconView = iconView;
-        // 添加一个配图
-        UIImageView *weiboImageView = [[UIImageView alloc] init];
-        [self.contentView addSubview:self.weiboImageView];
-        self.weiboImageView = weiboImageView;
+        [self setUpUI];
     }
     return self;
+}
+
+/**
+ 初始化界面
+ */
+- (void)setUpUI {
+    // 在这里面实现自定义的控件
+    // 添加一个姓名 label
+    UILabel *nameLabel = [[UILabel alloc] init];
+    nameLabel.font = [UIFont systemFontOfSize:16];
+    self.nameLabel = nameLabel;
+    [self.contentView addSubview:self.nameLabel];
+    // 添加一个内容 label
+    UILabel *contentLabel = [[UILabel alloc] init];
+    self.contentLabel.font = [UIFont systemFontOfSize:12];
+    self.contentLabel = contentLabel;
+    [self.contentView addSubview:self.contentLabel];
+    // FIXME: 修复下边控件添加的顺序
+    // 添加一个 VIP 的标签
+    UIImageView *VIPImageView = [[UIImageView alloc] init];
+    [self.contentView addSubview:self.VIPImageView];
+    self.VIPImageView = VIPImageView;
+    // 添加一个头像
+    UIImageView *iconView = [[UIImageView alloc] init];
+    [self.contentView addSubview:self.iconView];
+    self.iconView = iconView;
+    // 添加一个配图
+    UIImageView *weiboImageView = [[UIImageView alloc] init];
+    [self.contentView addSubview:self.weiboImageView];
+    self.weiboImageView = weiboImageView;
 }
 // MARK:重写 tableViewCell 的 setter 方法
 // 注意：在这个 setter 方法中，设置数据和 frame
@@ -58,7 +66,6 @@
 - (void)setDataForModel:(ITWeibo *)model {
     self.nameLabel.hidden = NO;
     self.nameLabel.text = model.name;
-    NSLog(@"%@", self.nameLabel.text);
     self.contentLabel.text = model.text;
     if (model.picture == nil) {
         self.imageView.hidden = YES;
@@ -92,7 +99,6 @@
     CGFloat nameWidth = nameSize.width;
     CGFloat nameHeight = nameSize.height;
     CGFloat nameX = CGRectGetMaxX(self.iconView.frame) + margin;
-    // FIXME: nameY 还没算完
     CGFloat nameY = (CGRectGetMaxY(self.iconView.frame) - margin - nameHeight) / 2 + margin;
     self.nameLabel.frame = CGRectMake(nameX, nameY, nameWidth, nameHeight);
     // 3、设置 VIP 的 frame
