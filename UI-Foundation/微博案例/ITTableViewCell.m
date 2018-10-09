@@ -2,7 +2,11 @@
 #define nameFontSize [UIFont systemFontOfSize:18]
 #define contentFontSize [UIFont systemFontOfSize:16]
 @interface ITTableViewCell ()
-
+@property (weak, nonatomic) UILabel *nameLabel;
+@property (nonatomic, weak) UILabel *contentLabel;
+@property (nonatomic, weak) UIImageView *iconView;
+@property (nonatomic, weak) UIImageView *VIPImageView;
+@property (nonatomic, weak) UIImageView *weiboImageView;
 @end
 
 @implementation ITTableViewCell
