@@ -1,12 +1,8 @@
 #import "ITTableViewCell.h"
-
+#define nameFontSize [UIFont systemFontOfSize:18]
+#define contentFontSize [UIFont systemFontOfSize:16]
 @interface ITTableViewCell ()
-// FIXME:为什么这个地方用 weak 就不行？
-@property (weak, nonatomic) UILabel *nameLabel;
-@property (nonatomic, weak) UILabel *contentLabel;
-@property (nonatomic, weak) UIImageView *iconView;
-@property (nonatomic, weak) UIImageView *VIPImageView;
-@property (nonatomic, weak) UIImageView *weiboImageView;
+
 @end
 
 @implementation ITTableViewCell
@@ -23,7 +19,6 @@
     }
     return self;
 }
-
 /**
  初始化界面
  */
@@ -31,30 +26,29 @@
     // 在这里面实现自定义的控件
     // 添加一个姓名 label
     UILabel *nameLabel = [[UILabel alloc] init];
-    nameLabel.font = [UIFont systemFontOfSize:16];
+    nameLabel.font = nameFontSize;
     self.nameLabel = nameLabel;
     [self.contentView addSubview:self.nameLabel];
     // 添加一个内容 label
     UILabel *contentLabel = [[UILabel alloc] init];
-    self.contentLabel.font = [UIFont systemFontOfSize:12];
+    contentLabel.font = contentFontSize;
     self.contentLabel = contentLabel;
     [self.contentView addSubview:self.contentLabel];
-    // FIXME: 修复下边控件添加的顺序
     // 添加一个 VIP 的标签
     UIImageView *VIPImageView = [[UIImageView alloc] init];
-    [self.contentView addSubview:self.VIPImageView];
     self.VIPImageView = VIPImageView;
+    [self.contentView addSubview:self.VIPImageView];
     // 添加一个头像
     UIImageView *iconView = [[UIImageView alloc] init];
-    [self.contentView addSubview:self.iconView];
     self.iconView = iconView;
+    [self.contentView addSubview:self.iconView];
     // 添加一个配图
     UIImageView *weiboImageView = [[UIImageView alloc] init];
-    [self.contentView addSubview:self.weiboImageView];
     self.weiboImageView = weiboImageView;
+    [self.contentView addSubview:self.weiboImageView];
 }
 // MARK:重写 tableViewCell 的 setter 方法
-// 注意：在这个 setter 方法中，设置数据和 frame
+// 注意：在这两个 setter 方法中，设置数据和 frame
 - (void)setModel:(ITWeibo *)model {
     _model = model;
     [self setDataForModel:model];
@@ -64,14 +58,14 @@
  设置属性中的数据
  */
 - (void)setDataForModel:(ITWeibo *)model {
-    self.nameLabel.hidden = NO;
     self.nameLabel.text = model.name;
     self.contentLabel.text = model.text;
+    self.contentLabel.numberOfLines = 0;
     if (model.picture == nil) {
-        self.imageView.hidden = YES;
+        self.weiboImageView.hidden = YES;
     } else {
-        self.imageView.hidden = NO;
-        self.imageView.image = [UIImage imageNamed:model.picture];
+        self.weiboImageView.hidden = NO;
+        self.weiboImageView.image = [UIImage imageNamed:model.picture];
     }
     self.iconView.image = [UIImage imageNamed:model.icon];
     // 判断是否是VIP，如果是，显示VIP图标，如果不是，则不显示。
@@ -95,7 +89,7 @@
     CGFloat iconY = margin;
     self.iconView.frame = CGRectMake(iconX, iconY, iconWidth, iconHeight);
     // 2、设置昵称的 frame
-    CGSize nameSize = [model.name boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]} context:nil].size;
+    CGSize nameSize = [model.name boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:nameFontSize} context:nil].size;
     CGFloat nameWidth = nameSize.width;
     CGFloat nameHeight = nameSize.height;
     CGFloat nameX = CGRectGetMaxX(self.iconView.frame) + margin;
@@ -108,17 +102,18 @@
     CGFloat VIPY = nameY;
     self.VIPImageView.frame = CGRectMake(VIPX, VIPY, VIPWidth, VIPHeight);
     // 4、设置微博内容的 frame
-    CGSize weiboSize = [model.text boundingRectWithSize:CGSizeMake(self.contentLabel.frame.size.width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:12]} context:nil].size;
+    CGSize weiboSize = [model.text boundingRectWithSize:CGSizeMake(400, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:contentFontSize} context:nil].size;
     CGFloat weiboWidth = weiboSize.width;
     CGFloat weiboHeight = weiboSize.height;
     CGFloat weiboX = margin;
     CGFloat weiboY = CGRectGetMaxY(self.iconView.frame) + margin;
     self.contentLabel.frame = CGRectMake(weiboX, weiboY, weiboWidth, weiboHeight);
     // 5、设置微博配图的 frame
-    CGFloat weiboPictureWidth = 2 * iconWidth;
-    CGFloat weiboPictureHeight = weiboWidth;
+    CGFloat weiboPictureWidth = 4 * iconWidth;
+    CGFloat weiboPictureHeight = weiboPictureWidth;
     CGFloat weiboPictureX = weiboX;
     CGFloat weiboPictureY = CGRectGetMaxY(self.contentLabel.frame) + margin;
     self.weiboImageView.frame = CGRectMake(weiboPictureX, weiboPictureY, weiboPictureWidth, weiboPictureHeight);
 }
+
 @end
