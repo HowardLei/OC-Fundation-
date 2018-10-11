@@ -118,7 +118,6 @@
     CGFloat weiboPictureX = weiboX;
     CGFloat weiboPictureY = CGRectGetMaxY(self.contentLabel.frame) + margin;
     self.weiboImageView.frame = CGRectMake(weiboPictureX, weiboPictureY, weiboPictureWidth, weiboPictureHeight);
-    NSLog(@"%@", NSStringFromCGRect(self.weiboImageView.frame));
 }
 
 @end
