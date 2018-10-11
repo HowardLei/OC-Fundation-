@@ -2,53 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8057a3f1-e7cf-4f6a-ab99-8c01e7b674c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../微博/ITTableViewController.xib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/AppDelegate.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/AppDelegate.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/icon/1.imageset/1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/icon/1.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/icon/1516159990.imageset/1516159990.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/icon/1516159990.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/icon/238221586.imageset/238221586.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/icon/238221586.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/icon/424324.imageset/424324.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/icon/424324.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/icon/50.imageset/50.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/icon/50.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/icon/7735164184.imageset/7735164184.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/icon/7735164184.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/icon/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/image/3461756566.imageset/3461756566.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/image/3461756566.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/image/4934348604.imageset/4934348604.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/image/4934348604.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/image/603564546.imageset/603564546.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/image/603564546.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/image/6289891986.imageset/6289891986.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/image/6289891986.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/image/926680527.imageset/926680527.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/image/926680527.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Assets.xcassets/image/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Base.lproj/Main.storyboard" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/ITTableViewCell.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/ITTableViewCell.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/ITTableViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/ITTableViewController.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/ITWeibo.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/ITWeibo.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/main.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../微博案例/weibo.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.xcworkspace/xcuserdata/jyz.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/project.xcworkspace/xcuserdata/jyz.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcuserdata/jyz.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/xcuserdata/jyz.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcuserdata/jyz.xcuserdatad/xcschemes/图片轮播器.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/xcuserdata/jyz.xcuserdatad/xcschemes/图片轮播器.xcscheme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../团购/ITHeaderView.m" beforeDir="false" afterPath="$PROJECT_DIR$/../团购/ITHeaderView.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../团购/ITTableViewCell.m" beforeDir="false" afterPath="$PROJECT_DIR$/../团购/ITTableViewCell.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../微博/ITTableViewController.xib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../微博案例/ITTableViewCell.h" beforeDir="false" afterPath="$PROJECT_DIR$/../微博案例/ITTableViewCell.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../微博案例/ITTableViewCell.m" beforeDir="false" afterPath="$PROJECT_DIR$/../微博案例/ITTableViewCell.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../微博案例/ITTableViewController.m" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,22 +19,23 @@
     <session id="-175752797">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="h" value="690" />
-          <entry key="m" value="449" />
+          <entry key="m" value="466" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="1139" />
+          <entry key="ObjectiveC" value="1156" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -100,25 +59,12 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../微博案例/ITTableViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-                <element signature="e#183#521#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../微博案例/ITWeibo.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+            <state relative-caret-position="264">
+              <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -131,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../微博案例/ITTableViewCell.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state relative-caret-position="2728">
+              <caret line="124" selection-start-line="124" selection-end-line="124" />
             </state>
           </provider>
         </entry>
@@ -140,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../微博案例/ITTableViewCell.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+            <state relative-caret-position="88">
+              <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -273,8 +219,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Cidr.FilesView" />
       <pane id="Scope" />
+      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -282,6 +228,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -352,6 +299,22 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="展示汽车模型（多组版）" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="UI-Foundation" TARGET_NAME="展示汽车模型（多组版）" CONFIG_NAME="Debug" SCHEME_NAME="展示汽车模型（多组版）" IS_LOCATION_SIMULATION_ALLOWED="true" RUN_TARGET_PROJECT_NAME="UI-Foundation" RUN_TARGET_NAME="展示汽车模型（多组版）" MAKE_ACTIVE="TRUE">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="通过代理监听缩放事件" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="UI-Foundation" TARGET_NAME="通过代理监听缩放事件" CONFIG_NAME="Debug" SCHEME_NAME="通过代理监听缩放事件" IS_LOCATION_SIMULATION_ALLOWED="true" RUN_TARGET_PROJECT_NAME="UI-Foundation" RUN_TARGET_NAME="通过代理监听缩放事件" MAKE_ACTIVE="TRUE">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="通过代理监听缩放事件" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="UI-Foundation" TARGET_NAME="通过代理监听缩放事件" CONFIG_NAME="Debug" SCHEME_NAME="通过代理监听缩放事件" IS_LOCATION_SIMULATION_ALLOWED="true" RUN_TARGET_PROJECT_NAME="UI-Foundation" RUN_TARGET_NAME="通过代理监听缩放事件" MAKE_ACTIVE="TRUE">
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
@@ -366,6 +329,7 @@
       <item itemvalue="Application.图片轮播器" />
       <item itemvalue="Application.应用管理 (xib版)" />
       <item itemvalue="Application.展示汽车模型（多组版）" />
+      <item itemvalue="Application.微博案例" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -381,11 +345,12 @@
       <workItem from="1537497567804" duration="264000" />
       <workItem from="1538643068389" duration="136000" />
       <workItem from="1538643252227" duration="1131000" />
+      <workItem from="1539091615844" duration="253000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1531000" />
+    <option name="totallyTimeSpent" value="1784000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -399,11 +364,10 @@
   <component name="ToolWindowManager">
     <frame x="679" y="326" width="1512" height="1000" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21972789" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22244897" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32929516" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -415,6 +379,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32929516" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -465,20 +430,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../展示英雄/Info.plist">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../展示英雄/ITHero.h">
+    <entry file="file://$PROJECT_DIR$/../微博案例/ITTableViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        <state relative-caret-position="704">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+            <element signature="e#183#521#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../展示英雄/ITHero.m">
+    <entry file="file://$PROJECT_DIR$/../微博案例/ITTableViewController.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../微博案例/ITTableViewCell.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="2728">
+          <caret line="124" selection-start-line="124" selection-end-line="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../微博案例/ITTableViewCell.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -494,38 +470,27 @@
     <entry file="file://$PROJECT_DIR$/../微博案例/Info.plist">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../微博案例/ITTableViewCell.m">
+    <entry file="file://$PROJECT_DIR$/../展示英雄/ITHero.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        <state relative-caret-position="154">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../微博案例/ITTableViewCell.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../微博案例/ITTableViewController.h">
+    <entry file="file://$PROJECT_DIR$/../展示英雄/Info.plist">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../微博案例/ITTableViewController.m">
+    <entry file="file://$PROJECT_DIR$/../展示英雄/ITHero.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-            <element signature="e#183#521#0" />
-          </folding>
+        <state relative-caret-position="66">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../微博案例/ITWeibo.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        <state relative-caret-position="264">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
         </state>
       </provider>
     </entry>

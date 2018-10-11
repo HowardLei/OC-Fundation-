@@ -6,7 +6,7 @@
 @property (nonatomic, weak) UILabel *contentLabel;
 @property (nonatomic, weak) UIImageView *iconView;
 @property (nonatomic, weak) UIImageView *VIPImageView;
-@property (nonatomic, weak) UIImageView *weiboImageView;
+
 @end
 
 @implementation ITTableViewCell
@@ -118,6 +118,7 @@
     CGFloat weiboPictureX = weiboX;
     CGFloat weiboPictureY = CGRectGetMaxY(self.contentLabel.frame) + margin;
     self.weiboImageView.frame = CGRectMake(weiboPictureX, weiboPictureY, weiboPictureWidth, weiboPictureHeight);
+    NSLog(@"%@", NSStringFromCGRect(self.weiboImageView.frame));
 }
 
 @end
