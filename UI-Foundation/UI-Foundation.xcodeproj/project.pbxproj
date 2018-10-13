@@ -1278,6 +1278,7 @@
 		18E99E9221107554005C5660 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		19D0B355105172697CD93BFD /* ITTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITTableViewCell.m; sourceTree = "<group>"; };
 		19D0B86400C4BEAB897AFD8F /* ITTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITTableViewCell.h; sourceTree = "<group>"; };
+		6E1525BC2171F48B007E1324 /* 11为什么控件的引用和控件的代理要用weak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "11为什么控件的引用和控件的代理要用weak.h"; sourceTree = "<group>"; };
 		6E1D64412161C6C0005D006F /* 团购.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "团购.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1D64432161C6C0005D006F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6E1D64442161C6C0005D006F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -3104,6 +3105,7 @@
 				6EDBE2F12165C08A0055C02B /* Model */,
 				6EDBE2F02165C0710055C02B /* View */,
 				6EDBE2EF2165C0690055C02B /* Controller */,
+				6E1525BC2171F48B007E1324 /* 11为什么控件的引用和控件的代理要用weak.h */,
 			);
 			path = "微博案例";
 			sourceTree = "<group>";
