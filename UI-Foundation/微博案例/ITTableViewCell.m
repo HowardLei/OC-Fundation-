@@ -118,6 +118,12 @@
     CGFloat weiboPictureX = weiboX;
     CGFloat weiboPictureY = CGRectGetMaxY(self.contentLabel.frame) + margin;
     self.weiboImageView.frame = CGRectMake(weiboPictureX, weiboPictureY, weiboPictureWidth, weiboPictureHeight);
+    // 计算出高度（根据是否有图片）
+    if (self.weiboImageView.isHidden) {
+        self.heightForRow = CGRectGetMaxY(self.contentLabel.frame) + margin;
+    } else {
+        self.heightForRow = CGRectGetMaxY(self.weiboImageView.frame) + margin;
+    }
 }
 
 @end

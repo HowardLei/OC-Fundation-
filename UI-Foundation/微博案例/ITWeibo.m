@@ -10,4 +10,8 @@
 + (instancetype)weiboWithDict:(NSDictionary *)dictionary {
     return [[self alloc] initWithDict:dictionary];
 }
+- (void)setHeightForRow:(CGFloat)heightForRow {
+    _heightForRow = heightForRow;
+    
+}
 @end

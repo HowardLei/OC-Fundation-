@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-
+#import <CoreGraphics/CoreGraphics.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ITWeibo : NSObject
@@ -8,6 +8,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong, getter=isVip) NSNumber *vip;
 @property (nonatomic, copy) NSString *picture;
+@property (nonatomic, assign) CGFloat heightForRow;
+
 + (instancetype)weiboWithDict:(NSDictionary *)dictionary;
 - (instancetype)initWithDict:(NSDictionary *)dictionary;
 @end

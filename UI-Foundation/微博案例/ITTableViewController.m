@@ -24,7 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.rowHeight = 250;
 }
 #pragma mark - Table view data source
 //MARK: 设置单元格行数
@@ -43,7 +42,14 @@
     }
     // 3、设置单元格数据
     cell.model = model;
+    // 注意：高度需要单独设置（因为 cell 是无法传入 tableView 设置行高的 delegate 方法）
+    model.heightForRow = cell.heightForRow;
     // 4、返回单元格
     return cell;
+}
+#pragma mark - Table view delegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ITWeibo *model = self.weiboArr[indexPath.row];
+    return model.heightForRow;
 }
 @end
