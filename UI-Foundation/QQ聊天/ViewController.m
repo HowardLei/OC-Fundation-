@@ -6,7 +6,7 @@
 //
 
 #import "ViewController.h"
-#import "ITChat.h"
+#import "ITTableViewCell.h"
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) NSArray *chatArr;
 @property (weak, nonatomic) IBOutlet UITableView *chatTableView;
@@ -38,10 +38,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ITChat *model = self.chatArr[indexPath.row];
     static NSString *ID = @"message";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    ITTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        cell = [[ITTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
+    // 设置单元格数据
+    cell.model = model;
     return cell;
 }
 // 设置 tableView 的行数

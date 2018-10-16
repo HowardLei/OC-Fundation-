@@ -6,11 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ITChat.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ITTableViewCell : UITableViewCell
-
+@property (nonatomic, strong) ITChat *model;
 @end
 
 NS_ASSUME_NONNULL_END
