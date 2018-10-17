@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <CoreGraphics/CoreGraphics.h>
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -19,6 +19,7 @@ typedef enum{
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, copy) NSString *time;
 @property (nonatomic, assign) ITChatPerson type;
+@property (nonatomic, assign) CGFloat height;
 - (instancetype)initWithDict:(NSDictionary *)dict;
 + (instancetype)chatWithDict:(NSDictionary *)dict;
 @end

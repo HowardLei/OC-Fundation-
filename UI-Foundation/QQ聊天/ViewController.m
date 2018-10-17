@@ -35,7 +35,7 @@
 
 // MARK: - Table View data source
 // 设置单元格格式
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (ITTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ITChat *model = self.chatArr[indexPath.row];
     static NSString *ID = @"message";
     ITTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
@@ -49,5 +49,11 @@
 // 设置 tableView 的行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.chatArr.count;
+}
+// MARK: - Table View delegate
+// 设置行高
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ITChat *model = self.chatArr[indexPath.row];
+    return model.height;
 }
 @end
