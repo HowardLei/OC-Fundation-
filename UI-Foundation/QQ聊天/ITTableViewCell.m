@@ -87,6 +87,7 @@
     }
     // 设置对话框的 frame
     // 注意：根据加载的头像不同，他们的对话框的 frame 也不完全相同
+    // FIXME: 这个地方设置的第一个参数的 width 还不能确定。
     CGSize messageSize = [model.text boundingRectWithSize:CGSizeMake(111, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:12]} context:nil].size;
     CGFloat messageWidth = messageSize.width;
     CGFloat messageHeight = messageSize.height;
