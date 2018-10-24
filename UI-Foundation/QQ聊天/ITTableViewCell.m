@@ -4,9 +4,10 @@
 //
 //  Created by jyz on 2018/10/16.
 //
-#include <stdlib.h>
-#import "ITTableViewCell.h"
 
+#import "ITTableViewCell.h"
+#define messageFont [UIFont systemFontOfSize:14]
+#define timeFont [UIFont systemFontOfSize:12]
 @interface ITTableViewCell ()
 @property (nonatomic, weak) UILabel *timeLabel;
 @property (nonatomic, weak) UIImageView *iconImageView;
@@ -30,15 +31,17 @@
         // 1、创建一个时间控件
         UILabel *timeLabel = [[UILabel alloc] init];
         self.timeLabel = timeLabel;
-        [self.contentView addSubview:self.timeLabel];
+        [self.contentView addSubview:timeLabel];
         // 2、创建一个头像
         UIImageView *iconImageView = [[UIImageView alloc] init];
         self.iconImageView = iconImageView;
-        [self.contentView addSubview:self.iconImageView];
+        [self.contentView addSubview:iconImageView];
         // 3、创建一个消息框
         UIButton *messageButton = [[UIButton alloc] init];
+        [messageButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        messageButton.userInteractionEnabled = YES;
         self.messageButton = messageButton;
-        [self.contentView addSubview:self.messageButton];
+        [self.contentView addSubview:messageButton];
     }
     return self;
 }
@@ -57,22 +60,26 @@
     NSString *messager = model.type ? @"other" : @"me";
     self.iconImageView.image = [UIImage imageNamed:messager];
     // 设置消息按钮的文本
-    self.messageButton.titleLabel.text = model.text;
-    self.messageButton.titleLabel.font = [UIFont systemFontOfSize:12];
+    [self.messageButton setTitle:model.text forState:UIControlStateNormal];
+    self.messageButton.titleLabel.font = messageFont;
+    self.messageButton.titleLabel.numberOfLines = 0;
     NSString *bubbleImage = model.type ? @"chat_recive_nor" : @"chat_send_nor";
-    self.messageButton.imageView.image = [UIImage imageNamed:bubbleImage];
+    UIImage *image = [self resizeImageWithImage:bubbleImage];
+    [self.messageButton setBackgroundImage:image forState:UIControlStateNormal];
+    self.messageButton.imageEdgeInsets = UIEdgeInsetsMake(20, 20, 20, 20);
 }
 // 设置控件的 frame
 - (void)setModelFrameFromModel:(ITChat *)model {
     CGFloat margin = 5;
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
     // 设置时间的 frame
-    CGFloat timeWidth = 375;
+    CGFloat timeWidth = screenWidth;
     CGFloat timeHeight = 10;
     CGFloat timeX = 0;
     CGFloat timeY = margin;
     self.timeLabel.frame = CGRectMake(timeX, timeY, timeWidth, timeHeight);
     self.timeLabel.textAlignment = NSTextAlignmentCenter;
-    self.timeLabel.font = [UIFont systemFontOfSize:14];
+    self.timeLabel.font = timeFont;
     // 设置头像的 frame
     // 注意：根据加载的头像不同，他们的头像 frame 也不完全相同
     CGFloat iconWidth = 30;
@@ -82,13 +89,12 @@
         CGFloat iconX = margin;
         self.iconImageView.frame = CGRectMake(iconX, iconY, iconWidth, iconHeight);
     } else {
-        CGFloat iconX = self.contentView.frame.size.width - iconWidth - margin;
+        CGFloat iconX = screenWidth - iconWidth - margin;
         self.iconImageView.frame = CGRectMake(iconX, iconY, iconWidth, iconHeight);
     }
     // 设置对话框的 frame
     // 注意：根据加载的头像不同，他们的对话框的 frame 也不完全相同
-    // FIXME: 这个地方设置的第一个参数的 width 还不能确定。
-    CGSize messageSize = [model.text boundingRectWithSize:CGSizeMake(111, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:12]} context:nil].size;
+    CGSize messageSize = [self.messageButton.currentTitle boundingRectWithSize:CGSizeMake(screenWidth - 2 * iconWidth - 4 * margin, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: messageFont} context:nil].size;
     CGFloat messageWidth = messageSize.width;
     CGFloat messageHeight = messageSize.height;
     CGFloat messageY = iconY;
@@ -96,10 +102,17 @@
         CGFloat messageX = CGRectGetMaxX(self.iconImageView.frame) + margin;
         self.messageButton.frame = CGRectMake(messageX, messageY, messageWidth, messageHeight);
     } else {
-        CGFloat messageX = CGRectGetMaxX(self.iconImageView.frame) + margin;
+        CGFloat messageX = CGRectGetMaxX(self.iconImageView.frame) - 2 * margin - messageWidth;
         self.messageButton.frame = CGRectMake(messageX, messageY, messageWidth, messageHeight);
     }
-    CGFloat rowHeight = CGRectGetMaxY(self.messageButton.frame);
+    CGFloat rowHeight = CGRectGetMaxY(self.iconImageView.frame) > CGRectGetMaxY(self.messageButton.frame) ? CGRectGetMaxY(self.iconImageView.frame) + margin : CGRectGetMaxY(self.messageButton.frame) + margin;
     model.height = rowHeight;
+}
+- (UIImage *)resizeImageWithImage:(NSString *)imageName {
+    UIImage *rowImage = [UIImage imageNamed:imageName];
+    CGFloat halfImageHeight = rowImage.size.height / 2;
+    CGFloat halfImageWidth = rowImage.size.width / 2;
+    UIImage *newImage = [rowImage resizableImageWithCapInsets:UIEdgeInsetsMake(halfImageHeight, halfImageWidth, halfImageHeight, halfImageWidth) resizingMode:UIImageResizingModeStretch];
+    return newImage;
 }
 @end

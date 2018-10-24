@@ -41,6 +41,7 @@
     ITTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
         cell = [[ITTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        cell.backgroundColor = [UIColor redColor];
     }
     // 设置单元格数据
     cell.model = model;
