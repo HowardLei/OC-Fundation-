@@ -94,15 +94,15 @@
     }
     // 设置对话框的 frame
     // 注意：根据加载的头像不同，他们的对话框的 frame 也不完全相同
-    CGSize messageSize = [self.messageButton.currentTitle boundingRectWithSize:CGSizeMake(screenWidth - 2 * iconWidth - 4 * margin, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: messageFont} context:nil].size;
+    CGSize messageSize = [self.messageButton.currentTitle boundingRectWithSize:CGSizeMake(screenWidth - 4 * iconWidth - 4 * margin, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: messageFont} context:nil].size;
     CGFloat messageWidth = messageSize.width;
     CGFloat messageHeight = messageSize.height;
     CGFloat messageY = iconY;
     if (model.type) {
-        CGFloat messageX = CGRectGetMaxX(self.iconImageView.frame) + margin;
+        CGFloat messageX = CGRectGetMaxX(self.iconImageView.frame);
         self.messageButton.frame = CGRectMake(messageX, messageY, messageWidth, messageHeight);
     } else {
-        CGFloat messageX = CGRectGetMaxX(self.iconImageView.frame) - 2 * margin - messageWidth;
+        CGFloat messageX = CGRectGetMinX(self.iconImageView.frame) - messageWidth;
         self.messageButton.frame = CGRectMake(messageX, messageY, messageWidth, messageHeight);
     }
     CGFloat rowHeight = CGRectGetMaxY(self.iconImageView.frame) > CGRectGetMaxY(self.messageButton.frame) ? CGRectGetMaxY(self.iconImageView.frame) + margin : CGRectGetMaxY(self.messageButton.frame) + margin;
