@@ -14,32 +14,67 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
+		<key>MVC设计模式.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>QQ聊天.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>24</integer>
+		</dict>
+		<key>QQ聊天.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>23</integer>
 		</dict>
 		<key>UIKit坐标系.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>UIKit坐标系.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>UIScrollerView的offset属性.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>15</integer>
+		</dict>
+		<key>UIScrollerView的offset属性.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
 		</dict>
 		<key>UITableViewCell的重用.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>22</integer>
 		</dict>
+		<key>UITableViewCell的重用.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>21</integer>
+		</dict>
 		<key>UITableView和UITableViewCell的常见属性.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>21</integer>
 		</dict>
+		<key>UITableView和UITableViewCell的常见属性.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>20</integer>
+		</dict>
 		<key>UITableView显示多组数据.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>17</integer>
+		</dict>
+		<key>UITableView显示多组数据.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>17</integer>
@@ -49,25 +84,50 @@
 			<key>orderHint</key>
 			<integer>18</integer>
 		</dict>
+		<key>UITableView显示数据的方法.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>14</integer>
+		</dict>
 		<key>transform.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>8</integer>
+		</dict>
+		<key>transform.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 		<key>喜马拉雅App.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>14</integer>
 		</dict>
+		<key>喜马拉雅App.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>15</integer>
+		</dict>
 		<key>团购.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>23</integer>
 		</dict>
+		<key>团购.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>22</integer>
+		</dict>
 		<key>图片浏览器.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>9</integer>
+		</dict>
+		<key>图片浏览器.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>图片轮播器.xcscheme</key>
 		<dict>
@@ -79,10 +139,20 @@
 			<key>orderHint</key>
 			<integer>13</integer>
 		</dict>
+		<key>大图显示.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
 		<key>展示汽车品牌.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>19</integer>
+		</dict>
+		<key>展示汽车品牌.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>18</integer>
 		</dict>
 		<key>展示汽车模型（多组版）.xcscheme</key>
 		<dict>
@@ -96,6 +166,11 @@
 			<key>orderHint</key>
 			<integer>20</integer>
 		</dict>
+		<key>展示英雄.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>19</integer>
+		</dict>
 		<key>应用管理 (xib版).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -106,10 +181,20 @@
 			<key>orderHint</key>
 			<integer>11</integer>
 		</dict>
+		<key>应用管理.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
 		<key>应用管理（模型版）.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>12</integer>
+		</dict>
+		<key>应用管理（模型版）.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
 		</dict>
 		<key>微博案例.xcscheme_^#shared#^_</key>
 		<dict>
@@ -121,12 +206,27 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>按钮的注意点.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>汤姆猫.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>10</integer>
 		</dict>
+		<key>汤姆猫.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>通过代理监听滚动事件.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
+		<key>通过代理监听滚动事件.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>16</integer>

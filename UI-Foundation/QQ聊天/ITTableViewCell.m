@@ -66,7 +66,7 @@
     NSString *bubbleImage = model.type ? @"chat_recive_nor" : @"chat_send_nor";
     UIImage *image = [self resizeImageWithImage:bubbleImage];
     [self.messageButton setBackgroundImage:image forState:UIControlStateNormal];
-    self.messageButton.imageEdgeInsets = UIEdgeInsetsMake(20, 20, 20, 20);
+    self.messageButton.contentEdgeInsets = UIEdgeInsetsMake(20, 20, 20, 20);
 }
 // 设置控件的 frame
 - (void)setModelFrameFromModel:(ITChat *)model {
@@ -84,27 +84,17 @@
     // 注意：根据加载的头像不同，他们的头像 frame 也不完全相同
     CGFloat iconWidth = 30;
     CGFloat iconHeight = iconWidth;
+    CGFloat iconX = model.type == ITChatPersonOther ? margin : screenWidth - iconWidth - margin;
     CGFloat iconY = CGRectGetMaxY(self.timeLabel.frame) + margin;
-    if (model.type) {
-        CGFloat iconX = margin;
-        self.iconImageView.frame = CGRectMake(iconX, iconY, iconWidth, iconHeight);
-    } else {
-        CGFloat iconX = screenWidth - iconWidth - margin;
-        self.iconImageView.frame = CGRectMake(iconX, iconY, iconWidth, iconHeight);
-    }
+    self.iconImageView.frame = CGRectMake(iconX, iconY, iconWidth, iconHeight);
     // 设置对话框的 frame
     // 注意：根据加载的头像不同，他们的对话框的 frame 也不完全相同
     CGSize messageSize = [self.messageButton.currentTitle boundingRectWithSize:CGSizeMake(screenWidth - 4 * iconWidth - 4 * margin, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: messageFont} context:nil].size;
     CGFloat messageWidth = messageSize.width;
     CGFloat messageHeight = messageSize.height;
+    CGFloat messageX = model.type == ITChatPersonOther ? CGRectGetMaxX(self.iconImageView.frame) : CGRectGetMinX(self.iconImageView.frame) - messageWidth;
     CGFloat messageY = iconY;
-    if (model.type) {
-        CGFloat messageX = CGRectGetMaxX(self.iconImageView.frame);
-        self.messageButton.frame = CGRectMake(messageX, messageY, messageWidth, messageHeight);
-    } else {
-        CGFloat messageX = CGRectGetMinX(self.iconImageView.frame) - messageWidth;
-        self.messageButton.frame = CGRectMake(messageX, messageY, messageWidth, messageHeight);
-    }
+    self.messageButton.frame = CGRectMake(messageX, messageY, messageWidth, messageHeight);
     CGFloat rowHeight = CGRectGetMaxY(self.iconImageView.frame) > CGRectGetMaxY(self.messageButton.frame) ? CGRectGetMaxY(self.iconImageView.frame) + margin : CGRectGetMaxY(self.messageButton.frame) + margin;
     model.height = rowHeight;
 }
