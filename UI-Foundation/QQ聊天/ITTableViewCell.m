@@ -77,7 +77,8 @@
      - (UIImage *)resizableImageWithCapInsets:(UIEdgeInsets)capInsets resizingMode:(UIImageResizingMode)resizingMode （iOS 6 上的方法）
      参数一：UIEdgeInsets 需要缩放的区域。参数二：缩放的方式（拉伸: UIImageResizingModeTile， 平铺:UIImageResizingModeStretch）。实现的效果是拉伸/缩放参数一中的区域。没有缩放的地方依旧保留。
 
-     拉伸完毕以后：还需要将按钮进行放大。因为不放大的话按钮的最大 size 是文字区域的大小
+     拉伸完毕以后：还需要将按钮进行放大（注意：文字区域不放大）。因为不放大的话按钮的最大 size 是文字区域的大小。
+     所以需要将按钮放大，然后在这个按钮中设置内边距(contentEdgeInsets 属性)，保证文字能够进入消息框当中。
      */
     NSString *normalBubbleImage = model.type ? @"chat_recive_nor" : @"chat_send_nor";
     NSString *highLightedBubbleImage = model.type ? @"chat_recive_press_pic" : @"chat_send_press_pic";
@@ -113,6 +114,7 @@
     // 设置对话框的 frame
     // 注意：根据加载的头像不同，他们的对话框的 frame 也不完全相同
     CGSize messageSize = [self.messageButton.currentTitle boundingRectWithSize:CGSizeMake(screenWidth - 4 * iconWidth - 4 * margin, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: messageFont} context:nil].size;
+    // 注意：在这里放大 button 的 size
     CGFloat messageWidth = messageSize.width + 30;
     CGFloat messageHeight = messageSize.height + 30;
     CGFloat messageX = model.type == ITChatPersonOther ? CGRectGetMaxX(self.iconImageView.frame) : CGRectGetMinX(self.iconImageView.frame) - messageWidth;
@@ -121,6 +123,7 @@
     CGFloat rowHeight = MAX(CGRectGetMaxY(self.iconImageView.frame), CGRectGetMaxY(self.messageButton.frame));
     model.height = rowHeight + margin;
 }
+// 封装好的设置 size 方法
 - (UIImage *)resizeImageFromImage:(UIImage *)image {
     const CGFloat newWidth = image.size.width / 2;
     const CGFloat newHeight = image.size.height / 2;
