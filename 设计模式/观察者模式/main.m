@@ -28,7 +28,7 @@ int main(int argc, const char * argv[]) {
         NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
         NSString *notificationName = @"精选";
         // 添加监听者的方法
-        [center addObserver:listener selector:@selector(message) name:notificationName object:sender];
+        [center addObserver:listener selector:@selector(messageWithNotification:) name:notificationName object:sender];
         [center postNotificationName:notificationName object:sender userInfo:@{@"今日大事": @"周涛在宿舍中吵着嚷着上头条", @"新闻" : @"周大爷一直想上头条不成"}];
     }
     return 0;
