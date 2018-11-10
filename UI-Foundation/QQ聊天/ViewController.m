@@ -11,6 +11,7 @@
 
 @property (nonatomic, strong) NSArray *chatArr;
 @property (weak, nonatomic) IBOutlet UITableView *chatTableView;
+@property (weak, nonatomic) IBOutlet UITextField *messageTextField;
 
 @end
 
@@ -37,6 +38,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.messageTextField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 3, 1)];
+    self.messageTextField.leftViewMode = UITextFieldViewModeWhileEditing;
 }
 
 // MARK: - Table View data source

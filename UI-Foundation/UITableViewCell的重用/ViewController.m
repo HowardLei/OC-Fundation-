@@ -12,6 +12,7 @@
  对 Cell ID 的优化
  */
 @interface ViewController () <UITableViewDataSource>
+
 @property (nonatomic, strong) NSArray *arr;
 @property (weak, nonatomic) IBOutlet UITableView *heroesTableView;
 
@@ -60,6 +61,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
 }
 
 @end

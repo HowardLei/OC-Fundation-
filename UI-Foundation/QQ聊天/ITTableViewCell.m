@@ -44,7 +44,6 @@
         self.messageButton = messageButton;
         [self.contentView addSubview:messageButton];
     }
-    self.backgroundColor = [UIColor clearColor];
     return self;
 }
 // 重写 setModel 方法。
@@ -65,27 +64,12 @@
     [self.messageButton setTitle:model.text forState:UIControlStateNormal];
     self.messageButton.titleLabel.font = messageFont;
     self.messageButton.titleLabel.numberOfLines = 0;
-    // 设置按钮的背景图
-    /*
-     注意：背景图需要根据文字的大小进行变换。所以需要对已有图片进行伸缩变换。
-     伸缩变换方法的总结
-     1、单纯进行平铺的方法
-     - (UIImage *)stretchableImageWithLeftCapWidth:(NSInteger)leftCapWidth topCapHeight:(NSInteger)topCapHeight;
-     参数一：选定的点距左边距的距离。参数二：选定的点距上边框的距离。实现的效果是从图形中选定了一个点，(x, y)分别为参数一，参数二。然后根据点做与x轴y轴平行的边，截取出4个图形。保留这4个图形。剩下需要填充的部分用选定的点的色彩进行填充。
-     这个方法实际上已经弃用，但是苹果 API 还没有对其进行修改。
-     2、可以进行平铺和拉伸的方法
-     - (UIImage *)resizableImageWithCapInsets:(UIEdgeInsets)capInsets resizingMode:(UIImageResizingMode)resizingMode （iOS 6 上的方法）
-     参数一：UIEdgeInsets 需要缩放的区域。参数二：缩放的方式（拉伸: UIImageResizingModeTile， 平铺:UIImageResizingModeStretch）。实现的效果是拉伸/缩放参数一中的区域。没有缩放的地方依旧保留。
-
-     拉伸完毕以后：还需要将按钮进行放大（注意：文字区域不放大）。因为不放大的话按钮的最大 size 是文字区域的大小。
-     所以需要将按钮放大，然后在这个按钮中设置内边距(contentEdgeInsets 属性)，保证文字能够进入消息框当中。
-     */
+    // 设置按钮的背景图，封装成了一个方法
     NSString *normalBubbleImage = model.type ? @"chat_recive_nor" : @"chat_send_nor";
     NSString *highLightedBubbleImage = model.type ? @"chat_recive_press_pic" : @"chat_send_press_pic";
-    UIImage *image = [UIImage imageNamed:normalBubbleImage];
-    image =  [self resizeImageFromImage:image];
+    [self setImage:normalBubbleImage WithButton:self.messageButton ForState:UIControlStateNormal];
+    [self setImage:highLightedBubbleImage WithButton:self.messageButton ForState:UIControlStateHighlighted];
     self.backgroundColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1];
-    [self.messageButton setBackgroundImage:image forState:UIControlStateNormal];
     self.messageButton.contentEdgeInsets = UIEdgeInsetsMake(15, 15, 15, 15);
 }
 // 设置控件的 frame
@@ -124,9 +108,25 @@
     model.height = rowHeight + margin;
 }
 // 封装好的设置 size 方法
-- (UIImage *)resizeImageFromImage:(UIImage *)image {
-    const CGFloat newWidth = image.size.width / 2;
-    const CGFloat newHeight = image.size.height / 2;
-    return [image resizableImageWithCapInsets:UIEdgeInsetsMake(newWidth, newHeight, newHeight, newWidth) resizingMode:UIImageResizingModeStretch];
+/*
+ 注意：背景图需要根据文字的大小进行变换。所以需要对已有图片进行伸缩变换。
+ 伸缩变换方法的总结
+ 1、单纯进行平铺的方法
+ - (UIImage *)stretchableImageWithLeftCapWidth:(NSInteger)leftCapWidth topCapHeight:(NSInteger)topCapHeight;
+ 参数一：选定的点距左边距的距离。参数二：选定的点距上边框的距离。实现的效果是从图形中选定了一个点，(x, y)分别为参数一，参数二。然后根据点做与x轴y轴平行的边，截取出4个图形。保留这4个图形。剩下需要填充的部分用选定的点的色彩进行填充。
+ 这个方法实际上已经弃用，但是苹果 API 还没有对其进行修改。
+ 2、可以进行平铺和拉伸的方法
+ - (UIImage *)resizableImageWithCapInsets:(UIEdgeInsets)capInsets resizingMode:(UIImageResizingMode)resizingMode （iOS 6 上的方法）
+ 参数一：UIEdgeInsets 需要缩放的区域。参数二：缩放的方式（拉伸: UIImageResizingModeTile， 平铺:UIImageResizingModeStretch）。实现的效果是拉伸/缩放参数一中的区域。没有缩放的地方依旧保留。
+
+ 拉伸完毕以后：还需要将按钮进行放大（注意：文字区域不放大）。因为不放大的话按钮的最大 size 是文字区域的大小。
+ 所以需要将按钮放大，然后在这个按钮中设置内边距(contentEdgeInsets 属性)，保证文字能够进入消息框当中。
+ */
+- (void)setImage:(NSString *)image WithButton:(UIButton *)button ForState:(UIControlState) state {
+    UIImage *newImage = [UIImage imageNamed:image];
+    const CGFloat newWidth = newImage.size.width / 2;
+    const CGFloat newHeight = newImage.size.height / 2;
+    newImage = [newImage resizableImageWithCapInsets:UIEdgeInsetsMake(newWidth, newHeight, newHeight, newWidth) resizingMode:UIImageResizingModeStretch];
+    [button setBackgroundImage:newImage forState:state];
 }
 @end
