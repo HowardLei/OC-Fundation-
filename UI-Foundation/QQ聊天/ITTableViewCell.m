@@ -8,6 +8,7 @@
 #import "ITTableViewCell.h"
 #define messageFont [UIFont systemFontOfSize:14]
 #define timeFont [UIFont systemFontOfSize:12]
+
 @interface ITTableViewCell ()
 @property (nonatomic, weak) UILabel *timeLabel;
 @property (nonatomic, weak) UIImageView *iconImageView;
@@ -43,6 +44,7 @@
         self.messageButton = messageButton;
         [self.contentView addSubview:messageButton];
     }
+    self.backgroundColor = [UIColor clearColor];
     return self;
 }
 // 重写 setModel 方法。
@@ -63,10 +65,27 @@
     [self.messageButton setTitle:model.text forState:UIControlStateNormal];
     self.messageButton.titleLabel.font = messageFont;
     self.messageButton.titleLabel.numberOfLines = 0;
-    NSString *bubbleImage = model.type ? @"chat_recive_nor" : @"chat_send_nor";
-    UIImage *image = [self resizeImageWithImage:bubbleImage];
+    // 设置按钮的背景图
+    /*
+     注意：背景图需要根据文字的大小进行变换。所以需要对已有图片进行伸缩变换。
+     伸缩变换方法的总结
+     1、单纯进行平铺的方法
+     - (UIImage *)stretchableImageWithLeftCapWidth:(NSInteger)leftCapWidth topCapHeight:(NSInteger)topCapHeight;
+     参数一：选定的点距左边距的距离。参数二：选定的点距上边框的距离。实现的效果是从图形中选定了一个点，(x, y)分别为参数一，参数二。然后根据点做与x轴y轴平行的边，截取出4个图形。保留这4个图形。剩下需要填充的部分用选定的点的色彩进行填充。
+     这个方法实际上已经弃用，但是苹果 API 还没有对其进行修改。
+     2、可以进行平铺和拉伸的方法
+     - (UIImage *)resizableImageWithCapInsets:(UIEdgeInsets)capInsets resizingMode:(UIImageResizingMode)resizingMode （iOS 6 上的方法）
+     参数一：UIEdgeInsets 需要缩放的区域。参数二：缩放的方式（拉伸: UIImageResizingModeTile， 平铺:UIImageResizingModeStretch）。实现的效果是拉伸/缩放参数一中的区域。没有缩放的地方依旧保留。
+
+     拉伸完毕以后：还需要将按钮进行放大。因为不放大的话按钮的最大 size 是文字区域的大小
+     */
+    NSString *normalBubbleImage = model.type ? @"chat_recive_nor" : @"chat_send_nor";
+    NSString *highLightedBubbleImage = model.type ? @"chat_recive_press_pic" : @"chat_send_press_pic";
+    UIImage *image = [UIImage imageNamed:normalBubbleImage];
+    image =  [self resizeImageFromImage:image];
+    self.backgroundColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1];
     [self.messageButton setBackgroundImage:image forState:UIControlStateNormal];
-    self.messageButton.contentEdgeInsets = UIEdgeInsetsMake(20, 20, 20, 20);
+    self.messageButton.contentEdgeInsets = UIEdgeInsetsMake(15, 15, 15, 15);
 }
 // 设置控件的 frame
 - (void)setModelFrameFromModel:(ITChat *)model {
@@ -77,6 +96,10 @@
     CGFloat timeHeight = 10;
     CGFloat timeX = 0;
     CGFloat timeY = margin;
+    self.timeLabel.hidden = model.timeHidden;
+    if (self.timeLabel.isHidden) {
+        timeHeight = 0;
+    }
     self.timeLabel.frame = CGRectMake(timeX, timeY, timeWidth, timeHeight);
     self.timeLabel.textAlignment = NSTextAlignmentCenter;
     self.timeLabel.font = timeFont;
@@ -90,19 +113,17 @@
     // 设置对话框的 frame
     // 注意：根据加载的头像不同，他们的对话框的 frame 也不完全相同
     CGSize messageSize = [self.messageButton.currentTitle boundingRectWithSize:CGSizeMake(screenWidth - 4 * iconWidth - 4 * margin, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: messageFont} context:nil].size;
-    CGFloat messageWidth = messageSize.width;
-    CGFloat messageHeight = messageSize.height;
+    CGFloat messageWidth = messageSize.width + 30;
+    CGFloat messageHeight = messageSize.height + 30;
     CGFloat messageX = model.type == ITChatPersonOther ? CGRectGetMaxX(self.iconImageView.frame) : CGRectGetMinX(self.iconImageView.frame) - messageWidth;
     CGFloat messageY = iconY;
     self.messageButton.frame = CGRectMake(messageX, messageY, messageWidth, messageHeight);
-    CGFloat rowHeight = CGRectGetMaxY(self.iconImageView.frame) > CGRectGetMaxY(self.messageButton.frame) ? CGRectGetMaxY(self.iconImageView.frame) + margin : CGRectGetMaxY(self.messageButton.frame) + margin;
-    model.height = rowHeight;
+    CGFloat rowHeight = MAX(CGRectGetMaxY(self.iconImageView.frame), CGRectGetMaxY(self.messageButton.frame));
+    model.height = rowHeight + margin;
 }
-- (UIImage *)resizeImageWithImage:(NSString *)imageName {
-    UIImage *rowImage = [UIImage imageNamed:imageName];
-    CGFloat halfImageHeight = rowImage.size.height / 2;
-    CGFloat halfImageWidth = rowImage.size.width / 2;
-    UIImage *newImage = [rowImage resizableImageWithCapInsets:UIEdgeInsetsMake(halfImageHeight, halfImageWidth, halfImageHeight, halfImageWidth) resizingMode:UIImageResizingModeStretch];
-    return newImage;
+- (UIImage *)resizeImageFromImage:(UIImage *)image {
+    const CGFloat newWidth = image.size.width / 2;
+    const CGFloat newHeight = image.size.height / 2;
+    return [image resizableImageWithCapInsets:UIEdgeInsetsMake(newWidth, newHeight, newHeight, newWidth) resizingMode:UIImageResizingModeStretch];
 }
 @end

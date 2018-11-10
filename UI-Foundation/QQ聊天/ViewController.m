@@ -8,6 +8,7 @@
 #import "ViewController.h"
 #import "ITTableViewCell.h"
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+
 @property (nonatomic, strong) NSArray *chatArr;
 @property (weak, nonatomic) IBOutlet UITableView *chatTableView;
 
@@ -22,6 +23,11 @@
         NSMutableArray *modelArr = [NSMutableArray array];
         for (NSDictionary *dictionary in arr) {
             ITChat *model = [ITChat chatWithDict:dictionary];
+            NSString *lastModelTime = [[modelArr lastObject] time];
+            // 在添加单元格的时候，判断是否上个单元格中的时间与下个相同。如果相同就隐藏，否则不隐藏。
+            if ([model.time isEqualToString:lastModelTime]) {
+                model.timeHidden = YES;
+            }
             [modelArr addObject:model];
         }
         _chatArr = modelArr;
@@ -41,7 +47,6 @@
     ITTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
         cell = [[ITTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-        cell.backgroundColor = [UIColor redColor];
     }
     // 设置单元格数据
     cell.model = model;

@@ -19,8 +19,12 @@ typedef enum{
 @property (nonatomic, copy) NSString *time;
 @property (nonatomic, assign) ITChatPerson type;
 @property (nonatomic, assign) CGFloat height;
+// 创建一个属性，用来判断时间框是否需要被隐藏
+@property (nonatomic, assign) BOOL timeHidden;
+
 - (instancetype)initWithDict:(NSDictionary *)dict;
 + (instancetype)chatWithDict:(NSDictionary *)dict;
+
 @end
 
 NS_ASSUME_NONNULL_END
