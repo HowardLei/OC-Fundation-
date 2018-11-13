@@ -1420,6 +1420,7 @@
 		6EA2383321452968008C7F1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EA2383521452968008C7F1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EA2383621452968008C7F1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6EAF22FF219AE0E9003A2CAB /* NSIndexPath补充.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath补充.h"; sourceTree = "<group>"; };
 		6EB30C6C2174999400483004 /* QQ聊天.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QQ聊天.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB30C6E2174999400483004 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6EB30C6F2174999400483004 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -3073,6 +3074,7 @@
 				6EB30C7C2174999500483004 /* Info.plist */,
 				6EB30C7D2174999500483004 /* main.m */,
 				6EB30C8721749CA900483004 /* messages.plist */,
+				6EAF22FF219AE0E9003A2CAB /* NSIndexPath补充.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

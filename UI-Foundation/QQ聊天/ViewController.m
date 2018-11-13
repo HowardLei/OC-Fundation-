@@ -16,7 +16,14 @@
 @end
 
 @implementation ViewController
-// MARK: 懒加载数据
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.messageTextField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 3, 1)];
+    self.messageTextField.leftViewMode = UITextFieldViewModeWhileEditing;
+    [self keyBoardPop];
+}
+
+// MARK: - 懒加载数据
 - (NSArray *)chatArr {
     if (_chatArr == nil) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"messages" ofType:@".plist"];
@@ -35,14 +42,7 @@
     }
     return _chatArr;
 }
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.messageTextField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 3, 1)];
-    self.messageTextField.leftViewMode = UITextFieldViewModeWhileEditing;
-    [self keyBoardPop];
-}
-
+// MARK: - 处理键盘事件
 /**
  管理键盘弹出事件
  */
@@ -58,7 +58,16 @@
      */
     CGFloat keyboardHeight = [notification.userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue].origin.y - [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y;
     CGFloat delta = self.view.frame.origin.y - keyboardHeight;
-    self.view.transform = CGAffineTransformMakeTranslation(0, delta);
+    [UIView animateWithDuration:0.25 animations:^{
+        self.view.transform = CGAffineTransformMakeTranslation(0, delta);
+    }];
+    [self scrollToLastRow];
+}
+// 当键盘弹出的时候，直接显示最后一行。注意：这个方法是在监听到键盘弹出来的时候再触发。
+- (void)scrollToLastRow {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.chatArr.count - 1 inSection:0];
+    // 滚动到指定行 方法： UITableView 对象 scrollToRowAtIndexPath:(NSIndexPath *)indexPath atScrollPosition:(UITableViewScrollPosition)scrollPosition animated:(BOOL)animated;
+    [self.chatTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 // MARK: - Table View data source
 // 设置单元格格式
@@ -84,4 +93,7 @@
     return model.height;
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 @end

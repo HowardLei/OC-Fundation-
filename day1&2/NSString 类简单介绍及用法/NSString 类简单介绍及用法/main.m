@@ -14,7 +14,7 @@ int main(int argc, const char * argv[]) {
         NSString * str3 = [[NSString alloc] initWithString:str1];
         NSLog(@"这是我复制的%@",str3);
         //4.格式化创建字符串
-        NSString * str4 = [NSString stringWithFormat:@"图片 xxxx %- %02d.jpg",19];//为啥我这个不能修改？
+        NSString * str4 = [NSString stringWithFormat:@"图片 xxxx %02d.jpg",19];//为啥我这个不能修改？
         NSLog(@"%@",str4);
     }
     return 0;
