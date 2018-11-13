@@ -40,8 +40,26 @@
     [super viewDidLoad];
     self.messageTextField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 3, 1)];
     self.messageTextField.leftViewMode = UITextFieldViewModeWhileEditing;
+    [self keyBoardPop];
 }
 
+/**
+ 管理键盘弹出事件
+ */
+- (void)keyBoardPop {
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(doWhenKeyboardFrameChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
+}
+// 当监听到键盘的 frame 即将改变的时候，执行以下方法
+- (void)doWhenKeyboardFrameChange:(NSNotification *)notification {
+    /*
+     思路：当键盘弹入屏幕的时候，控制 view 中 y 方向上的偏移量即可。
+     即键盘的y值减去view的高度即可。
+     */
+    CGFloat keyboardHeight = [notification.userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue].origin.y - [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y;
+    CGFloat delta = self.view.frame.origin.y - keyboardHeight;
+    self.view.transform = CGAffineTransformMakeTranslation(0, delta);
+}
 // MARK: - Table View data source
 // 设置单元格格式
 - (ITTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -65,4 +83,5 @@
     ITChat *model = self.chatArr[indexPath.row];
     return model.height;
 }
+
 @end
