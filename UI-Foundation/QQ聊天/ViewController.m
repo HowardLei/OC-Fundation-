@@ -7,9 +7,9 @@
 
 #import "ViewController.h"
 #import "ITTableViewCell.h"
-@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 
-@property (nonatomic, strong) NSArray *chatArr;
+@property (nonatomic, strong) NSMutableArray *chatArr;
 @property (weak, nonatomic) IBOutlet UITableView *chatTableView;
 @property (weak, nonatomic) IBOutlet UITextField *messageTextField;
 
@@ -24,7 +24,7 @@
 }
 
 // MARK: - 懒加载数据
-- (NSArray *)chatArr {
+- (NSMutableArray *)chatArr {
     if (_chatArr == nil) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"messages" ofType:@".plist"];
         NSArray *arr = [NSArray arrayWithContentsOfFile:path];
@@ -42,6 +42,7 @@
     }
     return _chatArr;
 }
+
 // MARK: - 处理键盘事件
 /**
  管理键盘弹出事件
@@ -58,6 +59,7 @@
      */
     CGFloat keyboardHeight = [notification.userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue].origin.y - [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y;
     CGFloat delta = self.view.frame.origin.y - keyboardHeight;
+    // 这个地方为了控制键盘弹出时间与 view 的弹出时间一致
     [UIView animateWithDuration:0.25 animations:^{
         self.view.transform = CGAffineTransformMakeTranslation(0, delta);
     }];
@@ -68,6 +70,23 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.chatArr.count - 1 inSection:0];
     // 滚动到指定行 方法： UITableView 对象 scrollToRowAtIndexPath:(NSIndexPath *)indexPath atScrollPosition:(UITableViewScrollPosition)scrollPosition animated:(BOOL)animated;
     [self.chatTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+}
+
+// MARK: - Scroll View Delegate
+// 当触发滚动条的时候，收起键盘
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self.view endEditing:YES];
+}
+// MARK: - TextField Delegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    ITChat *model = [[ITChat alloc] init];
+    model.text = textField.text;
+    model.type = ITChatPersonMe;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"今天 HH-mm";
+    model.time = [formatter stringFromDate:[NSDate date]];
+    [self.chatArr addObject:model];
+    return YES;
 }
 // MARK: - Table View data source
 // 设置单元格格式
@@ -86,6 +105,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.chatArr.count;
 }
+
 // MARK: - Table View delegate
 // 设置行高
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
