@@ -77,8 +77,10 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     [self.view endEditing:YES];
 }
-// MARK: - TextField Delegate
+
+// MARK: - Text Field Delegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    // 创建一个新模型，存储里面的数据
     ITChat *model = [[ITChat alloc] init];
     model.text = textField.text;
     model.type = ITChatPersonMe;
@@ -86,11 +88,16 @@
     formatter.dateFormat = @"今天 HH-mm";
     model.time = [formatter stringFromDate:[NSDate date]];
     [self.chatArr addObject:model];
+    // 将数据添加完成以后，刷新数据
+    [self.chatTableView reloadData];
+    textField.text = nil;
     return YES;
 }
+
 // MARK: - Table View data source
 // 设置单元格格式
 - (ITTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"cellForRowAtIndexPath");
     ITChat *model = self.chatArr[indexPath.row];
     static NSString *ID = @"message";
     ITTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
@@ -103,12 +110,14 @@
 }
 // 设置 tableView 的行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSLog(@"numberOfRowInSection");
     return self.chatArr.count;
 }
 
 // MARK: - Table View delegate
 // 设置行高
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"heightForRowAtIndexPath");
     ITChat *model = self.chatArr[indexPath.row];
     return model.height;
 }
@@ -116,4 +125,5 @@
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
 @end
