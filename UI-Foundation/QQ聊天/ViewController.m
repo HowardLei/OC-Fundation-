@@ -7,11 +7,12 @@
 
 #import "ViewController.h"
 #import "ITTableViewCell.h"
+
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 
 @property (nonatomic, strong) NSMutableArray *chatArr;
 @property (weak, nonatomic) IBOutlet UITableView *chatTableView;
-@property (weak, nonatomic) IBOutlet UITextField *messageTextField;
+@property (weak, nonatomic) IBOutlet UITextField *messageTextField;\
 
 @end
 
@@ -93,8 +94,9 @@
     [self.chatArr addObject:model];
     // 将数据添加完成以后，刷新数据
     [self.chatTableView reloadData];
-    [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.chatArr.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
     textField.text = nil;
+    // 将滚动方法延迟执行，给 self.charTableView 一些刷新时间。
+    [self performSelector:@selector(scrollToLastRow) withObject:self afterDelay:0.01];
     return YES;
 }
 
