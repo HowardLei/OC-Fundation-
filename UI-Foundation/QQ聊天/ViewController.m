@@ -18,8 +18,7 @@
 @implementation ViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.messageTextField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 3, 1)];
-    self.messageTextField.leftViewMode = UITextFieldViewModeWhileEditing;
+    [self setTextFieldData];
     [self keyBoardPop];
 }
 
@@ -68,8 +67,8 @@
 // 当键盘弹出的时候，直接显示最后一行。注意：这个方法是在监听到键盘弹出来的时候再触发。
 - (void)scrollToLastRow {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.chatArr.count - 1 inSection:0];
-    // 滚动到指定行 方法： UITableView 对象 scrollToRowAtIndexPath:(NSIndexPath *)indexPath atScrollPosition:(UITableViewScrollPosition)scrollPosition animated:(BOOL)animated;
     [self.chatTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    // 滚动到指定行 方法： UITableView 对象 scrollToRowAtIndexPath:(NSIndexPath *)indexPath atScrollPosition:(UITableViewScrollPosition)scrollPosition animated:(BOOL)animated;
 }
 
 // MARK: - Scroll View Delegate
@@ -77,7 +76,11 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     [self.view endEditing:YES];
 }
-
+// MARK: - Text Field Data Source
+- (void)setTextFieldData {
+    self.messageTextField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 3, 1)];
+    self.messageTextField.leftViewMode = UITextFieldViewModeWhileEditing;
+}
 // MARK: - Text Field Delegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     // 创建一个新模型，存储里面的数据
@@ -85,11 +88,12 @@
     model.text = textField.text;
     model.type = ITChatPersonMe;
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"今天 HH-mm";
+    formatter.dateFormat = @"今天 HH:mm";
     model.time = [formatter stringFromDate:[NSDate date]];
     [self.chatArr addObject:model];
     // 将数据添加完成以后，刷新数据
     [self.chatTableView reloadData];
+    [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.chatArr.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
     textField.text = nil;
     return YES;
 }
@@ -97,7 +101,6 @@
 // MARK: - Table View data source
 // 设置单元格格式
 - (ITTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"cellForRowAtIndexPath");
     ITChat *model = self.chatArr[indexPath.row];
     static NSString *ID = @"message";
     ITTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
@@ -110,14 +113,12 @@
 }
 // 设置 tableView 的行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"numberOfRowInSection");
     return self.chatArr.count;
 }
 
 // MARK: - Table View delegate
 // 设置行高
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"heightForRowAtIndexPath");
     ITChat *model = self.chatArr[indexPath.row];
     return model.height;
 }

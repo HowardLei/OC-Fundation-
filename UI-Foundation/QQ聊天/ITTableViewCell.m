@@ -17,13 +17,6 @@
 
 @implementation ITTableViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-}
 // 重写 initWithStyle 方法，自定义 cell 中的控件
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -122,8 +115,8 @@
  拉伸完毕以后：还需要将按钮进行放大（注意：文字区域不放大）。因为不放大的话按钮的最大 size 是文字区域的大小。
  所以需要将按钮放大，然后在这个按钮中设置内边距(contentEdgeInsets 属性)，保证文字能够进入消息框当中。
  */
-- (void)setImage:(NSString *)image WithButton:(UIButton *)button ForState:(UIControlState) state {
-    UIImage *newImage = [UIImage imageNamed:image];
+- (void)setImage:(NSString *)imageName WithButton:(UIButton *)button ForState:(UIControlState) state {
+    UIImage *newImage = [UIImage imageNamed:imageName];
     const CGFloat newWidth = newImage.size.width / 2;
     const CGFloat newHeight = newImage.size.height / 2;
     newImage = [newImage resizableImageWithCapInsets:UIEdgeInsetsMake(newWidth, newHeight, newHeight, newWidth) resizingMode:UIImageResizingModeStretch];
