@@ -18,8 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 }
+
 // MARK: - Models Lazy Loading
 - (NSArray *)groupArr {
     if (_groupArr == nil) {
@@ -54,7 +54,10 @@
 }
 // 自定义 UITableView 的 headerView 。
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    ITGroup *model = self.groupArr[section];
     ITHeaderFooterView *headerFooterView = [ITHeaderFooterView headerFooterViewWithTableView:tableView];
+    headerFooterView.model = model;
     return headerFooterView;
 }
+
 @end

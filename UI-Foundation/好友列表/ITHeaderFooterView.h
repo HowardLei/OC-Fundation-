@@ -6,10 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ITGroup.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ITHeaderFooterView : UITableViewHeaderFooterView
+@property (nonatomic, strong) ITGroup *model;
 + (instancetype)headerFooterViewWithTableView:(UITableView * )tableView;
 @end
 
