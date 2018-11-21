@@ -595,6 +595,7 @@
 		6E4997FC2158EF8C00CA996E /* heroes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E4997FB2158EF8C00CA996E /* heroes.plist */; };
 		6E49A0AF2161C893000BCB98 /* tgs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E49A0AE2161C893000BCB98 /* tgs.plist */; };
 		6E49A0B22161C8B7000BCB98 /* ITGoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E49A0B12161C8B7000BCB98 /* ITGoods.m */; };
+		6E5312BD21A54DE2004FF928 /* ITHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5312BC21A54DE2004FF928 /* ITHeaderFooterView.m */; };
 		6E53BEEB215A5A4600056EDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53BEEA215A5A4600056EDA /* AppDelegate.m */; };
 		6E53BEEE215A5A4600056EDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53BEED215A5A4600056EDA /* ViewController.m */; };
 		6E53BEF1215A5A4600056EDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E53BEEF215A5A4600056EDA /* Main.storyboard */; };
@@ -1358,6 +1359,8 @@
 		6E49A0AE2161C893000BCB98 /* tgs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tgs.plist; sourceTree = "<group>"; };
 		6E49A0B02161C8B7000BCB98 /* ITGoods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITGoods.h; sourceTree = "<group>"; };
 		6E49A0B12161C8B7000BCB98 /* ITGoods.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITGoods.m; sourceTree = "<group>"; };
+		6E5312BB21A54DE2004FF928 /* ITHeaderFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITHeaderFooterView.h; sourceTree = "<group>"; };
+		6E5312BC21A54DE2004FF928 /* ITHeaderFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITHeaderFooterView.m; sourceTree = "<group>"; };
 		6E53BEE7215A5A4500056EDA /* 展示汽车模型（多组版）.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "展示汽车模型（多组版）.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E53BEE9215A5A4600056EDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6E53BEEA215A5A4600056EDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -2584,6 +2587,8 @@
 				6E7029B721A037A300BD5CA5 /* ITTableViewCell.m */,
 				6E0D1F4A21A023CA00DF4A53 /* Main.storyboard */,
 				6E0D1F4F21A023CB00DF4A53 /* LaunchScreen.storyboard */,
+				6E5312BB21A54DE2004FF928 /* ITHeaderFooterView.h */,
+				6E5312BC21A54DE2004FF928 /* ITHeaderFooterView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -4972,6 +4977,7 @@
 				6E0D1F6621A0261300DF4A53 /* ITFriends.m in Sources */,
 				6E7029B821A037A300BD5CA5 /* ITTableViewCell.m in Sources */,
 				6E0D1F4621A023CA00DF4A53 /* AppDelegate.m in Sources */,
+				6E5312BD21A54DE2004FF928 /* ITHeaderFooterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

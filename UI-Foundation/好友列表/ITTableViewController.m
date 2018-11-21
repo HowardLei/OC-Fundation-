@@ -9,6 +9,7 @@
 #import "ITGroup.h"
 #import "ITFriends.h"
 #import "ITTableViewCell.h"
+#import "ITHeaderFooterView.h"
 @interface ITTableViewController ()
 @property (nonatomic, strong) NSArray *groupArr;
 @end
@@ -17,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
 }
 // MARK: - Models Lazy Loading
 - (NSArray *)groupArr {
@@ -32,6 +34,7 @@
     }
     return _groupArr;
 }
+
 // MARK: - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.groupArr.count;
@@ -40,16 +43,18 @@
     ITGroup *group = self.groupArr[section];
     return group.friends.count;
 }
+
 // MARK: - Table view delegate
 - (ITTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ITGroup *group = self.groupArr[indexPath.section];
     ITFriends *friend = group.friends[indexPath.row];
-    static NSString *ID = @"friendCell";
-    ITTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (!cell) {
-        cell = [[ITTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-    }
+    ITTableViewCell *cell = [ITTableViewCell cellWithTableView:tableView];
     cell.model = friend;
     return cell;
+}
+// 自定义 UITableView 的 headerView 。
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    ITHeaderFooterView *headerFooterView = [ITHeaderFooterView headerFooterViewWithTableView:tableView];
+    return headerFooterView;
 }
 @end

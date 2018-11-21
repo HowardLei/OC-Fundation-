@@ -18,6 +18,7 @@ int main(int argc, const char * argv[]) {
         Apple *a = [[Apple alloc]init];
         a.name = @"苹果";
         [p eatFruit:a];
+        NSLog(@"%g", [a sellWithPrice:2]);
     }
     return 0;
 }

@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ITTableViewCell : UITableViewCell
 @property (nonatomic, strong) ITFriends *model;
++ (instancetype)cellWithTableView:(UITableView *)cell;
 @end
 
 NS_ASSUME_NONNULL_END

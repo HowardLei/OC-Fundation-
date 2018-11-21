@@ -14,7 +14,17 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>SEL.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>Static在OC中的用法.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>Static在OC中的用法.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>7</integer>
@@ -24,7 +34,17 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>Super关键字.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>day4作业.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>day4作业.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>8</integer>
@@ -33,6 +53,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
+		</dict>
+		<key>多态.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>多态实现.xcscheme</key>
 		<dict>
@@ -44,12 +69,27 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>成员变量修饰符.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>类对象.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>类对象.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>继承.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>继承.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
