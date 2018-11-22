@@ -49,7 +49,6 @@
 		18105755211022D80055B868 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18105753211022D80055B868 /* LaunchScreen.storyboard */; };
 		18105758211022D80055B868 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18105757211022D80055B868 /* main.m */; };
 		1879105521197486003FE839 /* buttongreen_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 1879104521197485003FE839 /* buttongreen_highlighted.png */; };
-		1879105621197486003FE839 /* app.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1879104621197485003FE839 /* app.plist */; };
 		1879105721197486003FE839 /* icon_00.png in Resources */ = {isa = PBXBuildFile; fileRef = 1879104821197486003FE839 /* icon_00.png */; };
 		1879105821197486003FE839 /* icon_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1879104921197486003FE839 /* icon_01.png */; };
 		1879105921197486003FE839 /* icon_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1879104A21197486003FE839 /* icon_02.png */; };
@@ -555,6 +554,7 @@
 		18DAAA1921156EFD004C1991 /* fart.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DAA85821156EFC004C1991 /* fart.png */; };
 		18DAAA1A21156EFD004C1991 /* pie.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DAA85921156EFC004C1991 /* pie.png */; };
 		18DAAA1B21156EFD004C1991 /* scratch.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DAA85A21156EFC004C1991 /* scratch.png */; };
+		18DB6B2121A64DF1009970D0 /* app.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18DB6B2021A64DF1009970D0 /* app.plist */; };
 		18E99E8521107554005C5660 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E99E8421107554005C5660 /* AppDelegate.m */; };
 		18E99E8821107554005C5660 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E99E8721107554005C5660 /* ViewController.m */; };
 		18E99E8B21107554005C5660 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E99E8921107554005C5660 /* Main.storyboard */; };
@@ -768,7 +768,6 @@
 		1810575C211023370055B868 /* summary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = summary.h; sourceTree = "<group>"; };
 		182423A621199FD6008736B9 /* Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Extension.h; sourceTree = "<group>"; };
 		1879104521197485003FE839 /* buttongreen_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttongreen_highlighted.png; sourceTree = "<group>"; };
-		1879104621197485003FE839 /* app.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = app.plist; path = "../../../第3天/资料/图片/app.plist"; sourceTree = "<group>"; };
 		1879104821197486003FE839 /* icon_00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_00.png; sourceTree = "<group>"; };
 		1879104921197486003FE839 /* icon_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_01.png; sourceTree = "<group>"; };
 		1879104A21197486003FE839 /* icon_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_02.png; sourceTree = "<group>"; };
@@ -1292,6 +1291,7 @@
 		18DAA85821156EFC004C1991 /* fart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fart.png; sourceTree = "<group>"; };
 		18DAA85921156EFC004C1991 /* pie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pie.png; sourceTree = "<group>"; };
 		18DAA85A21156EFC004C1991 /* scratch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scratch.png; sourceTree = "<group>"; };
+		18DB6B2021A64DF1009970D0 /* app.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = app.plist; sourceTree = "<group>"; };
 		18E99E8121107554005C5660 /* transform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = transform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E99E8321107554005C5660 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E99E8421107554005C5660 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1800,8 +1800,8 @@
 				180357A12116E21400CD0643 /* AppDelegate.h */,
 				180357A22116E21400CD0643 /* AppDelegate.m */,
 				180357AA2116E21400CD0643 /* Assets.xcassets */,
+				18DB6B2021A64DF1009970D0 /* app.plist */,
 				180357AF2116E21400CD0643 /* Info.plist */,
-				1879104621197485003FE839 /* app.plist */,
 				1879104521197485003FE839 /* buttongreen_highlighted.png */,
 				1879105421197486003FE839 /* buttongreen.png */,
 				1879104721197486003FE839 /* Icons */,
@@ -4106,6 +4106,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DB6B2121A64DF1009970D0 /* app.plist in Resources */,
 				180357C92116E24600CD0643 /* app.plist in Resources */,
 				1879105B21197486003FE839 /* icon_04.png in Resources */,
 				180357AE2116E21400CD0643 /* LaunchScreen.storyboard in Resources */,
@@ -4115,7 +4116,6 @@
 				180357AB2116E21400CD0643 /* Assets.xcassets in Resources */,
 				1879105F21197486003FE839 /* icon_08.png in Resources */,
 				1879105921197486003FE839 /* icon_02.png in Resources */,
-				1879105621197486003FE839 /* app.plist in Resources */,
 				1879106221197486003FE839 /* icon_11.png in Resources */,
 				1879105C21197486003FE839 /* icon_05.png in Resources */,
 				1879106121197486003FE839 /* icon_10.png in Resources */,
