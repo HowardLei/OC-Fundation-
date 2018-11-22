@@ -23,8 +23,12 @@
     self.label.text = [NSString stringWithFormat:@"%d / %lu", model.online.intValue, model.friends.count];
 }
 - (void)setDataFrameWithModel:(ITGroup *)model {
-    self.button.frame = CGRectMake(0, 0, 100, 40);
     self.label.frame = CGRectMake(250, 0, 55, 40);
+}
+// 注意：当设置 button 的 frame 大小的时候。
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.button.frame = self.bounds;
 }
 + (instancetype)headerFooterViewWithTableView:(UITableView *)tableView {
     static NSString *ID = @"headerFooterView";
