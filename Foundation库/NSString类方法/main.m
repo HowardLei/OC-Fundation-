@@ -87,6 +87,7 @@ void search() {
     NSLog(@"%@", subStr3);
     // E、字符串的替换 方法：stringByReplacingOccurrencesOfString:需要替换部分的字符串 withString:替换部分 的字符串。（注意：新串在方法的返回值中，需要用一个字符串进行接收）
     NSString *str8 = @"我爱北京天安门";
+    NSLog(@"%@", [str8 substringWithRange:NSMakeRange(2, 2)]);
     str8 = [str8 stringByReplacingOccurrencesOfString:@"北京天安门" withString:@"广州"];
     NSLog(@"%@", str8);
     // F、字符串的类型转换。需要转换成什么类型就写xxxValue.（注意：从头开始转换，能转换多少是多少，到遇到不能转换的时候就停止转换。）
@@ -139,12 +140,32 @@ void NSRangeExtension() {
     NSLog(@"%@", NSStringFromRange(a));
     NSLog(@"%@", NSStringFromRange(b));
 }
+void demo1(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // 1、NSString 类的构造方法
-        append();
+//        int a = 10;
+//        int b = 20;
+//        demo1(&a, &b);
+//        NSLog(@"%d,%d", a, b);
+//        NSURL *url = [[NSURL alloc] initWithString:@"https://github.com/"];
+//        NSError *err = [[NSError alloc] init];
+//        NSLog(@"%@", [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&err]);
+        NSString *str = @"123";
+        NSString *str8 = @"我爱北京天安门";
+        NSString *str1 = [NSString stringWithString:str];
+        NSString *str2 = str;
+        NSLog(@"%@，%@，%@", str, str1, str2);
+        str = [str stringByReplacingOccurrencesOfString:@"2" withString:@"4"];
+        NSLog(@"%@，%@，%@", str, str1, str2);
+        NSRange range;
+//        append();
 //        search();
-        others();
+//        others();
 //        NSRangeExtension();
     }
     return 0;
