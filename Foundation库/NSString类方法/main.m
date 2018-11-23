@@ -76,7 +76,7 @@ void search() {
     NSRange g = [str6 rangeOfString:@"Desktop" options:2];
     NSLog(@"%lu", g.length);
     // D、字符串的截取
-    NSString *str7 = @"我爱张梦灿";
+    NSString *str7 = @"你看看这个世界";
     // 从第几个开始截取 方法：substringFromIndex: 参数输入的即为从第几个开始一直截取到字符串结束的子字符串。
     NSString *subStr1 = [str7 substringFromIndex:2];
     // 从头截取，一直到第几个 方法：substringToIndex: 参数输入截取的字符数
