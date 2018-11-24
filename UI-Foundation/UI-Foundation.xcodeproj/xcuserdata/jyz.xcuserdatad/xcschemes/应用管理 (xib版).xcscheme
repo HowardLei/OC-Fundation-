@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "18791067211974D3003FE839"
-               BuildableName = "&#24212;&#29992;&#31649;&#29702; (xib&#29256;).app"
-               BlueprintName = "&#24212;&#29992;&#31649;&#29702; (xib&#29256;)"
+               BuildableName = "&#x5e94;&#x7528;&#x7ba1;&#x7406; (xib&#x7248;).app"
+               BlueprintName = "&#x5e94;&#x7528;&#x7ba1;&#x7406; (xib&#x7248;)"
                ReferencedContainer = "container:UI-Foundation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18791067211974D3003FE839"
-            BuildableName = "&#24212;&#29992;&#31649;&#29702; (xib&#29256;).app"
-            BlueprintName = "&#24212;&#29992;&#31649;&#29702; (xib&#29256;)"
+            BuildableName = "&#x5e94;&#x7528;&#x7ba1;&#x7406; (xib&#x7248;).app"
+            BlueprintName = "&#x5e94;&#x7528;&#x7ba1;&#x7406; (xib&#x7248;)"
             ReferencedContainer = "container:UI-Foundation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18791067211974D3003FE839"
-            BuildableName = "&#24212;&#29992;&#31649;&#29702; (xib&#29256;).app"
-            BlueprintName = "&#24212;&#29992;&#31649;&#29702; (xib&#29256;)"
+            BuildableName = "&#x5e94;&#x7528;&#x7ba1;&#x7406; (xib&#x7248;).app"
+            BlueprintName = "&#x5e94;&#x7528;&#x7ba1;&#x7406; (xib&#x7248;)"
             ReferencedContainer = "container:UI-Foundation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18791067211974D3003FE839"
-            BuildableName = "&#24212;&#29992;&#31649;&#29702; (xib&#29256;).app"
-            BlueprintName = "&#24212;&#29992;&#31649;&#29702; (xib&#29256;)"
+            BuildableName = "&#x5e94;&#x7528;&#x7ba1;&#x7406; (xib&#x7248;).app"
+            BlueprintName = "&#x5e94;&#x7528;&#x7ba1;&#x7406; (xib&#x7248;)"
             ReferencedContainer = "container:UI-Foundation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

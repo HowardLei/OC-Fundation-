@@ -10,7 +10,7 @@
 #import "ITFriends.h"
 #import "ITTableViewCell.h"
 #import "ITHeaderFooterView.h"
-@interface ITTableViewController ()
+@interface ITTableViewController () <ITHeaderFooterViewDelegate>
 @property (nonatomic, strong) NSArray *groupArr;
 @end
 
@@ -41,7 +41,8 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     ITGroup *group = self.groupArr[section];
-    return group.friends.count;
+    NSInteger rows = group.isVisible == YES ? group.friends.count : 0;
+    return rows;
 }
 
 // MARK: - Table view delegate
@@ -57,7 +58,13 @@
     ITGroup *model = self.groupArr[section];
     ITHeaderFooterView *headerFooterView = [ITHeaderFooterView headerFooterViewWithTableView:tableView];
     headerFooterView.model = model;
+    headerFooterView.delegate = self;
+    headerFooterView.tag = section;
     return headerFooterView;
+}
+
+- (void)reloadTheDataWithHeaderView:(nonnull ITHeaderFooterView *)headerView {
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:headerView.tag] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 @end

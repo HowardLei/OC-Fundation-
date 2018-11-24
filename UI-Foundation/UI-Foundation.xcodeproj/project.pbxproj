@@ -41,7 +41,6 @@
 		180357AE2116E21400CD0643 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180357AC2116E21400CD0643 /* LaunchScreen.storyboard */; };
 		180357B12116E21400CD0643 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 180357B02116E21400CD0643 /* main.m */; };
 		180357B72116E22800CD0643 /* ITApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 180357B62116E22800CD0643 /* ITApp.m */; };
-		180357C92116E24600CD0643 /* app.plist in Resources */ = {isa = PBXBuildFile; fileRef = 180357B92116E24500CD0643 /* app.plist */; };
 		1810574A211022D60055B868 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18105749211022D60055B868 /* AppDelegate.m */; };
 		1810574D211022D60055B868 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1810574C211022D60055B868 /* ViewController.m */; };
 		18105750211022D60055B868 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1810574E211022D60055B868 /* Main.storyboard */; };
@@ -3948,7 +3947,7 @@
 			attributes = {
 				CLASSPREFIX = IT;
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1010;
 				TargetAttributes = {
 					1800859B210EC1AC0032073E = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -4107,7 +4106,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DB6B2121A64DF1009970D0 /* app.plist in Resources */,
-				180357C92116E24600CD0643 /* app.plist in Resources */,
 				1879105B21197486003FE839 /* icon_04.png in Resources */,
 				180357AE2116E21400CD0643 /* LaunchScreen.storyboard in Resources */,
 				1879105D21197486003FE839 /* icon_06.png in Resources */,

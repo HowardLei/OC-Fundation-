@@ -6,21 +6,23 @@
 //
 
 #import "ITHeaderFooterView.h"
+
 @interface ITHeaderFooterView ()
 @property (nonatomic, weak) UIButton *button;
 @property (nonatomic, weak) UILabel *label;
 @end
 
 @implementation ITHeaderFooterView
+// 注意：在设置模型的方法当中，并没有对模型中的 frame 进行设置
 - (void)setModel:(ITGroup *)model {
     _model = model;
     [self setDataWithModel:model];
-    [self setDataFrameWithModel:model];
 }
 - (void)setDataWithModel:(ITGroup *)model {
     [self.button setTitle:model.name forState:UIControlStateNormal];
     [self.button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     self.button.backgroundColor = [UIColor yellowColor];
+    [self.button addTarget:self action:@selector(touchToFoldOrUnfold) forControlEvents:UIControlEventTouchUpInside];
     self.label.text = [NSString stringWithFormat:@"%d / %lu", model.online.intValue, model.friends.count];
 }
 // 注意：在这个方法无法通过 self.bounds 属性设置 frame。因为这个时候的 bounds 还是 {0, 0}, {0, 0}
@@ -30,6 +32,15 @@
     也就是说，只有当 headerView 的 frame 被赋值了以后，他的 bounds 值才有意义。
  */
 - (void)setDataFrameWithModel:(ITGroup *)model {
+}
+// 按钮的点击事件
+- (void)touchToFoldOrUnfold {
+    // 1、设置群组是否为可见
+    self.model.visible = !self.model.isVisible;
+    // 2、执行代理方法
+    if ([self.delegate respondsToSelector:@selector(reloadTheDataWithHeaderView:)]) {
+        [self.delegate reloadTheDataWithHeaderView:self];
+    }
 }
 // 设置子控件布局的方法。
 // 该方法触发条件：1、改变了 view 的 frame 。2、调用 addSubView 方法的时候。
@@ -42,9 +53,7 @@
     self.button.contentEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
     self.button.titleEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 0);
     // FIXME:设置 label 的 frame
-
-    CGSize labelSize = [self.label.text boundingRectWithSize:CGSizeMake(MAXFLOAT, self.bounds.size.height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:12]} context:nil].size;
-    self.label.frame = CGRectMake(300, 0, 100, 100);
+    self.label.frame = CGRectMake(300, 0, 100, self.bounds.size.height);
 }
 + (instancetype)headerFooterViewWithTableView:(UITableView *)tableView {
     static NSString *ID = @"headerFooterView";
