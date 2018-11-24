@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *icon;
 @property (nonatomic, copy) NSString *intro;
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, strong) NSNumber *vip;
+@property (nonatomic, strong, getter=isVip) NSNumber *vip;
 - (instancetype)initWithDict:(NSDictionary *)dict;
 + (instancetype)friendsWithDict:(NSDictionary *)dict;
 @end

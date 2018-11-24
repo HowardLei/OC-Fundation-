@@ -21,7 +21,12 @@
 - (void)setDataWithModel:(ITGroup *)model {
     [self.button setTitle:model.name forState:UIControlStateNormal];
     [self.button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    self.button.backgroundColor = [UIColor yellowColor];
+    self.button.imageView.contentMode = UIViewContentModeCenter;
+    self.button.imageView.clipsToBounds = NO;
+    /*
+     注意：在设置按钮的图片的时候，需要检查一下小三角是不是应该旋转。因为当他不检查的时候，会由于 headerView 的复用而将之前展开的三角形保留下来。
+     */
+    [self triangleRotate];
     [self.button addTarget:self action:@selector(touchToFoldOrUnfold) forControlEvents:UIControlEventTouchUpInside];
     self.label.text = [NSString stringWithFormat:@"%d / %lu", model.online.intValue, model.friends.count];
 }
@@ -33,13 +38,34 @@
  */
 - (void)setDataFrameWithModel:(ITGroup *)model {
 }
-// 按钮的点击事件
+// MARK: 按钮的点击事件
 - (void)touchToFoldOrUnfold {
     // 1、设置群组是否为可见
     self.model.visible = !self.model.isVisible;
     // 2、执行代理方法
     if ([self.delegate respondsToSelector:@selector(reloadTheDataWithHeaderView:)]) {
         [self.delegate reloadTheDataWithHeaderView:self];
+    }
+    /*
+     本来这个地方是要设置旋转，为啥不能在这设置，由于旋转的时候会有一段时间的动画，而代理方法执行速度比动画快，会导致动画还没播完而单元格已经重新经过刷新。等动画播完以后 tableView 已经刷新完成了，而刷新完的 tableView 的上边的小三角在初始化的时候是指向右。所以会出现先执行完旋转而后又恢复原状。
+     解决方法：等他刷新完 tableView 以后再执行旋转。调用 didMoveToSuperview 方法
+     */
+}
+// MARK: 当 headerView 的父控件(也就是 tableView)发生改变的时候需要执行的方法
+- (void)didMoveToSuperview {
+    // 3、旋转小三角
+    [self triangleRotate];
+}
+// MARK: 判断小三角是否旋转
+- (void)triangleRotate {
+    if (self.model.isVisible) {
+        [UIView animateWithDuration:0.5 animations:^{
+            self.button.imageView.transform = CGAffineTransformMakeRotation(M_PI_2);
+        }];
+    } else {
+        [UIView animateWithDuration:0.5 animations:^{
+            self.button.imageView.transform = CGAffineTransformMakeRotation(0);
+        }];
     }
 }
 // 设置子控件布局的方法。

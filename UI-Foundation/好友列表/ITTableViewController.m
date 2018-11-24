@@ -59,6 +59,7 @@
     ITHeaderFooterView *headerFooterView = [ITHeaderFooterView headerFooterViewWithTableView:tableView];
     headerFooterView.model = model;
     headerFooterView.delegate = self;
+    // 通过 tag 值来确定哪部分是需要被展开或者被折叠，tag 值为哪一部分
     headerFooterView.tag = section;
     return headerFooterView;
 }

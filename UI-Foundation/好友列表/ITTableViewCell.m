@@ -19,6 +19,7 @@
 // 设置模型数据
 - (void)setModelDataWithModel:(ITFriends *)model {
     self.textLabel.text = model.name;
+    self.textLabel.textColor = (model.isVip.boolValue == YES ? [UIColor redColor] : [UIColor blackColor]);
     self.detailTextLabel.text = model.intro;
     self.imageView.image = [UIImage imageNamed:model.icon];
 }
