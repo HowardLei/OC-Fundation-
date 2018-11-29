@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6EDBE2D82165C05E0055C02B"
-               BuildableName = "&#x5fae;&#x535a;&#x6848;&#x4f8b;.app"
-               BlueprintName = "&#x5fae;&#x535a;&#x6848;&#x4f8b;"
+               BuildableName = "&#24494;&#21338;&#26696;&#20363;.app"
+               BlueprintName = "&#24494;&#21338;&#26696;&#20363;"
                ReferencedContainer = "container:UI-Foundation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6EDBE2D82165C05E0055C02B"
-            BuildableName = "&#x5fae;&#x535a;&#x6848;&#x4f8b;.app"
-            BlueprintName = "&#x5fae;&#x535a;&#x6848;&#x4f8b;"
+            BuildableName = "&#24494;&#21338;&#26696;&#20363;.app"
+            BlueprintName = "&#24494;&#21338;&#26696;&#20363;"
             ReferencedContainer = "container:UI-Foundation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6EDBE2D82165C05E0055C02B"
-            BuildableName = "&#x5fae;&#x535a;&#x6848;&#x4f8b;.app"
-            BlueprintName = "&#x5fae;&#x535a;&#x6848;&#x4f8b;"
+            BuildableName = "&#24494;&#21338;&#26696;&#20363;.app"
+            BlueprintName = "&#24494;&#21338;&#26696;&#20363;"
             ReferencedContainer = "container:UI-Foundation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -79,8 +79,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E90AD2421467E960002E14B"
-            BuildableName = "&#x56fe;&#x7247;&#x8f6e;&#x64ad;&#x5668;.app"
-            BlueprintName = "&#x56fe;&#x7247;&#x8f6e;&#x64ad;&#x5668;"
+            BuildableName = "&#22270;&#29255;&#36718;&#25773;&#22120;.app"
+            BlueprintName = "&#22270;&#29255;&#36718;&#25773;&#22120;"
             ReferencedContainer = "container:UI-Foundation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -6,5 +6,5 @@
 }
 @property id obj;
 @property NSString * name;
--(void)studyWithLanguage:(id)language;
+-(void)studyWithLanguage:(Language *)language;
 @end

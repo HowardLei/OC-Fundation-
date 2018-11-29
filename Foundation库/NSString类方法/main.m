@@ -162,7 +162,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%@，%@，%@", str, str1, str2);
         str = [str stringByReplacingOccurrencesOfString:@"2" withString:@"4"];
         NSLog(@"%@，%@，%@", str, str1, str2);
-        NSRange range;
+        NSString *str5 = @"FAHIKGAKLGFAHJIL FLA";
 //        append();
 //        search();
 //        others();

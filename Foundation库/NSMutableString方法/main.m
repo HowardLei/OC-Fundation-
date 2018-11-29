@@ -49,9 +49,14 @@ void alter() {
 }
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        add();
-        delete();
-        alter();
+//        add();
+//        delete();
+//        alter();
+        NSMutableString *str = [NSMutableString stringWithString:@"fhadsjkfhgbdjask"];
+        [str replaceCharactersInRange:NSMakeRange(2, 4) withString:@"string"];
+        [str replaceOccurrencesOfString:@"bdjas" withString:@"string" options:NSBackwardsSearch range:NSMakeRange(str.length - 7, 7)];
+        NSLog(@"%@", str);
+
     }
     return 0;
 }
