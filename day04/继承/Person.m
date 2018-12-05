@@ -2,9 +2,10 @@
 
 @implementation Person
 - (void)eatFruit:(Fruit *)fruit{
-    NSLog(@"%@正在吃%@", _name, fruit.name);
+    NSLog(@"父类正在吃%@", fruit.name);
 }
+
 - (void)show {
-    NSLog(@"%@", _age);
+    NSLog(@"%@", self.name);
 }
 @end

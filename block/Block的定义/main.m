@@ -15,7 +15,8 @@ void demo1() {
     NSLog(@"不知道");
 }
 // 用 typedef 声明一个 block 的名。（用于化简前面的一大推东西，类似于化简 struct）。
-typedef int(^calc)(int a, int b);
+typedef int (^calc)(int a, int b);
+typedef void (^myBlock1)(void);
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // 函数指针写法
@@ -31,6 +32,9 @@ int main(int argc, const char * argv[]) {
         int a = 12, b = 23;
         calc func = ^(int a, int b){
             return a + b;
+        };
+        myBlock1 func1 = ^() {
+            NSLog(@"这是一个块");
         };
         int temp = func(a, b);
         NSLog(@"%d", temp);

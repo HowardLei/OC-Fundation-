@@ -21,7 +21,7 @@ void add() {
     NSLog(@"arr1数组的元素为%@，数组中一共有%ld个元素", arr1, arr1.count);
 }
 // MARK: 数组的删除
-void Remove() {
+void remove() {
     NSArray *arr = @[@"UNIX", @"Ubentu", @"macOS", @"Windows"];
     NSMutableArray *varArr = [NSMutableArray arrayWithArray:arr];
     // a) 删除数组中的指定元素 方法：removeObject: 元素名
@@ -52,7 +52,7 @@ void replace() {
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 //        add();
-//        Remove();
+//        remove();
         replace();
     }
     return 0;

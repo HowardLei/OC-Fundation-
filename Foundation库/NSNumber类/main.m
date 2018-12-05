@@ -12,7 +12,6 @@
  */
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        test1();
         // 1、创建一个 NSNumber 对象
         NSNumber *num = [[NSNumber alloc] init];
         // 2、设置值
@@ -33,6 +32,9 @@ int main(int argc, const char * argv[]) {
         for (NSNumber *num in arr1) {
             NSLog(@"NSArray数组中的第%d个元素为：%@", num.intValue, num);
         }
+        [arr1 enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSLog(@"%@", obj);
+        }];
     }
     return 0;
 }

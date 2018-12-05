@@ -1,10 +1,11 @@
 #import "Dog.h"
+#import "Person.h"
 #import <Foundation/Foundation.h>
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Dog * c = [Dog new];
-        Dog * d = [[Dog alloc]init];
+        Dog * d = [[Dog alloc] init];
         /*
          上边两句等价
          因为：new一下，做了3件事
@@ -24,6 +25,7 @@ int main(int argc, const char * argv[]) {
          2.需要先初始化该对象,然后才能使用它
          3.但由于未进行初始化, 随后可能出现一些不可预测的行为  （这是什么意思？）
          */
+        Person *p = [Person new];
     }
     return 0;
 }

@@ -84,8 +84,9 @@
 // MARK: 删除控件
 - (IBAction)removeAllViews:(UIButton *)sender {
     // 思路：先进行判断 view 中的所有子空间中的第一个元素有没有，如果有，则将其删除，一直删到没有。
-    while (self.view.subviews.firstObject) {
-        [self.view.subviews.firstObject removeFromSuperview];
+    UIView *view = self.view.subviews.firstObject;
+    while (view) {
+        [view removeFromSuperview];
     }
 }
 - (void)didReceiveMemoryWarning {

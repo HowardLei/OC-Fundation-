@@ -1,6 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "Person.h"
 #import "Fruit.h"
+#import "Student.h"
 /*
  继承
  1、定义：让某个类型的对象获得另一个类型的对象的属性的方法。
@@ -15,9 +16,11 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Person *p = [[Person alloc]init];
         p.name = @"王尼玛";
+        Person *p1 = [Student new];
         Apple *a = [[Apple alloc]init];
         a.name = @"苹果";
         [p eatFruit:a];
+        [p1 eatFruit:a];
         NSLog(@"%g", [a sellWithPrice:2]);
     }
     return 0;

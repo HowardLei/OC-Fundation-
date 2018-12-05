@@ -57,12 +57,12 @@ void search() {
     }
     NSLog(@"-------");
     // 5、用块遍历字典 方法：enumerateKeysAndObjectsUsingBlock:指定的代码块
-    [dict enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop) {
-        NSLog(@"key = %@, value = %@", key, value);
+    [dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        NSLog(@"key = %@, value = %@", key, obj);
     }];
     // 6、将字典中的数据保存在文件中 方法：writeToFile: 文件路径 atomically: 默认写 NO
     [dict writeToFile:@"/Users/jyz/Desktop/abc.plist" atomically:NO];
-    // 7、从文件中读取字典中的数据 方法：dictionaryZWithContenesOfFile: 文件路径
+    // 7、从文件中读取字典中的数据 方法：dictionaryWithContentsOfFile: 文件路径
     NSDictionary *newDict = [NSDictionary dictionaryWithContentsOfFile:@"/Users/jyz/Desktop/abc.plist"];
     NSLog(@"%@", newDict);
 }
@@ -73,15 +73,12 @@ void keySort() {
                            @"School": @"Oxford",
                            @"Property": @"nonatomic"
                            };
-    // FIXME:为什么这个地方比较的是 key 的顺序？
     NSArray *arr1 = [dict keysSortedByValueUsingComparator:^NSComparisonResult(NSString *key1, NSString *key2) {
         if ([key1 compare:key2] == -1) {
             return NSOrderedDescending;
+        } else {
+            return NSOrderedSame;
         }
-        if ([key1 compare:key2] == 1) {
-            return NSOrderedAscending;
-        }
-        return NSOrderedSame;
     }];
     // FIXME:为什么这个地方比较的是 value 的长度？
     NSArray *arr2 = [dict keysSortedByValueUsingComparator:^NSComparisonResult(NSString *value1,  NSString *value2) {
@@ -156,12 +153,10 @@ void readFromFile() {
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 //        create();
-//        search();
+        search();
 //        keySort();
 //        store();
 //        readFromFile();
-        Person *p1 = [[Person alloc] initWithName:@"王尼玛"];
-        NSLog(@"%@", [p1 valueForKey:@"name"]);
     }
     return 0;
 }

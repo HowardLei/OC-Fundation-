@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E354C9021AFCC55006645C9 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E354C8F21AFCC55006645C9 /* Person.m */; };
 		6E53CCB71FCD757F00B336FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CCB61FCD757F00B336FE /* main.m */; };
 		6E53CCBD1FCD759F00B336FE /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CCBC1FCD759F00B336FE /* Person.m */; };
 		6E53CCC01FCD77D900B336FE /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CCBF1FCD77D900B336FE /* Student.m */; };
@@ -141,6 +142,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6E354C8E21AFCC55006645C9 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		6E354C8F21AFCC55006645C9 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		6E53CCB41FCD757F00B336FE /* 构造方法练习 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "构造方法练习"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E53CCB61FCD757F00B336FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6E53CCBB1FCD759F00B336FE /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -424,6 +427,8 @@
 			isa = PBXGroup;
 			children = (
 				6E8037151FCAABF200F1F322 /* main.m */,
+				6E354C8E21AFCC55006645C9 /* Person.h */,
+				6E354C8F21AFCC55006645C9 /* Person.m */,
 				6E80371A1FCAAC0C00F1F322 /* Dog.h */,
 				6E80371B1FCAAC0C00F1F322 /* Dog.m */,
 			);
@@ -805,6 +810,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E354C9021AFCC55006645C9 /* Person.m in Sources */,
 				6E80371C1FCAAC0C00F1F322 /* Dog.m in Sources */,
 				6E8037161FCAABF200F1F322 /* main.m in Sources */,
 			);
@@ -1846,6 +1852,7 @@
 				6E53CCB91FCD757F00B336FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E53CCC91FCD7BDA00B336FE /* Build configuration list for PBXNativeTarget "构造方法练习2" */ = {
 			isa = XCConfigurationList;
@@ -1854,6 +1861,7 @@
 				6E53CCCB1FCD7BDA00B336FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E53CCDD1FCD866600B336FE /* Build configuration list for PBXNativeTarget "构造方法练习3" */ = {
 			isa = XCConfigurationList;
@@ -1862,6 +1870,7 @@
 				6E53CCDF1FCD866600B336FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E58EA081FC6E067009FF3A2 /* Build configuration list for PBXNativeTarget "id类型" */ = {
 			isa = XCConfigurationList;
