@@ -10,6 +10,7 @@
 #import "ITAppCell.h"
 @interface ITTableViewController () <ITAppCellDelegate>
 @property (nonatomic, strong) NSArray *modelArr;
+@property (nonatomic, weak)UILabel *label;
 @end
 
 @implementation ITTableViewController
@@ -55,15 +56,35 @@
 // FIXME: label 的属性没写好
 - (void)showLabel {
     UILabel *label = [[UILabel alloc] init];
-    [self setLabelFrame:label];
-    [self.view addSubview:label];
+    self.label = label;
+    NSTimeInterval delayTime = 0.5;
+    [UIView animateWithDuration:delayTime animations:^{
+        [self setLabelContent];
+        [self setLabelFrame];
+        [self.view addSubview:label];
+    }];
+    [self performSelector:@selector(hideLabel) withObject:nil afterDelay:delayTime * 2];
 }
 
-- (void)setLabelFrame:(UILabel *)label {
-    CGFloat labelWidth;
-    CGFloat labelHeight;
-    CGFloat labelX;
-    CGFloat labelY;
-    label.frame = CGRectMake(labelX, labelY, labelWidth, labelHeight);
+- (void)setLabelFrame{
+    CGFloat labelWidth = self.view.bounds.size.width;
+    CGFloat labelHeight = 30;
+    CGFloat labelX = 0;
+    CGFloat labelY = (self.view.bounds.size.height - labelHeight) / 2;
+    self.label.frame = CGRectMake(labelX, labelY, labelWidth, labelHeight);
+}
+
+- (void)setLabelContent {
+    self.label.backgroundColor = [UIColor greenColor];
+    self.label.alpha = 0.8;
+    self.label.text = @"开始下载";
+    self.label.textColor = [UIColor blackColor];
+    self.label.textAlignment = NSTextAlignmentCenter;
+}
+- (void)hideLabel{
+    [UIView animateWithDuration:0.5 animations:^{
+        self.label.alpha = 0;
+    }];
+    self.label = nil;
 }
 @end
