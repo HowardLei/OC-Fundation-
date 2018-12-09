@@ -57,30 +57,31 @@
 - (void)showLabel {
     UILabel *label = [[UILabel alloc] init];
     self.label = label;
+    [self setLabelFrame];
     NSTimeInterval delayTime = 0.5;
     [UIView animateWithDuration:delayTime animations:^{
         [self setLabelContent];
-        [self setLabelFrame];
         [self.view addSubview:label];
     }];
     [self performSelector:@selector(hideLabel) withObject:nil afterDelay:delayTime * 2];
 }
 
 - (void)setLabelFrame{
-    CGFloat labelWidth = self.view.bounds.size.width;
+    CGFloat labelWidth = [UIScreen mainScreen].bounds.size.width;
     CGFloat labelHeight = 30;
     CGFloat labelX = 0;
-    CGFloat labelY = (self.view.bounds.size.height - labelHeight) / 2;
+    CGFloat labelY = ([UIScreen mainScreen].bounds.size.height - labelHeight) / 2;
     self.label.frame = CGRectMake(labelX, labelY, labelWidth, labelHeight);
+    self.label.alpha = 0.8;
 }
 
 - (void)setLabelContent {
     self.label.backgroundColor = [UIColor greenColor];
-    self.label.alpha = 0.8;
     self.label.text = @"开始下载";
     self.label.textColor = [UIColor blackColor];
     self.label.textAlignment = NSTextAlignmentCenter;
 }
+
 - (void)hideLabel{
     [UIView animateWithDuration:0.5 animations:^{
         self.label.alpha = 0;
