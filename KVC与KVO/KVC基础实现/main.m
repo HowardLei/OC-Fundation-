@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "Person.h"
+#import "Dog.h"
 /*
- 具体内容查找：http://www.cocoachina.com/ios/20180305/22441.html
  KVC(Key Value Coding) 键值监听。是一个非正式协议。KVC提供了一种间接访问其属性方法或成员变量的机制，可以通过字符串来访问对应的属性方法或成员变量。提供了一个 setter 方法和 getter 方法
  1、setter 方法
     - (void)setValue:(nullable id)value forKey:(NSString *)key;
@@ -10,6 +10,7 @@
     在使用KVC时，直接将属性名当做key，并设置value，即可对属性进行赋值。
     注意：这种方法的局限性是只能操作一层对象的属性。如果要操作对象的属性的属性，则需要下边的方法
     - (void)setValue:(nullable id)value forKeyPath:(NSString *)keyPath;
+    其中第一个参数仍然为属性对应的值，第二个参数为属性的路径，可以是 xxx.xxx(n 级都可以);
  2、getter 方法
  - (nullable id)valueForKey:(NSString *)key;
     返回这个 key 对应的属性的值（只能找一级属性）
@@ -41,6 +42,10 @@ int main(int argc, const char * argv[]) {
         Person *p1 = [[Person alloc] init];
         p1.name = @"王尼玛";
         NSLog(@"%@", [p1 valueForKey:@"name"]);
+        Dog *dog = [[Dog alloc] init];
+        p1.dog = dog;
+        [p1 setValue:@"王尼玛" forKeyPath:@"dog.name"];
+        NSLog(@"%@", p1.dog.name);
     }
     return 0;
 

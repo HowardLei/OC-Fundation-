@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E3102E221C6791A00099A99 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3102E121C6791A00099A99 /* Dog.m */; };
 		6E784FFE215B6F5D009C9303 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E784FFD215B6F5D009C9303 /* main.m */; };
 		6E785004215B6F75009C9303 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E785003215B6F75009C9303 /* Person.m */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6E3102E021C6791A00099A99 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		6E3102E121C6791A00099A99 /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
 		6E784FFA215B6F5D009C9303 /* KVC基础实现 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "KVC基础实现"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E784FFD215B6F5D009C9303 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6E785002215B6F75009C9303 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -61,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				6E784FFD215B6F5D009C9303 /* main.m */,
+				6E3102E021C6791A00099A99 /* Dog.h */,
+				6E3102E121C6791A00099A99 /* Dog.m */,
 				6E785002215B6F75009C9303 /* Person.h */,
 				6E785003215B6F75009C9303 /* Person.m */,
 			);
@@ -122,6 +127,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E3102E221C6791A00099A99 /* Dog.m in Sources */,
 				6E785004215B6F75009C9303 /* Person.m in Sources */,
 				6E784FFE215B6F5D009C9303 /* main.m in Sources */,
 			);
