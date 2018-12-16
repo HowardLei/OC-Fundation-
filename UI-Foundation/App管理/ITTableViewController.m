@@ -59,12 +59,9 @@
     self.label = label;
     [UIView animateWithDuration:0.5 animations:^{
         self.label.alpha = 0.7;
+        self.view.userInteractionEnabled = NO;
     } completion:^(BOOL finished) {
-        if (finished) {
-            [self performSelector:@selector(hideLabel) withObject:nil afterDelay:0.5 * 2];
-        } else {
-            return;
-        }
+        finished == YES ? [self performSelector:@selector(hideLabel) withObject:nil afterDelay:0.5 * 2] : NULL;
     }];
     [self.view addSubview:self.label];
 }
@@ -92,7 +89,10 @@
     [UIView animateWithDuration:1 animations:^{
         self.label.alpha = 0;
     } completion:^(BOOL finished) {
-        finished == YES ? [self.label removeFromSuperview] : NULL;
+        if (finished) {
+            [self.label removeFromSuperview];
+            self.view.userInteractionEnabled = YES;
+        }
     }];
     self.label = nil;
 }
