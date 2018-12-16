@@ -24,4 +24,4 @@ int main(int argc, const char * argv[]) {
     }
     return 0;
 }
-//Mac无法够买，买的话就直接崩掉
+// FIXME:Mac无法够买，买的话就直接崩掉

@@ -10,7 +10,7 @@
 #import "ITAppCell.h"
 @interface ITTableViewController () <ITAppCellDelegate>
 @property (nonatomic, strong) NSArray *modelArr;
-@property (nonatomic, weak)UILabel *label;
+@property (nonatomic, weak) UILabel *label;
 @end
 
 @implementation ITTableViewController
@@ -57,35 +57,48 @@
 - (void)showLabel {
     UILabel *label = [[UILabel alloc] init];
     self.label = label;
-    [self setLabelFrame];
-    NSTimeInterval delayTime = 0.5;
-    [UIView animateWithDuration:delayTime animations:^{
-        [self setLabelContent];
-        [self.view addSubview:label];
+    [UIView animateWithDuration:0.5 animations:^{
+        self.label.alpha = 0.7;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [self performSelector:@selector(hideLabel) withObject:nil afterDelay:0.5 * 2];
+        } else {
+            return;
+        }
     }];
-    [self performSelector:@selector(hideLabel) withObject:nil afterDelay:delayTime * 2];
+    [self.view addSubview:self.label];
 }
 
-- (void)setLabelFrame{
+- (void)setLabelFrame {
     CGFloat labelWidth = [UIScreen mainScreen].bounds.size.width;
     CGFloat labelHeight = 30;
     CGFloat labelX = 0;
     CGFloat labelY = ([UIScreen mainScreen].bounds.size.height - labelHeight) / 2;
     self.label.frame = CGRectMake(labelX, labelY, labelWidth, labelHeight);
-    self.label.alpha = 0.8;
+    self.label.layer.masksToBounds = YES;
+    self.label.layer.cornerRadius = 5;
 }
 
 - (void)setLabelContent {
     self.label.backgroundColor = [UIColor greenColor];
     self.label.text = @"开始下载";
+    self.label.font = [UIFont systemFontOfSize:16];
     self.label.textColor = [UIColor blackColor];
     self.label.textAlignment = NSTextAlignmentCenter;
+    self.label.alpha = 0;
 }
 
 - (void)hideLabel{
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:1 animations:^{
         self.label.alpha = 0;
+    } completion:^(BOOL finished) {
+        finished == YES ? [self.label removeFromSuperview] : NULL;
     }];
     self.label = nil;
+}
+- (void)setLabel:(UILabel *)label {
+    _label = label;
+    [self setLabelFrame];
+    [self setLabelContent];
 }
 @end
