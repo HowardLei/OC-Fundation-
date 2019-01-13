@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8b94861-e9f0-4186-becb-762bc4c34337" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Foundation库/Foundation库.xcodeproj/project.xcworkspace/xcuserdata/jyz.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../Foundation库/Foundation库.xcodeproj/project.xcworkspace/xcuserdata/jyz.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Foundation库/Foundation库.xcodeproj/xcuserdata/jyz.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../Foundation库/Foundation库.xcodeproj/xcuserdata/jyz.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Foundation库/NSMutableString方法/main.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Foundation库/NSMutableString方法/main.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Foundation库/NSString类方法/main.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Foundation库/NSString类方法/main.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI-Foundation.xcodeproj/project.xcworkspace/xcuserdata/jyz.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/UI-Foundation.xcodeproj/project.xcworkspace/xcuserdata/jyz.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Foundation库/Foundation库.xcodeproj/project.xcworkspace/xcuserdata/apple.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../Foundation库/Foundation库.xcodeproj/project.xcworkspace/xcuserdata/apple.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Foundation库/Foundation库.xcodeproj/xcuserdata/apple.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../Foundation库/Foundation库.xcodeproj/xcuserdata/apple.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Foundation库/单例模式/Person.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Foundation库/单例模式/Person.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App管理/ITTableViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/App管理/ITTableViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/ITChat.h" beforeDir="false" afterPath="$PROJECT_DIR$/QQ聊天/ITChat.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/ITChat.m" beforeDir="false" afterPath="$PROJECT_DIR$/QQ聊天/ITChat.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/ViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/QQ聊天/ViewController.m" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Developer/Xcode/DerivedData/UI-Foundation-fzmvjzmrlvnmejcimhmkjyszdtke/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,54 +33,56 @@
     <expand />
     <select />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_" />
-  <component name="FUSProjectUsageTrigger">
-    <session id="-570790580">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="9" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.26" value="1" />
-          <entry key="project.open.time.31" value="1" />
-          <entry key="project.open.time.34" value="1" />
-          <entry key="project.open.time.4" value="2" />
-          <entry key="project.opened" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="h" value="92" />
-          <entry key="m" value="1346" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="ObjectiveC" value="1438" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="h" value="2" />
-          <entry key="m" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="ObjectiveC" value="10" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.appcode.build">
-        <counts>
-          <entry key="buildservice" value="7" />
-          <entry key="xcodebuild" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_86EB036F-D026-40C5-9F83-2CB5D365E5B1" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App管理/ITTableViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#2#0" />
+                <element signature="e#155#308#0" />
+                <element signature="e#349#432#0" />
+                <element signature="e#434#575#0" />
+                <element signature="e#577#1130#0" />
+                <element signature="e#711#904#0" />
+                <element signature="e#1131#1650#0" />
+                <element signature="e#1651#2088#0" />
+                <element signature="e#1810#1897#0" />
+                <element signature="e#1909#2045#0" />
+                <element signature="e#2090#2475#0" />
+                <element signature="e#2477#2771#0" />
+                <element signature="e#2773#3070#0" />
+                <element signature="e#2838#2876#0" />
+                <element signature="e#2888#3044#0" />
+                <element signature="e#3072#3222#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App管理/ITTableViewController.h">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/通过代理监听缩放事件/ViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/通过代理监听缩放事件/ViewController.h">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -91,20 +97,15 @@
         <option value="$PROJECT_DIR$/好友列表/ITHeaderFooterView.h" />
         <option value="$PROJECT_DIR$/好友列表/ITTableViewController.m" />
         <option value="$PROJECT_DIR$/好友列表/ITHeaderFooterView.m" />
+        <option value="$PROJECT_DIR$/App管理/ITTableViewController.m" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="705" />
-    <option name="y" value="483" />
+    <option name="y" value="411" />
     <option name="width" value="1465" />
-    <option name="height" value="1023" />
+    <option name="height" value="1095" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -113,7 +114,6 @@
     </navigator>
     <panes>
       <pane id="Cidr.FilesView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -121,10 +121,22 @@
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="UI-Foundation" type="1d218c8b:XcodeProjectNode" />
             </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="UI-Foundation" type="1d218c8b:XcodeProjectNode" />
+              <item name="通过代理监听缩放事件" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="UI-Foundation" type="1d218c8b:XcodeProjectNode" />
+              <item name="通过代理监听缩放事件" type="fcab9f18:XcodeViewNode" />
+              <item name="View" type="fcab9f18:XcodeViewNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -145,35 +157,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Add calculator">
-    <configuration name="应用管理 (xib版)" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="UI-Foundation" TARGET_NAME="应用管理 (xib版)" CONFIG_NAME="Debug" SCHEME_NAME="应用管理 (xib版)" IS_LOCATION_SIMULATION_ALLOWED="true" RUN_TARGET_PROJECT_NAME="UI-Foundation" RUN_TARGET_NAME="应用管理 (xib版)" MAKE_ACTIVE="TRUE">
+  <component name="RunManager" selected="Application.App管理">
+    <configuration name="Add calculator" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="UI-Foundation" TARGET_NAME="Add calculator" CONFIG_NAME="Debug" SCHEME_NAME="Add calculator" IS_LOCATION_SIMULATION_ALLOWED="true" RUN_TARGET_PROJECT_NAME="UI-Foundation" RUN_TARGET_NAME="Add calculator" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
+      <embedded_app_extension_list />
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="图片轮播器" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="UI-Foundation" TARGET_NAME="微博案例" CONFIG_NAME="Debug" SCHEME_NAME="图片轮播器" IS_LOCATION_SIMULATION_ALLOWED="true" LOCATION_SCENARIO_ID="com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier" LOCATION_SCENARIO_TYPE="1" RUN_TARGET_PROJECT_NAME="UI-Foundation" RUN_TARGET_NAME="微博案例" MAKE_ACTIVE="TRUE">
+    <configuration name="App管理" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="UI-Foundation" TARGET_NAME="App管理" CONFIG_NAME="Debug" SCHEME_NAME="App管理" IS_LOCATION_SIMULATION_ALLOWED="true" RUN_TARGET_PROJECT_NAME="UI-Foundation" RUN_TARGET_NAME="App管理" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="通过代理监听缩放事件" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="UI-Foundation" TARGET_NAME="通过代理监听缩放事件" CONFIG_NAME="Debug" SCHEME_NAME="通过代理监听缩放事件" IS_LOCATION_SIMULATION_ALLOWED="true" RUN_TARGET_PROJECT_NAME="UI-Foundation" RUN_TARGET_NAME="通过代理监听缩放事件" MAKE_ACTIVE="TRUE">
-      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-      </EXTENSION>
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Add calculator" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="UI-Foundation" TARGET_NAME="图片轮播器" CONFIG_NAME="Debug" SCHEME_NAME="Add calculator" IS_LOCATION_SIMULATION_ALLOWED="true" LOCATION_SCENARIO_ID="com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier" LOCATION_SCENARIO_TYPE="1" RUN_TARGET_PROJECT_NAME="UI-Foundation" RUN_TARGET_NAME="图片轮播器" MAKE_ACTIVE="TRUE">
-      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-      </EXTENSION>
+      <embedded_app_extension_list />
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -220,9 +218,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.Add calculator" />
-      <item itemvalue="Application.通过代理监听缩放事件" />
-      <item itemvalue="Application.图片轮播器" />
-      <item itemvalue="Application.应用管理 (xib版)" />
+      <item itemvalue="Application.App管理" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -244,11 +240,13 @@
       <workItem from="1542545236284" duration="490000" />
       <workItem from="1542788987506" duration="818000" />
       <workItem from="1543150118577" duration="52000" />
+      <workItem from="1545739695633" duration="278000" />
+      <workItem from="1546488080906" duration="44000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5177000" />
+    <option name="totallyTimeSpent" value="5499000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -260,15 +258,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="705" y="483" width="1465" height="1023" extended-state="0" />
+    <frame x="705" y="411" width="1465" height="1095" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2157414" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22136332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4992636" weight="0.32929516" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4992636" weight="0.32901296" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39977974" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -277,7 +275,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50073636" side_tool="true" weight="0.32929516" />
-      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.32867885" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32867885" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -287,9 +285,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/通过代理监听滚动事件/ViewController.m">
@@ -303,13 +298,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/通过代理监听缩放事件/ViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -340,13 +328,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/微博案例/ITTableViewCell.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/微博案例/ITTableViewCell.m" />
     <entry file="file://$PROJECT_DIR$/好友列表/ITTableViewCell.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
@@ -375,6 +357,75 @@
           <folding>
             <element signature="e#81#114#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App管理/main.m">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App管理/Info.plist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="367" column="21" selection-start-line="367" selection-start-column="21" selection-end-line="367" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/objc/NSObject.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App管理/ITAppCellDelegate.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App管理/ITTableViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#2#0" />
+            <element signature="e#155#308#0" />
+            <element signature="e#349#432#0" />
+            <element signature="e#434#575#0" />
+            <element signature="e#577#1130#0" />
+            <element signature="e#711#904#0" />
+            <element signature="e#1131#1650#0" />
+            <element signature="e#1651#2088#0" />
+            <element signature="e#1810#1897#0" />
+            <element signature="e#1909#2045#0" />
+            <element signature="e#2090#2475#0" />
+            <element signature="e#2477#2771#0" />
+            <element signature="e#2773#3070#0" />
+            <element signature="e#2838#2876#0" />
+            <element signature="e#2888#3044#0" />
+            <element signature="e#3072#3222#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App管理/ITTableViewController.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/通过代理监听缩放事件/ViewController.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/通过代理监听缩放事件/ViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
         </state>
       </provider>
     </entry>

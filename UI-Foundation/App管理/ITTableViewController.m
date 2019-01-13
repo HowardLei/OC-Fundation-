@@ -6,8 +6,8 @@
 //
 
 #import "ITTableViewController.h"
-#import "ITApp.h"
 #import "ITAppCell.h"
+
 @interface ITTableViewController () <ITAppCellDelegate>
 @property (nonatomic, strong) NSArray *modelArr;
 @property (nonatomic, weak) UILabel *label;
@@ -76,7 +76,7 @@
     self.label.layer.cornerRadius = 5;
 }
 
-- (void)setLabelContent {
+- (void)setLabelProperty {
     self.label.backgroundColor = [UIColor greenColor];
     self.label.text = @"开始下载";
     self.label.font = [UIFont systemFontOfSize:16];
@@ -85,7 +85,7 @@
     self.label.alpha = 0;
 }
 
-- (void)hideLabel{
+- (void)hideLabel {
     [UIView animateWithDuration:1 animations:^{
         self.label.alpha = 0;
     } completion:^(BOOL finished) {
@@ -96,9 +96,11 @@
     }];
     self.label = nil;
 }
+
 - (void)setLabel:(UILabel *)label {
     _label = label;
     [self setLabelFrame];
-    [self setLabelContent];
+    [self setLabelProperty];
 }
+
 @end

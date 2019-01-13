@@ -2,12 +2,19 @@
 
 @implementation Person
 + (instancetype)allocWithZone:(struct _NSZone *)zone {
-    static id instance = nil;
-    if (instance == nil) {
-        instance = [super allocWithZone:zone];
-    }
-    return instance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        static id instance = nil;
+        if (instance == nil) {
+            instance = [super allocWithZone:zone];
+        }
+        return instance;
+    });
 }
+- (id)copyWithZone:(NSZone *)zone {
+    
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {

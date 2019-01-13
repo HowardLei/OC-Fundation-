@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ITChat : NSObject
-typedef enum{
+typedef enum {
     ITChatPersonMe,
     ITChatPersonOther
 } ITChatPerson;
@@ -22,6 +22,7 @@ typedef enum{
 // 创建一个属性，用来判断时间框是否需要被隐藏
 @property (nonatomic, assign) BOOL timeHidden;
 
+- (instancetype)initWithType:(ITChatPerson)type;
 - (instancetype)initWithDict:(NSDictionary *)dict;
 + (instancetype)chatWithDict:(NSDictionary *)dict;
 

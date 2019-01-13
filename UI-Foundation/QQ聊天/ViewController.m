@@ -68,8 +68,8 @@
 // 当键盘弹出的时候，直接显示最后一行。注意：这个方法是在监听到键盘弹出来的时候再触发。
 - (void)scrollToLastRow {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.chatArr.count - 1 inSection:0];
-    [self.chatTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
     // 滚动到指定行 方法： UITableView 对象 scrollToRowAtIndexPath:(NSIndexPath *)indexPath atScrollPosition:(UITableViewScrollPosition)scrollPosition animated:(BOOL)animated;
+    [self.chatTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
 // MARK: - Scroll View Delegate
@@ -85,9 +85,8 @@
 // MARK: - Text Field Delegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     // 创建一个新模型，存储里面的数据
-    ITChat *model = [[ITChat alloc] init];
+    ITChat *model = [[ITChat alloc] initWithType:ITChatPersonMe];
     model.text = textField.text;
-    model.type = ITChatPersonMe;
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"今天 HH:mm";
     model.time = [formatter stringFromDate:[NSDate date]];
