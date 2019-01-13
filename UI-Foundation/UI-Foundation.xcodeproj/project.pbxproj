@@ -110,6 +110,12 @@
 		18D17DB221EB0BDD00CB8EAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D17DB121EB0BDD00CB8EAB /* Assets.xcassets */; };
 		18D17DB521EB0BDD00CB8EAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D17DB321EB0BDD00CB8EAB /* LaunchScreen.storyboard */; };
 		18D17DB821EB0BDD00CB8EAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D17DB721EB0BDD00CB8EAB /* main.m */; };
+		18D17DC421EB28AD00CB8EAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D17DC321EB28AD00CB8EAB /* AppDelegate.m */; };
+		18D17DC721EB28AD00CB8EAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D17DC621EB28AD00CB8EAB /* ViewController.m */; };
+		18D17DCA21EB28AD00CB8EAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D17DC821EB28AD00CB8EAB /* Main.storyboard */; };
+		18D17DCC21EB28AE00CB8EAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D17DCB21EB28AE00CB8EAB /* Assets.xcassets */; };
+		18D17DCF21EB28AE00CB8EAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D17DCD21EB28AE00CB8EAB /* LaunchScreen.storyboard */; };
+		18D17DD221EB28AE00CB8EAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D17DD121EB28AE00CB8EAB /* main.m */; };
 		18DAA67B21156ED7004C1991 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DAA67A21156ED7004C1991 /* AppDelegate.m */; };
 		18DAA67E21156ED7004C1991 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DAA67D21156ED7004C1991 /* ViewController.m */; };
 		18DAA68121156ED7004C1991 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DAA67F21156ED7004C1991 /* Main.storyboard */; };
@@ -873,6 +879,16 @@
 		18D17DB421EB0BDD00CB8EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18D17DB621EB0BDD00CB8EAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D17DB721EB0BDD00CB8EAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18D17DC021EB28AD00CB8EAB /* AutoLayout四周边距注意事项.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AutoLayout四周边距注意事项.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18D17DC221EB28AD00CB8EAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18D17DC321EB28AD00CB8EAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		18D17DC521EB28AD00CB8EAB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		18D17DC621EB28AD00CB8EAB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18D17DC921EB28AD00CB8EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18D17DCB21EB28AE00CB8EAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18D17DCE21EB28AE00CB8EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18D17DD021EB28AE00CB8EAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18D17DD121EB28AE00CB8EAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18DAA67721156ED7004C1991 /* 汤姆猫.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "汤姆猫.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DAA67921156ED7004C1991 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18DAA67A21156ED7004C1991 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1670,6 +1686,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		18D17DBD21EB28AD00CB8EAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18DAA67421156ED7004C1991 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -2089,6 +2112,22 @@
 				18D17DB721EB0BDD00CB8EAB /* main.m */,
 			);
 			path = "初试AutoLayout";
+			sourceTree = "<group>";
+		};
+		18D17DC121EB28AD00CB8EAB /* AutoLayout四周边距注意事项 */ = {
+			isa = PBXGroup;
+			children = (
+				18D17DC221EB28AD00CB8EAB /* AppDelegate.h */,
+				18D17DC321EB28AD00CB8EAB /* AppDelegate.m */,
+				18D17DC521EB28AD00CB8EAB /* ViewController.h */,
+				18D17DC621EB28AD00CB8EAB /* ViewController.m */,
+				18D17DC821EB28AD00CB8EAB /* Main.storyboard */,
+				18D17DCB21EB28AE00CB8EAB /* Assets.xcassets */,
+				18D17DCD21EB28AE00CB8EAB /* LaunchScreen.storyboard */,
+				18D17DD021EB28AE00CB8EAB /* Info.plist */,
+				18D17DD121EB28AE00CB8EAB /* main.m */,
+			);
+			path = "AutoLayout四周边距注意事项";
 			sourceTree = "<group>";
 		};
 		18DAA67821156ED7004C1991 /* 汤姆猫 */ = {
@@ -3392,7 +3431,6 @@
 		6EB30C86217499C100483004 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6EDBE2DA2165C05E0055C02B /* 微博案例 */,
 				6EB30C772174999500483004 /* Assets.xcassets */,
 				6EB30C7C2174999500483004 /* Info.plist */,
 				6EB30C7D2174999500483004 /* main.m */,
@@ -3437,6 +3475,7 @@
 		6ED0443420B174D9003D1855 = {
 			isa = PBXGroup;
 			children = (
+				6EDBE2DA2165C05E0055C02B /* 微博案例 */,
 				6ED0444120B17503003D1855 /* Add calculator */,
 				1800859D210EC1AC0032073E /* UIKit坐标系 */,
 				180085B7210F0DD20032073E /* 按钮的注意点 */,
@@ -3467,6 +3506,7 @@
 				6E3E582E21B7B874001999BB /* App管理 */,
 				18D17D8C21E8AFA500CB8EAB /* Autoresizing的代码实现 */,
 				18D17DA721EB0BDB00CB8EAB /* 初试AutoLayout */,
+				18D17DC121EB28AD00CB8EAB /* AutoLayout四周边距注意事项 */,
 				6ED0444020B17503003D1855 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -3506,6 +3546,7 @@
 				188D8DAB21E87D320084BEBC /* Autoresizing的使用.app */,
 				18D17D8B21E8AFA500CB8EAB /* Autoresizing的代码实现.app */,
 				18D17DA621EB0BDB00CB8EAB /* 初试AutoLayout.app */,
+				18D17DC021EB28AD00CB8EAB /* AutoLayout四周边距注意事项.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3536,7 +3577,8 @@
 				6EDBE2EF2165C0690055C02B /* Controller */,
 				6E1525BC2171F48B007E1324 /* 11为什么控件的引用和控件的代理要用weak.h */,
 			);
-			path = "微博案例";
+			name = "微博案例";
+			path = "QQ聊天/微博案例";
 			sourceTree = "<group>";
 		};
 		6EDBE2EF2165C0690055C02B /* Controller */ = {
@@ -3818,6 +3860,23 @@
 			name = "初试AutoLayout";
 			productName = "初试AutoLayout";
 			productReference = 18D17DA621EB0BDB00CB8EAB /* 初试AutoLayout.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18D17DBF21EB28AD00CB8EAB /* AutoLayout四周边距注意事项 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18D17DD521EB28AE00CB8EAB /* Build configuration list for PBXNativeTarget "AutoLayout四周边距注意事项" */;
+			buildPhases = (
+				18D17DBC21EB28AD00CB8EAB /* Sources */,
+				18D17DBD21EB28AD00CB8EAB /* Frameworks */,
+				18D17DBE21EB28AD00CB8EAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AutoLayout四周边距注意事项";
+			productName = "AutoLayout四周边距注意事项";
+			productReference = 18D17DC021EB28AD00CB8EAB /* AutoLayout四周边距注意事项.app */;
 			productType = "com.apple.product-type.application";
 		};
 		18DAA67621156ED7004C1991 /* 汤姆猫 */ = {
@@ -4234,6 +4293,9 @@
 					18D17DA521EB0BDB00CB8EAB = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					18D17DBF21EB28AD00CB8EAB = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					18DAA67621156ED7004C1991 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -4347,6 +4409,7 @@
 				188D8DAA21E87D320084BEBC /* Autoresizing的使用 */,
 				18D17D8A21E8AFA500CB8EAB /* Autoresizing的代码实现 */,
 				18D17DA521EB0BDB00CB8EAB /* 初试AutoLayout */,
+				18D17DBF21EB28AD00CB8EAB /* AutoLayout四周边距注意事项 */,
 			);
 		};
 /* End PBXProject section */
@@ -4493,6 +4556,16 @@
 				18D17DB521EB0BDD00CB8EAB /* LaunchScreen.storyboard in Resources */,
 				18D17DB221EB0BDD00CB8EAB /* Assets.xcassets in Resources */,
 				18D17DB021EB0BDB00CB8EAB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18D17DBE21EB28AD00CB8EAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18D17DCF21EB28AE00CB8EAB /* LaunchScreen.storyboard in Resources */,
+				18D17DCC21EB28AE00CB8EAB /* Assets.xcassets in Resources */,
+				18D17DCA21EB28AD00CB8EAB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5281,6 +5354,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		18D17DBC21EB28AD00CB8EAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18D17DC721EB28AD00CB8EAB /* ViewController.m in Sources */,
+				18D17DD221EB28AE00CB8EAB /* main.m in Sources */,
+				18D17DC421EB28AD00CB8EAB /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18DAA67321156ED7004C1991 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -5663,6 +5746,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				18D17DB421EB0BDD00CB8EAB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		18D17DC821EB28AD00CB8EAB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18D17DC921EB28AD00CB8EAB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18D17DCD21EB28AE00CB8EAB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18D17DCE21EB28AE00CB8EAB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -6915,6 +7014,92 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.itcenter.--AutoLayout";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18D17DD321EB28AE00CB8EAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = V9C6R6LR63;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "AutoLayout四周边距注意事项/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.itcenter.AutoLayout--------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18D17DD421EB28AE00CB8EAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = V9C6R6LR63;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "AutoLayout四周边距注意事项/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.itcenter.AutoLayout--------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -8999,6 +9184,15 @@
 			buildConfigurations = (
 				18D17DB921EB0BDD00CB8EAB /* Debug */,
 				18D17DBA21EB0BDD00CB8EAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18D17DD521EB28AE00CB8EAB /* Build configuration list for PBXNativeTarget "AutoLayout四周边距注意事项" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18D17DD321EB28AE00CB8EAB /* Debug */,
+				18D17DD421EB28AE00CB8EAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
