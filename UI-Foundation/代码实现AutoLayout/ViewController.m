@@ -47,7 +47,9 @@
     self.redView = redView;
     self.redView.translatesAutoresizingMaskIntoConstraints = NO;
 }
-
+/**
+ 设置蓝色 view 的 AutoLayout
+ */
 - (void)setBlueConstraint {
     // 创建父类 view
     UIView *fatherView = self.blueView.superview;
@@ -65,7 +67,16 @@
     NSArray<NSLayoutConstraint *> *arr = @[blueTop, blueleft, blueRight];
     [fatherView addConstraints:arr];
 }
+/**
+ 设置红色 view 的 AutoLayout
+ */
 - (void)setRedConstraint {
-
+    UIView *brotherView = self.blueView;
+    CGFloat redDefaultMargin = 30;
+    NSLayoutConstraint *redHeight = [NSLayoutConstraint constraintWithItem:self.redView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.blueView attribute:NSLayoutAttributeHeight multiplier:1 constant:0];
+    NSLayoutConstraint *redTop = [NSLayoutConstraint constraintWithItem:self.redView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:brotherView attribute:NSLayoutAttributeBottom multiplier:1 constant:redDefaultMargin];
+    NSLayoutConstraint *redRight = [NSLayoutConstraint constraintWithItem:self.redView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.redView.superview attribute:NSLayoutAttributeRight multiplier:1 constant:-redDefaultMargin];
+    NSLayoutConstraint *redLeft = [NSLayoutConstraint constraintWithItem:self.redView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:brotherView attribute:NSLayoutAttributeLeft multiplier:0.5 constant:0];
+    // FIXME: 间距设置完成，数组还没创建
 }
 @end
