@@ -2,15 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8b94861-e9f0-4186-becb-762bc4c34337" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Foundation库/Foundation库.xcodeproj/project.xcworkspace/xcuserdata/apple.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../Foundation库/Foundation库.xcodeproj/project.xcworkspace/xcuserdata/apple.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Foundation库/Foundation库.xcodeproj/xcuserdata/apple.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../Foundation库/Foundation库.xcodeproj/xcuserdata/apple.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Foundation库/单例模式/Person.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Foundation库/单例模式/Person.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutoLayout的加强使用方法/Base.lproj/Main.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/代码实现AutoLayout/AppDelegate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/代码实现AutoLayout/AppDelegate.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/代码实现AutoLayout/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/代码实现AutoLayout/Assets.xcassets/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/代码实现AutoLayout/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/代码实现AutoLayout/Base.lproj/Main.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/代码实现AutoLayout/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/代码实现AutoLayout/ViewController.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/代码实现AutoLayout/ViewController.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/代码实现AutoLayout/main.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App管理/ITTableViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/App管理/ITTableViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QQ聊天/ITChat.h" beforeDir="false" afterPath="$PROJECT_DIR$/QQ聊天/ITChat.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QQ聊天/ITChat.m" beforeDir="false" afterPath="$PROJECT_DIR$/QQ聊天/ITChat.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QQ聊天/ViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/QQ聊天/ViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/11为什么控件的引用和控件的代理要用weak.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/AppDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/AppDelegate.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/icon/1.imageset/1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/icon/1.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/icon/1516159990.imageset/1516159990.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/icon/1516159990.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/icon/238221586.imageset/238221586.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/icon/238221586.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/icon/424324.imageset/424324.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/icon/424324.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/icon/50.imageset/50.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/icon/50.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/icon/7735164184.imageset/7735164184.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/icon/7735164184.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/icon/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/image/3461756566.imageset/3461756566.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/image/3461756566.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/image/4934348604.imageset/4934348604.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/image/4934348604.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/image/603564546.imageset/603564546.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/image/603564546.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/image/6289891986.imageset/6289891986.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/image/6289891986.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/image/926680527.imageset/926680527.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/image/926680527.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/image/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/vip.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Assets.xcassets/vip.imageset/vip.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Base.lproj/LaunchScreen.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Base.lproj/Main.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/ITTableViewCell.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/ITTableViewCell.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/ITTableViewController.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/ITTableViewController.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/ITWeibo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/ITWeibo.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/ViewController.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/ViewController.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/main.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQ聊天/微博案例/weibo.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI-Foundation.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/UI-Foundation.xcodeproj/project.pbxproj" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Developer/Xcode/DerivedData/UI-Foundation-fzmvjzmrlvnmejcimhmkjyszdtke/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,50 +84,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_86EB036F-D026-40C5-9F83-2CB5D365E5B1" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App管理/ITTableViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#2#0" />
-                <element signature="e#155#308#0" />
-                <element signature="e#349#432#0" />
-                <element signature="e#434#575#0" />
-                <element signature="e#577#1130#0" />
-                <element signature="e#711#904#0" />
-                <element signature="e#1131#1650#0" />
-                <element signature="e#1651#2088#0" />
-                <element signature="e#1810#1897#0" />
-                <element signature="e#1909#2045#0" />
-                <element signature="e#2090#2475#0" />
-                <element signature="e#2477#2771#0" />
-                <element signature="e#2773#3070#0" />
-                <element signature="e#2838#2876#0" />
-                <element signature="e#2888#3044#0" />
-                <element signature="e#3072#3222#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App管理/ITTableViewController.h">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/通过代理监听缩放事件/ViewController.m">
+        <entry file="file://$PROJECT_DIR$/代码实现AutoLayout/ViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+            <state relative-caret-position="658">
+              <caret line="51" column="45" lean-forward="true" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/通过代理监听缩放事件/ViewController.h">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -98,13 +109,14 @@
         <option value="$PROJECT_DIR$/好友列表/ITTableViewController.m" />
         <option value="$PROJECT_DIR$/好友列表/ITHeaderFooterView.m" />
         <option value="$PROJECT_DIR$/App管理/ITTableViewController.m" />
+        <option value="$PROJECT_DIR$/代码实现AutoLayout/ViewController.m" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="705" />
     <option name="y" value="411" />
-    <option name="width" value="1465" />
+    <option name="width" value="1593" />
     <option name="height" value="1095" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -113,7 +125,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,26 +135,26 @@
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="UI-Foundation" type="1d218c8b:XcodeProjectNode" />
-              <item name="通过代理监听缩放事件" type="fcab9f18:XcodeViewNode" />
+              <item name="AutoLayout的加强使用方法" type="fcab9f18:XcodeViewNode" />
             </path>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="UI-Foundation" type="1d218c8b:XcodeProjectNode" />
-              <item name="通过代理监听缩放事件" type="fcab9f18:XcodeViewNode" />
-              <item name="View" type="fcab9f18:XcodeViewNode" />
+              <item name="代码实现AutoLayout" type="fcab9f18:XcodeViewNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -200,25 +211,12 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="通过代理监听缩放事件" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="UI-Foundation" TARGET_NAME="通过代理监听缩放事件" CONFIG_NAME="Debug" SCHEME_NAME="通过代理监听缩放事件" IS_LOCATION_SIMULATION_ALLOWED="true" RUN_TARGET_PROJECT_NAME="UI-Foundation" RUN_TARGET_NAME="通过代理监听缩放事件" MAKE_ACTIVE="TRUE">
-      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-      </EXTENSION>
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="通过代理监听缩放事件" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="UI-Foundation" TARGET_NAME="通过代理监听缩放事件" CONFIG_NAME="Debug" SCHEME_NAME="通过代理监听缩放事件" IS_LOCATION_SIMULATION_ALLOWED="true" RUN_TARGET_PROJECT_NAME="UI-Foundation" RUN_TARGET_NAME="通过代理监听缩放事件" MAKE_ACTIVE="TRUE">
-      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-      </EXTENSION>
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Add calculator" />
       <item itemvalue="Application.App管理" />
+      <item itemvalue="Application.Autoresizing的代码实现" />
+      <item itemvalue="Application.微博案例" />
+      <item itemvalue="Application.初试AutoLayout" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -242,11 +240,13 @@
       <workItem from="1543150118577" duration="52000" />
       <workItem from="1545739695633" duration="278000" />
       <workItem from="1546488080906" duration="44000" />
+      <workItem from="1547467813215" duration="183000" />
+      <workItem from="1547468024071" duration="1530000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5499000" />
+    <option name="totallyTimeSpent" value="7212000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -258,9 +258,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="705" y="411" width="1465" height="1095" extended-state="0" />
+    <frame x="705" y="411" width="1593" height="1095" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22136332" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20825274" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4992636" weight="0.32901296" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39977974" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50073636" side_tool="true" weight="0.32901296" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32867885" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.21644413" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22417428" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -281,7 +304,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.21644413" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -416,16 +439,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App管理/ITTableViewController.h">
+    <entry file="file://$PROJECT_DIR$/通过代理监听缩放事件/ViewController.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/通过代理监听缩放事件/ViewController.h">
+    <entry file="file://$PROJECT_DIR$/App管理/ITTableViewController.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/通过代理监听缩放事件/ViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
+        <state relative-caret-position="288">
           <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/初试AutoLayout/ViewController.m">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoLayout的加强使用方法/main.m">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoLayout的加强使用方法/ViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" selection-start-line="8" selection-end-line="19" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="appcode.project-settings://7752eefc">
+      <provider selected="true" editor-type-id="AppCode.ProjectSettings" />
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/NSLayoutConstraint.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="434" column="38" lean-forward="true" selection-start-line="434" selection-start-column="38" selection-end-line="434" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/代码实现AutoLayout/ViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="658">
+          <caret line="51" column="45" lean-forward="true" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
         </state>
       </provider>
     </entry>
