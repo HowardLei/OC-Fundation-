@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SfG-1F-0d8" userLabel="GreenView">
+                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="333.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wangnima" translatesAutoresizingMaskIntoConstraints="NO" id="bVe-9l-QPZ">
+                                        <rect key="frame" x="44" y="117" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="4qG-pE-jy3"/>
+                                            <constraint firstAttribute="height" constant="100" id="iLP-ro-sQL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="死大头王尼玛" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjf-h8-AmQ">
+                                        <rect key="frame" x="0.0" y="312.5" width="187.5" height="21"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.137931464" green="1" blue="0.30388238620000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="qjf-h8-AmQ" firstAttribute="leading" secondItem="SfG-1F-0d8" secondAttribute="leading" id="865-CP-r83"/>
+                                    <constraint firstItem="bVe-9l-QPZ" firstAttribute="centerY" secondItem="SfG-1F-0d8" secondAttribute="centerY" id="Uxu-u5-Z3g"/>
+                                    <constraint firstItem="bVe-9l-QPZ" firstAttribute="centerX" secondItem="SfG-1F-0d8" secondAttribute="centerX" id="edK-6H-DCF"/>
+                                    <constraint firstAttribute="bottom" secondItem="qjf-h8-AmQ" secondAttribute="bottom" id="pGV-wy-hIQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="qjf-h8-AmQ" secondAttribute="trailing" id="ych-GJ-1La"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jN7-SX-j6S" userLabel="BlueView">
+                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="333.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wangnima" translatesAutoresizingMaskIntoConstraints="NO" id="lRo-II-nFk">
+                                        <rect key="frame" x="44" y="117" width="100" height="100"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="死大头王尼玛" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7e-O7-UEs">
+                                        <rect key="frame" x="0.0" y="312.5" width="187.5" height="21"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="T7e-O7-UEs" secondAttribute="bottom" id="2wg-iJ-jWR"/>
+                                    <constraint firstItem="T7e-O7-UEs" firstAttribute="leading" secondItem="jN7-SX-j6S" secondAttribute="leading" id="Ebe-MX-zyD"/>
+                                    <constraint firstAttribute="trailing" secondItem="T7e-O7-UEs" secondAttribute="trailing" id="GBh-sh-tN5"/>
+                                    <constraint firstItem="lRo-II-nFk" firstAttribute="centerY" secondItem="jN7-SX-j6S" secondAttribute="centerY" id="OZg-KN-udn"/>
+                                    <constraint firstItem="lRo-II-nFk" firstAttribute="centerX" secondItem="jN7-SX-j6S" secondAttribute="centerX" id="wKi-Dl-4Th"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqv-e5-c7b" userLabel="YellowView">
+                                <rect key="frame" x="0.0" y="333.5" width="187.5" height="333.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wangnima" translatesAutoresizingMaskIntoConstraints="NO" id="P7y-eQ-K6G">
+                                        <rect key="frame" x="44" y="117" width="100" height="100"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="死大头王尼玛" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rO-us-lHS">
+                                        <rect key="frame" x="0.0" y="312.5" width="187.5" height="21"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="P7y-eQ-K6G" firstAttribute="centerY" secondItem="sqv-e5-c7b" secondAttribute="centerY" id="RkR-Vt-z9V"/>
+                                    <constraint firstAttribute="trailing" secondItem="7rO-us-lHS" secondAttribute="trailing" id="Tiz-ZS-USF"/>
+                                    <constraint firstAttribute="bottom" secondItem="7rO-us-lHS" secondAttribute="bottom" id="Xld-bk-5s7"/>
+                                    <constraint firstItem="P7y-eQ-K6G" firstAttribute="centerX" secondItem="sqv-e5-c7b" secondAttribute="centerX" id="o0P-7U-V89"/>
+                                    <constraint firstItem="7rO-us-lHS" firstAttribute="leading" secondItem="sqv-e5-c7b" secondAttribute="leading" id="rNW-eo-vkU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jyg-Vz-FlT" userLabel="PurpleView">
+                                <rect key="frame" x="187.5" y="333.5" width="187.5" height="333.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wangnima" translatesAutoresizingMaskIntoConstraints="NO" id="2WK-9W-TcI">
+                                        <rect key="frame" x="44" y="117" width="100" height="100"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="死大头王尼玛" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTw-dM-67O">
+                                        <rect key="frame" x="0.0" y="312.5" width="187.5" height="21"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="nTw-dM-67O" secondAttribute="bottom" id="Nrt-wN-jOs"/>
+                                    <constraint firstItem="2WK-9W-TcI" firstAttribute="centerY" secondItem="Jyg-Vz-FlT" secondAttribute="centerY" id="T3T-VO-XIU"/>
+                                    <constraint firstItem="nTw-dM-67O" firstAttribute="leading" secondItem="Jyg-Vz-FlT" secondAttribute="leading" id="YUa-61-iPg"/>
+                                    <constraint firstAttribute="trailing" secondItem="nTw-dM-67O" secondAttribute="trailing" id="fV7-ac-VUN"/>
+                                    <constraint firstItem="2WK-9W-TcI" firstAttribute="centerX" secondItem="Jyg-Vz-FlT" secondAttribute="centerX" id="mSD-qb-ykE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="P7y-eQ-K6G" firstAttribute="height" secondItem="bVe-9l-QPZ" secondAttribute="height" id="0Xy-gj-Ycu"/>
+                            <constraint firstAttribute="trailing" secondItem="Jyg-Vz-FlT" secondAttribute="trailing" id="7om-P3-ZFg"/>
+                            <constraint firstItem="jN7-SX-j6S" firstAttribute="height" secondItem="SfG-1F-0d8" secondAttribute="height" id="DaX-yI-Ci9"/>
+                            <constraint firstItem="lRo-II-nFk" firstAttribute="height" secondItem="bVe-9l-QPZ" secondAttribute="height" id="FVf-Xf-xnm"/>
+                            <constraint firstItem="sqv-e5-c7b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FwJ-hM-YAy"/>
+                            <constraint firstItem="2WK-9W-TcI" firstAttribute="width" secondItem="bVe-9l-QPZ" secondAttribute="width" id="JDS-F1-wPH"/>
+                            <constraint firstItem="Jyg-Vz-FlT" firstAttribute="width" secondItem="jN7-SX-j6S" secondAttribute="width" id="K7k-xW-ALg"/>
+                            <constraint firstItem="jN7-SX-j6S" firstAttribute="width" secondItem="SfG-1F-0d8" secondAttribute="width" id="Qxh-VT-ecu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jN7-SX-j6S" secondAttribute="trailing" id="TdP-ak-BGI"/>
+                            <constraint firstAttribute="bottom" secondItem="sqv-e5-c7b" secondAttribute="bottom" id="bEN-NW-gCO"/>
+                            <constraint firstItem="lRo-II-nFk" firstAttribute="width" secondItem="bVe-9l-QPZ" secondAttribute="width" id="ctP-tD-aOT"/>
+                            <constraint firstItem="sqv-e5-c7b" firstAttribute="width" secondItem="SfG-1F-0d8" secondAttribute="width" id="dCx-Db-oS1"/>
+                            <constraint firstAttribute="bottom" secondItem="Jyg-Vz-FlT" secondAttribute="bottom" id="dMP-oK-FQs"/>
+                            <constraint firstItem="Jyg-Vz-FlT" firstAttribute="height" secondItem="jN7-SX-j6S" secondAttribute="height" id="dQR-qD-4hp"/>
+                            <constraint firstItem="jN7-SX-j6S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="evr-Bm-Kuh"/>
+                            <constraint firstItem="SfG-1F-0d8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fob-S1-WvQ"/>
+                            <constraint firstItem="SfG-1F-0d8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hwj-jp-cVu"/>
+                            <constraint firstItem="P7y-eQ-K6G" firstAttribute="width" secondItem="bVe-9l-QPZ" secondAttribute="width" id="oWv-Uu-khG"/>
+                            <constraint firstItem="2WK-9W-TcI" firstAttribute="height" secondItem="bVe-9l-QPZ" secondAttribute="height" id="pcG-6h-ZPy"/>
+                            <constraint firstItem="sqv-e5-c7b" firstAttribute="height" secondItem="SfG-1F-0d8" secondAttribute="height" id="sNQ-vq-qyv"/>
+                            <constraint firstItem="SfG-1F-0d8" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ssR-5h-EhT"/>
+                            <constraint firstItem="SfG-1F-0d8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xfc-sK-eKg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wangnima" width="404.94937133789062" height="404.94937133789062"/>
+    </resources>
+</document>
