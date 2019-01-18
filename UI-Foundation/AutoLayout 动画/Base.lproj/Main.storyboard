@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cX2-qb-xIL">
+                                <rect key="frame" x="10" y="10" width="100" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.29292270295618861" blue="0.16020270917276402" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9LQ-WU-uPg"/>
+                                    <constraint firstAttribute="width" constant="100" id="Bzu-kf-Bvd"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctm-tZ-9eg">
+                                <rect key="frame" x="240" y="45" width="46" height="30"/>
+                                <state key="normal" title="我看看"/>
+                                <connections>
+                                    <action selector="touchToAnimate" destination="BYZ-38-t0r" eventType="touchUpInside" id="fP6-6C-383"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cX2-qb-xIL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="29l-Q7-DSV"/>
+                            <constraint firstItem="ctm-tZ-9eg" firstAttribute="leading" secondItem="cX2-qb-xIL" secondAttribute="trailing" constant="130" id="DuO-Cg-7jP"/>
+                            <constraint firstItem="ctm-tZ-9eg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="25" id="Uzs-BR-0zD"/>
+                            <constraint firstItem="cX2-qb-xIL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="10" id="nbW-UK-gXM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="redView" destination="cX2-qb-xIL" id="M86-qJ-tkX"/>
+                        <outlet property="redViewTopConstraint" destination="nbW-UK-gXM" id="cZF-zv-25D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
