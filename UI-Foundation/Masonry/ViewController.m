@@ -53,10 +53,6 @@
         make.edges.mas_equalTo(UIEdgeInsetsMake(35, 20, 20, 20));
     }];
     self.redView = redView;
-    [self performSelector:@selector(showFrame) withObject:nil afterDelay:1];
 }
 
-- (void)showFrame {
-    NSLog(@"%@", NSStringFromCGRect(self.redView.frame));
-}
 @end
