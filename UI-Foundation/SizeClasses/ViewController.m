@@ -26,9 +26,8 @@
     [super viewDidLoad];
 }
 - (IBAction)loginIn:(UIButton *)sender {
-    // 判断键盘中是否具有内容，如果没有则弹出一个警告栏
-    if ([self.userNameTextField.text isEqualToString:@""] ||
-        [self.passwordTextField.text isEqualToString:@""]) {
+    // 判断键盘中是否有文本框没有内容，如果有则弹出一个警告栏
+    if ([self.userNameTextField.text isEqualToString:@""] || [self.passwordTextField.text isEqualToString:@""]) {
         UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"输入格式错误" message:@"你的用户名和密码是不是没有填完啊？" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"让我重新检查一下" style:UIAlertActionStyleCancel handler:nil];
         UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"我要重新输入一遍" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
