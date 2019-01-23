@@ -28,13 +28,19 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Xgl-N2-Nhp"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="R7f-S1-2yn">
                                 <rect key="frame" x="87.666666666666686" y="256" width="200" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2zU-Wd-6hv"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6f-Bt-Sn7">
                                 <rect key="frame" x="172" y="306" width="31" height="30"/>
@@ -59,6 +65,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="Y6f-Bt-Sn7" id="QfG-WO-OlX"/>
                         <outlet property="passwordTextField" destination="R7f-S1-2yn" id="B7W-Np-6AF"/>
                         <outlet property="userNameTextField" destination="ime-Fi-eJP" id="BHR-io-4wG"/>
                     </connections>

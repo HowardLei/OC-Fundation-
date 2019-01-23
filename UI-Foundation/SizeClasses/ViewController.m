@@ -14,9 +14,10 @@
     R regular : 宽松型；
     Any 任意类型
  */
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
 @end
 
@@ -25,7 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
+
 - (IBAction)loginIn:(UIButton *)sender {
+    [self.view endEditing:YES];
     // 判断键盘中是否有文本框没有内容，如果有则弹出一个警告栏
     if ([self.userNameTextField.text isEqualToString:@""] || [self.passwordTextField.text isEqualToString:@""]) {
         UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"输入格式错误" message:@"你的用户名和密码是不是没有填完啊？" preferredStyle:UIAlertControllerStyleAlert];
@@ -38,5 +41,10 @@
         [controller addAction:action2];
         [self presentViewController:controller animated:YES completion:nil];
     }
+}
+// 实现键盘点击 return 的代理方法。注意：不要忘记设置 textField 的代理对象。否则这个方法没法触发。
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self loginIn:self.loginButton];
+    return YES;
 }
 @end
