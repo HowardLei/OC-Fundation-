@@ -9,8 +9,7 @@
 
 @implementation ITWeibo
 - (instancetype)initWithDict:(NSDictionary *)dict {
-    self = [super init];
-    if (self) {
+    if (self = [super init]) {
         [self setValuesForKeysWithDictionary:dict];
     }
     return self;

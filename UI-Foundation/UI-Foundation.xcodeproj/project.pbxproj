@@ -634,7 +634,6 @@
 		637DFE4621F85C9100BBD4B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637DFE4421F85C9100BBD4B7 /* LaunchScreen.storyboard */; };
 		637DFE4921F85C9100BBD4B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 637DFE4821F85C9100BBD4B7 /* main.m */; };
 		637DFE5521F8621A00BBD4B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 637DFE5421F8621A00BBD4B7 /* AppDelegate.m */; };
-		637DFE5821F8621A00BBD4B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637DFE5721F8621A00BBD4B7 /* ViewController.m */; };
 		637DFE5B21F8621A00BBD4B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637DFE5921F8621A00BBD4B7 /* Main.storyboard */; };
 		637DFE5D21F8621B00BBD4B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 637DFE5C21F8621B00BBD4B7 /* Assets.xcassets */; };
 		637DFE6021F8621B00BBD4B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637DFE5E21F8621B00BBD4B7 /* LaunchScreen.storyboard */; };
@@ -643,6 +642,7 @@
 		637DFE6F21F8660600BBD4B7 /* weibo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 637DFE6E21F8660600BBD4B7 /* weibo.plist */; };
 		637DFE7221F8661700BBD4B7 /* ITWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 637DFE7121F8661700BBD4B7 /* ITWeibo.m */; };
 		637DFE7521F86A8600BBD4B7 /* ITWeiboCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 637DFE7421F86A8600BBD4B7 /* ITWeiboCell.m */; };
+		637DFE7821F8A7C800BBD4B7 /* ITTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637DFE7721F8A7C800BBD4B7 /* ITTableViewController.m */; };
 		63B074D321F56A1D00B9EEE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B074D221F56A1D00B9EEE6 /* AppDelegate.m */; };
 		63B074D621F56A1D00B9EEE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B074D521F56A1D00B9EEE6 /* ViewController.m */; };
 		63B074D921F56A1D00B9EEE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B074D721F56A1D00B9EEE6 /* Main.storyboard */; };
@@ -1535,8 +1535,6 @@
 		637DFE5121F8621A00BBD4B7 /* 微博（For AutoLayout）.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博（For AutoLayout）.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		637DFE5321F8621A00BBD4B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		637DFE5421F8621A00BBD4B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		637DFE5621F8621A00BBD4B7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		637DFE5721F8621A00BBD4B7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		637DFE5A21F8621A00BBD4B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		637DFE5C21F8621B00BBD4B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		637DFE5F21F8621B00BBD4B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -1548,6 +1546,8 @@
 		637DFE7121F8661700BBD4B7 /* ITWeibo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITWeibo.m; sourceTree = "<group>"; };
 		637DFE7321F86A8600BBD4B7 /* ITWeiboCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITWeiboCell.h; sourceTree = "<group>"; };
 		637DFE7421F86A8600BBD4B7 /* ITWeiboCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITWeiboCell.m; sourceTree = "<group>"; };
+		637DFE7621F8A7C800BBD4B7 /* ITTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITTableViewController.h; sourceTree = "<group>"; };
+		637DFE7721F8A7C800BBD4B7 /* ITTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITTableViewController.m; sourceTree = "<group>"; };
 		63B074CF21F56A1D00B9EEE6 /* SizeClasses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SizeClasses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B074D121F56A1D00B9EEE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		63B074D221F56A1D00B9EEE6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -3223,8 +3223,8 @@
 		637DFE6721F8638100BBD4B7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				637DFE5621F8621A00BBD4B7 /* ViewController.h */,
-				637DFE5721F8621A00BBD4B7 /* ViewController.m */,
+				637DFE7621F8A7C800BBD4B7 /* ITTableViewController.h */,
+				637DFE7721F8A7C800BBD4B7 /* ITTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -3343,8 +3343,6 @@
 		6E0D1F5A21A023E600DF4A53 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6E7029B621A037A300BD5CA5 /* ITTableViewCell.h */,
-				6E7029B721A037A300BD5CA5 /* ITTableViewCell.m */,
 				6E0D1F4A21A023CA00DF4A53 /* Main.storyboard */,
 				6E0D1F4F21A023CB00DF4A53 /* LaunchScreen.storyboard */,
 				6E5312BB21A54DE2004FF928 /* ITHeaderFooterView.h */,
@@ -3356,6 +3354,8 @@
 		6E0D1F5B21A0243200DF4A53 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6E7029B621A037A300BD5CA5 /* ITTableViewCell.h */,
+				6E7029B721A037A300BD5CA5 /* ITTableViewCell.m */,
 				6E0D1F6421A0261300DF4A53 /* ITFriends.h */,
 				6E0D1F6521A0261300DF4A53 /* ITFriends.m */,
 				6E0D1F6721A0279300DF4A53 /* ITGroup.h */,
@@ -6459,10 +6459,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				637DFE5821F8621A00BBD4B7 /* ViewController.m in Sources */,
 				637DFE6321F8621B00BBD4B7 /* main.m in Sources */,
 				637DFE5521F8621A00BBD4B7 /* AppDelegate.m in Sources */,
 				637DFE7221F8661700BBD4B7 /* ITWeibo.m in Sources */,
+				637DFE7821F8A7C800BBD4B7 /* ITTableViewController.m in Sources */,
 				637DFE7521F86A8600BBD4B7 /* ITWeiboCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

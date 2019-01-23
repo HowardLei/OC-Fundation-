@@ -1,17 +1,17 @@
 //
-//  ViewController.m
+//  ITTableViewController.m
 //  微博（For AutoLayout）
 //
 //  Created by 雷维卡 on 2019/1/23.
 //
 
-#import "ViewController.h"
+#import "ITTableViewController.h"
 #import "ITWeiboCell.h"
-@interface ViewController ()
+@interface ITTableViewController ()
 @property (nonatomic, strong) NSArray *weiboArr;
 @end
 
-@implementation ViewController
+@implementation ITTableViewController
 // MARK: Lazy loading weibo data
 - (NSArray *)weiboArr {
     if (_weiboArr == nil) {
@@ -26,10 +26,11 @@
     }
     return _weiboArr;
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
+
 // MARK: - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.weiboArr.count;
@@ -41,5 +42,4 @@
     cell.weiboModel = self.weiboArr[indexPath.row];
     return cell;
 }
-
 @end

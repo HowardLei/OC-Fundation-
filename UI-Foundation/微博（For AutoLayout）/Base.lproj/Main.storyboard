@@ -12,7 +12,7 @@
         <!--Table View Controller-->
         <scene sceneID="IZu-8U-vK4">
             <objects>
-                <tableViewController id="LOr-mS-bFi" sceneMemberID="viewController">
+                <tableViewController id="LOr-mS-bFi" customClass="ITTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oBd-8n-Qbp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,6 +156,13 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contentLabel" destination="2tB-R6-fvc" id="twS-JB-MQh"/>
+                                    <outlet property="iconImageView" destination="T8b-HU-BJa" id="qLd-pC-n2R"/>
+                                    <outlet property="nameLabel" destination="upb-nR-ixd" id="mgN-tn-GbX"/>
+                                    <outlet property="pictureImageView" destination="xse-Zp-elx" id="Y2S-M8-hlV"/>
+                                    <outlet property="vipImageView" destination="7Cs-Pv-sIz" id="Hxb-fb-x8p"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
