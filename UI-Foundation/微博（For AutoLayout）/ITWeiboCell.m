@@ -30,7 +30,7 @@
     self.vipImageView.image = [UIImage imageNamed:@"vip"];
     self.vipImageView.hidden = !weiboModel.isVip;
     self.contentLabel.text = weiboModel.text;
-    self.pictureImageView.image = [UIImage imageNamed:weiboModel.picture];
+    self.pictureImageView.image = weiboModel.picture ? [UIImage imageNamed:weiboModel.picture] : nil;
 }
 
 @end

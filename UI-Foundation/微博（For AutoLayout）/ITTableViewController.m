@@ -29,6 +29,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIScreen *screen = [UIScreen mainScreen];
+    NSLog(@"%@", NSStringFromCGRect(screen.bounds));
 }
 
 // MARK: - Table view data source
@@ -42,4 +44,5 @@
     cell.weiboModel = self.weiboArr[indexPath.row];
     return cell;
 }
+
 @end
