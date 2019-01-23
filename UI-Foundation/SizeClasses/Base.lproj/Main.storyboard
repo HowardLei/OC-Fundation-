@@ -37,7 +37,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6f-Bt-Sn7">
-                                <rect key="frame" x="172" y="391" width="31" height="30"/>
+                                <rect key="frame" x="172" y="306" width="31" height="30"/>
                                 <state key="normal" title="登录"/>
                                 <connections>
                                     <action selector="loginIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dmd-cc-uMD"/>
@@ -47,13 +47,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="R7f-S1-2yn" firstAttribute="centerX" secondItem="5b0-5v-KGz" secondAttribute="centerX" id="Dhe-hR-HVD"/>
+                            <constraint firstItem="Y6f-Bt-Sn7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IYz-Wf-i7W"/>
                             <constraint firstItem="R7f-S1-2yn" firstAttribute="top" secondItem="ime-Fi-eJP" secondAttribute="bottom" constant="10" id="Wx6-YM-9VB"/>
                             <constraint firstItem="5b0-5v-KGz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="Ye2-Rb-kbA"/>
-                            <constraint firstItem="Y6f-Bt-Sn7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cKd-eB-7hZ"/>
                             <constraint firstItem="R7f-S1-2yn" firstAttribute="width" secondItem="ime-Fi-eJP" secondAttribute="width" id="dIx-9b-GRA"/>
                             <constraint firstItem="ime-Fi-eJP" firstAttribute="centerX" secondItem="5b0-5v-KGz" secondAttribute="centerX" id="eRW-z2-xaW"/>
-                            <constraint firstItem="Y6f-Bt-Sn7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hp6-LG-fua"/>
                             <constraint firstItem="ime-Fi-eJP" firstAttribute="top" secondItem="5b0-5v-KGz" secondAttribute="bottom" constant="10" id="px4-rD-UVE"/>
+                            <constraint firstItem="Y6f-Bt-Sn7" firstAttribute="top" secondItem="R7f-S1-2yn" secondAttribute="bottom" constant="20" id="v2m-S1-2yV"/>
                             <constraint firstItem="5b0-5v-KGz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yJA-gM-30H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
