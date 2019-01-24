@@ -8,7 +8,7 @@
 #import "ITTableViewController.h"
 #import "ITWeiboCell.h"
 @interface ITTableViewController ()
-@property (nonatomic, strong) NSArray *weiboArr;
+@property (nonatomic, strong) NSArray<ITWeibo *> *weiboArr;
 @end
 
 @implementation ITTableViewController
@@ -29,8 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIScreen *screen = [UIScreen mainScreen];
-    NSLog(@"%@", NSStringFromCGRect(screen.bounds));
 }
 
 // MARK: - Table view data source

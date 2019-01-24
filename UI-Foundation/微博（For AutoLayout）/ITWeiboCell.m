@@ -18,7 +18,6 @@
 @end
 
 @implementation ITWeiboCell
-
 /**
  将模型中的数据添加到单元格当中
  @param weiboModel 需要添加的模型
