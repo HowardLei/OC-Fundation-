@@ -28,12 +28,12 @@
 
 // 计算方法的实现
 - (IBAction)touchToCalc {
-    // 记录 num1 和 num2 的数据（注意：刚开始接受的数据是 NSString 类型的数据，所以在转换成 int 型的时候用 intValue 方法）
-    int num1 = self.txtNum1.text.intValue;
-    int num2 = self.txtNum2.text.intValue;
+    // 记录 num1 和 num2 的数据（注意：刚开始接受的数据是 NSString 类型的数据，所以在转换成 NSInteger 型的时候用 intValue 方法）
+    NSInteger num1 = self.txtNum1.text.integerValue;
+    NSInteger num2 = self.txtNum2.text.integerValue;
     // 将结果的数据传给结果的 Label 。即 lblResult 。接受值的 label 不要忘了调用 text 方法。
     // 注意：传回去的值是 NSString 型的数据。需要调用 stringWithFormat 的类方法。
-    self.lblResult.text = [NSString stringWithFormat:@"%d", num1 + num2];
+    self.lblResult.text = [NSString stringWithFormat:@"%ld", num1 + num2];
     // 关闭键盘
     /*
      第一种方法：将这个 view endEditing。

@@ -14,6 +14,7 @@
         [self setValuesForKeysWithDictionary:dict];
     }
     return self;
+
 }
 + (instancetype)chatWithDict:(NSDictionary *)dict {
     return [[self alloc] initWithDict:dict];

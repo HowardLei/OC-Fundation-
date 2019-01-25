@@ -43,6 +43,11 @@ int main(int argc, const char * argv[]) {
         p1.name = @"王尼玛";
         NSLog(@"%@", [p1 valueForKey:@"name"]);
         Dog *dog = [[Dog alloc] init];
+        @try {
+            [dog setValue:@213 forKeyPath:@"dog.age"];
+        } @catch (NSException *exception) {
+            NSLog(@"对不起，找不到对应属性");
+        }
         p1.dog = dog;
         [p1 setValue:@"王尼玛" forKeyPath:@"dog.name"];
         NSLog(@"%@", p1.dog.name);
