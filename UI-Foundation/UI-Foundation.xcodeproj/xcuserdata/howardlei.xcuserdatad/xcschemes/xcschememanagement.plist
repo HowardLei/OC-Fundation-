@@ -72,32 +72,32 @@
 		<key>UIKit坐标系.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 		<key>UIScrollerView的offset属性.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>11</integer>
 		</dict>
 		<key>UITableViewCell的重用.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>20</integer>
+			<integer>21</integer>
 		</dict>
 		<key>UITableView和UITableViewCell的常见属性.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>21</integer>
+			<integer>19</integer>
 		</dict>
 		<key>UITableView显示多组数据.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>18</integer>
+			<integer>16</integer>
 		</dict>
 		<key>UITableView显示数据的方法.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>17</integer>
 		</dict>
 		<key>VFL语言.xcscheme_^#shared#^_</key>
 		<dict>
@@ -107,7 +107,12 @@
 		<key>transform.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>5</integer>
+		</dict>
+		<key>代码实现 UICollectionView.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>43</integer>
 		</dict>
 		<key>代码实现AutoLayout.xcscheme_^#shared#^_</key>
 		<dict>
@@ -122,7 +127,7 @@
 		<key>喜马拉雅App.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>13</integer>
 		</dict>
 		<key>四个大块的适配.xcscheme_^#shared#^_</key>
 		<dict>
@@ -137,7 +142,7 @@
 		<key>图片浏览器.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>4</integer>
 		</dict>
 		<key>图片轮播器.xcscheme_^#shared#^_</key>
 		<dict>
@@ -147,7 +152,7 @@
 		<key>大图显示.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>9</integer>
 		</dict>
 		<key>好友列表.xcscheme_^#shared#^_</key>
 		<dict>
@@ -157,7 +162,7 @@
 		<key>展示汽车品牌.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>17</integer>
+			<integer>18</integer>
 		</dict>
 		<key>展示汽车模型（多组版）.xcscheme_^#shared#^_</key>
 		<dict>
@@ -167,22 +172,22 @@
 		<key>展示英雄.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>20</integer>
 		</dict>
 		<key>应用管理 (xib版).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>10</integer>
 		</dict>
 		<key>应用管理.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>6</integer>
 		</dict>
 		<key>应用管理（模型版）.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>8</integer>
 		</dict>
 		<key>微博案例.xcscheme_^#shared#^_</key>
 		<dict>
@@ -192,17 +197,17 @@
 		<key>微博（For AutoLayout）.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>43</integer>
+			<integer>44</integer>
 		</dict>
 		<key>按钮的注意点.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<key>汤姆猫.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>7</integer>
 		</dict>
 		<key>游戏图片按钮适配.xcscheme_^#shared#^_</key>
 		<dict>
@@ -212,12 +217,17 @@
 		<key>通过代理监听滚动事件.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>12</integer>
 		</dict>
 		<key>通过代理监听缩放事件.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>14</integer>
+		</dict>
+		<key>通过代码（Collectio）实现应用管理.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>45</integer>
 		</dict>
 		<key>静态单元格的设置.xcscheme_^#shared#^_</key>
 		<dict>

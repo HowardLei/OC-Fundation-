@@ -34,7 +34,7 @@
     return cell;
 }
 // 设置 UICollectionView 显示多少个项目
-- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return 100;
 }
 
