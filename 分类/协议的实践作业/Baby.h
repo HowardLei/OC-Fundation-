@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "CareProtocol.h"
+
 @interface Baby : NSObject 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, assign) int age;
