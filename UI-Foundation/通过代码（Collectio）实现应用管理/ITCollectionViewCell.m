@@ -39,10 +39,10 @@
 - (void)setModel:(ITApp *)model {
     _model = model;
     self.label.text = model.name;
-    // 先创建原串
-    NSString *str1 = [model.icon substringToIndex:5];
+    // 设置图片开始为 0
     static NSUInteger i = 0;
-    NSString *imageName = [NSString stringWithFormat:@"%@%02lu", str1, i];
+    // 按照图片要求格式化出来一个新串
+    NSString *imageName = [NSString stringWithFormat:@"%@%02lu", [model.icon substringToIndex:5], i];
     self.imageView.image = [UIImage imageNamed:imageName];
     i++;
 }
