@@ -6,11 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class ITApp;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ITCollectionViewCell : UICollectionViewCell
-
+@property (nonatomic, strong) ITApp *model;
 @end
 
 NS_ASSUME_NONNULL_END

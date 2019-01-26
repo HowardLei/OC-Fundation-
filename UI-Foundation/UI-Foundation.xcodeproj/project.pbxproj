@@ -650,6 +650,8 @@
 		6393F01E21FB74DB007FC3E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6393F01C21FB74DB007FC3E4 /* LaunchScreen.storyboard */; };
 		6393F02121FB74DB007FC3E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6393F02021FB74DB007FC3E4 /* main.m */; };
 		6393F02C21FB75A6007FC3E4 /* ITCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6393F02B21FB75A6007FC3E4 /* ITCollectionViewCell.m */; };
+		6393F02E21FBFC46007FC3E4 /* app.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6393F02D21FBFC46007FC3E4 /* app.plist */; };
+		6393F03121FC034D007FC3E4 /* ITApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 6393F03021FC034D007FC3E4 /* ITApp.m */; };
 		63B074D321F56A1D00B9EEE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B074D221F56A1D00B9EEE6 /* AppDelegate.m */; };
 		63B074D621F56A1D00B9EEE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B074D521F56A1D00B9EEE6 /* ViewController.m */; };
 		63B074D921F56A1D00B9EEE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B074D721F56A1D00B9EEE6 /* Main.storyboard */; };
@@ -1573,6 +1575,9 @@
 		6393F02021FB74DB007FC3E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6393F02A21FB75A6007FC3E4 /* ITCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITCollectionViewCell.h; sourceTree = "<group>"; };
 		6393F02B21FB75A6007FC3E4 /* ITCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITCollectionViewCell.m; sourceTree = "<group>"; };
+		6393F02D21FBFC46007FC3E4 /* app.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = app.plist; sourceTree = "<group>"; };
+		6393F02F21FC034D007FC3E4 /* ITApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITApp.h; sourceTree = "<group>"; };
+		6393F03021FC034D007FC3E4 /* ITApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITApp.m; sourceTree = "<group>"; };
 		63B074CF21F56A1D00B9EEE6 /* SizeClasses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SizeClasses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B074D121F56A1D00B9EEE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		63B074D221F56A1D00B9EEE6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -3354,6 +3359,8 @@
 		6393F02721FB755D007FC3E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6393F02F21FC034D007FC3E4 /* ITApp.h */,
+				6393F03021FC034D007FC3E4 /* ITApp.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -3370,6 +3377,7 @@
 		6393F02921FB756F007FC3E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6393F02D21FBFC46007FC3E4 /* app.plist */,
 				6393F01A21FB74DB007FC3E4 /* Assets.xcassets */,
 				6393F01F21FB74DB007FC3E4 /* Info.plist */,
 				6393F02021FB74DB007FC3E4 /* main.m */,
@@ -6172,6 +6180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6393F02E21FBFC46007FC3E4 /* app.plist in Resources */,
 				6393F01E21FB74DB007FC3E4 /* LaunchScreen.storyboard in Resources */,
 				6393F01B21FB74DB007FC3E4 /* Assets.xcassets in Resources */,
 				6393F01921FB74DB007FC3E4 /* Main.storyboard in Resources */,
@@ -6660,6 +6669,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6393F03121FC034D007FC3E4 /* ITApp.m in Sources */,
 				6393F01621FB74DB007FC3E4 /* ViewController.m in Sources */,
 				6393F02C21FB75A6007FC3E4 /* ITCollectionViewCell.m in Sources */,
 				6393F02121FB74DB007FC3E4 /* main.m in Sources */,
