@@ -30,7 +30,7 @@
     [self.contentView addSubview:imageView];
     self.imageView = imageView;
     // 2、设置 label
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 70, CGRectGetWidth(frame), 30)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(imageView.frame), CGRectGetWidth(frame), 30)];
     label.font = [UIFont systemFontOfSize:14];
     label.textAlignment = NSTextAlignmentCenter;
     [self.contentView addSubview:label];
