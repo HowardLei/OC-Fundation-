@@ -59,8 +59,4 @@
     NSLog(@"正在安装");
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 @end

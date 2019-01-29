@@ -1,5 +1,4 @@
 #import "ViewController.h"
-#import "ITGoods.h"
 #import "ITTableViewCell.h"
 #import "ITHeaderView.h"
 #import "ITFooterView.h"
@@ -47,7 +46,7 @@
         1、控制器知道的内容太多，导致一旦单元格中的属性发生变化，则所有有单元格的控制器都需要修改代码，过于依赖控制器。
         2、单元格本身封装的也并不完整。还需要程序员手动设置属性。
      */
-    ITTableViewCell *cell = [ITTableViewCell tableViewCellWithTableView:tableView];
+    ITTableViewCell *cell = [ITTableViewCell tableViewCellForTableView:tableView];
     // 3、设置单元格数据
     // 这次是将数据封装到一个属性当中
     cell.goods = model;

@@ -37,6 +37,8 @@
     // 点击完以后显示一个 Label 表示正在下载和下载成功
     if ([self.delegate respondsToSelector:@selector(showLabel)]) {
         [self.delegate showLabel];
+    } else {
+        @throw [NSException exceptionWithName:@"方法未找到" reason:@"没有实现代理方法" userInfo:nil];
     }
 }
 @end

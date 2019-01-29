@@ -7,17 +7,17 @@
 		<key>Add calculator.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>App管理.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>27</integer>
+			<integer>28</integer>
 		</dict>
 		<key>AutoLayout 动画.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>38</integer>
+			<integer>37</integer>
 		</dict>
 		<key>AutoLayout中两个控件之间的关系的设置.xcscheme_^#shared#^_</key>
 		<dict>
@@ -37,42 +37,47 @@
 		<key>Autoresizing的代码实现.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>31</integer>
+			<integer>29</integer>
 		</dict>
 		<key>Autoresizing的使用.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>29</integer>
+			<integer>30</integer>
+		</dict>
+		<key>CollectionViewController.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>47</integer>
 		</dict>
 		<key>MVC设计模式.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Masonry.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>39</integer>
+			<integer>41</integer>
 		</dict>
 		<key>QQ聊天.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>28</integer>
+			<integer>24</integer>
 		</dict>
 		<key>SizeClasses.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>42</integer>
+			<integer>40</integer>
 		</dict>
 		<key>UICollectionView.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>43</integer>
+			<integer>42</integer>
 		</dict>
 		<key>UIKit坐标系.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>UIScrollerView的offset属性.xcscheme_^#shared#^_</key>
 		<dict>
@@ -102,7 +107,7 @@
 		<key>VFL语言.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>40</integer>
+			<integer>39</integer>
 		</dict>
 		<key>transform.xcscheme_^#shared#^_</key>
 		<dict>
@@ -117,12 +122,12 @@
 		<key>代码实现AutoLayout.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>36</integer>
+			<integer>38</integer>
 		</dict>
 		<key>初试AutoLayout.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>30</integer>
+			<integer>31</integer>
 		</dict>
 		<key>喜马拉雅App.xcscheme_^#shared#^_</key>
 		<dict>
@@ -132,17 +137,17 @@
 		<key>四个大块的适配.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>37</integer>
+			<integer>36</integer>
 		</dict>
 		<key>团购.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>21</integer>
+			<integer>23</integer>
 		</dict>
 		<key>图片浏览器.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>7</integer>
 		</dict>
 		<key>图片轮播器.xcscheme_^#shared#^_</key>
 		<dict>
@@ -157,7 +162,7 @@
 		<key>好友列表.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>25</integer>
+			<integer>26</integer>
 		</dict>
 		<key>展示汽车品牌.xcscheme_^#shared#^_</key>
 		<dict>
@@ -167,7 +172,7 @@
 		<key>展示汽车模型（多组版）.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>23</integer>
+			<integer>21</integer>
 		</dict>
 		<key>展示英雄.xcscheme_^#shared#^_</key>
 		<dict>
@@ -182,7 +187,7 @@
 		<key>应用管理.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>5</integer>
 		</dict>
 		<key>应用管理（模型版）.xcscheme_^#shared#^_</key>
 		<dict>
@@ -192,12 +197,12 @@
 		<key>微博案例.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>24</integer>
+			<integer>25</integer>
 		</dict>
 		<key>微博（For AutoLayout）.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>41</integer>
+			<integer>43</integer>
 		</dict>
 		<key>按钮的注意点.xcscheme_^#shared#^_</key>
 		<dict>
@@ -217,7 +222,7 @@
 		<key>通过 xib 实现应用管理（用 CollectionView）.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>46</integer>
+			<integer>45</integer>
 		</dict>
 		<key>通过代理监听滚动事件.xcscheme_^#shared#^_</key>
 		<dict>
@@ -232,12 +237,12 @@
 		<key>通过代码（Collectio）实现应用管理.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>45</integer>
+			<integer>46</integer>
 		</dict>
 		<key>静态单元格的设置.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>26</integer>
+			<integer>27</integer>
 		</dict>
 	</dict>
 </dict>
