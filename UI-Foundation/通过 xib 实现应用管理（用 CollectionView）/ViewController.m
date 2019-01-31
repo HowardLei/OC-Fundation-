@@ -31,7 +31,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@", NSStringFromCGRect(self.view.safeAreaLayoutGuide.layoutFrame));
     [self createACollectionView];
 }
 
