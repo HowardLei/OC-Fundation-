@@ -24,7 +24,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Hlo-1J-hhX">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Hlo-1J-hhX" customClass="ITHeroCell">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -62,6 +62,11 @@
                                     <constraint firstAttribute="bottom" secondItem="MKX-sb-1hn" secondAttribute="bottom" constant="10" id="nIS-5T-P4N"/>
                                     <constraint firstItem="MKX-sb-1hn" firstAttribute="leading" secondItem="Hlo-1J-hhX" secondAttribute="leading" constant="10" id="qJI-di-sts"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="contentLabel" destination="dp8-pZ-Ed5" id="sQT-jM-yTn"/>
+                                    <outlet property="heroImageView" destination="MKX-sb-1hn" id="CNg-Kc-qEe"/>
+                                    <outlet property="nameLabel" destination="jdS-SG-dy5" id="Bhi-wG-slB"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

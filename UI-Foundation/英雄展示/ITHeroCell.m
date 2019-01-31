@@ -9,12 +9,17 @@
 #import "ITHero.h"
 
 @interface ITHeroCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *heroImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 
 @end
 
 @implementation ITHeroCell
 - (void)setModel:(ITHero *)model {
     _model = model;
-    model.name = @"<#string#>"
+    self.nameLabel.text = model.name;
+    self.heroImageView.image = [UIImage imageNamed:model.icon];
+    self.contentLabel.text = model.intro;
 }
 @end
