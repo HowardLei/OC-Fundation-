@@ -58,6 +58,7 @@ static NSString *const reuseIdentifier = @"Cell";
 }
 // 注意：在 UICollectionView 当中，没有 headerView 与 footerView 类，统一均用 UICollectionReusableView 来创建 headerView 与 footerView。通过 kind 参数来区分。
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    // 1、先设置 headerView 与 footerView 的重用 ID
     static NSString *const headerID = @"header";
     static NSString *const footerID = @"footer";
     UICollectionReusableView *view = nil;

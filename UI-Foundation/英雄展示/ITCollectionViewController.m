@@ -44,7 +44,7 @@ static NSString *const reuseIdentifier = @"Cell";
 }
 
 #pragma mark - <UICollectionViewDelegate>
-// 设置哪个 cell 会显示菜单
+// 设置哪个 cell 会显示菜单，如果都显示则返回值为 YES，如果精确定位到哪个 cell，通过 indexPath 参数访问即可。
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
@@ -61,9 +61,10 @@ static NSString *const reuseIdentifier = @"Cell";
     // 创建一个剪切板。注意：剪切板分为公共的和私有的。调用 generalPasteboard 获得的剪切板为公共剪切板
     UIPasteboard *board = [UIPasteboard generalPasteboard];
     // 获得需要复制的模型
-    ITHero *model = self.modelArr[indexPath.row];
+    ITHero *model = nil;
     // 根据你点击的按钮，作出相应的事件。由于设置好两个按键，所以直接用 if-else 结构即可。
     if (action == @selector(copy:)) {
+        model = self.modelArr[indexPath.row];
         // 将数据添加到剪切板上
         board.strings = @[model.name, model.icon, model.intro];
     } else {
@@ -71,8 +72,8 @@ static NSString *const reuseIdentifier = @"Cell";
         NSArray<NSString *> *values = board.strings;
         NSDictionary *modelDict = [NSDictionary dictionaryWithObjects:values forKeys:keys];
         // FIXME: 这个地方为什么不能直接 copy 原对象的副本？
-        ITHero *hero = [ITHero heroWithDict:modelDict];
-        [self.modelArr insertObject:hero atIndex:indexPath.row];
+        model = [ITHero heroWithDict:modelDict];
+        [self.modelArr insertObject:model atIndex:indexPath.row];
         [collectionView insertItemsAtIndexPaths:@[indexPath]];
     }
 }
