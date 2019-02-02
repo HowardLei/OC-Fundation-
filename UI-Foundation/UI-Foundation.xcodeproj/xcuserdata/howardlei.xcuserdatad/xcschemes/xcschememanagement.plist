@@ -212,7 +212,7 @@
 		<key>新特性设置.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>49</integer>
+			<integer>48</integer>
 		</dict>
 		<key>汤姆猫.xcscheme_^#shared#^_</key>
 		<dict>
@@ -224,10 +224,15 @@
 			<key>orderHint</key>
 			<integer>34</integer>
 		</dict>
+		<key>自定义布局.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>50</integer>
+		</dict>
 		<key>英雄展示.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>48</integer>
+			<integer>49</integer>
 		</dict>
 		<key>通过 xib 实现应用管理（用 CollectionView）.xcscheme_^#shared#^_</key>
 		<dict>
