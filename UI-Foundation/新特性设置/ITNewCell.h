@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ITNewCell : UICollectionViewCell
 @property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) NSIndexPath *path;
 @end
 
 NS_ASSUME_NONNULL_END

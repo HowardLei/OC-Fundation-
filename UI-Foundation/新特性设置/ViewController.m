@@ -8,14 +8,14 @@
 #import "ViewController.h"
 #import "ITNewCell.h"
 
-@interface ViewController () <UICollectionViewDataSource>
+@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (nonatomic, strong) NSArray<UIImage *> *images;
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *collectionViewLayout;
 @property (weak, nonatomic) IBOutlet UICollectionView *imageCollectionView;
 @end
 
 @implementation ViewController
-static NSString *const ID = @"newCell";
+
 - (NSArray<UIImage *> *)images {
     if (_images == nil) {
         NSMutableArray<UIImage *> *arrM = [NSMutableArray array];
@@ -32,18 +32,18 @@ static NSString *const ID = @"newCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.collectionViewLayout.itemSize = self.imageCollectionView.bounds.size;
+    // 其它效果全部都在设置在右边栏当中
 }
-
-
+// MARK: - Collection view data source
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    static NSString *const ID = @"newCell";
     ITNewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor redColor];
     cell.image = self.images[indexPath.row];
+    cell.path = indexPath;
     return cell;
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.images.count;
 }
-
 @end
