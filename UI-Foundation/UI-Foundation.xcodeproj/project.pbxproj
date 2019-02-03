@@ -645,6 +645,7 @@
 		636663A222056643006042E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636663A022056643006042E5 /* LaunchScreen.storyboard */; };
 		636663A522056643006042E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 636663A422056643006042E5 /* main.m */; };
 		636663B022056C06006042E5 /* ITPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 636663AF22056C06006042E5 /* ITPhotoCell.m */; };
+		636663B322057AA0006042E5 /* ITPhotoFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 636663B222057AA0006042E5 /* ITPhotoFlowLayout.m */; };
 		637DFE3B21F85C9000BBD4B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 637DFE3A21F85C9000BBD4B7 /* AppDelegate.m */; };
 		637DFE3E21F85C9000BBD4B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637DFE3D21F85C9000BBD4B7 /* ViewController.m */; };
 		637DFE4121F85C9000BBD4B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637DFE3F21F85C9000BBD4B7 /* Main.storyboard */; };
@@ -1606,6 +1607,8 @@
 		636663A422056643006042E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		636663AE22056C06006042E5 /* ITPhotoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITPhotoCell.h; sourceTree = "<group>"; };
 		636663AF22056C06006042E5 /* ITPhotoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITPhotoCell.m; sourceTree = "<group>"; };
+		636663B122057AA0006042E5 /* ITPhotoFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITPhotoFlowLayout.h; sourceTree = "<group>"; };
+		636663B222057AA0006042E5 /* ITPhotoFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITPhotoFlowLayout.m; sourceTree = "<group>"; };
 		637DFE3721F85C9000BBD4B7 /* UICollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		637DFE3921F85C9000BBD4B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		637DFE3A21F85C9000BBD4B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -3493,6 +3496,8 @@
 		636663AB2205665E006042E5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				636663B122057AA0006042E5 /* ITPhotoFlowLayout.h */,
+				636663B222057AA0006042E5 /* ITPhotoFlowLayout.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -7274,6 +7279,7 @@
 				6366639A22056642006042E5 /* ViewController.m in Sources */,
 				636663A522056643006042E5 /* main.m in Sources */,
 				6366639722056642006042E5 /* AppDelegate.m in Sources */,
+				636663B322057AA0006042E5 /* ITPhotoFlowLayout.m in Sources */,
 				636663B022056C06006042E5 /* ITPhotoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
