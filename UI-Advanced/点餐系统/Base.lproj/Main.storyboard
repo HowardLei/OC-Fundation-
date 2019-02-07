@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nxs-vv-bBh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="点菜系统" id="YKd-3t-DxQ"/>
+                                </items>
+                            </navigationBar>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uok-9b-w89">
+                                <rect key="frame" x="0.0" y="64" width="375" height="269.5"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="g5p-yD-8Vu"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="R5A-xp-D1F"/>
+                                </connections>
+                            </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2e-El-S49">
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="水果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qR4-QO-NdZ">
+                                        <rect key="frame" x="76.5" y="73" width="35" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4Z-zh-47w">
+                                        <rect key="frame" x="272.5" y="73" width="17.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主菜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0z-Ha-lIu">
+                                        <rect key="frame" x="76.5" y="156.5" width="35" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYS-wg-TDm">
+                                        <rect key="frame" x="272.5" y="156.5" width="17.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtd-15-WrZ">
+                                        <rect key="frame" x="272.5" y="239.5" width="17.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="酒水" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxM-bp-xQu">
+                                        <rect key="frame" x="76.5" y="239.5" width="35" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qR4-QO-NdZ" firstAttribute="centerX" secondItem="J2e-El-S49" secondAttribute="centerX" multiplier="0.5" id="05o-9T-bDq"/>
+                                    <constraint firstItem="j4Z-zh-47w" firstAttribute="centerX" secondItem="J2e-El-S49" secondAttribute="centerX" multiplier="1.5" id="1WK-Mf-iu4"/>
+                                    <constraint firstItem="TxM-bp-xQu" firstAttribute="centerX" secondItem="J2e-El-S49" secondAttribute="centerX" multiplier="0.5" id="D7Q-eC-K2y"/>
+                                    <constraint firstItem="l0z-Ha-lIu" firstAttribute="centerX" secondItem="J2e-El-S49" secondAttribute="centerX" multiplier="0.5" id="ELK-wd-hL5"/>
+                                    <constraint firstItem="YYS-wg-TDm" firstAttribute="centerY" secondItem="l0z-Ha-lIu" secondAttribute="centerY" id="Hfm-Cm-Fjb"/>
+                                    <constraint firstItem="j4Z-zh-47w" firstAttribute="centerY" secondItem="qR4-QO-NdZ" secondAttribute="centerY" id="JiU-r0-u5o"/>
+                                    <constraint firstItem="l0z-Ha-lIu" firstAttribute="centerY" secondItem="J2e-El-S49" secondAttribute="centerY" id="Lo3-rb-RIK"/>
+                                    <constraint firstItem="qR4-QO-NdZ" firstAttribute="centerY" secondItem="J2e-El-S49" secondAttribute="centerY" multiplier="0.5" id="NKi-AP-2pn"/>
+                                    <constraint firstItem="TxM-bp-xQu" firstAttribute="centerY" secondItem="J2e-El-S49" secondAttribute="centerY" multiplier="1.5" id="hkV-XP-met"/>
+                                    <constraint firstItem="Rtd-15-WrZ" firstAttribute="centerX" secondItem="YYS-wg-TDm" secondAttribute="centerX" id="qnA-WU-mL9"/>
+                                    <constraint firstItem="Rtd-15-WrZ" firstAttribute="centerY" secondItem="TxM-bp-xQu" secondAttribute="centerY" id="tiF-1I-wRM"/>
+                                    <constraint firstItem="YYS-wg-TDm" firstAttribute="centerX" secondItem="j4Z-zh-47w" secondAttribute="centerX" id="z2W-fj-b3o"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="J2e-El-S49" secondAttribute="trailing" id="0Y2-6m-0wp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uok-9b-w89" secondAttribute="trailing" id="3Se-e3-iLU"/>
+                            <constraint firstItem="J2e-El-S49" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7Ft-nt-1jp"/>
+                            <constraint firstItem="uok-9b-w89" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8ab-sD-uh9"/>
+                            <constraint firstItem="J2e-El-S49" firstAttribute="top" secondItem="uok-9b-w89" secondAttribute="bottom" id="M3T-4g-6ou"/>
+                            <constraint firstItem="nxs-vv-bBh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TtA-dq-BcW"/>
+                            <constraint firstItem="J2e-El-S49" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="bottom" multiplier="0.5" id="VGE-xx-N4h"/>
+                            <constraint firstItem="uok-9b-w89" firstAttribute="top" secondItem="nxs-vv-bBh" secondAttribute="bottom" id="bTz-8h-n3Y"/>
+                            <constraint firstItem="nxs-vv-bBh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dC0-Dl-Brl"/>
+                            <constraint firstAttribute="trailing" secondItem="nxs-vv-bBh" secondAttribute="trailing" id="dpe-1X-jRf"/>
+                            <constraint firstItem="uok-9b-w89" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nMt-cN-ikq"/>
+                            <constraint firstItem="J2e-El-S49" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yLR-Lp-heW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="drinkChoiceLabel" destination="Rtd-15-WrZ" id="LDv-FK-nvt"/>
+                        <outlet property="fruitChoiceLabel" destination="j4Z-zh-47w" id="76P-Mb-QGw"/>
+                        <outlet property="mainCourseChoiceLabel" destination="YYS-wg-TDm" id="OLh-4u-OVS"/>
+                        <outlet property="menuView" destination="uok-9b-w89" id="u7m-hM-FZ9"/>
+                        <outlet property="showView" destination="J2e-El-S49" id="LOD-bH-9q5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
