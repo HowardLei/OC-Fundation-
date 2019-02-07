@@ -15,11 +15,16 @@
 @end
 
 @implementation ViewController
+
 static NSString *const ID = @"photo";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createACollectionView];
 }
+/**
+ 创建 collectionView 布局
+ */
 - (void)createACollectionView {
     // 1、设置布局
     ITPhotoFlowLayout *flowLayout = [[ITPhotoFlowLayout alloc] init];
@@ -40,5 +45,4 @@ static NSString *const ID = @"photo";
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return 100;
 }
-
 @end

@@ -7,6 +7,9 @@
 
 #import "ITPhotoFlowLayout.h"
 
+@interface ITPhotoFlowLayout () <UICollectionViewDelegateFlowLayout>
+
+@end
 @implementation ITPhotoFlowLayout
 - (instancetype)init {
     if (self = [super init]) {
@@ -19,7 +22,7 @@
  该方法和 init 方法相似，但前者可能会被调用多次，所以一些不固定的计算（比如该计算和 collectionView 的尺寸相关），最好放在这里，以保证 collectionView 发生变化时，自定义 CollectionView 能做出正确的反应。
  */
 /**
- 当布局进行刷新的时候，就会调用此方法
+ 当开始布局或者布局刷新的时候调用该方法执行准备工作
  */
 - (void)prepareLayout {
     [super prepareLayout];
@@ -29,17 +32,25 @@
     CGFloat height = CGRectGetHeight(rect) * 0.8;
     self.itemSize = CGSizeMake(width, height);
 }
-// 这个方法是设置所有 cell 里面的属性
+/**
+ 调用该方法是控制指定 CGRect 区域所有 item 的属性。
+ @param rect 单个 item 所控制的区域
+ @return 所有 items 的值
+ */
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
     // 1、取出所有 item 当中的 UICollectionViewLayoutAttributes
     NSArray<UICollectionViewLayoutAttributes *> *superAttributes = [super layoutAttributesForElementsInRect:rect];
+    CGFloat screenCenter = self.collectionView.contentOffset.x + CGRectGetWidth(self.collectionView.frame) / 2;
     // 2、通过循环遍历进行访问
     for (UICollectionViewLayoutAttributes *attrs in superAttributes) {
-        NSLog(@"%@", NSStringFromCGRect(attrs.frame));
+        CGFloat deltaMargin = ABS(screenCenter - attrs.center.x);
+        // 4. 计算一个放大比率 , cell 和中心点的距离和放大的比率成反比
+        CGFloat scaleDelta = 1.1 - deltaMargin / (CGRectGetWidth(self.collectionView.frame) / 2 + CGRectGetWidth(attrs.frame));
+        attrs.transform = CGAffineTransformMakeScale(scaleDelta, scaleDelta);
     }
     return superAttributes;
 }
-// MARK: 当
+// MARK: 当界面开始刷新的时候，开始调用这个方法
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
     return YES;
 }
