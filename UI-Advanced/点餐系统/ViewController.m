@@ -13,7 +13,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *fruitChoiceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mainCourseChoiceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *drinkChoiceLabel;
+@property (weak, nonatomic) IBOutlet UIButton *randomChooseButton;
 @property (nonatomic, strong) NSArray<NSArray<NSString *> *> *models;
+- (IBAction)randomChoose;
 @end
 
 @implementation ViewController
@@ -90,5 +92,19 @@
         _models = [NSArray arrayWithContentsOfFile:path];
     }
     return _models;
+}
+// MARK: - 按钮点击事件
+/**
+ 当点击随机点餐的时候，实现下面的方法
+ */
+- (IBAction)randomChoose {
+    for (NSInteger i = 0; i < self.models.count; i++) {
+        // 1、调整 picker view 当中选定的按钮
+        // 计算随机的行，注意每个部分之间的行不相同。
+        NSUInteger row = arc4random_uniform((unsigned int)self.models[i].count);
+        [self.menuView selectRow:row inComponent:i animated:YES];
+        // 2、调整 label 里面的内容。使其与上边选择好的进行一一对应
+        [self pickerView:self.menuView didSelectRow:row inComponent:i];
+    }
 }
 @end

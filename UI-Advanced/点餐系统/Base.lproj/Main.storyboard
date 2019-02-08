@@ -21,7 +21,18 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nxs-vv-bBh">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="点菜系统" id="YKd-3t-DxQ"/>
+                                    <navigationItem title="点菜系统" id="YKd-3t-DxQ">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="LFX-Va-D9X">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gxs-2P-A5I">
+                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="随机点餐"/>
+                                                <connections>
+                                                    <action selector="randomChoose" destination="BYZ-38-t0r" eventType="touchUpInside" id="RDk-nN-ba8"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uok-9b-w89">
@@ -110,6 +121,7 @@
                         <outlet property="fruitChoiceLabel" destination="j4Z-zh-47w" id="76P-Mb-QGw"/>
                         <outlet property="mainCourseChoiceLabel" destination="YYS-wg-TDm" id="OLh-4u-OVS"/>
                         <outlet property="menuView" destination="uok-9b-w89" id="u7m-hM-FZ9"/>
+                        <outlet property="randomChooseButton" destination="gxs-2P-A5I" id="MBj-kg-iEd"/>
                         <outlet property="showView" destination="J2e-El-S49" id="LOD-bH-9q5"/>
                     </connections>
                 </viewController>
