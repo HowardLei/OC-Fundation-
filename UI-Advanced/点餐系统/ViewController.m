@@ -8,6 +8,7 @@
 #import "ViewController.h"
 
 @interface ViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIPickerView *menuView;
 @property (weak, nonatomic) IBOutlet UIView *showView;
 @property (weak, nonatomic) IBOutlet UILabel *fruitChoiceLabel;
@@ -15,10 +16,18 @@
 @property (weak, nonatomic) IBOutlet UILabel *drinkChoiceLabel;
 @property (weak, nonatomic) IBOutlet UIButton *randomChooseButton;
 @property (nonatomic, strong) NSArray<NSArray<NSString *> *> *models;
+
 - (IBAction)randomChoose;
+
+typedef NS_ENUM(NSUInteger, ITChoice) {
+    ITChoiceFruit,
+    ITChoiceMainCourse,
+    ITChoiceDrink,
+};
 @end
 
 @implementation ViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     for (NSUInteger i = 0; i < self.models.count; i++) {
@@ -68,11 +77,6 @@
     // 1、获取数据
     NSArray<NSString *> *item = self.models[component];
     // 2、设置 label 当中的值。为了方便判断这里选择使用枚举。
-    typedef NS_ENUM(NSUInteger, ITChoice) {
-        ITChoiceFruit,
-        ITChoiceMainCourse,
-        ITChoiceDrink,
-    };
     switch (component) {
         case ITChoiceFruit:
             self.fruitChoiceLabel.text = item[row];
@@ -102,6 +106,10 @@
         // 1、调整 picker view 当中选定的按钮
         // 计算随机的行，注意每个部分之间的行不相同。
         NSUInteger row = arc4random_uniform((unsigned int)self.models[i].count);
+        // 注意：为了防止出现随机点餐出现选项相同，进行一个 while 循环判断。如果相同，则行标继续重新生成，直到不同为止。
+        while (row == [self.menuView selectedRowInComponent:i]) {
+            row = arc4random_uniform((unsigned int)self.models[i].count);
+        }
         [self.menuView selectRow:row inComponent:i animated:YES];
         // 2、调整 label 里面的内容。使其与上边选择好的进行一一对应
         [self pickerView:self.menuView didSelectRow:row inComponent:i];
