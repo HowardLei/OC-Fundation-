@@ -17,16 +17,11 @@
 @end
 
 @implementation ViewController
-// MARK: - Lazy loading model
-- (NSArray<NSArray<NSString *> *> *)models {
-    if (_models == nil) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"01foods" ofType:@".plist"];
-        _models = [NSArray arrayWithContentsOfFile:path];
-    }
-    return _models;
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    for (NSUInteger i = 0; i < self.models.count; i++) {
+        [self pickerView:self.menuView didSelectRow:0 inComponent:i];
+    }
 }
 // MARK: - Picker view data source
 /**
@@ -63,14 +58,37 @@
 }
 /**
  当 picker view 当中的选项被选中的时候，触发当前方法
- @param pickerView <#pickerView description#>
- @param row <#row description#>
- @param component <#component description#>
+ @param pickerView 绑定的 picker view
+ @param row 选定的行
+ @param component 选定的组成部分
  */
-// TODO: 将数据转化到 label 当中
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     // 1、获取数据
     NSArray<NSString *> *item = self.models[component];
-    // 2、设置 label 当中的值
+    // 2、设置 label 当中的值。为了方便判断这里选择使用枚举。
+    typedef NS_ENUM(NSUInteger, ITChoice) {
+        ITChoiceFruit,
+        ITChoiceMainCourse,
+        ITChoiceDrink,
+    };
+    switch (component) {
+        case ITChoiceFruit:
+            self.fruitChoiceLabel.text = item[row];
+            break;
+        case ITChoiceMainCourse:
+            self.mainCourseChoiceLabel.text = item[row];
+            break;
+        case ITChoiceDrink:
+            self.drinkChoiceLabel.text = item[row];
+            break;
+    }
+}
+// MARK: - Lazy loading model
+- (NSArray<NSArray<NSString *> *> *)models {
+    if (_models == nil) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"01foods" ofType:@".plist"];
+        _models = [NSArray arrayWithContentsOfFile:path];
+    }
+    return _models;
 }
 @end
