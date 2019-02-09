@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVu-dj-2qp">
+                                <rect key="frame" x="0.0" y="20" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="6lj-i2-I1r"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SMp-bn-2YW"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N21-X8-nZv">
+                                <rect key="frame" x="30" y="251" width="142.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gaj-Mn-oAV">
+                                <rect key="frame" x="202.5" y="251" width="142.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Gaj-Mn-oAV" firstAttribute="width" secondItem="N21-X8-nZv" secondAttribute="width" id="8ch-fz-QTt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gaj-Mn-oAV" secondAttribute="trailing" constant="30" id="DWs-gN-sFT"/>
+                            <constraint firstItem="HVu-dj-2qp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FOO-KI-yqE"/>
+                            <constraint firstItem="N21-X8-nZv" firstAttribute="top" secondItem="HVu-dj-2qp" secondAttribute="bottom" constant="15" id="Qwz-HE-7A1"/>
+                            <constraint firstItem="HVu-dj-2qp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ux3-wy-z96"/>
+                            <constraint firstItem="Gaj-Mn-oAV" firstAttribute="leading" secondItem="N21-X8-nZv" secondAttribute="trailing" constant="30" id="VVT-di-jLL"/>
+                            <constraint firstItem="N21-X8-nZv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="kDq-Nk-jcf"/>
+                            <constraint firstItem="HVu-dj-2qp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="l89-fa-vSW"/>
+                            <constraint firstItem="Gaj-Mn-oAV" firstAttribute="height" secondItem="N21-X8-nZv" secondAttribute="height" id="tYF-YM-QBG"/>
+                            <constraint firstItem="Gaj-Mn-oAV" firstAttribute="top" secondItem="HVu-dj-2qp" secondAttribute="bottom" constant="15" id="zfa-sT-hNp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="Gaj-Mn-oAV" id="2AH-r6-gGs"/>
+                        <outlet property="provinceLabel" destination="N21-X8-nZv" id="hrR-nU-zu7"/>
+                        <outlet property="provincePickerView" destination="HVu-dj-2qp" id="PyL-09-69E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
