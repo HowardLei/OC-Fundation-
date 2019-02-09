@@ -8,10 +8,12 @@
 #import "ViewController.h"
 #import "ITProvince.h"
 @interface ViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UIPickerView *provincePickerView;
 @property (weak, nonatomic) IBOutlet UILabel *provinceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (nonatomic, strong) NSArray<ITProvince *> *provinces;
+
 typedef NS_ENUM(NSInteger, ITPosition) {
     ITPositionProvince,
     ITPositionCity
@@ -22,12 +24,13 @@ typedef NS_ENUM(NSInteger, ITPosition) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self pickerView:self.provincePickerView didSelectRow:0 inComponent:ITPositionProvince];
+    [self pickerView:self.provincePickerView didSelectRow:0 inComponent:ITPositionCity];
 }
 // MARK: - Picker view data source
 - (NSInteger)numberOfComponentsInPickerView:(nonnull UIPickerView *)pickerView {
     return 2;
 }
-
 - (NSInteger)pickerView:(nonnull UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     if (component == ITPositionProvince) {
         return self.provinces.count;
@@ -49,6 +52,16 @@ typedef NS_ENUM(NSInteger, ITPosition) {
         return province.cities[row];
     } else {
         @throw [NSException exceptionWithName:@"picker view 选项设置失败" reason:@"找不到当前省份对应的名字" userInfo:nil];
+    }
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    if (component == ITPositionProvince) {
+        self.provinceLabel.text = self.provinces[row].name;
+    } else if (component == ITPositionCity) {
+        NSInteger provinceRow = [pickerView selectedRowInComponent:ITPositionProvince];
+        self.cityLabel.text = self.provinces[provinceRow].cities[row];
+    } else {
+        @throw [NSException exceptionWithName:@"选不到项目" reason:@"当期 picker view 没有该选项" userInfo:nil];
     }
 }
 // MARK: - Lazy loading model
