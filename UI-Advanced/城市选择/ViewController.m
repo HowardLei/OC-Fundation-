@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *provinceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (nonatomic, strong) NSArray<ITProvince *> *provinces;
+// 创建一个属性，将选中的省份数据保存起来。目的：解决数组越界的 BUG
+@property (nonatomic, strong) ITProvince *chooseProvince;
 
 typedef NS_ENUM(NSInteger, ITPosition) {
     ITPositionProvince,
@@ -35,8 +37,10 @@ typedef NS_ENUM(NSInteger, ITPosition) {
     if (component == ITPositionProvince) {
         return self.provinces.count;
     } else if (component == ITPositionCity) {
-        NSInteger row = [pickerView selectedRowInComponent:component];
-        return self.provinces[row].cities.count;
+        NSInteger provinceRow = [pickerView selectedRowInComponent:ITPositionProvince];
+        ITProvince *province = self.provinces[provinceRow];
+        self.chooseProvince = province;
+        return self.chooseProvince.cities.count;
     } else {
         @throw [NSException exceptionWithName:@"picker view 选项设置失败" reason:@"没有当前枚举值" userInfo:nil];
     }
@@ -46,14 +50,13 @@ typedef NS_ENUM(NSInteger, ITPosition) {
     if (component == ITPositionProvince) {
         return self.provinces[row].name;
     } else if (component == ITPositionCity) {
-        NSInteger provinceChoice = [pickerView selectedRowInComponent:ITPositionProvince];
-        ITProvince *province = self.provinces[provinceChoice];
-        return province.cities[row];
+        return self.chooseProvince.cities[row];
     } else {
         @throw [NSException exceptionWithName:@"picker view 选项设置失败" reason:@"找不到当前省份对应的名字" userInfo:nil];
     }
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    // 当选择省份那部分选项的时候，执行下面的方法
     if (component == ITPositionProvince) {
         // 注意：由于选项是根据省的组成部分决定的，每个省与每个省之间的城市又不一样，所以说在更换省份选项的时候要刷新城市的选项。
         [pickerView reloadComponent:ITPositionCity];
@@ -62,7 +65,6 @@ typedef NS_ENUM(NSInteger, ITPosition) {
         // 注意：这个地方由于已经选择了省份了，所以需要将城市当中的选项改为第 0 项。以保证城市的 label 显示正确。
         row = 0;
     }
-    // FIXME: 当设置到台湾、澳门、重庆、天津、上海、香港的时候出现 BUG
     // 当选择的市的时候，省名保留即可
     NSInteger provinceRow = [pickerView selectedRowInComponent:ITPositionProvince];
     self.cityLabel.text = self.provinces[provinceRow].cities[row];
