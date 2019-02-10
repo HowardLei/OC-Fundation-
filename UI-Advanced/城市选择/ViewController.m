@@ -13,13 +13,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *provinceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (nonatomic, strong) NSArray<ITProvince *> *provinces;
-// 创建一个属性，将选中的省份数据保存起来。目的：解决数组越界的 BUG
+// 创建一个属性，将选中的省份数据保存起来。目的：解决数组越界的 BUG。
 @property (nonatomic, strong) ITProvince *chooseProvince;
 
 typedef NS_ENUM(NSInteger, ITPosition) {
     ITPositionProvince,
     ITPositionCity
 };
+
 @end
 
 @implementation ViewController
