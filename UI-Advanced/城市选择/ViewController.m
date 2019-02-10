@@ -42,7 +42,6 @@ typedef NS_ENUM(NSInteger, ITPosition) {
     }
 }
 // MARK: - Picker view delegate
-// FIXME: 显示的时候有 BUG，当换了一个省的时候，不能自动转换该省对应城市的选项
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     if (component == ITPositionProvince) {
         return self.provinces[row].name;
@@ -56,13 +55,17 @@ typedef NS_ENUM(NSInteger, ITPosition) {
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     if (component == ITPositionProvince) {
+        // 注意：由于选项是根据省的组成部分决定的，每个省与每个省之间的城市又不一样，所以说在更换省份选项的时候要刷新城市的选项。
+        [pickerView reloadComponent:ITPositionCity];
+        [pickerView selectRow:0 inComponent:ITPositionCity animated:YES];
         self.provinceLabel.text = self.provinces[row].name;
-    } else if (component == ITPositionCity) {
-        NSInteger provinceRow = [pickerView selectedRowInComponent:ITPositionProvince];
-        self.cityLabel.text = self.provinces[provinceRow].cities[row];
-    } else {
-        @throw [NSException exceptionWithName:@"选不到项目" reason:@"当期 picker view 没有该选项" userInfo:nil];
+        // 注意：这个地方由于已经选择了省份了，所以需要将城市当中的选项改为第 0 项。以保证城市的 label 显示正确。
+        row = 0;
     }
+    // FIXME: 当设置到台湾、澳门、重庆、天津、上海、香港的时候出现 BUG
+    // 当选择的市的时候，省名保留即可
+    NSInteger provinceRow = [pickerView selectedRowInComponent:ITPositionProvince];
+    self.cityLabel.text = self.provinces[provinceRow].cities[row];
 }
 // MARK: - Lazy loading model
 - (NSArray<ITProvince *> *)provinces {
