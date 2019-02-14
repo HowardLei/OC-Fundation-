@@ -28,9 +28,9 @@
         // toolbar 的宽度设置为 0 即为屏幕的宽度
         _toolbar.frame = CGRectMake(0, 0, 0, 44);
         // 向 toolbar 添加按钮
-        UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:nil];
+        UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(clearTextField)];
         UIBarButtonItem *bounceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-        UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:nil];
+        UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(noteDate)];
         _toolbar.items = @[cancelItem, bounceItem, doneItem];
     }
     return _toolbar;
@@ -43,5 +43,19 @@
         _datePicker.datePickerMode = UIDatePickerModeDate;
     }
     return _datePicker;
+}
+// MARK: - Tool bar 当中的点击事件
+/**
+ 清除文本框当中的内容
+ */
+- (void)clearTextField {
+    self.dateTextField.text = nil;
+}
+- (void)noteDate {
+    NSDate *currentDate = self.datePicker.date;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"YYYY年MM月dd日";
+    self.dateTextField.text = [formatter stringFromDate:currentDate];
+    [self.dateTextField endEditing:YES];
 }
 @end
