@@ -12,6 +12,7 @@
     #ifdef __OBJC__
         #define randomColorNumber arc4random_uniform(256) / 255.0
         #define ITRandomColor [UIColor colorWithDisplayP3Red:randomColorNumber green:randomColorNumber blue:randomColorNumber alpha:1];
+        #define ITLog(...) NSLog(__VA__ARGS__);
     #endif
 
 #endif /* PrefixHeader_pch */

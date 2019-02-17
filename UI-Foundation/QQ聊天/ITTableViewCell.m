@@ -1,4 +1,4 @@
-//
+ //
 //  ITTableViewCell.m
 //  QQ聊天
 //
@@ -6,6 +6,7 @@
 //
 
 #import "ITTableViewCell.h"
+
 #define messageFont [UIFont systemFontOfSize:14]
 #define timeFont [UIFont systemFontOfSize:12]
 
@@ -19,8 +20,7 @@
 
 // 重写 initWithStyle 方法，自定义 cell 中的控件
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         // 在这个地方创建子控件
         // 1、创建一个时间控件
         UILabel *timeLabel = [[UILabel alloc] init];
@@ -68,7 +68,7 @@
 // 设置控件的 frame
 - (void)setModelFrameFromModel:(ITChat *)model {
     CGFloat margin = 5;
-    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat screenWidth = CGRectGetWidth([UIScreen mainScreen].bounds);
     // 设置时间的 frame
     CGFloat timeWidth = screenWidth;
     CGFloat timeHeight = 10;
@@ -90,10 +90,10 @@
     self.iconImageView.frame = CGRectMake(iconX, iconY, iconWidth, iconHeight);
     // 设置对话框的 frame
     // 注意：根据加载的头像不同，他们的对话框的 frame 也不完全相同
-    CGSize messageSize = [self.messageButton.currentTitle boundingRectWithSize:CGSizeMake(screenWidth - 4 * iconWidth - 4 * margin, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: messageFont} context:nil].size;
+    CGRect messageFrame = [self.messageButton.currentTitle boundingRectWithSize:CGSizeMake(screenWidth - 4 * iconWidth - 4 * margin, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: messageFont} context:nil];
     // 注意：在这里放大 button 的 size
-    CGFloat messageWidth = messageSize.width + 30;
-    CGFloat messageHeight = messageSize.height + 30;
+    CGFloat messageWidth = CGRectGetWidth(messageFrame) + 30;
+    CGFloat messageHeight = CGRectGetHeight(messageFrame) + 30;
     CGFloat messageX = model.type == ITChatPersonOther ? CGRectGetMaxX(self.iconImageView.frame) : CGRectGetMinX(self.iconImageView.frame) - messageWidth;
     CGFloat messageY = iconY;
     self.messageButton.frame = CGRectMake(messageX, messageY, messageWidth, messageHeight);
