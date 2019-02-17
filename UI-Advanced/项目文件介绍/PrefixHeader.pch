@@ -12,7 +12,12 @@
     #ifdef __OBJC__
         #define randomColorNumber arc4random_uniform(256) / 255.0
         #define ITRandomColor [UIColor colorWithDisplayP3Red:randomColorNumber green:randomColorNumber blue:randomColorNumber alpha:1];
-        #define ITLog(...) NSLog(__VA__ARGS__);
+        // 管理哪些事情是在 DEBUG 阶段做的，哪些事情是在 RELEASE 阶段做的
+        #ifdef DEBUG
+            #define ITLog(...) NSLog(__VA_ARGS__)
+        #else
+            #define ITLog(...)
+        #endif
     #endif
 
 #endif /* PrefixHeader_pch */
