@@ -39,7 +39,7 @@
     if (_datePicker == nil) {
         _datePicker = [[UIDatePicker alloc] init];
         // 设置该日期控件的本地化语言
-        _datePicker.locale = [NSLocale localeWithLocaleIdentifier:@"zh-hans"];
+//        _datePicker.locale = [NSLocale localeWithLocaleIdentifier:@"zh-hans"];
         _datePicker.datePickerMode = UIDatePickerModeDate;
     }
     return _datePicker;

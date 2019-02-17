@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  UI-Advanced
+//
+//  Created by 雷维卡 on 2019/2/14.
+//
+
+#ifndef PrefixHeader_pch
+    #define PrefixHeader_pch
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+    #ifdef __OBJC__
+        #define randomColorNumber arc4random_uniform(256) / 255.0
+        #define ITRandomColor [UIColor colorWithDisplayP3Red:randomColorNumber green:randomColorNumber blue:randomColorNumber alpha:1];
+    #endif
+
+#endif /* PrefixHeader_pch */
