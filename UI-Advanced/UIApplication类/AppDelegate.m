@@ -57,7 +57,7 @@
  @param application 即将进入前台的应用
  */
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    // 调用这个方法作为从后台转换到前台的一部分，在这个方法你可以让你在将之前进入后台的时候所做的改变全部撤销掉。
     NSLog(@"%s", __FUNCTION__);
 }
 /**
@@ -91,7 +91,7 @@
 - (void)applicationSignificantTimeChange:(UIApplication *)application {
     
 }
-// MARK: - URL source
+// MARK: - for URL settings
 /**
  通过代理打开一个 url
  @param app 需要打开 url 的应用对象
