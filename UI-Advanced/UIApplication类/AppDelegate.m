@@ -12,6 +12,7 @@
 @end
 
 @implementation AppDelegate
+// MARK: - 系统内的代理管理
 /**
  当应用完成启动以后，执行该代理方法
  @param application 当前启动的单例应用
@@ -83,5 +84,22 @@
     // 当应用收到内存警告通知的时候，触发这个方法
     NSLog(@"%s", __FUNCTION__);
 }
-
+/**
+ 当系统的时间发生重大改变时执行
+ @param application 需要改变的应用程序单例对象
+ */
+- (void)applicationSignificantTimeChange:(UIApplication *)application {
+    
+}
+// MARK: - URL source
+/**
+ 通过代理打开一个 url
+ @param app 需要打开 url 的应用对象
+ @param url URL 地址
+ @param options 如何打开这个 URL。（存储格式为<UIApplicationOpenURLOptionsKey, id> 类型的字典）
+ @return 如果代理对象能够成功处理这个 url 返回 YES，否则返回 NO
+ */
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    return YES;
+}
 @end
