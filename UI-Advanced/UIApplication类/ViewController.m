@@ -41,5 +41,9 @@
     NSSet<UNNotificationCategory *> *categorySet = [NSSet setWithObjects:category, nil];
     [center setNotificationCategories:categorySet];
     app.applicationIconBadgeNumber = 10;
+    app.networkActivityIndicatorVisible = !app.isNetworkActivityIndicatorVisible;
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 @end
