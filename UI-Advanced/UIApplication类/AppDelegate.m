@@ -89,7 +89,7 @@
  @param application 需要改变的应用程序单例对象
  */
 - (void)applicationSignificantTimeChange:(UIApplication *)application {
-    
+    NSLog(@"%s", __FUNCTION__);
 }
 // MARK: - for URL settings
 /**
@@ -100,6 +100,7 @@
  @return 如果代理对象能够成功处理这个 url 返回 YES，否则返回 NO
  */
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    NSLog(@"%s", __FUNCTION__);
     return YES;
 }
 @end
