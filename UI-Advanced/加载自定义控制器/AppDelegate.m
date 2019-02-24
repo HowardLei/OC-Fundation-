@@ -20,7 +20,7 @@
      3. 将自定义的控制器设置到代理类的代理加载方法当中
      4. 初始化代理对象的窗口属性，窗口大小为当前屏幕的大小（注意：在代理方法当中没有 view 属性，不能设置为 self.view.bounds）
      5. 初始化代理对象窗口的根控制器为自定义控制器对象
-     6. 让当前窗口为keyWindow 并且可见。（注意：设置当前窗口为 keyWindow 不代表它是可见的，需要调用方法来设置）
+     6. 让当前窗口为 keyWindow 并且可见。（注意：设置当前窗口为 keyWindow 不代表它是可见的，需要调用方法来设置）
      */
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     self.window.rootViewController = [[ITViewController alloc] init];
