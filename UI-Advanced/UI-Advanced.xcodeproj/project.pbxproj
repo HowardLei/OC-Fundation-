@@ -11,13 +11,13 @@
 		18422AA5222285E000CC7ADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18422AA4222285E000CC7ADC /* Assets.xcassets */; };
 		18422AA8222285E000CC7ADC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18422AA6222285E000CC7ADC /* LaunchScreen.storyboard */; };
 		18422AAB222285E100CC7ADC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18422AAA222285E100CC7ADC /* main.m */; };
-		18422AB12222865100CC7ADC /* ITViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18422AB02222865100CC7ADC /* ITViewController.m */; };
 		18FB059E2222AD88008C1A22 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FB059D2222AD88008C1A22 /* AppDelegate.m */; };
 		18FB05A12222AD88008C1A22 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FB05A02222AD88008C1A22 /* ViewController.m */; };
 		18FB05A42222AD88008C1A22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FB05A22222AD88008C1A22 /* Main.storyboard */; };
 		18FB05A62222AD89008C1A22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FB05A52222AD89008C1A22 /* Assets.xcassets */; };
 		18FB05A92222AD89008C1A22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FB05A72222AD89008C1A22 /* LaunchScreen.storyboard */; };
 		18FB05AC2222AD89008C1A22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FB05AB2222AD89008C1A22 /* main.m */; };
+		18FB05B22222AEEE008C1A22 /* ITViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FB05B02222AEEE008C1A22 /* ITViewController.m */; };
 		630CE7BC22153D800021ED32 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 630CE7BB22153D800021ED32 /* AppDelegate.m */; };
 		630CE7BF22153D800021ED32 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630CE7BE22153D800021ED32 /* ViewController.m */; };
 		630CE7C222153D800021ED32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630CE7C022153D800021ED32 /* Main.storyboard */; };
@@ -71,8 +71,6 @@
 		18422AA7222285E000CC7ADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18422AA9222285E000CC7ADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18422AAA222285E100CC7ADC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		18422AAF2222865100CC7ADC /* ITViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ITViewController.h; path = "国旗选择/ITViewController.h"; sourceTree = SOURCE_ROOT; };
-		18422AB02222865100CC7ADC /* ITViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ITViewController.m; path = "国旗选择/ITViewController.m"; sourceTree = SOURCE_ROOT; };
 		18FB059A2222AD87008C1A22 /* 3种方式创建控制器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3种方式创建控制器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FB059C2222AD88008C1A22 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18FB059D2222AD88008C1A22 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +81,8 @@
 		18FB05A82222AD89008C1A22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18FB05AA2222AD89008C1A22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18FB05AB2222AD89008C1A22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18FB05B02222AEEE008C1A22 /* ITViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITViewController.m; sourceTree = "<group>"; };
+		18FB05B12222AEEE008C1A22 /* ITViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITViewController.h; sourceTree = "<group>"; };
 		630CE7B822153D800021ED32 /* 项目文件介绍.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "项目文件介绍.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		630CE7BA22153D800021ED32 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		630CE7BB22153D800021ED32 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -225,8 +225,8 @@
 				18422AA6222285E000CC7ADC /* LaunchScreen.storyboard */,
 				18422AA9222285E000CC7ADC /* Info.plist */,
 				18422AAA222285E100CC7ADC /* main.m */,
-				18422AAF2222865100CC7ADC /* ITViewController.h */,
-				18422AB02222865100CC7ADC /* ITViewController.m */,
+				18FB05B12222AEEE008C1A22 /* ITViewController.h */,
+				18FB05B02222AEEE008C1A22 /* ITViewController.m */,
 			);
 			path = "加载自定义控制器";
 			sourceTree = "<group>";
@@ -836,7 +836,7 @@
 			files = (
 				18422AAB222285E100CC7ADC /* main.m in Sources */,
 				18422A9D222285DF00CC7ADC /* AppDelegate.m in Sources */,
-				18422AB12222865100CC7ADC /* ITViewController.m in Sources */,
+				18FB05B22222AEEE008C1A22 /* ITViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
