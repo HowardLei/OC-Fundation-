@@ -15,6 +15,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 当创建一个自定义控制器的时候，需要实现一下几步。（没有 xib 文件的时候）
     /*
+     // MARK: - 自定义控制器的创建与实现
      1. 先将原有的控制器与控制器有关的 plist 文件当中全部的数据清理
      2. 创建自定义控制器类，继承自 UIViewController
      3. 将自定义的控制器设置到代理类的代理加载方法当中
@@ -24,6 +25,14 @@
      */
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     self.window.rootViewController = [[ITViewController alloc] init];
+    /*
+     // MARK: - 自定义控制器当中的 view 是懒加载的
+     证明控制器当中的 view 是懒加载的，方法：设置 view 当中的属性。检查他属性设置执行前后变量地址的变化即可
+     view 懒加载原理
+        1. 当设置 view 下边的属性的时候，view 的 getter 方法会先进行非空检查（因为这个属性当中有关键字 null_resettable）如果发现 view 是空的，则先调用控制器当中的 loadView 方法进行 view 的加载。加载完成以后会按照 view 的生命周期执行
+        2. 当整个 view 成功展示出来，表示 view 加载完成，则在调用 setter 方法，修改背景颜色。成功修改。
+     */
+    self.window.rootViewController.view.backgroundColor = [UIColor blueColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
