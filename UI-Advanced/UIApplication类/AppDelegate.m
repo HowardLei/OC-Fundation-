@@ -20,7 +20,7 @@
  @return 当你的应用无法处理 URL 资源或者是不能继续处理用户活动的时候返回值为 NO，其他情况下都为 YES
  */
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // 当应用运行完成以后，重写该方法以调用一些其他需要在启动就要做的方法
+    // 当应用运行完成以后，重写该方法以调用一些其他需要在启动就要做的方法（比如：加载自定义的控制器）
     NSLog(@"%s", __FUNCTION__);
     return YES;
 }
