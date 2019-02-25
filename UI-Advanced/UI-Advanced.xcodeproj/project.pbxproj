@@ -52,6 +52,7 @@
 		63AAA5AA221035F3006B46A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63AAA5A9221035F3006B46A3 /* Assets.xcassets */; };
 		63AAA5AD221035F3006B46A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AAA5AB221035F3006B46A3 /* LaunchScreen.storyboard */; };
 		63AAA5B0221035F3006B46A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AAA5AF221035F3006B46A3 /* main.m */; };
+		63ED11672222D90900A2658E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63ED11662222D90900A2658E /* Main.storyboard */; };
 		63F893EC220EA8B100B22BEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F893EB220EA8B100B22BEE /* AppDelegate.m */; };
 		63F893EF220EA8B100B22BEE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F893EE220EA8B100B22BEE /* ViewController.m */; };
 		63F893F2220EA8B100B22BEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63F893F0220EA8B100B22BEE /* Main.storyboard */; };
@@ -139,6 +140,7 @@
 		63AAA5AC221035F3006B46A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63AAA5AE221035F3006B46A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63AAA5AF221035F3006B46A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63ED11662222D90900A2658E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		63F893E8220EA8B100B22BEE /* 城市选择.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "城市选择.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63F893EA220EA8B100B22BEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		63F893EB220EA8B100B22BEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				18FB05AB2222AD89008C1A22 /* main.m */,
 				18B579192222B07D00F90462 /* ITViewController.h */,
 				18B5791A2222B07D00F90462 /* ITViewController.m */,
+				63ED11662222D90900A2658E /* Main.storyboard */,
 			);
 			path = "3种方式创建控制器";
 			sourceTree = "<group>";
@@ -754,6 +757,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63ED11672222D90900A2658E /* Main.storyboard in Resources */,
 				18FB05A92222AD89008C1A22 /* LaunchScreen.storyboard in Resources */,
 				18FB05A62222AD89008C1A22 /* Assets.xcassets in Resources */,
 			);
