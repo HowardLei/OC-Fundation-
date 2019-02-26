@@ -43,6 +43,9 @@
     // 最后别忘了让 self.window 成为主窗口以及可见
     [self.window makeKeyAndVisible];
 }
+/**
+ 通过 Info.plist 加载控制器
+ */
 - (void)usingInfoPlistCreateViewController {
     /*
      如果手动添加控制器到项目当中需要做一下工作
