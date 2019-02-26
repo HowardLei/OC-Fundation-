@@ -15,7 +15,13 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    /*
+     用 xib 创建控制器
+     1. 先创建一个自定义控制器，并且选择同时创建 xib 。
+     2. 向里面拖动一个 view （注意：是 view，不是 ViewController）
+     3. 选择 File's Owner，右键拖线到创建的 view ，与他进行绑定。
+     4. 将里面的数据绑定到代理方法当中实现。
+     */
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     self.window.rootViewController = [[ITViewController alloc] init];
     [self.window makeKeyAndVisible];
