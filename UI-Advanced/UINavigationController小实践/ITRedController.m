@@ -16,7 +16,6 @@
 @implementation ITRedController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)touchToGreen {
     [self.navigationController pushViewController:[[ITGreenController alloc] init] animated:YES];
