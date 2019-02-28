@@ -36,6 +36,16 @@
 		6328A7DA220C5B5300ADF8C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6328A7D8220C5B5300ADF8C2 /* LaunchScreen.storyboard */; };
 		6328A7DD220C5B5300ADF8C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6328A7DC220C5B5300ADF8C2 /* main.m */; };
 		6328A7E7220C866C00ADF8C2 /* 01foods.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6328A7E6220C866C00ADF8C2 /* 01foods.plist */; };
+		637A6F5B2226E38D0073FD1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F5A2226E38D0073FD1E /* AppDelegate.m */; };
+		637A6F632226E38E0073FD1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F622226E38E0073FD1E /* Assets.xcassets */; };
+		637A6F662226E38E0073FD1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F642226E38E0073FD1E /* LaunchScreen.storyboard */; };
+		637A6F692226E38E0073FD1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F682226E38E0073FD1E /* main.m */; };
+		637A6F762226E7800073FD1E /* ITViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F742226E7800073FD1E /* ITViewController.m */; };
+		637A6F772226E7800073FD1E /* ITViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F752226E7800073FD1E /* ITViewController.xib */; };
+		637A6F7E2226E7B00073FD1E /* ITTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F7C2226E7B00073FD1E /* ITTableViewController.m */; };
+		637A6F7F2226E7B00073FD1E /* ITTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F7D2226E7B00073FD1E /* ITTableViewController.xib */; };
+		637A6F862226E7CF0073FD1E /* ITCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F842226E7CF0073FD1E /* ITCollectionViewController.m */; };
+		637A6F872226E7CF0073FD1E /* ITCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F852226E7CF0073FD1E /* ITCollectionViewController.xib */; };
 		6394B97E221D0C9500555B46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6394B97D221D0C9500555B46 /* AppDelegate.m */; };
 		6394B981221D0C9500555B46 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6394B980221D0C9500555B46 /* ViewController.m */; };
 		6394B984221D0C9500555B46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6394B982221D0C9500555B46 /* Main.storyboard */; };
@@ -120,6 +130,22 @@
 		6328A7DB220C5B5300ADF8C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6328A7DC220C5B5300ADF8C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6328A7E6220C866C00ADF8C2 /* 01foods.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 01foods.plist; sourceTree = "<group>"; };
+		637A6F572226E38D0073FD1E /* UINavigationController的创建及使用.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UINavigationController的创建及使用.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		637A6F592226E38D0073FD1E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		637A6F5A2226E38D0073FD1E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		637A6F622226E38E0073FD1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		637A6F652226E38E0073FD1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		637A6F672226E38E0073FD1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		637A6F682226E38E0073FD1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		637A6F732226E7800073FD1E /* ITViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITViewController.h; sourceTree = "<group>"; };
+		637A6F742226E7800073FD1E /* ITViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITViewController.m; sourceTree = "<group>"; };
+		637A6F752226E7800073FD1E /* ITViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ITViewController.xib; sourceTree = "<group>"; };
+		637A6F7B2226E7B00073FD1E /* ITTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITTableViewController.h; sourceTree = "<group>"; };
+		637A6F7C2226E7B00073FD1E /* ITTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITTableViewController.m; sourceTree = "<group>"; };
+		637A6F7D2226E7B00073FD1E /* ITTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ITTableViewController.xib; sourceTree = "<group>"; };
+		637A6F832226E7CF0073FD1E /* ITCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITCollectionViewController.h; sourceTree = "<group>"; };
+		637A6F842226E7CF0073FD1E /* ITCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITCollectionViewController.m; sourceTree = "<group>"; };
+		637A6F852226E7CF0073FD1E /* ITCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ITCollectionViewController.xib; sourceTree = "<group>"; };
 		6394B97A221D0C9400555B46 /* UIApplication类.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIApplication类.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6394B97C221D0C9500555B46 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6394B97D221D0C9500555B46 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -202,6 +228,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6328A7C7220C5B5300ADF8C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		637A6F542226E38D0073FD1E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -359,6 +392,7 @@
 				18422A9A222285DF00CC7ADC /* 加载自定义控制器 */,
 				18FB059B2222AD88008C1A22 /* 3种方式创建控制器 */,
 				18738F0122253EEF0081034D /* 通过xib加载控制器 */,
+				637A6F582226E38D0073FD1E /* UINavigationController的创建及使用 */,
 				6328A7CB220C5B5300ADF8C2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -375,6 +409,7 @@
 				18422A99222285DF00CC7ADC /* 加载自定义控制器.app */,
 				18FB059A2222AD87008C1A22 /* 3种方式创建控制器.app */,
 				18738F0022253EEF0081034D /* 通过xib加载控制器.app */,
+				637A6F572226E38D0073FD1E /* UINavigationController的创建及使用.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -432,6 +467,68 @@
 				6328A7D6220C5B5300ADF8C2 /* Assets.xcassets */,
 				6328A7DB220C5B5300ADF8C2 /* Info.plist */,
 				6328A7DC220C5B5300ADF8C2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		637A6F582226E38D0073FD1E /* UINavigationController的创建及使用 */ = {
+			isa = PBXGroup;
+			children = (
+				637A6F722226E75E0073FD1E /* Supporting Files */,
+				637A6F712226E7450073FD1E /* Other */,
+				637A6F6F2226E3A60073FD1E /* Model */,
+				637A6F6E2226E3A30073FD1E /* View */,
+				637A6F6D2226E3940073FD1E /* Controller */,
+			);
+			path = "UINavigationController的创建及使用";
+			sourceTree = "<group>";
+		};
+		637A6F6D2226E3940073FD1E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				637A6F732226E7800073FD1E /* ITViewController.h */,
+				637A6F742226E7800073FD1E /* ITViewController.m */,
+				637A6F7B2226E7B00073FD1E /* ITTableViewController.h */,
+				637A6F7C2226E7B00073FD1E /* ITTableViewController.m */,
+				637A6F832226E7CF0073FD1E /* ITCollectionViewController.h */,
+				637A6F842226E7CF0073FD1E /* ITCollectionViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		637A6F6E2226E3A30073FD1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				637A6F852226E7CF0073FD1E /* ITCollectionViewController.xib */,
+				637A6F7D2226E7B00073FD1E /* ITTableViewController.xib */,
+				637A6F752226E7800073FD1E /* ITViewController.xib */,
+				637A6F642226E38E0073FD1E /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		637A6F6F2226E3A60073FD1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		637A6F712226E7450073FD1E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				637A6F592226E38D0073FD1E /* AppDelegate.h */,
+				637A6F5A2226E38D0073FD1E /* AppDelegate.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		637A6F722226E75E0073FD1E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				637A6F622226E38E0073FD1E /* Assets.xcassets */,
+				637A6F672226E38E0073FD1E /* Info.plist */,
+				637A6F682226E38E0073FD1E /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -673,6 +770,23 @@
 			productReference = 6328A7CA220C5B5300ADF8C2 /* 点餐系统.app */;
 			productType = "com.apple.product-type.application";
 		};
+		637A6F562226E38D0073FD1E /* UINavigationController的创建及使用 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 637A6F6C2226E38E0073FD1E /* Build configuration list for PBXNativeTarget "UINavigationController的创建及使用" */;
+			buildPhases = (
+				637A6F532226E38D0073FD1E /* Sources */,
+				637A6F542226E38D0073FD1E /* Frameworks */,
+				637A6F552226E38D0073FD1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UINavigationController的创建及使用";
+			productName = "UINavigationController的创建及使用";
+			productReference = 637A6F572226E38D0073FD1E /* UINavigationController的创建及使用.app */;
+			productType = "com.apple.product-type.application";
+		};
 		6394B979221D0C9400555B46 /* UIApplication类 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6394B98F221D0C9600555B46 /* Build configuration list for PBXNativeTarget "UIApplication类" */;
@@ -765,6 +879,9 @@
 					6328A7C9220C5B5300ADF8C2 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					637A6F562226E38D0073FD1E = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					6394B979221D0C9400555B46 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -801,6 +918,7 @@
 				18422A98222285DF00CC7ADC /* 加载自定义控制器 */,
 				18FB05992222AD87008C1A22 /* 3种方式创建控制器 */,
 				18738EFF22253EEF0081034D /* 通过xib加载控制器 */,
+				637A6F562226E38D0073FD1E /* UINavigationController的创建及使用 */,
 			);
 		};
 /* End PBXProject section */
@@ -853,6 +971,18 @@
 				6328A7D7220C5B5300ADF8C2 /* Assets.xcassets in Resources */,
 				6328A7D5220C5B5300ADF8C2 /* Main.storyboard in Resources */,
 				6328A7E7220C866C00ADF8C2 /* 01foods.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		637A6F552226E38D0073FD1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				637A6F662226E38E0073FD1E /* LaunchScreen.storyboard in Resources */,
+				637A6F872226E7CF0073FD1E /* ITCollectionViewController.xib in Resources */,
+				637A6F772226E7800073FD1E /* ITViewController.xib in Resources */,
+				637A6F7F2226E7B00073FD1E /* ITTableViewController.xib in Resources */,
+				637A6F632226E38E0073FD1E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -949,6 +1079,18 @@
 				6328A7D2220C5B5300ADF8C2 /* ViewController.m in Sources */,
 				6328A7DD220C5B5300ADF8C2 /* main.m in Sources */,
 				6328A7CF220C5B5300ADF8C2 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		637A6F532226E38D0073FD1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				637A6F692226E38E0073FD1E /* main.m in Sources */,
+				637A6F862226E7CF0073FD1E /* ITCollectionViewController.m in Sources */,
+				637A6F5B2226E38D0073FD1E /* AppDelegate.m in Sources */,
+				637A6F7E2226E7B00073FD1E /* ITTableViewController.m in Sources */,
+				637A6F762226E7800073FD1E /* ITViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1050,6 +1192,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				6328A7D9220C5B5300ADF8C2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		637A6F642226E38E0073FD1E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				637A6F652226E38E0073FD1E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1805,6 +1955,140 @@
 			};
 			name = Release;
 		};
+		637A6F6A2226E38E0073FD1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = V9C6R6LR63;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "UINavigationController的创建及使用/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "Anonymous.UINavigationController------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		637A6F6B2226E38E0073FD1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = V9C6R6LR63;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "UINavigationController的创建及使用/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "Anonymous.UINavigationController------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		6394B98D221D0C9600555B46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2394,6 +2678,15 @@
 			buildConfigurations = (
 				6328A7DE220C5B5300ADF8C2 /* Debug */,
 				6328A7DF220C5B5300ADF8C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		637A6F6C2226E38E0073FD1E /* Build configuration list for PBXNativeTarget "UINavigationController的创建及使用" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				637A6F6A2226E38E0073FD1E /* Debug */,
+				637A6F6B2226E38E0073FD1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
