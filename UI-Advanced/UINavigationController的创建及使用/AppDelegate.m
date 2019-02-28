@@ -18,8 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ITViewController alloc] init]];
-    
+    UINavigationController *naviController = [[UINavigationController alloc] initWithRootViewController:[[ITViewController alloc] init]];
+    [naviController pushViewController:[[ITTableViewController alloc] init] animated:YES];
+    self.window.rootViewController = naviController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
