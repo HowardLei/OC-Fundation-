@@ -17,12 +17,17 @@
     [super viewDidLoad];
 }
 - (IBAction)touchToBlue {
-    [self.navigationController pushViewController:[[ITBlueController alloc] init] animated:YES];
+    if (self.navigationController.viewControllers.count == 3) {
+        [self.navigationController popViewControllerAnimated:YES];
+    } else if (self.navigationController.viewControllers.count == 2) {
+        [self.navigationController pushViewController:[[ITBlueController alloc] init] animated:YES];
+    } else {
+        @throw [NSException exceptionWithName:@"" reason:@"栈中数据过多" userInfo:nil];
+    }
+//    [self.navigationController pushViewController:[[ITBlueController alloc] init] animated:YES];
 }
 - (IBAction)touchToRed {
-    
-}
-- (NSString *)description {
-    return [NSString stringWithFormat:@"%@", NSStringFromClass([self class])];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end
+    

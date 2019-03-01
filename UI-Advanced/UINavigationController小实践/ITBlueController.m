@@ -17,12 +17,19 @@
     [super viewDidLoad];
 }
 - (IBAction)touchToRed {
-    [self.navigationController pushViewController:[[ITRedController alloc] init] animated:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 - (IBAction)touchToGreen {
-    [self.navigationController pushViewController:[[ITGreenController alloc] init] animated:YES];
-}
-- (NSString *)description {
-    return [NSString stringWithFormat:@"%@", NSStringFromClass([self class])];
+    if (self.navigationController.viewControllers.count == 3) {
+        NSArray<UIViewController *> *controllers = [self.navigationController popToViewController:[[ITRedController alloc] init] animated:YES];
+        for (UIViewController *controller in controllers) {
+            NSLog(@"%@", controller);
+        }
+        [self.navigationController popViewControllerAnimated:YES];
+    } else if (self.navigationController.viewControllers.count == 2) {
+        [self.navigationController pushViewController:[[ITGreenController alloc] init] animated:YES];
+    } else {
+        @throw [NSException exceptionWithName:@"string" reason:@"string" userInfo:nil];
+    }
 }
 @end
