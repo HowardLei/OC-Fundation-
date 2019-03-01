@@ -8,6 +8,7 @@
 #import "ITBlueController.h"
 #import "ITRedController.h"
 #import "ITGreenController.h"
+
 @interface ITBlueController ()
 
 @end
@@ -21,15 +22,11 @@
 }
 - (IBAction)touchToGreen {
     if (self.navigationController.viewControllers.count == 3) {
-        NSArray<UIViewController *> *controllers = [self.navigationController popToViewController:[[ITRedController alloc] init] animated:YES];
-        for (UIViewController *controller in controllers) {
-            NSLog(@"%@", controller);
-        }
         [self.navigationController popViewControllerAnimated:YES];
     } else if (self.navigationController.viewControllers.count == 2) {
         [self.navigationController pushViewController:[[ITGreenController alloc] init] animated:YES];
     } else {
-        @throw [NSException exceptionWithName:@"string" reason:@"string" userInfo:nil];
+        @throw [NSException exceptionWithName:@"Controller Not Found" reason:@"栈空间当中没有需要的控制器" userInfo:nil];
     }
 }
 @end

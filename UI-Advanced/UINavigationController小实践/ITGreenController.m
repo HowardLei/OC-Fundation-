@@ -22,9 +22,8 @@
     } else if (self.navigationController.viewControllers.count == 2) {
         [self.navigationController pushViewController:[[ITBlueController alloc] init] animated:YES];
     } else {
-        @throw [NSException exceptionWithName:@"" reason:@"栈中数据过多" userInfo:nil];
+        @throw [NSException exceptionWithName:@"Controller Not Found!" reason:@"栈中寻找不到该控制器" userInfo:nil];
     }
-//    [self.navigationController pushViewController:[[ITBlueController alloc] init] animated:YES];
 }
 - (IBAction)touchToRed {
     [self.navigationController popToRootViewControllerAnimated:YES];
