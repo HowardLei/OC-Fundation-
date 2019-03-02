@@ -18,7 +18,12 @@
 }
 - (IBAction)touchToBlue {
     if (self.navigationController.viewControllers.count == 3) {
-        [self.navigationController popViewControllerAnimated:YES];
+        // 通过调用 popToViewController 方法返回控制器
+        for (UIViewController *controller in self.navigationController.viewControllers) {
+            if ([controller.description isEqualToString:NSStringFromClass(ITBlueController.class)]) {
+                [self.navigationController popToViewController:controller animated:YES];
+            }
+        }
     } else if (self.navigationController.viewControllers.count == 2) {
         [self.navigationController pushViewController:[[ITBlueController alloc] init] animated:YES];
     } else {
@@ -27,6 +32,9 @@
 }
 - (IBAction)touchToRed {
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+- (NSString *)description {
+    return NSStringFromClass(self.class);
 }
 @end
     

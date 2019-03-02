@@ -29,4 +29,7 @@
         @throw [NSException exceptionWithName:@"Controller Not Found" reason:@"栈空间当中没有需要的控制器" userInfo:nil];
     }
 }
+- (NSString *)description {
+    return NSStringFromClass(self.class);
+}
 @end

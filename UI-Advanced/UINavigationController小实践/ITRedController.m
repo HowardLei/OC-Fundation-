@@ -23,4 +23,7 @@
 - (IBAction)touchToBlue {
     [self.navigationController pushViewController:[[ITBlueController alloc] init] animated:YES];
 }
+- (NSString *)description {
+    return NSStringFromClass(self.class);
+}
 @end
