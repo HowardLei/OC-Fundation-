@@ -15,6 +15,7 @@
 @implementation ITGreenController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"绿色控制器";
 }
 - (IBAction)touchToBlue {
     if (self.navigationController.viewControllers.count == 3) {

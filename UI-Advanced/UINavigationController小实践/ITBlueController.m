@@ -16,6 +16,7 @@
 @implementation ITBlueController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"蓝色控制器";
 }
 - (IBAction)touchToRed {
     [self.navigationController popToRootViewControllerAnimated:YES];

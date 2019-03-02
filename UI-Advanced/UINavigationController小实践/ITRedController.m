@@ -16,6 +16,7 @@
 @implementation ITRedController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"红色控制器";
 }
 - (IBAction)touchToGreen {
     [self.navigationController pushViewController:[[ITGreenController alloc] init] animated:YES];
