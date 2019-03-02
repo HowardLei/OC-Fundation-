@@ -16,6 +16,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"绿色控制器";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addController)];
+}
+- (void)addController {
+    NSLog(@"我在这");
 }
 - (IBAction)touchToBlue {
     if (self.navigationController.viewControllers.count == 3) {
