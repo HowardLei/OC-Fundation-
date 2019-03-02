@@ -26,7 +26,7 @@
     } else if (self.navigationController.viewControllers.count == 2) {
         [self.navigationController pushViewController:[[ITGreenController alloc] init] animated:YES];
     } else {
-        @throw [NSException exceptionWithName:@"Controller Not Found" reason:@"栈空间当中没有需要的控制器" userInfo:nil];
+        @throw [NSException exceptionWithName:@"Controller Not Found" reason:@"栈中寻找不到该控制器" userInfo:nil];
     }
 }
 - (NSString *)description {
