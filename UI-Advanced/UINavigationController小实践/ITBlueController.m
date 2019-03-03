@@ -18,6 +18,10 @@
     [super viewDidLoad];
     self.navigationItem.title = @"蓝色控制器";
 }
+- (IBAction)go2GreenController {
+}
+- (IBAction)go2GreenController:(id)sender {
+}
 - (IBAction)touchToRed {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }

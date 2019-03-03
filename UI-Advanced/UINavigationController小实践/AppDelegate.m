@@ -17,7 +17,9 @@
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    UINavigationController *naviController = [[UINavigationController alloc] initWithRootViewController:[[ITRedController alloc] init]];
+    ITRedController *redController = [[ITRedController alloc] init];
+    UINavigationController *naviController = [[UINavigationController alloc] initWithRootViewController:redController];
+//    redController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:nil];
     naviController.view.backgroundColor = [UIColor orangeColor];
     self.window.rootViewController = naviController;
     [self.window makeKeyAndVisible];

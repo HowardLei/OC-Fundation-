@@ -20,8 +20,8 @@
     UIBarButtonItem *add = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];
     UIBarButtonItem *camera = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:nil];
     NSArray<UIBarButtonItem *> *buttons = @[add, camera];
-    // FIXME: 为什么在根控制器下设置不了导航栏左边的按键？
-    self.navigationItem.leftBarButtonItem = add;
+    // 注意：这个地方不能将左边和右边的按钮设置成相同对象，否则会出现一侧添加不上。（可以再次创建一个匿名对象解决）
+//    self.navigationItem.leftBarButtonItem = add;
     self.navigationItem.rightBarButtonItems = buttons;
 }
 - (IBAction)touchToGreen {
