@@ -18,12 +18,6 @@
 @end
 
 @implementation ViewController
-- (IBAction)claerPasscode:(UIButton *)sender {
-}
-- (IBAction)clearQQNumber:(UIButton *)sender {
-}
-- (IBAction)clearPasscode:(id)sender {
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

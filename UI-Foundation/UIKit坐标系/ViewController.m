@@ -33,7 +33,7 @@
     UIView *fatherView = sender.superview;
     // 2、调整父视图的颜色，让他成为随机色。
     // 注意：在这里面，可以使用 random() 函数，但是编译器有提示，让你使用arc4random 函数，又因为颜色的范围是 0 -- 255, 所以需要调用 arcrandom_uniform() 函数，参数即 255。
-    float randomNumber = arc4random_uniform(255) / 255.0;
+    CGFloat randomNumber = arc4random_uniform(255) / 255.0;
     // 3、变成随机色，从 UIColor 中调用方法 + (UIColor *)colorWithRed:(float) 范围：0 -- 1 green:(float) 范围：0 -- 1 blue:(float) 范围：0 -- 1 alpha:透明度 范围0 -- 1 其中0为透明，1为纯正;
     // 因为随机色的范围为 0 -- 1，所以上面求的值需要除以 255.0 才行。（注意：小数不能删，因为结果是 float 型）
     fatherView.backgroundColor = [UIColor colorWithRed:randomNumber green:randomNumber blue:randomNumber alpha:randomNumber];
@@ -88,11 +88,10 @@
     while (view) {
         [view removeFromSuperview];
     }
+    [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)nextPicture:(UIButton *)sender {
-}
 @end

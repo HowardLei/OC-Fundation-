@@ -58,17 +58,18 @@ NSString *(^myBlock)(NSString *, int) = ^(NSString *name, int i) {
 }
 // MARK: 击倒
 - (IBAction)knockOut:(UIButton *)sender {
+//    NSString *str = [NSString stringWithUTF8String:__FUNCTION__];
     [self action:@"knockout" InDuration:5 RepeatCount:1];
 }
 // MARK: 动画汇总方法
 - (void)action:(NSString *)action InDuration:(NSTimeInterval) duration RepeatCount:(int) count{
     // 注意：由于在触发了一个动画的时候，不能触发其他的动画，所以说需要进行一个判断，如果动画正在进行，则不能再进行其他的动画。
-    if (self.tom.animating) {
+    if (self.tom.isAnimating) {
         return;
     }
-    NSMutableArray *arrM = [NSMutableArray array];
+    NSMutableArray<UIImage *> *images = [NSMutableArray array];
     int i = 0;
-    NSFileManager *manager = [NSFileManager defaultManager];
+    NSFileManager *manager = NSFileManager.defaultManager;
     // 由于我们不知道需要调用多少动画，所以需要使用 while 循环进行判断
     while ([manager fileExistsAtPath:myBlock(action, i)]) {
         /*
@@ -81,10 +82,10 @@ NSString *(^myBlock)(NSString *, int) = ^(NSString *name, int i) {
          */
         // 注意：如果调用 imageWithContentsOfFile 方法时，添加文件不能添加到 Assets.xcassets 文件夹中，应该直接添加到项目当中。而且添加的时候应该选择 create groups ，才能调用这个方法。而调用 imageNamed 方法的时候，则可以添加到 Assets.xcassets 中。
         UIImage *tempImage = [UIImage imageWithContentsOfFile:myBlock(action, i)];
-        [arrM addObject:tempImage];
+        [images addObject:tempImage];
         i++;
     }
-    self.tom.animationImages = arrM;
+    self.tom.animationImages = images;
     self.tom.animationRepeatCount = count;
     self.tom.animationDuration = duration;
     [self.tom startAnimating];
