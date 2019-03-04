@@ -10,7 +10,6 @@
 @interface ITRedViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIButton *go2BlueButton;
-
 @end
 
 @implementation ITRedViewController
