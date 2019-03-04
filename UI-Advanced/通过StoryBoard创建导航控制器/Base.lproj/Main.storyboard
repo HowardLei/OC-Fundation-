@@ -41,11 +41,20 @@
                                     <segue destination="eQK-Rk-8b6" kind="show" id="N2W-2V-utp"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vI6-58-hdn">
+                                <rect key="frame" x="20" y="268.5" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Tj2-f5-UkC" firstAttribute="trailing" secondItem="vI6-58-hdn" secondAttribute="trailing" constant="20" id="0SD-RZ-6mx"/>
+                            <constraint firstItem="QN0-E3-H1D" firstAttribute="top" secondItem="vI6-58-hdn" secondAttribute="bottom" constant="20" id="1KV-fH-jzh"/>
                             <constraint firstItem="QN0-E3-H1D" firstAttribute="centerY" secondItem="a1Y-C0-QsQ" secondAttribute="centerY" id="Pfo-cI-sI5"/>
                             <constraint firstItem="QN0-E3-H1D" firstAttribute="centerX" secondItem="a1Y-C0-QsQ" secondAttribute="centerX" id="Qzi-MY-tVm"/>
+                            <constraint firstItem="vI6-58-hdn" firstAttribute="leading" secondItem="Tj2-f5-UkC" secondAttribute="leading" constant="20" id="ecu-Kt-u8x"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tj2-f5-UkC"/>
                     </view>
@@ -53,6 +62,10 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="ELO-d9-ld7"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="sBe-sL-a6X"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="go2BlueButton" destination="QN0-E3-H1D" id="4za-Uo-9d4"/>
+                        <outlet property="textField" destination="vI6-58-hdn" id="v72-kQ-rw0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vu6-AB-y76" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,7 +74,7 @@
         <!--蓝色控制器-->
         <scene sceneID="xdv-tY-hi4">
             <objects>
-                <viewController id="eQK-Rk-8b6" sceneMemberID="viewController">
+                <viewController id="eQK-Rk-8b6" customClass="ITBlueViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nsg-lE-Xbh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

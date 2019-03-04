@@ -35,6 +35,7 @@
 		18CE5E222227DCAF004737E0 /* ITGreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CE5E202227DCAF004737E0 /* ITGreenController.xib */; };
 		18CE5E292227DCD2004737E0 /* ITBlueController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE5E272227DCD2004737E0 /* ITBlueController.m */; };
 		18CE5E2A2227DCD2004737E0 /* ITBlueController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CE5E282227DCD2004737E0 /* ITBlueController.xib */; };
+		18DC331F222D336F00E54B5A /* ITBlueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC331E222D336F00E54B5A /* ITBlueViewController.m */; };
 		18F31EFF222B9F7600004886 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F31EFE222B9F7600004886 /* AppDelegate.m */; };
 		18F31F02222B9F7600004886 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F31F01222B9F7600004886 /* ViewController.m */; };
 		18F31F05222B9F7600004886 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F31F03222B9F7600004886 /* Main.storyboard */; };
@@ -160,6 +161,8 @@
 		18CE5E262227DCD2004737E0 /* ITBlueController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITBlueController.h; sourceTree = "<group>"; };
 		18CE5E272227DCD2004737E0 /* ITBlueController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITBlueController.m; sourceTree = "<group>"; };
 		18CE5E282227DCD2004737E0 /* ITBlueController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ITBlueController.xib; sourceTree = "<group>"; };
+		18DC331D222D336F00E54B5A /* ITBlueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITBlueViewController.h; sourceTree = "<group>"; };
+		18DC331E222D336F00E54B5A /* ITBlueViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITBlueViewController.m; sourceTree = "<group>"; };
 		18F31EFB222B9F7600004886 /* 自定义UIWindow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "自定义UIWindow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F31EFD222B9F7600004886 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18F31EFE222B9F7600004886 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -437,6 +440,8 @@
 				181BFC39222BDAEB00C41AF7 /* ITViewController.m */,
 				18C732CC222BFAA8009B6723 /* ITRedViewController.h */,
 				18C732CD222BFAA8009B6723 /* ITRedViewController.m */,
+				18DC331D222D336F00E54B5A /* ITBlueViewController.h */,
+				18DC331E222D336F00E54B5A /* ITBlueViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1546,6 +1551,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18BE7C8C222BD72400D3A1CF /* main.m in Sources */,
+				18DC331F222D336F00E54B5A /* ITBlueViewController.m in Sources */,
 				18BE7C7E222BD72300D3A1CF /* AppDelegate.m in Sources */,
 				181BFC3A222BDAEB00C41AF7 /* ITViewController.m in Sources */,
 				18C732CE222BFAA8009B6723 /* ITRedViewController.m in Sources */,
