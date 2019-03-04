@@ -33,32 +33,35 @@ NSString *(^myBlock)(NSString *, int) = ^(NSString *name, int i) {
     [super didReceiveMemoryWarning];
 }
 // 喝牛奶按钮
-- (IBAction)drink:(UIButton *)sender {
-    [self action:@"drink" InDuration:3 RepeatCount:1];
+- (IBAction)drink {
+    [self action:NSStringFromSelector(@selector(drink)) InDuration:3 RepeatCount:1];
 }
 // 吃东西按钮
-- (IBAction)eat:(UIButton *)sender {
-    [self action:@"eat" InDuration:3 RepeatCount:1];
+- (IBAction)eat {
+    [self action:NSStringFromSelector(@selector(eat)) InDuration:3 RepeatCount:1];
 }
 // MARK: 放屁
-- (IBAction)fart:(UIButton *)sender {
-    [self action:@"fart" InDuration:3 RepeatCount:1];
+- (IBAction)fart {
+    [self action:NSStringFromSelector(@selector(fart)) InDuration:3 RepeatCount:1];
 }
 // MARK: 吃派
-- (IBAction)eatPie:(UIButton *)sender {
-    [self action:@"pie" InDuration:2.2 RepeatCount:1];
+- (IBAction)eatPie {
+    NSString *actionName = NSStringFromSelector(@selector(eatPie));
+    actionName = [actionName substringFromIndex:3].lowercaseString;
+    [self action:actionName InDuration:2.2 RepeatCount:1];
 }
 // MARK: 抓屏幕
-- (IBAction)scratchTheScreen:(UIButton *)sender {
-    [self action:@"scratch" InDuration:5 RepeatCount:1];
+- (IBAction)scratchTheScreen {
+    NSString *actionName = NSStringFromSelector(@selector(scratchTheScreen));
+    actionName = [actionName substringToIndex:7];
+    [self action:actionName InDuration:5 RepeatCount:1];
 }
 // MARK: 打鼓
-- (IBAction)cymbal:(UIButton *)sender {
-    [self action:@"cymbal" InDuration:1.8 RepeatCount:1];
+- (IBAction)cymbal {
+    [self action:NSStringFromSelector(@selector(cymbal)) InDuration:1.8 RepeatCount:1];
 }
 // MARK: 击倒
-- (IBAction)knockOut:(UIButton *)sender {
-//    NSString *str = [NSString stringWithUTF8String:__FUNCTION__];
+- (IBAction)knockOut {
     [self action:@"knockout" InDuration:5 RepeatCount:1];
 }
 // MARK: 动画汇总方法

@@ -22,8 +22,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
-- (IBAction)eat:(UIButton *)sender {
-}
 // MARK: 创建一个 Button ，并且要将 button 里面的方法也写出来。
 - (IBAction)createWangnima:(UIButton *)sender {
     // 1、创建一个 Button。
@@ -47,9 +45,4 @@
     lbl.adjustsFontSizeToFitWidth = YES;
     [self.view addSubview:lbl];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 @end

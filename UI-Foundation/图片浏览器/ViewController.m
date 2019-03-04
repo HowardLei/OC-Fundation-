@@ -54,8 +54,4 @@
     self.rightButton.enabled = (self.index != (self.arr.count - 1));
     self.leftButton.enabled = (self.index != 0);
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 @end
