@@ -37,12 +37,13 @@
     // 1、创建一个新的 View
     UIView *newView = [[UIView alloc] init];
     // 2、对这个视图的属性进行赋值
-    newView.frame = CGRectMake(20, 50, 100, 100);
-    newView.backgroundColor = [UIColor redColor];
+    CGFloat height = 100;
+    CGFloat x = arc4random_uniform(CGRectGetWidth(UIScreen.mainScreen.bounds) - height);
+    newView.frame = CGRectMake(x, x, height, height);
+    CGFloat randomColor = arc4random_uniform(255) / 255.0;
+    newView.backgroundColor = [[UIColor alloc] initWithRed:randomColor green:randomColor blue:randomColor alpha:randomColor];
     // 3、将新视图添加到 UIView 当中
     [self.view addSubview:newView];
-}
-- (IBAction)backPicture:(id)sender {
 }
 // MARK: 在这个 GreenView 中创建随机的视图及颜色
 // 思路：先创建色块，在对色块的属性进行调整，最后再添加进入视图即可。
@@ -78,10 +79,11 @@
 // MARK: 删除控件
 - (IBAction)removeAllViews:(UIButton *)sender {
     // 思路：先进行判断 view 中的所有子空间中的第一个元素有没有，如果有，则将其删除，一直删到没有。
-//    UIView *view = self.view.subviews.firstObject;
-//    while (view != nil) {
-//        [view removeFromSuperview];
-//    }
+    /*
+        UIView *view = self.view.subviews.firstObject;
+        while (view != nil) {
+        [view removeFromSuperview];
+     */
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"注意" message:@"确定清空当前view下的所有控件，此操作无法撤回！" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
     UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
