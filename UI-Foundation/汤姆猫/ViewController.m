@@ -13,9 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *scratchButton;
 @property (weak, nonatomic) IBOutlet UIButton *cymbalButton;
 @property (weak, nonatomic) IBOutlet UIButton *knockOutButton;
-
-- (IBAction)drink:(UIButton *)sender;
-
 @end
 
 @implementation ViewController
