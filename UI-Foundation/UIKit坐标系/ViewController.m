@@ -38,8 +38,8 @@
     UIView *newView = [[UIView alloc] init];
     // 2、对这个视图的属性进行赋值
     CGFloat height = 100;
-    CGFloat x = arc4random_uniform(CGRectGetWidth(UIScreen.mainScreen.bounds) - height);
-    newView.frame = CGRectMake(x, x, height, height);
+    CGFloat positionNumber = arc4random_uniform(CGRectGetWidth(UIScreen.mainScreen.bounds) - height);
+    newView.frame = CGRectMake(positionNumber, positionNumber, height, height);
     CGFloat randomColor = arc4random_uniform(255) / 255.0;
     newView.backgroundColor = [[UIColor alloc] initWithRed:randomColor green:randomColor blue:randomColor alpha:randomColor];
     // 3、将新视图添加到 UIView 当中
