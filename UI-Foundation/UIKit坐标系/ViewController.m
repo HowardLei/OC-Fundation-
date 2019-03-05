@@ -6,7 +6,6 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *greenView;
 @property (weak, nonatomic) IBOutlet UIButton *changeFatherViewColor;
-- (IBAction)nextPicture:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *changeFatherViewColorIntoRandomColor;
 @property (weak, nonatomic) IBOutlet UIButton *createView;
 @property (weak, nonatomic) IBOutlet UIButton *moveView;
@@ -14,18 +13,13 @@
 @end
 
 @implementation ViewController
-
-- (IBAction)nextPicture:(UIButton *)sender {
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
 // MARK: 改变控件的颜色为指定颜色
 - (IBAction)changeFatherViewColor:(UIButton *)sender {
-    // 1、获取父控件
-    UIView *fatherView = sender.superview;
-    // 2、改变父控件的颜色
-    fatherView.backgroundColor = [UIColor greenColor];
+    // 改变父控件的颜色
+    self.greenView.backgroundColor = [UIColor greenColor];
 }
 // MARK: 改变控件的颜色为随机颜色
 - (IBAction)changeFatherViewColorIntoRandomColor:(UIButton *)sender {
@@ -84,14 +78,17 @@
 // MARK: 删除控件
 - (IBAction)removeAllViews:(UIButton *)sender {
     // 思路：先进行判断 view 中的所有子空间中的第一个元素有没有，如果有，则将其删除，一直删到没有。
-    UIView *view = self.view.subviews.firstObject;
-    while (view) {
-        [view removeFromSuperview];
-    }
-    [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+//    UIView *view = self.view.subviews.firstObject;
+//    while (view != nil) {
+//        [view removeFromSuperview];
+//    }
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"注意" message:@"确定清空当前view下的所有控件，此操作无法撤回！" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    }];
+    [controller addAction:cancelAction];
+    [controller addAction:confirmAction];
+    [self presentViewController:controller animated:YES completion:nil];
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 @end
