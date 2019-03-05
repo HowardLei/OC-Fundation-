@@ -21,13 +21,8 @@ NSString *(^myBlock)(NSString *, int) = ^(NSString *name, int i) {
     NSString *path = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@_%02d.jpg", name, i] ofType:nil];
     return path;
 };
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 // 喝牛奶按钮
 - (IBAction)drink {
