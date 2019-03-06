@@ -9,7 +9,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *changeFatherViewColorIntoRandomColor;
 @property (weak, nonatomic) IBOutlet UIButton *createView;
 @property (weak, nonatomic) IBOutlet UIButton *moveView;
-
 @end
 
 @implementation ViewController
