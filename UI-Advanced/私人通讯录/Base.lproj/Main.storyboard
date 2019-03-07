@@ -39,18 +39,12 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="cFq-OP-Bph" id="n0e-kV-61s"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mlH-Oi-sNe">
                                 <rect key="frame" x="10" y="134" width="355" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="cFq-OP-Bph" id="2bb-of-38g"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="记住密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5I-B7-eOL">
                                 <rect key="frame" x="10" y="184" width="70" height="21"/>
@@ -80,7 +74,7 @@
                                 <rect key="frame" x="172" y="318.5" width="31" height="30"/>
                                 <state key="normal" title="登录"/>
                                 <connections>
-                                    <segue destination="0rx-L2-9uY" kind="show" id="S83-AH-sUm"/>
+                                    <action selector="login:" destination="cFq-OP-Bph" eventType="touchUpInside" id="srp-MR-YuY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -115,6 +109,7 @@
                         <outlet property="passwordTextField" destination="mlH-Oi-sNe" id="zjO-FK-eXJ"/>
                         <outlet property="rememberPasswordSwitch" destination="cb3-hQ-ted" id="V9I-1E-bsA"/>
                         <outlet property="userNameTextField" destination="QPt-jQ-ua6" id="Ezm-CP-Ngi"/>
+                        <segue destination="0rx-L2-9uY" kind="show" identifier="login2Contact" id="LDZ-39-FcP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynP-Gl-csi" userLabel="First Responder" sceneMemberID="firstResponder"/>
