@@ -17,12 +17,12 @@
 @end
 
 @implementation ITLoginController
-// MARK: - 控制 View 当中的生命周期
+// MARK: - 控制控制器 View 当中的生命周期的方法
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSNotificationCenter *center = NSNotificationCenter.defaultCenter;
-    [center addObserver:self selector:@selector(contentChange:) name:UITextFieldTextDidChangeNotification object:self.userNameTextField];
-    [center addObserver:self selector:@selector(contentChange:) name:UITextFieldTextDidChangeNotification object:self.passwordTextField];
+    [center addObserver:self selector:@selector(contentChange) name:UITextFieldTextDidChangeNotification object:self.userNameTextField];
+    [center addObserver:self selector:@selector(contentChange) name:UITextFieldTextDidChangeNotification object:self.passwordTextField];
 }
 // MARK: - 管理开关的方法
 /**
@@ -45,13 +45,13 @@
 }
 // MARK: - 与键盘相关的方法
 /**
- 当 textField 当中的内容发生改变的时候，
- @param textField 需要检测的 textField
+ 当 textField 当中的内容发生改变的时候，系统发送通知。一旦
  */
-- (void)contentChange:(UITextField *)textField {
-    // 1. 先判断发送通知的键盘是哪一个
-    if ([textField.description isEqualToString:self.userNameTextField.description]) {
-        
-    }
+- (void)contentChange {
+    self.loginButton.enabled = (self.userNameTextField.text.length > 0 && self.passwordTextField.text.length > 0) ? YES : NO;
+}
+// MARK: - 控制器中的 dealloc 方法
+- (void)dealloc {
+    [NSNotificationCenter.defaultCenter removeObserver:self];
 }
 @end
