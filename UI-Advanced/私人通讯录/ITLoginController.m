@@ -13,7 +13,6 @@
 @property (weak, nonatomic) IBOutlet UISwitch *rememberPasswordSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *autoLoginSwitch;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
-
 @end
 
 @implementation ITLoginController
@@ -53,7 +52,7 @@
     // 1. 判断用户名密码是否正确
     if ([self.userNameTextField.text isEqualToString:@"admin"] && [self.passwordTextField.text isEqualToString:@"123"]) {
         // 正确的话执行下面的方法
-        [self performSegueWithIdentifier:@"login2Contact" sender:@"123"];
+        [self performSegueWithIdentifier:@"login2Contact" sender:nil];
     } else {
         // 错误的话进行提示，
         UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"密码错误" message:@"请检查一下密码是否有误" preferredStyle:UIAlertControllerStyleAlert];

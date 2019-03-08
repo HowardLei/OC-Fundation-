@@ -119,13 +119,13 @@
         <!--我的私人通讯录-->
         <scene sceneID="s0k-Km-Tiy">
             <objects>
-                <tableViewController id="0rx-L2-9uY" customClass="ITContactController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="loginInIndex" id="0rx-L2-9uY" customClass="ITContactController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SRi-Cp-j9r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Contact" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="WCQ-5S-zyq">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" id="WCQ-5S-zyq" customClass="ITContactCell">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WCQ-5S-zyq" id="vcl-pZ-xOu">
@@ -159,7 +159,7 @@
         <!--添加联系人-->
         <scene sceneID="Vf6-vv-4WW">
             <objects>
-                <viewController id="XRG-wI-ada" sceneMemberID="viewController">
+                <viewController id="XRG-wI-ada" customClass="ITAddContactController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IHm-P0-RPM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,11 +170,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e1r-zn-CWR">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入电话" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e1r-zn-CWR">
                                 <rect key="frame" x="20" y="134" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -189,7 +189,11 @@
                         <viewLayoutGuide key="safeArea" id="d6N-qe-hjL"/>
                     </view>
                     <navigationItem key="navigationItem" title="添加联系人" id="5nn-Jq-tee">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Plr-Ss-Y8S"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Plr-Ss-Y8S">
+                            <connections>
+                                <action selector="done" destination="XRG-wI-ada" id="4Qt-mQ-pZH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDc-99-wPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
