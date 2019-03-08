@@ -33,7 +33,7 @@
             person.name = self.nameTextField.text;
             person.phoneNumber = self.phoneTextField.text;
             [controller setContact:person];
-            // FIXME: 当调用刷新方法的时候，无法刷新出界面
+            // FIXME: 当调用刷新方法的时候，无法将界面当中的数据刷新出来。
             [[controller tableView] reloadData];
             [self performSelector:@selector(delayMethodWithController:) withObject:controller afterDelay:0.01];
             return;

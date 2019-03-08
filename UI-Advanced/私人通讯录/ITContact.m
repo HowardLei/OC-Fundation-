@@ -8,5 +8,7 @@
 #import "ITContact.h"
 
 @implementation ITContact
-
+- (NSString *)description {
+    return [NSString stringWithFormat:@"我是%@，电话：%@", self.name, self.phoneNumber];
+}
 @end

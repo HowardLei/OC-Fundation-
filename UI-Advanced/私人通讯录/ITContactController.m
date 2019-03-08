@@ -31,9 +31,11 @@ static NSString *const ID = @"cell";
 }
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSLog(@"%lu", self.contacts.count);
     return self.contacts.count;
 }
 - (__kindof UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"%s", __FUNCTION__);
     ITContactCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
     // Configure the cell...
     if (!cell) {
@@ -42,4 +44,5 @@ static NSString *const ID = @"cell";
     }
     return cell;
 }
+
 @end
