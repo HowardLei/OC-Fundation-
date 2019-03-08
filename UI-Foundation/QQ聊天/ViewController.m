@@ -10,9 +10,9 @@
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 
-@property (nonatomic, strong) NSMutableArray *chatArr;
+@property (nonatomic, strong) NSMutableArray<ITChat *> *chatArr;
 @property (weak, nonatomic) IBOutlet UITableView *chatTableView;
-@property (weak, nonatomic) IBOutlet UITextField *messageTextField;\
+@property (weak, nonatomic) IBOutlet UITextField *messageTextField;
 
 @end
 
@@ -24,7 +24,7 @@
 }
 
 // MARK: - 懒加载数据
-- (NSMutableArray *)chatArr {
+- (NSMutableArray<ITChat *> *)chatArr {
     if (_chatArr == nil) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"messages" ofType:@".plist"];
         NSArray *arr = [NSArray arrayWithContentsOfFile:path];
@@ -116,16 +116,14 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.chatArr.count;
 }
-
 // MARK: - Table View delegate
 // 设置行高
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     ITChat *model = self.chatArr[indexPath.row];
     return model.height;
 }
-
+// MARK: - dealloc
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-
 @end

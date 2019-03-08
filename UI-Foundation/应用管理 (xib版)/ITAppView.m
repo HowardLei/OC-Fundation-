@@ -17,7 +17,7 @@
 }
 + (instancetype)appViewWithNib:(NSString *)nibName {
     NSBundle *bundle = [NSBundle mainBundle];
-    return [[bundle loadNibNamed:nibName owner:nil options:nil] firstObject];
+    return [bundle loadNibNamed:nibName owner:nil options:nil].firstObject;
 }
 // MARK: 点击以后出现正在下载按钮的动画，播放完消失
 - (IBAction)download:(UIButton *)sender {

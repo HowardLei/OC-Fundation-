@@ -9,7 +9,7 @@
 #import "ITContactCell.h"
 
 @interface ITContactController ()
-
+@property (nonatomic, strong) NSMutableArray<ITContact *> *contacts;
 @end
 
 @implementation ITContactController
@@ -17,10 +17,6 @@ static NSString *const ID = @"cell";
 // MARK: - 与试图有关的方法
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 // MARK: - 按钮业务
 - (IBAction)logout:(id)sender {
@@ -35,7 +31,7 @@ static NSString *const ID = @"cell";
 }
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.contacts.count;
 }
 - (__kindof UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ITContactCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
