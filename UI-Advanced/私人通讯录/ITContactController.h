@@ -6,11 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class ITContact;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ITContactController : UITableViewController
-
+@property (nonatomic, strong) ITContact *contact;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -10,6 +10,7 @@
 		181BFC3A222BDAEB00C41AF7 /* ITViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181BFC39222BDAEB00C41AF7 /* ITViewController.m */; };
 		1828CDB322326A1D00D2BF38 /* ITAddContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828CDB222326A1D00D2BF38 /* ITAddContactController.m */; };
 		18305DAA22326B4200C95F98 /* ITContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18305DA922326B4200C95F98 /* ITContactCell.m */; };
+		18305DAD2232786600C95F98 /* ITContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 18305DAC2232786600C95F98 /* ITContact.m */; };
 		18422A9D222285DF00CC7ADC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18422A9C222285DF00CC7ADC /* AppDelegate.m */; };
 		18422AA5222285E000CC7ADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18422AA4222285E000CC7ADC /* Assets.xcassets */; };
 		18422AA8222285E000CC7ADC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18422AA6222285E000CC7ADC /* LaunchScreen.storyboard */; };
@@ -129,6 +130,8 @@
 		1828CDB222326A1D00D2BF38 /* ITAddContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITAddContactController.m; sourceTree = "<group>"; };
 		18305DA822326B4200C95F98 /* ITContactCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITContactCell.h; sourceTree = "<group>"; };
 		18305DA922326B4200C95F98 /* ITContactCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITContactCell.m; sourceTree = "<group>"; };
+		18305DAB2232786600C95F98 /* ITContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITContact.h; sourceTree = "<group>"; };
+		18305DAC2232786600C95F98 /* ITContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITContact.m; sourceTree = "<group>"; };
 		18422A99222285DF00CC7ADC /* 加载自定义控制器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "加载自定义控制器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18422A9B222285DF00CC7ADC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18422A9C222285DF00CC7ADC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1062,6 +1065,8 @@
 			children = (
 				18305DA822326B4200C95F98 /* ITContactCell.h */,
 				18305DA922326B4200C95F98 /* ITContactCell.m */,
+				18305DAB2232786600C95F98 /* ITContact.h */,
+				18305DAC2232786600C95F98 /* ITContact.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1802,6 +1807,7 @@
 				63E79364222FE49000D76267 /* AppDelegate.m in Sources */,
 				18305DAA22326B4200C95F98 /* ITContactCell.m in Sources */,
 				1828CDB322326A1D00D2BF38 /* ITAddContactController.m in Sources */,
+				18305DAD2232786600C95F98 /* ITContact.m in Sources */,
 				63E7937D22302AA300D76267 /* ITLoginController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

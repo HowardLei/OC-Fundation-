@@ -159,7 +159,7 @@
         <!--添加联系人-->
         <scene sceneID="Vf6-vv-4WW">
             <objects>
-                <viewController id="XRG-wI-ada" customClass="ITAddContactController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addContact" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XRG-wI-ada" customClass="ITAddContactController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IHm-P0-RPM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,12 +189,17 @@
                         <viewLayoutGuide key="safeArea" id="d6N-qe-hjL"/>
                     </view>
                     <navigationItem key="navigationItem" title="添加联系人" id="5nn-Jq-tee">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Plr-Ss-Y8S">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="done" id="Plr-Ss-Y8S">
                             <connections>
                                 <action selector="done" destination="XRG-wI-ada" id="4Qt-mQ-pZH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="Plr-Ss-Y8S" id="WX1-wx-Gpt"/>
+                        <outlet property="nameTextField" destination="37i-1h-kzH" id="b4w-Y2-CSg"/>
+                        <outlet property="phoneTextField" destination="e1r-zn-CWR" id="4iI-Th-5tH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDc-99-wPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

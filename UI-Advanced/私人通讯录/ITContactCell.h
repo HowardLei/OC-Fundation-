@@ -6,12 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class ITContact;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ITContactCell : UITableViewCell
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *phoneNumber;
+@property (nonatomic, strong) ITContact *model;
 @end
 
 NS_ASSUME_NONNULL_END
