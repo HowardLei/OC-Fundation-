@@ -19,7 +19,7 @@ static NSString *const ID = @"ContactCell";
         _contacts = [NSMutableArray array];
     }
     if (_contact != nil) {
-        // FIXME: 再添加的时候，会将第二个添加进去
+        // FIXME: 再添加的时候，会将原有的数据重复添加进去
         [_contacts addObject:_contact];
     }
     return _contacts;
