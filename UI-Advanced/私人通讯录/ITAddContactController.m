@@ -33,18 +33,13 @@
             person.name = self.nameTextField.text;
             person.phoneNumber = self.phoneTextField.text;
             [controller setContact:person];
-            // FIXME: 当调用刷新方法的时候，无法将界面当中的数据刷新出来。
             [[controller tableView] reloadData];
-            [self performSelector:@selector(delayMethodWithController:) withObject:controller afterDelay:0.01];
+            [self.navigationController popToViewController:controller animated:YES];
             return;
         }
     }
 }
 - (void)doneButtonEnable {
     self.doneButton.enabled = self.nameTextField.text.length > 0 && self.phoneTextField.text.length > 0 ? YES : NO;
-}
-// 单纯的封装方法，减少参数
-- (void)delayMethodWithController:(UITableViewController *)controller {
-    [self.navigationController popToViewController:controller animated:YES];
 }
 @end

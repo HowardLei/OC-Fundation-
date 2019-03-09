@@ -13,10 +13,21 @@
 @end
 
 @implementation ITContactController
-static NSString *const ID = @"cell";
-// MARK: - 与试图有关的方法
+static NSString *const ID = @"ContactCell";
+- (NSMutableArray<ITContact *> *)contacts {
+    if (!_contacts) {
+        _contacts = [NSMutableArray array];
+    }
+    if (_contact != nil) {
+        // FIXME: 再添加的时候，会将第二个添加进去
+        [_contacts addObject:_contact];
+    }
+    return _contacts;
+}
+// MARK: - 与视图有关的方法
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.rowHeight = 80;
 }
 // MARK: - 按钮业务
 - (IBAction)logout:(id)sender {
@@ -31,17 +42,11 @@ static NSString *const ID = @"cell";
 }
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"%lu", self.contacts.count);
     return self.contacts.count;
 }
 - (__kindof UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%s", __FUNCTION__);
     ITContactCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
-    // Configure the cell...
-    if (!cell) {
-        cell = [[ITContactCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-        cell.model = self.contact;
-    }
+    cell.model = self.contacts[indexPath.row];
     return cell;
 }
 
