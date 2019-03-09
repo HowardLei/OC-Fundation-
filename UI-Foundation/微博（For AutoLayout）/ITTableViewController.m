@@ -13,11 +13,11 @@
 
 @implementation ITTableViewController
 // MARK: Lazy loading weibo data
-- (NSArray *)weiboArr {
+- (NSArray<ITWeibo *> *)weiboArr {
     if (_weiboArr == nil) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"weibo" ofType:@".plist"];
-        NSArray *tempArr = [NSArray arrayWithContentsOfFile:path];
-        NSMutableArray *arrM = [NSMutableArray array];
+        NSArray<NSDictionary *> *tempArr = [NSArray arrayWithContentsOfFile:path];
+        NSMutableArray<ITWeibo *> *arrM = [NSMutableArray arrayWithCapacity:tempArr.count];
         for (NSDictionary *dict in tempArr) {
             ITWeibo *appModel = [ITWeibo weiboWithDict:dict];
             [arrM addObject:appModel];

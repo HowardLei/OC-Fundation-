@@ -17,12 +17,10 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 }
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        self.nameLabel.text = self.model.name;
-        self.phoneNumberLabel.text = self.model.phoneNumber;
-    }
-    return self;
+
+- (void)setModel:(ITContact *)model {
+    _model = model;
+    self.nameLabel.text = model.name;
+    self.phoneNumberLabel.text = model.phoneNumber;
 }
 @end

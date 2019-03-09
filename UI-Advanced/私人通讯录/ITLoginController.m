@@ -70,6 +70,15 @@
 - (void)contentChange {
     self.loginButton.enabled = (self.userNameTextField.text.length > 0 && self.passwordTextField.text.length > 0) ? YES : NO;
 }
+/**
+ 当输入完密码以后，点击完成即可登录
+ @param textField 输入密码的文本框
+ @return 默认为 YES
+ */
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self login:self.loginButton];
+    return YES;
+}
 // MARK: - 控制器中的 dealloc 方法
 - (void)dealloc {
     [NSNotificationCenter.defaultCenter removeObserver:self];
