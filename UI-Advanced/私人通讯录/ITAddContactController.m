@@ -49,4 +49,9 @@
     [self done];
     return YES;
 }
+// MARK: - dealloc Method
+// 当你创建好通知的时候，千万不要忘记移除通知
+- (void)dealloc {
+    [NSNotificationCenter.defaultCenter removeObserver:self];
+}
 @end

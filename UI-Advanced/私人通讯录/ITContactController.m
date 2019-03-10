@@ -13,7 +13,6 @@
 @end
 
 @implementation ITContactController
-static NSString *const ID = @"ContactCell";
 - (NSMutableArray<ITContact *> *)contacts {
     if (!_contacts) {
         _contacts = [NSMutableArray array];
@@ -45,6 +44,7 @@ static NSString *const ID = @"ContactCell";
     return self.contacts.count;
 }
 - (__kindof UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *const ID = @"ContactCell";
     ITContactCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
     cell.model = self.contacts[indexPath.row];
     return cell;

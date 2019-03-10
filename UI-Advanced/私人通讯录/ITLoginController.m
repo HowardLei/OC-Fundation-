@@ -7,6 +7,7 @@
 
 #import "ITLoginController.h"
 #import "MBProgressHUD/MBProgressHUD+CZ.h"
+#import "ITContactController.h"
 @interface ITLoginController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
@@ -51,11 +52,12 @@
 - (IBAction)login:(UIButton *)sender {
     // 模拟网络登录
     [MBProgressHUD showMessage:@"正在登录" toView:self.navigationController.view];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{          [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         // 1. 判断用户名密码是否正确
         if ([self.userNameTextField.text isEqualToString:@"admin"] && [self.passwordTextField.text isEqualToString:@"123"]) {
-            // 正确的话执行下面的方法
-            [self performSegueWithIdentifier:@"login2Contact" sender:nil];
+            // 正确的话执行下面的方法，进行页面的跳转
+            [self performSegueWithIdentifier:@"login2Contact" sender:@"admin"];
         } else {
             // 错误的话进行提示。并且清空密码框
             [MBProgressHUD showError:@"您输入的密码有误"];
@@ -82,5 +84,15 @@
 // MARK: - 控制器中的 dealloc 方法
 - (void)dealloc {
     [NSNotificationCenter.defaultCenter removeObserver:self];
+}
+// MARK: - 控制 segue 方法
+/**
+ 当我们需要通过 segue 的时候，需要进行顺向传值。
+ @param segue 需要通过的 segue
+ @param sender 需要顺向传递的值
+ */
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    ITContactController *controller = segue.destinationViewController;
+    controller.navigationItem.title = [NSString stringWithFormat:@"%@的私人通讯录", sender];
 }
 @end
