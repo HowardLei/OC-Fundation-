@@ -8,7 +8,7 @@
 #import "ITAddContactController.h"
 #import "ITContactController.h"
 #import "ITContact.h"
-@interface ITAddContactController ()
+@interface ITAddContactController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
@@ -29,9 +29,7 @@
 - (IBAction)done {
     for (id controller in self.navigationController.viewControllers) {
         if ([controller isMemberOfClass:ITContactController.class]) {
-            ITContact *person = [[ITContact alloc] init];
-            person.name = self.nameTextField.text;
-            person.phoneNumber = self.phoneTextField.text;
+            ITContact *person = [[ITContact alloc] initWithName:self.nameTextField.text phoneNumber:self.phoneTextField.text];
             [controller setContact:person];
             [[controller tableView] reloadData];
             [self.navigationController popToViewController:controller animated:YES];
@@ -41,5 +39,14 @@
 }
 - (void)doneButtonEnable {
     self.doneButton.enabled = self.nameTextField.text.length > 0 && self.phoneTextField.text.length > 0 ? YES : NO;
+}
+/**
+ 当点击键盘当中的完成的时候，自动选择完成
+ @param textField 输入密码的文本框
+ @return 默认为 YES
+ */
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self done];
+    return YES;
 }
 @end
