@@ -49,5 +49,4 @@ static NSString *const ID = @"ContactCell";
     cell.model = self.contacts[indexPath.row];
     return cell;
 }
-
 @end

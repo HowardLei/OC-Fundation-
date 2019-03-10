@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1814DF6A2234EBD300D9CBE9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1814DF652234EBD300D9CBE9 /* MBProgressHUD.m */; };
+		1814DF6B2234EBD300D9CBE9 /* MBProgressHUD+CZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1814DF662234EBD300D9CBE9 /* MBProgressHUD+CZ.m */; };
+		1814DF6C2234EBD300D9CBE9 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1814DF692234EBD300D9CBE9 /* MBProgressHUD.bundle */; };
 		181BFC3A222BDAEB00C41AF7 /* ITViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181BFC39222BDAEB00C41AF7 /* ITViewController.m */; };
 		1828CDB322326A1D00D2BF38 /* ITAddContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828CDB222326A1D00D2BF38 /* ITAddContactController.m */; };
 		18305DAA22326B4200C95F98 /* ITContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18305DA922326B4200C95F98 /* ITContactCell.m */; };
@@ -124,6 +127,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1814DF652234EBD300D9CBE9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		1814DF662234EBD300D9CBE9 /* MBProgressHUD+CZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+CZ.m"; sourceTree = "<group>"; };
+		1814DF672234EBD300D9CBE9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		1814DF682234EBD300D9CBE9 /* MBProgressHUD+CZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+CZ.h"; sourceTree = "<group>"; };
+		1814DF692234EBD300D9CBE9 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		181BFC38222BDAEB00C41AF7 /* ITViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITViewController.h; sourceTree = "<group>"; };
 		181BFC39222BDAEB00C41AF7 /* ITViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITViewController.m; sourceTree = "<group>"; };
 		1828CDB122326A1D00D2BF38 /* ITAddContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITAddContactController.h; sourceTree = "<group>"; };
@@ -425,6 +433,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1814DF642234EBD300D9CBE9 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				1814DF652234EBD300D9CBE9 /* MBProgressHUD.m */,
+				1814DF662234EBD300D9CBE9 /* MBProgressHUD+CZ.m */,
+				1814DF672234EBD300D9CBE9 /* MBProgressHUD.h */,
+				1814DF682234EBD300D9CBE9 /* MBProgressHUD+CZ.h */,
+				1814DF692234EBD300D9CBE9 /* MBProgressHUD.bundle */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		18422A9A222285DF00CC7ADC /* 加载自定义控制器 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1086,6 +1106,7 @@
 		63E7937A22302A7100D76267 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1814DF642234EBD300D9CBE9 /* MBProgressHUD */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1639,6 +1660,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63E7936F222FE49000D76267 /* LaunchScreen.storyboard in Resources */,
+				1814DF6C2234EBD300D9CBE9 /* MBProgressHUD.bundle in Resources */,
 				63E7936C222FE49000D76267 /* Assets.xcassets in Resources */,
 				63E7936A222FE49000D76267 /* Main.storyboard in Resources */,
 			);
@@ -1803,12 +1825,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				63E79372222FE49000D76267 /* main.m in Sources */,
+				1814DF6B2234EBD300D9CBE9 /* MBProgressHUD+CZ.m in Sources */,
 				63E7938022302D4F00D76267 /* ITContactController.m in Sources */,
 				63E79364222FE49000D76267 /* AppDelegate.m in Sources */,
 				18305DAA22326B4200C95F98 /* ITContactCell.m in Sources */,
 				1828CDB322326A1D00D2BF38 /* ITAddContactController.m in Sources */,
 				18305DAD2232786600C95F98 /* ITContact.m in Sources */,
 				63E7937D22302AA300D76267 /* ITLoginController.m in Sources */,
+				1814DF6A2234EBD300D9CBE9 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

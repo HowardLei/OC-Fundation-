@@ -6,7 +6,7 @@
 //
 
 #import "ITLoginController.h"
-
+#import "MBProgressHUD/MBProgressHUD+CZ.h"
 @interface ITLoginController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
@@ -49,19 +49,19 @@
  @param sender 登录按钮
  */
 - (IBAction)login:(UIButton *)sender {
-    // 1. 判断用户名密码是否正确
-    if ([self.userNameTextField.text isEqualToString:@"admin"] && [self.passwordTextField.text isEqualToString:@"123"]) {
-        // 正确的话执行下面的方法
-        [self performSegueWithIdentifier:@"login2Contact" sender:nil];
-    } else {
-        // 错误的话进行提示，
-        UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"密码错误" message:@"请检查一下密码是否有误" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *checkAction = [UIAlertAction actionWithTitle:@"我去检查一下" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    // 模拟网络登录
+    [MBProgressHUD showMessage:@"正在登录" toView:self.navigationController.view];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{          [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+        // 1. 判断用户名密码是否正确
+        if ([self.userNameTextField.text isEqualToString:@"admin"] && [self.passwordTextField.text isEqualToString:@"123"]) {
+            // 正确的话执行下面的方法
+            [self performSegueWithIdentifier:@"login2Contact" sender:nil];
+        } else {
+            // 错误的话进行提示。并且清空密码框
+            [MBProgressHUD showError:@"您输入的密码有误"];
             self.passwordTextField.text = nil;
-        }];
-        [controller addAction:checkAction];
-        [self presentViewController:controller animated:YES completion:nil];
-    }
+        }
+    });
 }
 // MARK: - 与键盘相关的方法
 /**
