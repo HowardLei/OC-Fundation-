@@ -29,14 +29,17 @@
 - (IBAction)done {
     for (id controller in self.navigationController.viewControllers) {
         if ([controller isMemberOfClass:ITContactController.class]) {
-            ITContact *person = [[ITContact alloc] initWithName:self.nameTextField.text phoneNumber:self.phoneTextField.text];
-            [controller setContact:person];
+            ITContact *person = [ITContact contactWithName:self.nameTextField.text phoneNumber:self.phoneTextField.text];
+            [[controller contacts] addObject:person];
             [[controller tableView] reloadData];
             [self.navigationController popToViewController:controller animated:YES];
             return;
         }
     }
 }
+/**
+ 当文本框当中都有数据的时候，才让按钮能够正常使用
+ */
 - (void)doneButtonEnable {
     self.doneButton.enabled = self.nameTextField.text.length > 0 && self.phoneTextField.text.length > 0 ? YES : NO;
 }

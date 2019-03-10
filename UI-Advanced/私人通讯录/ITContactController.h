@@ -9,8 +9,10 @@
 @class ITContact;
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ITContactController : UITableViewController
-@property (nullable, nonatomic, strong) ITContact *contact;
+@interface ITContactController : UITableViewController {
+    NSMutableArray<ITContact *> *_contacts;
+}
+@property (nonatomic, strong, readonly) NSMutableArray<ITContact *> *contacts;
 @end
 
 NS_ASSUME_NONNULL_END

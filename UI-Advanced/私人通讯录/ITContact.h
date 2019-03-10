@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ITContact : NSObject
 @property (nonatomic, copy, readonly) NSString *name;
 @property (nonatomic, copy, readonly) NSString *phoneNumber;
-- (instancetype)initWithName:(NSString *)name phoneNumber:(NSString *)phoneNumber;
++ (instancetype)contactWithName:(NSString *)name phoneNumber:(NSString *)phoneNumber;
 @end
 
 NS_ASSUME_NONNULL_END

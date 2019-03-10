@@ -9,17 +9,13 @@
 #import "ITContactCell.h"
 
 @interface ITContactController ()
-@property (nonatomic, strong) NSMutableArray<ITContact *> *contacts;
+
 @end
 
 @implementation ITContactController
 - (NSMutableArray<ITContact *> *)contacts {
     if (!_contacts) {
         _contacts = [NSMutableArray array];
-    }
-    if (_contact != nil) {
-        // FIXME: 再添加的时候，会将原有的数据重复添加进去
-        [_contacts addObject:_contact];
     }
     return _contacts;
 }
