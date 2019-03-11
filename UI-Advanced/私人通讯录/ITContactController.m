@@ -9,7 +9,7 @@
 #import "ITContactCell.h"
 
 @interface ITContactController ()
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addContactButton;
 @end
 
 @implementation ITContactController
@@ -35,7 +35,11 @@
     [controller addAction:cancelAction];
     [self presentViewController:controller animated:YES completion:nil];
 }
-#pragma mark - Table view data source
+- (IBAction)editCell:(UIBarButtonItem *)sender {
+    self.addContactButton.enabled = !self.addContactButton.isEnabled;
+    [self.tableView setEditing:!self.tableView.isEditing animated:YES];
+}
+// MARK: - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.contacts.count;
 }
@@ -44,5 +48,35 @@
     ITContactCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
     cell.model = self.contacts[indexPath.row];
     return cell;
+}
+// MARK: - Table view delegate
+/**
+ 设置 table view 需要添加 cell 或者删除 cell 的时候进行如下处理
+ @param tableView 拖动 cell 所在的 table view
+ @param editingStyle 编辑样式
+ @param indexPath cell 所在的位置
+ */
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (editingStyle) {
+        case UITableViewCellEditingStyleDelete:
+            // 1. 将数组当中的数据删除
+            [self.contacts removeObjectAtIndex:indexPath.row];
+            // 2. 将 cell 当中的数据同样删除了
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+        case UITableViewCellEditingStyleInsert:
+            break;
+        default:
+            break;
+    }
+}
+/**
+ 当需要改变每一行的编辑
+ @param tableView <#tableView description#>
+ @param indexPath <#indexPath description#>
+ @return <#return value description#>
+ */
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return indexPath.row % 2 ? UITableViewCellEditingStyleInsert: UITableViewCellEditingStyleDelete;
 }
 @end
