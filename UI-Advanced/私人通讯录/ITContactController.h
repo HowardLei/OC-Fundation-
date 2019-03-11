@@ -10,6 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ITContactController : UITableViewController {
+    @private
     NSMutableArray<ITContact *> *_contacts;
 }
 @property (nonatomic, strong, readonly) NSMutableArray<ITContact *> *contacts;
