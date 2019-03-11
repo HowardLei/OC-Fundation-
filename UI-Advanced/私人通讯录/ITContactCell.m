@@ -17,7 +17,6 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 }
-
 - (void)setModel:(ITContact *)model {
     _model = model;
     self.nameLabel.text = model.name;

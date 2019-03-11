@@ -9,8 +9,7 @@
 
 @implementation ITContact
 - (instancetype)initWithName:(NSString *)name phoneNumber:(NSString *)phoneNumber {
-    self = [super init];
-    if (self) {
+    if (self = [super init]) {
         _name = name;
         _phoneNumber = phoneNumber;
     }
