@@ -72,9 +72,9 @@
 }
 /**
  当需要改变每一行的编辑
- @param tableView <#tableView description#>
- @param indexPath <#indexPath description#>
- @return <#return value description#>
+ @param tableView 需要改变的 table view
+ @param indexPath 需要改变 table view cell 的位置
+ @return table view cell 的编辑样式
  */
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     return indexPath.row % 2 ? UITableViewCellEditingStyleInsert: UITableViewCellEditingStyleDelete;
