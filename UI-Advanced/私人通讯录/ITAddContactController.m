@@ -22,7 +22,7 @@
     [center addObserver:self selector:@selector(doneButtonEnable) name:UITextFieldTextDidChangeNotification object:self.nameTextField];
     [center addObserver:self selector:@selector(doneButtonEnable) name:UITextFieldTextDidChangeNotification object:self.phoneTextField];
 }
-// MARK: 按钮业务
+// MARK: - 按钮业务
 /**
  点击完成按钮以后，返回原有控制器
  */

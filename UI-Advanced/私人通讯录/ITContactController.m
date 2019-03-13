@@ -26,7 +26,7 @@
     [super viewDidLoad];
     self.tableView.rowHeight = 75;
 }
-// MARK:
+// MARK: - 与 segue 有关的方法
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // 根据 segue 的识别符判断具体是哪条 segue
     if ([segue.identifier isEqualToString:@"editContact"]) {
