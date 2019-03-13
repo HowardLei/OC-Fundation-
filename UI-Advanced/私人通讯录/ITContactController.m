@@ -22,7 +22,7 @@
 // MARK: - 与视图有关的方法
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.rowHeight = 80;
+    self.tableView.rowHeight = 75;
 }
 // MARK: - 按钮业务
 - (IBAction)logout:(id)sender {

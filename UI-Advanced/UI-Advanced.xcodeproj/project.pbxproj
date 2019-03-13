@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18051BE22238C42800221487 /* ITEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18051BE12238C42800221487 /* ITEditController.m */; };
 		1814DF6A2234EBD300D9CBE9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1814DF652234EBD300D9CBE9 /* MBProgressHUD.m */; };
 		1814DF6B2234EBD300D9CBE9 /* MBProgressHUD+CZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1814DF662234EBD300D9CBE9 /* MBProgressHUD+CZ.m */; };
 		1814DF6C2234EBD300D9CBE9 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1814DF692234EBD300D9CBE9 /* MBProgressHUD.bundle */; };
@@ -127,6 +128,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18051BE02238C42800221487 /* ITEditController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITEditController.h; sourceTree = "<group>"; };
+		18051BE12238C42800221487 /* ITEditController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITEditController.m; sourceTree = "<group>"; };
 		1814DF652234EBD300D9CBE9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		1814DF662234EBD300D9CBE9 /* MBProgressHUD+CZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+CZ.m"; sourceTree = "<group>"; };
 		1814DF672234EBD300D9CBE9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -1067,6 +1070,8 @@
 				63E7937F22302D4F00D76267 /* ITContactController.m */,
 				1828CDB122326A1D00D2BF38 /* ITAddContactController.h */,
 				1828CDB222326A1D00D2BF38 /* ITAddContactController.m */,
+				18051BE02238C42800221487 /* ITEditController.h */,
+				18051BE12238C42800221487 /* ITEditController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1832,6 +1837,7 @@
 				1828CDB322326A1D00D2BF38 /* ITAddContactController.m in Sources */,
 				18305DAD2232786600C95F98 /* ITContact.m in Sources */,
 				63E7937D22302AA300D76267 /* ITLoginController.m in Sources */,
+				18051BE22238C42800221487 /* ITEditController.m in Sources */,
 				1814DF6A2234EBD300D9CBE9 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
