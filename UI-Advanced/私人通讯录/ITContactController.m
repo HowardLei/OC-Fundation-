@@ -7,12 +7,14 @@
 
 #import "ITContactController.h"
 #import "ITContactCell.h"
-
-@interface ITContactController ()
+#import "ITEditController.h"
+@interface ITContactController () <ITEditControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addContactButton;
+@property (nonatomic, strong) NSIndexPath *selectedCellIndexPath;
 @end
 
 @implementation ITContactController
+// MARK: - 懒加载联系人
 - (NSMutableArray<ITContact *> *)contacts {
     if (!_contacts) {
         _contacts = [NSMutableArray array];
@@ -23,6 +25,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.rowHeight = 75;
+}
+// MARK:
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // 根据 segue 的识别符判断具体是哪条 segue
+    if ([segue.identifier isEqualToString:@"editContact"]) {
+        // 1. 获得联系人
+        ITContact *contact = self.contacts[self.selectedCellIndexPath.row];
+        // 2. 将联系人当中的数据传到控制器当中
+        ITEditController *editVC = segue.destinationViewController;
+        editVC.contact = contact;
+        editVC.delegate = self;
+    }
 }
 // MARK: - 按钮业务
 - (IBAction)logout:(id)sender {
@@ -78,5 +92,14 @@
  */
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     return indexPath.row % 2 ? UITableViewCellEditingStyleInsert: UITableViewCellEditingStyleDelete;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedCellIndexPath = indexPath;
+}
+// MARK: ITEditController delegate
+- (void)editCellContent:(ITContact *)contact {
+    self.contacts[self.selectedCellIndexPath.row] = contact;
+    // FIXME: 当之前的数据比之前的数据长的时候，就会出现省略号。
+    [self.tableView reloadRowsAtIndexPaths:@[self.selectedCellIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 @end

@@ -142,7 +142,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wE9-tP-zAR">
-                                            <rect key="frame" x="21" y="50" width="72" height="19.5"/>
+                                            <rect key="frame" x="21" y="50" width="39.5" height="19.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -152,7 +152,7 @@
                                         <constraint firstItem="wE9-tP-zAR" firstAttribute="leading" secondItem="n1u-0O-LsA" secondAttribute="leading" id="4LR-BL-bHG"/>
                                         <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="n1u-0O-LsA" secondAttribute="trailing" id="Cfx-4G-d8i"/>
                                         <constraint firstItem="n1u-0O-LsA" firstAttribute="top" secondItem="vcl-pZ-xOu" secondAttribute="topMargin" constant="5" id="G44-XS-0w3"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="wE9-tP-zAR" secondAttribute="trailing" constant="240" id="OGw-8V-5CQ"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="wE9-tP-zAR" secondAttribute="trailing" constant="240" id="OGw-8V-5CQ"/>
                                         <constraint firstItem="n1u-0O-LsA" firstAttribute="leading" secondItem="vcl-pZ-xOu" secondAttribute="leadingMargin" constant="5" id="OY0-M9-BnE"/>
                                         <constraint firstItem="wE9-tP-zAR" firstAttribute="top" secondItem="n1u-0O-LsA" secondAttribute="bottom" constant="10" id="dqc-s2-8eu"/>
                                     </constraints>
@@ -160,6 +160,7 @@
                                 <connections>
                                     <outlet property="nameLabel" destination="n1u-0O-LsA" id="uum-iK-gp8"/>
                                     <outlet property="phoneNumberLabel" destination="wE9-tP-zAR" id="8Uo-kr-eLx"/>
+                                    <segue destination="kuF-LR-GYj" kind="show" identifier="editContact" id="IjA-Gd-t1O"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -177,7 +178,7 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="W4A-Kz-54c">
                                 <connections>
-                                    <segue destination="XRG-wI-ada" kind="show" id="cLu-4h-mjW"/>
+                                    <segue destination="XRG-wI-ada" kind="show" identifier="addContact" id="cLu-4h-mjW"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="trash" id="fcg-Nd-U7X">
@@ -194,6 +195,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MYs-Ng-dZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1480.8" y="52.623688155922046"/>
+        </scene>
+        <!--编辑联系人-->
+        <scene sceneID="Mpz-Sa-g8C">
+            <objects>
+                <viewController id="kuF-LR-GYj" customClass="ITEditController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dgr-hh-0Tr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6QS-Qx-bUB">
+                                <rect key="frame" x="20" y="84" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入电话" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ymo-iQ-aJP">
+                                <rect key="frame" x="20" y="134" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XRG-wI-ada" id="ZbN-0W-CLJ"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="shk-vt-KRH" firstAttribute="trailing" secondItem="6QS-Qx-bUB" secondAttribute="trailing" constant="20" id="0ez-3z-Nnp"/>
+                            <constraint firstItem="ymo-iQ-aJP" firstAttribute="leading" secondItem="shk-vt-KRH" secondAttribute="leading" constant="20" id="Lh3-ip-7mC"/>
+                            <constraint firstItem="shk-vt-KRH" firstAttribute="trailing" secondItem="ymo-iQ-aJP" secondAttribute="trailing" constant="20" id="NAK-jH-T89"/>
+                            <constraint firstItem="6QS-Qx-bUB" firstAttribute="leading" secondItem="shk-vt-KRH" secondAttribute="leading" constant="20" id="NsQ-Vh-1iY"/>
+                            <constraint firstItem="6QS-Qx-bUB" firstAttribute="top" secondItem="shk-vt-KRH" secondAttribute="top" constant="20" id="TVD-bA-H1f"/>
+                            <constraint firstItem="ymo-iQ-aJP" firstAttribute="top" secondItem="6QS-Qx-bUB" secondAttribute="bottom" constant="20" id="f6x-g5-AcW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="shk-vt-KRH"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="编辑联系人" id="WIs-St-euE">
+                        <barButtonItem key="rightBarButtonItem" title="编辑" id="Ua0-al-uBh">
+                            <connections>
+                                <action selector="edit:" destination="kuF-LR-GYj" id="5aw-rd-et1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="6QS-Qx-bUB" id="gCj-fb-mwT"/>
+                        <outlet property="phoneTextField" destination="ymo-iQ-aJP" id="8KG-af-A1t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c00-sl-RSi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2489" y="53"/>
         </scene>
         <!--添加联系人-->
         <scene sceneID="Vf6-vv-4WW">
@@ -245,7 +299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDc-99-wPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2527" y="-486"/>
+            <point key="canvasLocation" x="2489" y="-660"/>
         </scene>
     </scenes>
 </document>
