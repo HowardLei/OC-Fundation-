@@ -8,12 +8,15 @@
 #import "ITLoginController.h"
 #import "MBProgressHUD/MBProgressHUD+CZ.h"
 #import "ITContactController.h"
+#import "ITContact.h"
 @interface ITLoginController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UISwitch *rememberPasswordSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *autoLoginSwitch;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (nonatomic, copy) NSString *userName;
+@property (nonatomic, copy) NSString *passcode;
 @end
 
 @implementation ITLoginController
@@ -27,21 +30,25 @@
 }
 // MARK: - 管理开关的方法
 /**
- 当点击自动登录开关为开的状态的时候，记住密码的开关同样打开
+ 当点击自动登录开关为开的状态的时候，记住密码的开关同样打开。而且下次重新打开应用的时候，可以直接将密码直接导入。
  @param sender 自动登录开关
  */
 - (IBAction)autoLogin:(UISwitch *)sender {
     if (sender.isOn) {
         [self.rememberPasswordSwitch setOn:YES animated:YES];
+        [self rememberPassword:self.rememberPasswordSwitch];
     }
 }
 /**
- 当记住密码的开关状态为
+ 当点击记住密码开关的时候，执行下面的方法。
  @param sender 记住密码开关
  */
 - (IBAction)rememberPassword:(UISwitch *)sender {
     if (!sender.isOn) {
         [self.autoLoginSwitch setOn:NO animated:YES];
+    } else {
+        self.userName = self.userNameTextField.text;
+        self.passcode = self.passwordTextField.text;
     }
 }
 // MARK: - 管理按钮的方法
