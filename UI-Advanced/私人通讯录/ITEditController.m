@@ -13,7 +13,6 @@
 @end
 
 @implementation ITEditController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.nameTextField.text = self.contact.name;
