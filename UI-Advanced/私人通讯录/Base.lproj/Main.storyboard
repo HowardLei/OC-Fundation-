@@ -190,6 +190,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addContactButton" destination="W4A-Kz-54c" id="ryO-ob-5Ed"/>
+                        <outlet property="logoutButton" destination="2AA-eO-lUZ" id="HxJ-9r-5kM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MYs-Ng-dZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
