@@ -101,7 +101,6 @@
 // MARK: - ITEditController delegate
 - (void)editCellContent:(ITContact *)contact {
     self.contacts[self.selectedCellIndexPath.row] = contact;
-    // FIXME: 当之前的数据比之前的数据长的时候，就会出现省略号。
     [self.tableView reloadRowsAtIndexPaths:@[self.selectedCellIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 @end
