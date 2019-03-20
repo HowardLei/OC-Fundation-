@@ -142,7 +142,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wE9-tP-zAR">
-                                            <rect key="frame" x="21" y="50" width="39.5" height="19.5"/>
+                                            <rect key="frame" x="21" y="50" width="72" height="19.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -152,7 +152,7 @@
                                         <constraint firstItem="wE9-tP-zAR" firstAttribute="leading" secondItem="n1u-0O-LsA" secondAttribute="leading" id="4LR-BL-bHG"/>
                                         <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="n1u-0O-LsA" secondAttribute="trailing" id="Cfx-4G-d8i"/>
                                         <constraint firstItem="n1u-0O-LsA" firstAttribute="top" secondItem="vcl-pZ-xOu" secondAttribute="topMargin" constant="5" id="G44-XS-0w3"/>
-                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="wE9-tP-zAR" secondAttribute="trailing" constant="240" id="OGw-8V-5CQ"/>
+                                        <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="wE9-tP-zAR" secondAttribute="trailing" constant="240" id="OGw-8V-5CQ"/>
                                         <constraint firstItem="n1u-0O-LsA" firstAttribute="leading" secondItem="vcl-pZ-xOu" secondAttribute="leadingMargin" constant="5" id="OY0-M9-BnE"/>
                                         <constraint firstItem="wE9-tP-zAR" firstAttribute="top" secondItem="n1u-0O-LsA" secondAttribute="bottom" constant="10" id="dqc-s2-8eu"/>
                                     </constraints>
