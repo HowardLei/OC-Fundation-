@@ -6,7 +6,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *leftButton;
 @property (weak, nonatomic) IBOutlet UIButton *rightButton;
-@property (strong, nonatomic) NSArray *arr;
+@property (strong, nonatomic) NSArray<NSDictionary *> *arr;
 // 创建一个索引属性，控制其是第几张图片。
 @property (assign, nonatomic) int index;
 
@@ -20,11 +20,11 @@
     [self setData];
 }
 // MARK: 懒加载数据（直到调用 getter 方法才将数据传输进内存）
-- (NSArray *)arr {
+- (NSArray<NSDictionary *> *)arr {
     if (_arr == nil) {
         // NSBundle 是一个目录，其中包含了程序会使用到的资源。初始化的方法为 [NSBundle mainBundle] 。他会调用 App 的根目录。
         NSString *path = [[NSBundle mainBundle] pathForResource:@"Picture" ofType:@".plist"];
-        NSArray *tempArr = [NSArray arrayWithContentsOfFile:path];
+        NSArray<NSDictionary *> *tempArr = [NSArray arrayWithContentsOfFile:path];
         _arr = tempArr;
     }
     return _arr;

@@ -10,6 +10,7 @@
 #import "ITEditController.h"
 @interface ITContactController () <ITEditControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addContactButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
 @property (nonatomic, strong) NSIndexPath *selectedCellIndexPath;
 @end
 
@@ -51,6 +52,7 @@
 }
 - (IBAction)editCell:(UIBarButtonItem *)sender {
     self.addContactButton.enabled = !self.addContactButton.isEnabled;
+    self.logoutButton.enabled = !self.logoutButton.isEnabled;
     [self.tableView setEditing:!self.tableView.isEditing animated:YES];
 }
 // MARK: - Table view data source
