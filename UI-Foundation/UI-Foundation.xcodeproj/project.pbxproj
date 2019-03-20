@@ -2400,6 +2400,7 @@
 		180357A02116E21400CD0643 /* 应用管理（模型版） */ = {
 			isa = PBXGroup;
 			children = (
+				180357AC2116E21400CD0643 /* LaunchScreen.storyboard */,
 				180357B92116E24500CD0643 /* app.plist */,
 				180357A12116E21400CD0643 /* AppDelegate.h */,
 				180357A22116E21400CD0643 /* AppDelegate.m */,
@@ -2411,7 +2412,6 @@
 				1879104721197486003FE839 /* Icons */,
 				180357B52116E22800CD0643 /* ITApp.h */,
 				180357B62116E22800CD0643 /* ITApp.m */,
-				180357AC2116E21400CD0643 /* LaunchScreen.storyboard */,
 				180357B02116E21400CD0643 /* main.m */,
 				180357A72116E21400CD0643 /* Main.storyboard */,
 				180357A42116E21400CD0643 /* ViewController.h */,

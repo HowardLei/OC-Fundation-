@@ -77,6 +77,13 @@
 		6328A7DA220C5B5300ADF8C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6328A7D8220C5B5300ADF8C2 /* LaunchScreen.storyboard */; };
 		6328A7DD220C5B5300ADF8C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6328A7DC220C5B5300ADF8C2 /* main.m */; };
 		6328A7E7220C866C00ADF8C2 /* 01foods.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6328A7E6220C866C00ADF8C2 /* 01foods.plist */; };
+		6331DADF2242A327008A34BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6331DADE2242A327008A34BB /* AppDelegate.m */; };
+		6331DAE22242A327008A34BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6331DAE12242A327008A34BB /* ViewController.m */; };
+		6331DAE52242A327008A34BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6331DAE32242A327008A34BB /* Main.storyboard */; };
+		6331DAE72242A328008A34BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6331DAE62242A328008A34BB /* Assets.xcassets */; };
+		6331DAEA2242A328008A34BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6331DAE82242A328008A34BB /* LaunchScreen.storyboard */; };
+		6331DAED2242A328008A34BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6331DAEC2242A328008A34BB /* main.m */; };
+		6331DAF32242A35E008A34BB /* ITView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6331DAF22242A35E008A34BB /* ITView.m */; };
 		637A6F5B2226E38D0073FD1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F5A2226E38D0073FD1E /* AppDelegate.m */; };
 		637A6F632226E38E0073FD1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F622226E38E0073FD1E /* Assets.xcassets */; };
 		637A6F662226E38E0073FD1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F642226E38E0073FD1E /* LaunchScreen.storyboard */; };
@@ -247,6 +254,18 @@
 		6328A7DB220C5B5300ADF8C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6328A7DC220C5B5300ADF8C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6328A7E6220C866C00ADF8C2 /* 01foods.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 01foods.plist; sourceTree = "<group>"; };
+		6331DADB2242A327008A34BB /* Quartz2D简易绘图.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quartz2D简易绘图.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6331DADD2242A327008A34BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6331DADE2242A327008A34BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6331DAE02242A327008A34BB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6331DAE12242A327008A34BB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6331DAE42242A327008A34BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6331DAE62242A328008A34BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6331DAE92242A328008A34BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6331DAEB2242A328008A34BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6331DAEC2242A328008A34BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6331DAF12242A35E008A34BB /* ITView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITView.h; sourceTree = "<group>"; };
+		6331DAF22242A35E008A34BB /* ITView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITView.m; sourceTree = "<group>"; };
 		637A6F572226E38D0073FD1E /* UINavigationController的创建及使用.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UINavigationController的创建及使用.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		637A6F592226E38D0073FD1E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		637A6F5A2226E38D0073FD1E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -385,6 +404,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6328A7C7220C5B5300ADF8C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6331DAD82242A327008A34BB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -814,6 +840,7 @@
 				18F31F19222BC0C600004886 /* 导航控制器传值 */,
 				18BE7C7B222BD72300D3A1CF /* 通过StoryBoard创建导航控制器 */,
 				63E79361222FE49000D76267 /* 私人通讯录 */,
+				6331DADC2242A327008A34BB /* Quartz2D简易绘图 */,
 				6328A7CB220C5B5300ADF8C2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -836,6 +863,7 @@
 				18F31F18222BC0C600004886 /* 导航控制器传值.app */,
 				18BE7C7A222BD72300D3A1CF /* 通过StoryBoard创建导航控制器.app */,
 				63E79360222FE49000D76267 /* 私人通讯录.app */,
+				6331DADB2242A327008A34BB /* Quartz2D简易绘图.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -893,6 +921,64 @@
 				6328A7D6220C5B5300ADF8C2 /* Assets.xcassets */,
 				6328A7DB220C5B5300ADF8C2 /* Info.plist */,
 				6328A7DC220C5B5300ADF8C2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6331DADC2242A327008A34BB /* Quartz2D简易绘图 */ = {
+			isa = PBXGroup;
+			children = (
+				6331DAF92242A6D3008A34BB /* Supporting Files */,
+				6331DAF82242A6CD008A34BB /* Other */,
+				6331DAF72242A6C7008A34BB /* Model */,
+				6331DAF52242A6B9008A34BB /* View */,
+				6331DAF42242A6AD008A34BB /* Controller */,
+			);
+			path = "Quartz2D简易绘图";
+			sourceTree = "<group>";
+		};
+		6331DAF42242A6AD008A34BB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6331DAE02242A327008A34BB /* ViewController.h */,
+				6331DAE12242A327008A34BB /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6331DAF52242A6B9008A34BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6331DAE32242A327008A34BB /* Main.storyboard */,
+				6331DAE82242A328008A34BB /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6331DAF72242A6C7008A34BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6331DAF12242A35E008A34BB /* ITView.h */,
+				6331DAF22242A35E008A34BB /* ITView.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6331DAF82242A6CD008A34BB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				6331DADD2242A327008A34BB /* AppDelegate.h */,
+				6331DADE2242A327008A34BB /* AppDelegate.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		6331DAF92242A6D3008A34BB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6331DAE62242A328008A34BB /* Assets.xcassets */,
+				6331DAEB2242A328008A34BB /* Info.plist */,
+				6331DAEC2242A328008A34BB /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1331,6 +1417,23 @@
 			productReference = 6328A7CA220C5B5300ADF8C2 /* 点餐系统.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6331DADA2242A327008A34BB /* Quartz2D简易绘图 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6331DAF02242A328008A34BB /* Build configuration list for PBXNativeTarget "Quartz2D简易绘图" */;
+			buildPhases = (
+				6331DAD72242A327008A34BB /* Sources */,
+				6331DAD82242A327008A34BB /* Frameworks */,
+				6331DAD92242A327008A34BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Quartz2D简易绘图";
+			productName = "Quartz2D简易绘图";
+			productReference = 6331DADB2242A327008A34BB /* Quartz2D简易绘图.app */;
+			productType = "com.apple.product-type.application";
+		};
 		637A6F562226E38D0073FD1E /* UINavigationController的创建及使用 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 637A6F6C2226E38E0073FD1E /* Build configuration list for PBXNativeTarget "UINavigationController的创建及使用" */;
@@ -1469,6 +1572,9 @@
 					6328A7C9220C5B5300ADF8C2 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					6331DADA2242A327008A34BB = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					637A6F562226E38D0073FD1E = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -1517,6 +1623,7 @@
 				18F31F17222BC0C600004886 /* 导航控制器传值 */,
 				18BE7C79222BD72300D3A1CF /* 通过StoryBoard创建导航控制器 */,
 				63E7935F222FE49000D76267 /* 私人通讯录 */,
+				6331DADA2242A327008A34BB /* Quartz2D简易绘图 */,
 			);
 		};
 /* End PBXProject section */
@@ -1613,6 +1720,16 @@
 				6328A7D7220C5B5300ADF8C2 /* Assets.xcassets in Resources */,
 				6328A7D5220C5B5300ADF8C2 /* Main.storyboard in Resources */,
 				6328A7E7220C866C00ADF8C2 /* 01foods.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6331DAD92242A327008A34BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6331DAEA2242A328008A34BB /* LaunchScreen.storyboard in Resources */,
+				6331DAE72242A328008A34BB /* Assets.xcassets in Resources */,
+				6331DAE52242A327008A34BB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1778,6 +1895,17 @@
 				6328A7D2220C5B5300ADF8C2 /* ViewController.m in Sources */,
 				6328A7DD220C5B5300ADF8C2 /* main.m in Sources */,
 				6328A7CF220C5B5300ADF8C2 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6331DAD72242A327008A34BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6331DAE22242A327008A34BB /* ViewController.m in Sources */,
+				6331DAED2242A328008A34BB /* main.m in Sources */,
+				6331DADF2242A327008A34BB /* AppDelegate.m in Sources */,
+				6331DAF32242A35E008A34BB /* ITView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1956,6 +2084,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				6328A7D9220C5B5300ADF8C2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6331DAE32242A327008A34BB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6331DAE42242A327008A34BB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6331DAE82242A328008A34BB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6331DAE92242A328008A34BB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -3323,6 +3467,92 @@
 			};
 			name = Release;
 		};
+		6331DAEE2242A328008A34BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = V9C6R6LR63;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Quartz2D简易绘图/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "Anonymous.Quartz2D----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6331DAEF2242A328008A34BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = V9C6R6LR63;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Quartz2D简易绘图/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "Anonymous.Quartz2D----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		637A6F6A2226E38E0073FD1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -4168,6 +4398,15 @@
 			buildConfigurations = (
 				6328A7DE220C5B5300ADF8C2 /* Debug */,
 				6328A7DF220C5B5300ADF8C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6331DAF02242A328008A34BB /* Build configuration list for PBXNativeTarget "Quartz2D简易绘图" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6331DAEE2242A328008A34BB /* Debug */,
+				6331DAEF2242A328008A34BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

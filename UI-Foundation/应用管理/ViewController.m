@@ -23,15 +23,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 定义行元素数
-    int rowElements = 4;
+    NSInteger rowElements = 4;
     // 将这里面的所有 App 全部添加进来
     CGFloat marginTop = 25;
     // 注意：这里面的 80 实际上是下边的 width 属性的值。
-    CGFloat marginX = (self.view.frame.size.width - (rowElements * 80)) / (rowElements + 1.0);
+    CGFloat marginX = (CGRectGetWidth(self.view.frame) - (rowElements * 80)) / (rowElements + 1.0);
     for (int i = 0; i < self.App.count; i++) {
         // 将数组中的每个字典导出来
         NSDictionary *appDict = self.App[i];
-        
         // MARK: 1、先创建一个 view
         UIView *view = [[UIView alloc] init];
         // MARK: 2、对这个 view 的大小进行设置
@@ -44,13 +43,12 @@
         view.frame = CGRectMake(x, y, width, height);
         // MARK: 2.3、将 view 添加到主 view 当中
         [self.view addSubview:view];
-        
         // MARK: 3、在上边的 View 中添加子控件
         // MARK: 3.1.1 布局 imageView
         UIImageView *appImage = [[UIImageView alloc] init];
         CGFloat appImageWidth = 50;
         CGFloat appImageHeight = 50;
-        CGFloat appImageX = (view.frame.size.width - appImageWidth) / 2;
+        CGFloat appImageX = (CGRectGetWidth(view.frame) - appImageWidth) / 2;
         CGFloat appImageY = 0;
         appImage.frame = CGRectMake(appImageX, appImageY, appImageWidth, appImageHeight);
         // MARK: 3.1.2 为这个 imageView 添加数据
@@ -59,7 +57,7 @@
         
         // MARK: 3.2.1 添加一个 label
         UILabel *appLabel = [[UILabel alloc] init];
-        CGFloat appLabelWidth = view.frame.size.width;
+        CGFloat appLabelWidth = CGRectGetWidth(view.frame);
         CGFloat appLabelHeight = 20;
         CGFloat appLabelX = 0;
         CGFloat appLabelY = appImageHeight;
