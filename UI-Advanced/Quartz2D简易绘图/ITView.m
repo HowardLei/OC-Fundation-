@@ -21,8 +21,9 @@
     // 设置终点 void CGContextAddLineToPoint(CGContextRef cg_nullable c, CGFloat x, CGFloat y)
     CGContextAddLineToPoint(ref, 40, 40);
     // 注意：如果不再重新设置起点，则会将终点当作下次绘图的起点来进行绘制
+    CGContextAddLineToPoint(ref, 40, 20);
+    CGContextClosePath(ref);
     // 3. 绘制图形
     CGContextStrokePath(ref);
 }
-
 @end
