@@ -14,10 +14,10 @@
     // 1、在 UIScrollView 中设置滚动图片
     CGFloat width = 300;
     CGFloat height = 130;
-    int images = 5;
-    for (int i = 0; i < images; i++) {
+    NSInteger images = 5;
+    for (NSInteger i = 0; i < images; i++) {
         UIImageView *imageView = [[UIImageView alloc] init];
-        NSString *imageName = [NSString stringWithFormat:@"img_%02d", i + 1];
+        NSString *imageName = [NSString stringWithFormat:@"img_%02ld", i + 1];
         imageView.image = [UIImage imageNamed:imageName];
         CGFloat imageX = i * width;
         CGFloat imageY = 0;
@@ -36,6 +36,7 @@
     // 改变 timer 对象的优先级。设置模式为：NSRunLoopCommonModes。
     [runLoop addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
+// MARK: - Scroll view delegate
 // MARK: 设置 PageControl 的页码 (通过 scrollView 中的 offset 来判断页码的位置)
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat offsetX = scrollView.contentOffset.x;
@@ -51,7 +52,7 @@
     // 当计时器停止了以后，上边的计时器对象就没用了，就需要指向一个新的计时器对象才能重新计时。
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(autoScroll) userInfo:nil repeats:YES];
 }
-// MARK: 实现自动滚动
+// MARK: - 实现自动滚动
 - (void)autoScroll {
     // 每次执行这个方法，让页面滚动一页。
     // 注意：滚动是靠偏移量来执行的。
@@ -61,11 +62,6 @@
     } else {
         page++;
     }
-    [self.scrollView setContentOffset:CGPointMake(page * self.scrollView.frame.size.width, 0) animated:YES];
+    [self.scrollView setContentOffset:CGPointMake(page * CGRectGetWidth(self.scrollView.frame), 0) animated:YES];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 @end
