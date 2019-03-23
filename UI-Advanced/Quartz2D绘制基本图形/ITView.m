@@ -77,8 +77,8 @@
  */
 - (void)drawEcilpse {
     // OC 方式
-    //    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(20, 20, 200, 100)];
-    //    [path stroke];
+    // UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(20, 20, 200, 100)];
+    // [path stroke];
     // C 方式
     CGContextRef ref = UIGraphicsGetCurrentContext();
     CGContextAddEllipseInRect(ref, CGRectMake(20, 20, 200, 150));
@@ -93,7 +93,6 @@
  @param clockwise 是否顺时针
  */
 - (void)drawArcWithCenter:(CGPoint)point radius:(CGFloat)radius startAngle:(CGFloat)angle1 endAngle:(CGFloat)angle2 clockwise:(BOOL)clockwise {
-    // 1. 画圆弧当中的构造方法
     // OC 方式
     //    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:point radius:radius startAngle:angle1 endAngle:angle2 clockwise:clockwise];
     //    [path stroke];
