@@ -94,8 +94,8 @@
  */
 - (void)drawArcWithCenter:(CGPoint)point radius:(CGFloat)radius startAngle:(CGFloat)angle1 endAngle:(CGFloat)angle2 clockwise:(BOOL)clockwise {
     // OC 方式
-    //    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:point radius:radius startAngle:angle1 endAngle:angle2 clockwise:clockwise];
-    //    [path stroke];
+    //  UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:point radius:radius startAngle:angle1 endAngle:angle2 clockwise:clockwise];
+    //  [path stroke];
     // C 方式
     CGContextRef ref = UIGraphicsGetCurrentContext();
     CGContextAddArc(ref, point.x, point.y, radius, angle1, angle2, !clockwise);
