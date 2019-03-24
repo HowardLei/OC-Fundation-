@@ -102,6 +102,9 @@
     // C 方式
     CGContextRef ref = UIGraphicsGetCurrentContext();
     CGContextAddArc(ref, point.x, point.y, radius, angle1, angle2, !clockwise);
+    // 如果画圆弧的时候想画一个完整的圆弧。则需要将圆弧画出来以后，与圆心连接一条线，再关闭路径即可
+    CGContextAddLineToPoint(ref, point.x, point.y);
+    CGContextClosePath(ref);
     CGContextDrawPath(ref, kCGPathStroke);
 }
 /**
