@@ -13,6 +13,27 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
+    [self linesWithBezithPath];
+}
+/**
+ 通过 path 管理直线
+ */
+- (void)linesWithBezithPath {
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(20, 20)];
+    [path addLineToPoint:CGPointMake(70, 70)];
+    [path addLineToPoint:CGPointMake(70, 20)];
+    [path closePath];
+    path.lineWidth = 10;
+    path.lineJoinStyle = kCGLineJoinBevel;
+    path.lineCapStyle = kCGLineCapRound;
+    [[UIColor redColor] setStroke];
+    [path stroke];
+}
+/**
+ 通过 Quartz2D 来管理直线当中的属性
+ */
+- (void)linesWithCGContext {
     [[UIColor redColor] set];
     CGContextRef ref = UIGraphicsGetCurrentContext();
     CGContextMoveToPoint(ref, 20, 20);
@@ -25,5 +46,4 @@
     CGContextSetLineJoin(ref, kCGLineJoinRound);
     CGContextDrawPath(ref, kCGPathStroke);
 }
-
 @end
