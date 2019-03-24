@@ -13,6 +13,12 @@
     CGPoint circleCenter = CGPointMake(50, 50);
     [self drawArcWithCenter:circleCenter radius:50 startAngle:0 endAngle:M_PI_2 clockwise:YES];
 }
+- (void)drawLine {
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(20, 20)];
+    [path addLineToPoint:CGPointMake(60, 60)];
+    [path stroke];
+}
 /**
  画长方形
  @param rect 设置的长方形
@@ -35,16 +41,13 @@
  画三角形
  */
 - (void)drawTriangle {
-    // 1. 获取当前 View 的图形上下文内容
-    CGContextRef ref = UIGraphicsGetCurrentContext();
-    // 2. 创建路径
+    // 创建路径
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointMake(20, 20)];
     [path addLineToPoint:CGPointMake(20, 60)];
     [path addLineToPoint:CGPointMake(60, 60)];
     [path closePath];
-    CGContextAddPath(ref, path.CGPath);
-    CGContextDrawPath(ref, kCGPathStroke);
+    [path stroke];
 }
 /**
  画圆角矩形

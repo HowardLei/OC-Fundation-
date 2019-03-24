@@ -57,7 +57,7 @@
 		<key>导航控制器传值.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>11</integer>
 		</dict>
 		<key>点餐系统.xcscheme_^#shared#^_</key>
 		<dict>
@@ -67,7 +67,7 @@
 		<key>私人通讯录.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>12</integer>
 		</dict>
 		<key>自定义UIWindow.xcscheme_^#shared#^_</key>
 		<dict>
@@ -77,7 +77,7 @@
 		<key>通过StoryBoard创建导航控制器.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>13</integer>
 		</dict>
 		<key>通过xib加载控制器.xcscheme_^#shared#^_</key>
 		<dict>
