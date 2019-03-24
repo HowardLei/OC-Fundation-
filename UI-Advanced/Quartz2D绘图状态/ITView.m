@@ -34,7 +34,6 @@
  通过 Quartz2D 来管理直线当中的属性
  */
 - (void)linesWithCGContext {
-    [[UIColor redColor] set];
     CGContextRef ref = UIGraphicsGetCurrentContext();
     CGContextMoveToPoint(ref, 20, 20);
     CGContextAddLineToPoint(ref, 100, 100);
