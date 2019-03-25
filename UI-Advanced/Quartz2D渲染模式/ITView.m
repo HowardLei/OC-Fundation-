@@ -18,9 +18,11 @@
     CGFloat radius = 100;
     UIBezierPath *path1 = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:0 endAngle:M_PI * 2 clockwise:YES];
     UIBezierPath *path2 = [UIBezierPath bezierPathWithArcCenter:center radius:radius / 2 startAngle:0 endAngle:M_PI * 2 clockwise:NO];
+    UIBezierPath *path3 = [UIBezierPath bezierPathWithRect:CGRectMake(100, 100, 10, 100)];
     CGContextAddPath(ref, path1.CGPath);
     CGContextAddPath(ref, path2.CGPath);
-    CGContextDrawPath(ref, kCGPathFill);
+    CGContextAddPath(ref, path3.CGPath);
+    CGContextDrawPath(ref, kCGPathEOFill);
 }
 
 @end
