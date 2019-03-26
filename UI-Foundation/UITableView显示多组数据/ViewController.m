@@ -20,7 +20,11 @@
 @end
 
 @implementation ViewController
-
+typedef NS_ENUM(NSUInteger, ITContinents) {
+    ITContinentAsia,
+    ITContinentAfrica,
+    ITContinentEurope,
+};
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
@@ -68,12 +72,18 @@
 }
 // MARK: 设置每组上边的数据
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if (!section) {
-        return @"亚洲";
-    } else if (section == 1) {
-        return @"非洲";
-    } else {
-        return @"欧洲";
+    switch (section) {
+        case ITContinentAsia:
+            return @"亚洲";
+            break;
+        case ITContinentAfrica:
+            return @"非洲";
+            break;
+        case ITContinentEurope:
+            return @"非洲";
+        default:
+            @throw [NSException exceptionWithName:@"大洲无法找到" reason:@"section当中没有对应的值" userInfo:nil];
+            break;
     }
 }
 // MARK: 设置每组下边的显示内容
