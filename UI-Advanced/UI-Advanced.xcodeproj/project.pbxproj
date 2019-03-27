@@ -46,6 +46,7 @@
 		18422AA5222285E000CC7ADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18422AA4222285E000CC7ADC /* Assets.xcassets */; };
 		18422AA8222285E000CC7ADC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18422AA6222285E000CC7ADC /* LaunchScreen.storyboard */; };
 		18422AAB222285E100CC7ADC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18422AAA222285E100CC7ADC /* main.m */; };
+		1846A8ED224BB8B800D511D7 /* ITView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846A8EC224BB8B800D511D7 /* ITView.m */; };
 		18738F0422253EEF0081034D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18738F0322253EEF0081034D /* AppDelegate.m */; };
 		18738F0C22253EF10081034D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18738F0B22253EF10081034D /* Assets.xcassets */; };
 		18738F0F22253EF10081034D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18738F0D22253EF10081034D /* LaunchScreen.storyboard */; };
@@ -237,6 +238,8 @@
 		18422AA7222285E000CC7ADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18422AA9222285E000CC7ADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18422AAA222285E100CC7ADC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1846A8EB224BB8B800D511D7 /* ITView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITView.h; sourceTree = "<group>"; };
+		1846A8EC224BB8B800D511D7 /* ITView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITView.m; sourceTree = "<group>"; };
 		18738F0022253EEF0081034D /* 通过xib加载控制器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "通过xib加载控制器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18738F0222253EEF0081034D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18738F0322253EEF0081034D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -703,6 +706,8 @@
 			children = (
 				181D0D49224B0B95001C60B6 /* Main.storyboard */,
 				181D0D4E224B0B96001C60B6 /* LaunchScreen.storyboard */,
+				1846A8EB224BB8B800D511D7 /* ITView.h */,
+				1846A8EC224BB8B800D511D7 /* ITView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -2291,6 +2296,7 @@
 				181D0D48224B0B95001C60B6 /* ViewController.m in Sources */,
 				181D0D53224B0B96001C60B6 /* main.m in Sources */,
 				181D0D45224B0B95001C60B6 /* AppDelegate.m in Sources */,
+				1846A8ED224BB8B800D511D7 /* ITView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
