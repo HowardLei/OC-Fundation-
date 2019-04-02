@@ -45,6 +45,7 @@
                     </view>
                     <connections>
                         <outlet property="downloadView" destination="gqy-4A-r9m" id="Ly7-et-RFU"/>
+                        <outlet property="slider" destination="Q1k-Ft-goT" id="7Zm-8C-cM8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

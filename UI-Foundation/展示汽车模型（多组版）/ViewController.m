@@ -56,6 +56,9 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UITableView *tableview = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    [tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellID"];
+    [self.view addSubview:tableview];
 }
 
 @end
