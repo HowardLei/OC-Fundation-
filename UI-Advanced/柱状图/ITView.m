@@ -16,7 +16,7 @@
     NSArray<NSNumber *> *numbers = @[@300, @150.65, @55.3, @507.7, @95.8, @700, @650.65];
     UIBezierPath *path = nil;
     for (NSNumber *number in numbers) {
-        
+        path = [UIBezierPath bezierPath];
     }
 }
 

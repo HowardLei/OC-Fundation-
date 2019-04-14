@@ -8,11 +8,5 @@
 #import "MyThread.h"
 
 @implementation MyThread
-- (instancetype)initWithTarget:(id)target selector:(SEL)selector object:(id)argument {
-    self = [super initWithTarget:target selector:selector object:argument];
-    if (self) {
-        self.name = [argument intValue] % 2 == 0 ? @"偶数线程" : @"奇数线程";
-    }
-    return self;
-}
+
 @end
