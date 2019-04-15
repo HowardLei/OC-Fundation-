@@ -17,7 +17,7 @@
     [super viewDidLoad];
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self demo];
+    [self demo2];
     NSLog(@"%@", NSThread.currentThread);
 }
 /**
@@ -25,7 +25,7 @@
  */
 - (void)demo {
     pthread_t threadID;
-    int res = pthread_create(&threadID, NULL, targat, NULL);
+    int res = pthread_create(&threadID, NULL, target, NULL);
     !res ? NSLog(@"YES") : NSLog(@"NO");
 }
 /**
@@ -33,7 +33,7 @@
  */
 - (void)demo2 {
     pthread_t threadID;
-    int res = pthread_create(&threadID, NULL, targat, "4312");
+    int res = pthread_create(&threadID, NULL, target, "4312");
     !res ? NSLog(@"YES") : NSLog(@"NO");
 }
 /**
@@ -41,7 +41,12 @@
  @param param void *参数
  @return void *指针
  */
-void *targat(void *param) {
+void *target(void *param) {
+    if (param != NULL) {
+        NSLog(@"%s", param);
+    }
+    NSThread *thread = NSThread.currentThread;
+    thread.name = @"wangnima";
     NSLog(@"%@", NSThread.currentThread);
     return NULL;
 }
