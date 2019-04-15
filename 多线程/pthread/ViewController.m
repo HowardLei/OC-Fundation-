@@ -27,6 +27,7 @@
     pthread_t threadID;
     int res = pthread_create(&threadID, NULL, target, NULL);
     !res ? NSLog(@"YES") : NSLog(@"NO");
+    pthread_detach(threadID);
 }
 /**
  含参数创建线程的方法
@@ -35,6 +36,7 @@
     pthread_t threadID;
     int res = pthread_create(&threadID, NULL, target, "4312");
     !res ? NSLog(@"YES") : NSLog(@"NO");
+    pthread_detach(threadID);
 }
 /**
  多线程需要调用的函数
@@ -47,7 +49,7 @@ void *target(void *param) {
     }
     NSThread *thread = NSThread.currentThread;
     thread.name = @"wangnima";
-    NSLog(@"%@", NSThread.currentThread);
+    NSLog(@"%@", thread);
     return NULL;
 }
 @end
