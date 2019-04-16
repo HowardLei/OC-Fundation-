@@ -19,6 +19,7 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self demo];
+    [self demo2];
 }
 - (void)demo {
     // 1. 通过构造方法创建线程
@@ -29,6 +30,9 @@
     [NSThread detachNewThreadSelector:@selector(run) toTarget:self withObject:nil];
     // 3. 隐式创建线程
     [self performSelectorInBackground:@selector(run) withObject:nil];
+}
+- (void)demo2 {
+    
 }
 - (void)run {
     NSLog(@"%@", NSThread.currentThread);
