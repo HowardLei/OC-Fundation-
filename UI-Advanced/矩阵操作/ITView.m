@@ -16,6 +16,7 @@
     path1.lineWidth = 10;
     [path1 stroke];
     UIBezierPath *path2 = [path1 copy];
+    // 当需要进行平移、缩放、旋转操作的时候，调用 - (void)applyTransform:(CGAffineTransform)transform; 方法即可
     [path2 applyTransform:CGAffineTransformMakeTranslation(100, 0)];
     path2.lineWidth = 10;
     [[UIColor redColor] setStroke];
