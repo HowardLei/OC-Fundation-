@@ -25,6 +25,7 @@
     // 1. 通过构造方法创建线程
     NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(run) object:nil];
     thread.name = @"wangnima";
+    thread.threadPriority = 1;
     [thread start];
     // 2. 通过匿名方法创建新线程，并启动该线程的方法
     [NSThread detachNewThreadSelector:@selector(run) toTarget:self withObject:nil];
