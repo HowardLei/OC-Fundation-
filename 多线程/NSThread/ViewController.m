@@ -43,7 +43,6 @@
 }
 - (void)run {
     NSLog(@"%@", NSThread.currentThread);
-
     // 3. 中途休眠该线程，使线程进入 block 状态
     [NSThread sleepForTimeInterval:3];
     // 当休眠完成以后，线程将会进入 runnable 状态，等待 CPU 再次调用，进入 running 状态
