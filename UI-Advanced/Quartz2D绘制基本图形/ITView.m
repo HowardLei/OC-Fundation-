@@ -67,13 +67,13 @@
 - (void)drawCircle {
     // OC 方式
     CGFloat radius = 60;
-    //    [[UIColor redColor] set];
-    //    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(40, 40, radius * 2, radius * 2) cornerRadius:radius];
-    //    [path fill];
+    [[UIColor redColor] set];
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(40, 40, radius * 2, radius * 2) cornerRadius:radius];
+    [path fill];
     // C 方式
-    CGContextRef ref = UIGraphicsGetCurrentContext();
-    CGContextAddEllipseInRect(ref, CGRectMake(40, 40, radius, radius));
-    CGContextDrawPath(ref, kCGPathFill);
+//    CGContextRef ref = UIGraphicsGetCurrentContext();
+//    CGContextAddEllipseInRect(ref, CGRectMake(40, 40, radius, radius));
+//    CGContextDrawPath(ref, kCGPathFill);
 }
 /**
  画椭圆
