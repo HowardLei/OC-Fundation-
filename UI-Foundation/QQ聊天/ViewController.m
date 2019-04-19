@@ -33,10 +33,7 @@
             ITChat *model = [ITChat chatWithDict:dictionary];
             NSString *lastModelTime = [modelArr lastObject].time;
             // 在添加单元格的时候，判断是否上个单元格中的时间与下个相同。如果相同就隐藏，否则不隐藏。
-            // FIXME: 这个地方只能负责懒加载的时候能够正确，如果发送消息的时候不能保证正确。
-            if ([model.time isEqualToString:lastModelTime]) {
-                model.timeHidden = YES;
-            }
+            model.timeHidden = [model.time isEqualToString:lastModelTime] ? YES : NO;
             [modelArr addObject:model];
         }
         _chatArr = modelArr;
@@ -109,8 +106,12 @@
     if (!cell) {
         cell = [[ITTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
-    // 设置单元格数据
-    cell.model = model;
+    // 设置单元格数据。为了防止单元格的值为 0 的时候设置值错误，需要进行检查
+    @try {
+        [cell setModel:model lastRowName:self.chatArr[indexPath.row - 1].time];
+    } @catch (NSException *exception) {
+        cell.model = model;
+    }
     return cell;
 }
 // 设置 tableView 的行数

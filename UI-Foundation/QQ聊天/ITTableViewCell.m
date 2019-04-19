@@ -40,17 +40,17 @@
     return self;
 }
 // 修改的新方法
-//- (void)setModel:(ITChat *)model indexPath:(NSIndexPath *)indexPath {
-//    _model = model;
-//    [self setDataFromModel:model];
-//    在设置 frame 大小的时候通过判断 indexPath 来判断时间。
-//    [self setModelFrameFromModel:model indexPath:indexPath]
-//}
+- (void)setModel:(ITChat *)model lastRowName:(nullable NSString *)name {
+    [self setDataFromModel:model];
+    if ([name isEqualToString:model.time]) {
+        model.timeHidden = YES;
+    }
+    _model = model;
+    [self setModelFrameFromModel:model];
+}
 // 重写 setModel 方法。
 - (void)setModel:(ITChat *)model {
-    _model = model;
-    [self setDataFromModel:model];
-    [self setModelFrameFromModel:model];
+    [self setModel:model lastRowName:nil];
 }
 // 设置控件的数据
 - (void)setDataFromModel:(ITChat *)model {

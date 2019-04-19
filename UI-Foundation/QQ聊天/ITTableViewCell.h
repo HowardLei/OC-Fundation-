@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ITTableViewCell : UITableViewCell
 @property (nonatomic, strong) ITChat *model;
+- (void)setModel:(ITChat *)model lastRowName:(nullable NSString *)name;
 @end
 
 NS_ASSUME_NONNULL_END
