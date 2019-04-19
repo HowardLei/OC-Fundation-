@@ -39,6 +39,13 @@
     }
     return self;
 }
+// 修改的新方法
+//- (void)setModel:(ITChat *)model indexPath:(NSIndexPath *)indexPath {
+//    _model = model;
+//    [self setDataFromModel:model];
+//    在设置 frame 大小的时候通过判断 indexPath 来判断时间。
+//    [self setModelFrameFromModel:model indexPath:indexPath]
+//}
 // 重写 setModel 方法。
 - (void)setModel:(ITChat *)model {
     _model = model;
@@ -74,11 +81,11 @@
     CGFloat timeHeight = 10;
     CGFloat timeX = 0;
     CGFloat timeY = margin;
-    self.timeLabel.hidden = model.timeHidden;
     if (self.timeLabel.isHidden) {
         timeHeight = 0;
     }
     self.timeLabel.frame = CGRectMake(timeX, timeY, timeWidth, timeHeight);
+    self.timeLabel.hidden = model.isTimeHidden;
     self.timeLabel.textAlignment = NSTextAlignmentCenter;
     self.timeLabel.font = timeFont;
     // 设置头像的 frame

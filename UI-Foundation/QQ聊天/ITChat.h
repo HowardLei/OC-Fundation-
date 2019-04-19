@@ -21,7 +21,7 @@ typedef NS_ENUM(NSUInteger, ITChatPerson) {
 @property (nonatomic, assign) ITChatPerson type;
 @property (nonatomic, assign) CGFloat height;
 // 创建一个属性，用来判断时间框是否需要被隐藏
-@property (nonatomic, assign) BOOL timeHidden;
+@property (nonatomic, assign, getter=isTimeHidden) BOOL timeHidden;
 
 - (instancetype)initWithType:(ITChatPerson)type;
 - (instancetype)initWithDict:(NSDictionary *)dict;

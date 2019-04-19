@@ -27,12 +27,13 @@
 - (NSMutableArray<ITChat *> *)chatArr {
     if (_chatArr == nil) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"messages" ofType:@".plist"];
-        NSArray *arr = [NSArray arrayWithContentsOfFile:path];
-        NSMutableArray *modelArr = [NSMutableArray array];
+        NSArray<NSDictionary *> *arr = [NSArray arrayWithContentsOfFile:path];
+        NSMutableArray<ITChat *> *modelArr = [NSMutableArray array];
         for (NSDictionary *dictionary in arr) {
             ITChat *model = [ITChat chatWithDict:dictionary];
-            NSString *lastModelTime = [[modelArr lastObject] time];
+            NSString *lastModelTime = [modelArr lastObject].time;
             // 在添加单元格的时候，判断是否上个单元格中的时间与下个相同。如果相同就隐藏，否则不隐藏。
+            // FIXME: 这个地方只能负责懒加载的时候能够正确，如果发送消息的时候不能保证正确。
             if ([model.time isEqualToString:lastModelTime]) {
                 model.timeHidden = YES;
             }
@@ -58,7 +59,7 @@
      即键盘的y值减去view的高度即可。
      */
     CGFloat keyboardHeight = [notification.userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue].origin.y - [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y;
-    CGFloat delta = self.view.frame.origin.y - keyboardHeight;
+    CGFloat delta = CGRectGetMinY(self.view.frame) - keyboardHeight;
     // 这个地方为了控制键盘弹出时间与 view 的弹出时间一致
     [UIView animateWithDuration:0.25 animations:^{
         self.view.transform = CGAffineTransformMakeTranslation(0, delta);
@@ -103,7 +104,7 @@
 // 设置单元格格式
 - (ITTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ITChat *model = self.chatArr[indexPath.row];
-    static NSString *ID = @"message";
+    static NSString *const ID = @"message";
     ITTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
         cell = [[ITTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];

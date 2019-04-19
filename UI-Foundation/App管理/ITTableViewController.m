@@ -43,7 +43,7 @@
 - (NSArray *)modelArr {
     if (_modelArr == nil) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"apps_full" ofType:@".plist"];
-        NSArray *arr = [NSArray arrayWithContentsOfFile:path];
+        NSArray<NSDictionary *> *arr = [NSArray arrayWithContentsOfFile:path];
         NSMutableArray *modelArr = [NSMutableArray array];
         for (NSDictionary *dictionary in arr) {
             ITApp *model = [ITApp appWithDict:dictionary];
