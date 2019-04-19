@@ -14,9 +14,9 @@
 - (void)drawRect:(CGRect)rect {
     // Drawing code
     NSString *str = @"123";
-    NSAttachmentAttributeName
-    NSDictionary<NSAttributedStringKey, id> *attrDict = @{<#key#>: <#object, ...#>}
-    str drawInRect:rect withAttributes:<#(nullable NSDictionary<NSAttributedStringKey,id> *)#>
+    NSDictionary<NSAttributedStringKey, id> *attrDict = @{NSFontAttributeName: [UIFont systemFontOfSize:40], NSForegroundColorAttributeName: [UIColor blueColor], NSUnderlineStyleAttributeName: @1};
+//    [str drawAtPoint:CGPointZero withAttributes:attrDict];
+    [str drawInRect:CGRectMake(50, 50, 200, 200) withAttributes:attrDict];
 }
 
 @end
