@@ -5,13 +5,13 @@
 
 @implementation Store
 //欢迎语
-- (void)helloWorld{
+- (void)helloWorld {
     NSLog(@"欢迎来到Apple Store.");
     NSLog(@"我们有以下商品供您选择：iPhone、iPad、Mac");
     NSLog(@"请输入您的选择");
     
     char name[100];
-    scanf("%s",name);//在输入的时候，OC没有提供相应函数，所以在调用的时候还需要借用C中的scanf函数，到时候再将输入的数据转换为OC数据类型
+    scanf("%s", name);//在输入的时候，OC没有提供相应函数，所以在调用的时候还需要借用C中的scanf函数，到时候再将输入的数据转换为OC数据类型
     NSLog(@"请输入您所需要的数量:");
     int count;
     scanf("%d",&count);//&这是取地址，取count的地址
@@ -32,11 +32,11 @@
     int num1;
     scanf("%d",&num1);
     if (num1 == 1) {
-        NSLog(@"您选择的商品名是:%@,商品的数量是%d,商品的总价是%.2f,商品的折扣价是%.2f",name1,count,money,realMoney);
-    }else if (num1 == 2){
+        NSLog(@"您选择的商品名是:%@,商品的数量是%d,商品的总价是%.2f,商品的折扣价是%.2f", name1, count, money, realMoney);
+    } else if (num1 == 2) {
         [self helloWorld];
         [_shelf addGoodsWithName:name1 andCount:count];//把删除掉的商品重新加回去
-    }else{
+    } else {
         NSLog(@"ค(TㅅT)再见");
         [_shelf addGoodsWithName:name1 andCount:count];//把删除掉的商品重新加回去
     }
@@ -44,40 +44,37 @@
     [_shelf show];
 }
 //打折方法
-- (float)getRealMoney:(float)money andNum:(int)num{
+- (float)getRealMoney:(float)money andNum:(int)num {
     if (num == 1) {
         Discount * dis = [[Discount alloc]init];
         [dis getDiscountMoney:money];
         return [dis getDiscountMoney:money];
-    }
-    else if (num == 2){
+    } else if (num == 2) {
         SubDiscount * sub =[[SubDiscount alloc]init];
         sub.rate = 0.8;
         [sub getSubDiscountMoney:money];
         return [sub getSubDiscountMoney:money];
-    }
-    else if (num == 3){
+    } else if (num == 3) {
         MxJx * dz = [[MxJx alloc]init];
         dz.m = 300;
         dz.j = 50;
         [dz getMxJxMoney:money];
         return [dz getMxJxMoney:money];
-    }else{
+    } else {
         return 0;
     }
 }
 //计算正常价格
-- (float)getMoneyWithTemp:(NSMutableArray *)temp{
+- (float)getMoneyWithTemp:(NSMutableArray *)temp {
     int money = 0;
     for (int i = 0; i < temp.count; i++) {
-        Goods * good = temp [i];
+        Goods * good = temp[i];
         money += good.price;
     }
     return money;
 }
 //重写构造方法，对货架进行初始化
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         _shelf = [[Shelf alloc]init];
