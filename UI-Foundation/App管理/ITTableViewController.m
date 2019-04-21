@@ -9,7 +9,7 @@
 #import "ITAppCell.h"
 
 @interface ITTableViewController () <ITAppCellDelegate>
-@property (nonatomic, strong) NSArray *modelArr;
+@property (nonatomic, strong) NSArray<ITApp *> *modelArr;
 @property (nonatomic, weak) UILabel *label;
 @end
 
@@ -22,7 +22,7 @@
 
 // MARK: - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.modelArr.count;
 }
 
 // MARK: - Table view delegate
@@ -33,18 +33,18 @@
      2、但是 xib 使用的时候还需要代码导入，如果不想在 controller 中导入 xib 的时候，就可以直接使用 UITableView 的 cell 模板。通过设置重用 ID 来创建单元格。将需要设置的控件拖到 cell 当中即可。
      */
     ITApp *model = self.modelArr[indexPath.row];
-    static NSString *ID = @"appID";
+    static NSString *const ID = @"appID";
     ITAppCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     cell.model = model;
     cell.delegate = self;
     return cell;
 }
 // MARK: Lazy loading plist data
-- (NSArray *)modelArr {
+- (NSArray<ITApp *> *)modelArr {
     if (_modelArr == nil) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"apps_full" ofType:@".plist"];
         NSArray<NSDictionary *> *arr = [NSArray arrayWithContentsOfFile:path];
-        NSMutableArray *modelArr = [NSMutableArray array];
+        NSMutableArray<ITApp *> *modelArr = [NSMutableArray arrayWithCapacity:arr.count];
         for (NSDictionary *dictionary in arr) {
             ITApp *model = [ITApp appWithDict:dictionary];
             [modelArr addObject:model];
@@ -67,10 +67,10 @@
 }
 
 - (void)setLabelFrame {
-    CGFloat labelWidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat labelWidth = CGRectGetWidth(UIScreen.mainScreen.bounds);
     CGFloat labelHeight = 30;
     CGFloat labelX = 0;
-    CGFloat labelY = ([UIScreen mainScreen].bounds.size.height - labelHeight) / 2;
+    CGFloat labelY = (CGRectGetHeight(UIScreen.mainScreen.bounds) - labelHeight) / 2;
     self.label.frame = CGRectMake(labelX, labelY, labelWidth, labelHeight);
     self.label.layer.masksToBounds = YES;
     self.label.layer.cornerRadius = 5;

@@ -18,9 +18,6 @@
 
 @implementation ITAppCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-}
 - (void)setModel:(ITApp *)model {
     _model = model;
     [self setModelData:model];
