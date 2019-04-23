@@ -12,6 +12,7 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
+    [self drawImageWithRect:rect];
 }
 /**
  绘制字符串
@@ -26,8 +27,8 @@
  绘制图片
  */
 - (void)drawImageWithRect:(CGRect)rect {
-    UIImage *image = [UIImage imageNamed:@"Image"];
-    [image drawInRect:rect blendMode:kCGBlendModeNormal alpha:1];
-    [image drawAtPoint:CGPointZero blendMode:kCGBlendModeNormal alpha:1];
+    UIImage *image = [UIImage imageNamed:@"image1"];
+    [image drawInRect:rect blendMode:kCGBlendModeLighten alpha:1];
+//    [image drawAtPoint:CGPointZero blendMode:kCGBlendModeNormal alpha:1];
 }
 @end
