@@ -8,19 +8,27 @@
 #import "ITView.h"
 
 @implementation ITView
-
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
-    UIImage *image = [UIImage imageNamed:@"image1"];
-    [image drawInRect:rect];
-    [image drawAtPoint:CGPointZero blendMode:kCGBlendModeNormal alpha:1];
+    [self drawImageWithRect:rect];
 }
+/**
+ 绘制字符串
+ */
 - (void)drawString {
     NSString *str = @"123";
     NSDictionary<NSAttributedStringKey, id> *attrDict = @{NSFontAttributeName: [UIFont systemFontOfSize:40], NSForegroundColorAttributeName: [UIColor greenColor], NSUnderlineStyleAttributeName: @1};
-    //    [str drawInRect:CGRectMake(50, 50, 200, 200) withAttributes:attrDict];
+//    [str drawInRect:CGRectMake(50, 50, 200, 200) withAttributes:attrDict];
     [str drawAtPoint:CGPointZero withAttributes:attrDict];
+}
+/**
+ 绘制图片
+ */
+- (void)drawImageWithRect:(CGRect)rect {
+    UIImage *image = [UIImage imageNamed:@"image1"];
+    [image drawInRect:rect blendMode:kCGBlendModeLighten alpha:1];
+//    [image drawAtPoint:CGPointZero blendMode:kCGBlendModeNormal alpha:1];
 }
 @end
