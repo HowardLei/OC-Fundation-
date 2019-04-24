@@ -25,8 +25,12 @@
     [barController addChildViewController:greenViewController];
     ITViewController *redViewController = [[ITViewController alloc] initWithBackgroundColor:[UIColor redColor]];
     [barController addChildViewController:redViewController];
-    // 手动设置显示的控制器
-//    barController.selectedIndex = 2;
+    // 手动设置默认显示的控制器
+    @try {
+        barController.selectedIndex = 6;
+    } @catch (NSException *exception) {
+        barController.selectedIndex = 0;
+    }
     // 设置每个控制器显示的按钮
     // 紫色
     purpleViewController.tabBarItem.title = @"紫色";
