@@ -6,7 +6,8 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "ITViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -15,8 +16,27 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    self.window.rootViewController = [[UITabBarController alloc] init];
-//    self.window.rootViewController.view.backgroundColor = [UIColor redColor];
+    UITabBarController *barController = [[UITabBarController alloc] init];
+    self.window.rootViewController = barController;
+    // 向 UITabBarController 添加控制器
+    ITViewController *purpleViewController = [[ITViewController alloc] init];
+    [barController addChildViewController:purpleViewController];
+    ITViewController *greenViewController = [[ITViewController alloc] initWithBackgroundColor:[UIColor greenColor]];
+    [barController addChildViewController:greenViewController];
+    ITViewController *redViewController = [[ITViewController alloc] initWithBackgroundColor:[UIColor redColor]];
+    [barController addChildViewController:redViewController];
+    // 手动设置显示的控制器
+//    barController.selectedIndex = 2;
+    // 设置每个控制器显示的按钮
+    // 紫色
+    purpleViewController.tabBarItem.title = @"紫色";
+    purpleViewController.tabBarItem.badgeValue = @"12";
+    // 绿色
+    greenViewController.tabBarItem.title = @"绿色";
+    greenViewController.tabBarItem.badgeValue = @"1";
+    // 红色
+    redViewController.tabBarItem.title = @"红色";
+    barController.tabBar.tintColor = [UIColor purpleColor];
     [self.window makeKeyAndVisible];
     return YES;
 }

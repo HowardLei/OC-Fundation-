@@ -46,6 +46,8 @@
 		1828CDB322326A1D00D2BF38 /* ITAddContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828CDB222326A1D00D2BF38 /* ITAddContactController.m */; };
 		18305DAA22326B4200C95F98 /* ITContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18305DA922326B4200C95F98 /* ITContactCell.m */; };
 		18305DAD2232786600C95F98 /* ITContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 18305DAC2232786600C95F98 /* ITContact.m */; };
+		18390E1C227059B900C91AFD /* ITViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18390E1A227059B900C91AFD /* ITViewController.m */; };
+		18390E1D227059B900C91AFD /* ITViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18390E1B227059B900C91AFD /* ITViewController.xib */; };
 		1840E1DE2247AACC00409715 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1840E1DD2247AACC00409715 /* AppDelegate.m */; };
 		1840E1E12247AACC00409715 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1840E1E02247AACC00409715 /* ViewController.m */; };
 		1840E1E42247AACC00409715 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1840E1E22247AACC00409715 /* Main.storyboard */; };
@@ -277,6 +279,9 @@
 		18305DA922326B4200C95F98 /* ITContactCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITContactCell.m; sourceTree = "<group>"; };
 		18305DAB2232786600C95F98 /* ITContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITContact.h; sourceTree = "<group>"; };
 		18305DAC2232786600C95F98 /* ITContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITContact.m; sourceTree = "<group>"; };
+		18390E19227059B900C91AFD /* ITViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITViewController.h; sourceTree = "<group>"; };
+		18390E1A227059B900C91AFD /* ITViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITViewController.m; sourceTree = "<group>"; };
+		18390E1B227059B900C91AFD /* ITViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ITViewController.xib; sourceTree = "<group>"; };
 		1840E1DA2247AACC00409715 /* Quartz2D渲染模式.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quartz2D渲染模式.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1840E1DC2247AACC00409715 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1840E1DD2247AACC00409715 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -959,6 +964,9 @@
 		181DC190226ECF2100E13978 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				18390E19227059B900C91AFD /* ITViewController.h */,
+				18390E1A227059B900C91AFD /* ITViewController.m */,
+				18390E1B227059B900C91AFD /* ITViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -2719,6 +2727,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				181DC189226ECF1D00E13978 /* LaunchScreen.storyboard in Resources */,
+				18390E1D227059B900C91AFD /* ITViewController.xib in Resources */,
 				181DC186226ECF1D00E13978 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3006,6 +3015,7 @@
 			files = (
 				181DC18C226ECF1D00E13978 /* main.m in Sources */,
 				181DC17E226ECF1C00E13978 /* AppDelegate.m in Sources */,
+				18390E1C227059B900C91AFD /* ITViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
