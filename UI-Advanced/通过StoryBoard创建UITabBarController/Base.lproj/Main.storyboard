@@ -29,7 +29,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="wZ5-Aq-wLf">
             <objects>
-                <tabBarController id="Yko-gt-cu6" sceneMemberID="viewController">
+                <tabBarController id="Yko-gt-cu6" customClass="ITTabBarController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Odd-06-oe6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -68,7 +68,7 @@
                             <outlet property="delegate" destination="7bR-8z-cyt" id="3Zh-IC-4vO"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="TableView" id="sGH-sJ-VKF"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="TableView" id="sGH-sJ-VKF"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9F-iM-65N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,7 +103,7 @@
                             <outlet property="delegate" destination="K1n-Qz-E73" id="PEM-o7-PnT"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="CollectionView" id="CG9-f8-xhk"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="CollectionView" id="CG9-f8-xhk"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H31-FW-F2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

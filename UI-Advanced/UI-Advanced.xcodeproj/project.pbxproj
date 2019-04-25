@@ -88,6 +88,7 @@
 		18738F1222253EF10081034D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18738F1122253EF10081034D /* main.m */; };
 		18738F192225457D0081034D /* ITViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18738F172225457D0081034D /* ITViewController.m */; };
 		18738F1A2225457D0081034D /* ITViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18738F182225457D0081034D /* ITViewController.xib */; };
+		18A1E99C2271BD54004B8561 /* ITTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E99B2271BD54004B8561 /* ITTabBarController.m */; };
 		18B5791B2222B07D00F90462 /* ITViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B5791A2222B07D00F90462 /* ITViewController.m */; };
 		18BE7C7E222BD72300D3A1CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE7C7D222BD72300D3A1CF /* AppDelegate.m */; };
 		18BE7C84222BD72300D3A1CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BE7C82222BD72300D3A1CF /* Main.storyboard */; };
@@ -359,6 +360,8 @@
 		18738F162225457D0081034D /* ITViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITViewController.h; sourceTree = "<group>"; };
 		18738F172225457D0081034D /* ITViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITViewController.m; sourceTree = "<group>"; };
 		18738F182225457D0081034D /* ITViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ITViewController.xib; sourceTree = "<group>"; };
+		18A1E99A2271BD54004B8561 /* ITTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITTabBarController.h; sourceTree = "<group>"; };
+		18A1E99B2271BD54004B8561 /* ITTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITTabBarController.m; sourceTree = "<group>"; };
 		18B579192222B07D00F90462 /* ITViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITViewController.h; sourceTree = "<group>"; };
 		18B5791A2222B07D00F90462 /* ITViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITViewController.m; sourceTree = "<group>"; };
 		18BE7C7A222BD72300D3A1CF /* 通过StoryBoard创建导航控制器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "通过StoryBoard创建导航控制器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1055,6 +1058,8 @@
 				18390E3E2270770400C91AFD /* ITTableViewController.m */,
 				18390E402270774100C91AFD /* ITCollectionViewController.h */,
 				18390E412270774100C91AFD /* ITCollectionViewController.m */,
+				18A1E99A2271BD54004B8561 /* ITTabBarController.h */,
+				18A1E99B2271BD54004B8561 /* ITTabBarController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -3147,6 +3152,7 @@
 			files = (
 				18390E29227075D500C91AFD /* ViewController.m in Sources */,
 				18390E422270774100C91AFD /* ITCollectionViewController.m in Sources */,
+				18A1E99C2271BD54004B8561 /* ITTabBarController.m in Sources */,
 				18390E34227075D700C91AFD /* main.m in Sources */,
 				18390E3F2270770400C91AFD /* ITTableViewController.m in Sources */,
 				18390E26227075D500C91AFD /* AppDelegate.m in Sources */,
