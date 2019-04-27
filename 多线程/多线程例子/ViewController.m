@@ -29,6 +29,8 @@
         }
     }
 }
+- (IBAction)safeBuyTickets:(UIButton *)sender {
+}
 
 - (void)runWithNumber:(NSNumber *)number {
     int value = number.intValue;
