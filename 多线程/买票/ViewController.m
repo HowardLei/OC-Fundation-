@@ -42,8 +42,9 @@
         while (self.leftTickets) {
             self.leftTickets--;
             NSLog(@"现在%@卖出一张票，还剩%ld张票", NSThread.currentThread.name, self.leftTickets);
-            [NSThread sleepForTimeInterval:0.1];
+            [NSThread sleepForTimeInterval:0.2];
         }
+        NSLog(@"对不起，%@没票了", NSThread.currentThread.name);
     }
 }
 // MARK: - 线程不安全的购买车票
