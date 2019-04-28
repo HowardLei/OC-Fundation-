@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,7 @@
 		18CBF497226360DE00FC2173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CBF496226360DE00FC2173 /* Assets.xcassets */; };
 		18CBF49A226360DE00FC2173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CBF498226360DE00FC2173 /* LaunchScreen.storyboard */; };
 		18CBF49D226360DE00FC2173 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CBF49C226360DE00FC2173 /* main.m */; };
+		635FB03722758D050099B44D /* ITAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 635FB03622758D050099B44D /* ITAccount.m */; };
 		636DB0CB21F31DC70050A866 /* MyThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 636DB0CA21F31DC70050A866 /* MyThread.m */; };
 		63F625E021F318F40003C748 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F625DF21F318F40003C748 /* AppDelegate.m */; };
 		63F625E321F318F40003C748 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F625E221F318F40003C748 /* ViewController.m */; };
@@ -81,6 +82,8 @@
 		18CBF499226360DE00FC2173 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18CBF49B226360DE00FC2173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18CBF49C226360DE00FC2173 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		635FB03522758D050099B44D /* ITAccount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITAccount.h; sourceTree = "<group>"; };
+		635FB03622758D050099B44D /* ITAccount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITAccount.m; sourceTree = "<group>"; };
 		636DB0C921F31DC70050A866 /* MyThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyThread.h; sourceTree = "<group>"; };
 		636DB0CA21F31DC70050A866 /* MyThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyThread.m; sourceTree = "<group>"; };
 		63F625DB21F318F40003C748 /* 多线程例子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "多线程例子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +242,8 @@
 		18A06B6622748A8F00553DEB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				635FB03522758D050099B44D /* ITAccount.h */,
+				635FB03622758D050099B44D /* ITAccount.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -454,6 +459,7 @@
 		63F625D121F318E10003C748 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = IT;
 				LastUpgradeCheck = 1020;
 				TargetAttributes = {
 					180213D922647BD6009F7A19 = {
@@ -474,7 +480,7 @@
 				};
 			};
 			buildConfigurationList = 63F625D421F318E10003C748 /* Build configuration list for PBXProject "多线程" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -573,6 +579,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635FB03722758D050099B44D /* ITAccount.m in Sources */,
 				18A06B4F2274868600553DEB /* ViewController.m in Sources */,
 				18A06B5A2274868700553DEB /* main.m in Sources */,
 				18A06B4C2274868600553DEB /* AppDelegate.m in Sources */,
