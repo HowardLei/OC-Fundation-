@@ -26,6 +26,7 @@
     */
     // 将当前账户作为同步锁，如果哪个人需要取钱，需要先将当前账户锁定，防止其它账户能够并发访问到当前账户。
     @synchronized (self) {
+        // 通过判断卡里面的余额，来决定能否取钱
         if (self.balance >= amount) {
             NSLog(@"%@取钱成功！取出现金%g元", NSThread.currentThread.name, amount);
             self.balance -= amount;
