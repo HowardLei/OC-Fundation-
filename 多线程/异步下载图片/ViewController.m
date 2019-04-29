@@ -28,7 +28,6 @@
     UIImage *image = [UIImage imageWithData:data];
     // 当图片下载完成以后，才在主线程上执行刷新动作
     [self performSelectorOnMainThread:@selector(setImageInImageView:) withObject:image waitUntilDone:YES];
-    NSObject
 }
 - (void)setImageInImageView:(UIImage *)image {
     self.imageView.image = image;
