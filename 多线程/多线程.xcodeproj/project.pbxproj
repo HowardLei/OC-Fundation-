@@ -188,6 +188,50 @@
 			path = "买票";
 			sourceTree = "<group>";
 		};
+		186C4A0722773BCB00A36391 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18CA24A82276EAB6006CCC24 /* ViewController.h */,
+				18CA24A92276EAB6006CCC24 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		186C4A0822773BD200A36391 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18CA24AB2276EAB6006CCC24 /* Main.storyboard */,
+				18CA24B02276EAB7006CCC24 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		186C4A0922773BD700A36391 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		186C4A0A22773BDB00A36391 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				18CA24A52276EAB6006CCC24 /* AppDelegate.h */,
+				18CA24A62276EAB6006CCC24 /* AppDelegate.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		186C4A0B22773BDF00A36391 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18CA24AE2276EAB7006CCC24 /* Assets.xcassets */,
+				18CA24B32276EAB7006CCC24 /* Info.plist */,
+				18CA24B42276EAB7006CCC24 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		18A06B492274868600553DEB /* 取钱 */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,15 +337,11 @@
 		18CA24A42276EAB6006CCC24 /* 异步下载图片 */ = {
 			isa = PBXGroup;
 			children = (
-				18CA24A52276EAB6006CCC24 /* AppDelegate.h */,
-				18CA24A62276EAB6006CCC24 /* AppDelegate.m */,
-				18CA24A82276EAB6006CCC24 /* ViewController.h */,
-				18CA24A92276EAB6006CCC24 /* ViewController.m */,
-				18CA24AB2276EAB6006CCC24 /* Main.storyboard */,
-				18CA24AE2276EAB7006CCC24 /* Assets.xcassets */,
-				18CA24B02276EAB7006CCC24 /* LaunchScreen.storyboard */,
-				18CA24B32276EAB7006CCC24 /* Info.plist */,
-				18CA24B42276EAB7006CCC24 /* main.m */,
+				186C4A0B22773BDF00A36391 /* Supporting Files */,
+				186C4A0A22773BDB00A36391 /* Other */,
+				186C4A0922773BD700A36391 /* Model */,
+				186C4A0822773BD200A36391 /* View */,
+				186C4A0722773BCB00A36391 /* Controller */,
 			);
 			path = "异步下载图片";
 			sourceTree = "<group>";

@@ -8,7 +8,7 @@
 #import "ITAccount.h"
 
 @implementation ITAccount
-- (instancetype)initWithAccount:(NSString *)acccountNO balance:(double)balance {
+- (instancetype)initWithAccount:(NSString *)acccountNO balance:(CGFloat)balance {
     self = [super init];
     if (self) {
         _accountNO = acccountNO;

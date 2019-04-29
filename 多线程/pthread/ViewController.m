@@ -23,6 +23,8 @@
 /**
  无参数创建线程的方法
  */
+- (IBAction)showImage:(id)sender {
+}
 - (void)demo {
     pthread_t threadID;
     int res = pthread_create(&threadID, NULL, target, NULL);

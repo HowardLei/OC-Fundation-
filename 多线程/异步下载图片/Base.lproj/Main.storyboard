@@ -25,10 +25,19 @@
                                     <constraint firstAttribute="width" constant="300" id="aYC-3k-fwq"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1r-0H-7rc">
+                                <rect key="frame" x="156.66666666666666" y="596" width="62" height="30"/>
+                                <state key="normal" title="展示图片"/>
+                                <connections>
+                                    <action selector="showImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Af-vb-MwP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="E17-na-Cjo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8a8-VN-v0Z"/>
+                            <constraint firstItem="V1r-0H-7rc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N5j-YN-7mr"/>
+                            <constraint firstItem="V1r-0H-7rc" firstAttribute="top" secondItem="E17-na-Cjo" secondAttribute="bottom" constant="40" id="egi-3u-c9U"/>
                             <constraint firstItem="E17-na-Cjo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zuQ-r1-cdH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

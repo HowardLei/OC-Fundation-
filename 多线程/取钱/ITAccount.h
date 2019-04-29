@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ITAccount : NSObject
 @property (nonatomic, copy, readonly) NSString *accountNO;
-@property (nonatomic, assign) double balance;
+@property (nonatomic, assign) CGFloat balance;
 // 如果需要显式保证当前对象的线程安全，需要创建一个 NSLock 类的对象来控制锁。
 @property (nonatomic, strong) NSLock *locker;
 - (instancetype)initWithAccount:(NSString *)acccountNO balance:(CGFloat)balance;
