@@ -9,7 +9,6 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-
 @end
 
 @implementation ViewController
@@ -31,7 +30,5 @@
 }
 - (void)setImageInImageView:(UIImage *)image {
     self.imageView.image = image;
-}
-- (void)setImage {
 }
 @end
