@@ -16,7 +16,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self asyncConcurrent];
+//    [self asyncConcurrent];
+    [self syncMainThread];
 }
 /**
  同步执行+并行队列
@@ -89,5 +90,26 @@
     dispatch_async(queue, ^{
         NSLog(@"4%@", NSThread.currentThread);
     });
+}
+/**
+ 同步执行+主队列
+ */
+- (void)syncMainThread {
+    dispatch_queue_main_t queue = dispatch_get_main_queue();
+    dispatch_sync(queue, ^{
+        NSLog(@"1%@", NSThread.currentThread);
+    });
+    dispatch_sync(queue, ^{
+        NSLog(@"2%@", NSThread.currentThread);
+    });
+    dispatch_sync(queue, ^{
+        NSLog(@"3%@", NSThread.currentThread);
+    });
+    dispatch_sync(queue, ^{
+        NSLog(@"4%@", NSThread.currentThread);
+    });
+}
+- (void)asyncMainThread {
+    
 }
 @end

@@ -17,7 +17,7 @@
 		<key>pthread.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>买票.xcscheme_^#shared#^_</key>
 		<dict>
@@ -32,7 +32,7 @@
 		<key>多线程例子.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>异步下载图片.xcscheme_^#shared#^_</key>
 		<dict>
