@@ -70,7 +70,7 @@ static NSString *const reuseIdentifier = @"Cell";
     } else {
         NSArray<NSString *> *keys = @[@"name", @"icon", @"intro"];
         NSArray<NSString *> *values = board.strings;
-        NSDictionary *modelDict = [NSDictionary dictionaryWithObjects:values forKeys:keys];
+        NSDictionary<NSString *, NSString *> *modelDict = [NSDictionary dictionaryWithObjects:values forKeys:keys];
         // FIXME: 这个地方为什么不能直接 copy 原对象的副本？
         model = [ITHero heroWithDict:modelDict];
         [self.modelArr insertObject:model atIndex:indexPath.row];
