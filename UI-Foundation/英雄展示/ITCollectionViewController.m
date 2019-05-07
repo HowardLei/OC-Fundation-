@@ -59,7 +59,7 @@ static NSString *const reuseIdentifier = @"Cell";
 // 设置点击了哪个选项以后执行什么事件
 - (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(nullable id)sender {
     // 创建一个剪切板。注意：剪切板分为公共的和私有的。调用 generalPasteboard 获得的剪切板为公共剪切板
-    UIPasteboard *board = [UIPasteboard generalPasteboard];
+    UIPasteboard *board = UIPasteboard.generalPasteboard;
     // 获得需要复制的模型
     ITHero *model = nil;
     // 根据你点击的按钮，作出相应的事件。由于设置好两个按键，所以直接用 if-else 结构即可。
