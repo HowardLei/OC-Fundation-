@@ -8,21 +8,21 @@
 #import "ViewController.h"
 /*
  用代码实现 AutoLayout 的步骤
- 1、将项目中的需要进行的 AutoLayout 的控件关闭。属性：translatesAutoresizingMaskIntoConstraints 注意：是需要进行 AutoLayout 的控件，不是直接关闭这个 view 的即可。
- 2、创建 1 个 NSLayoutConstraint 对象。设置约束规则。
- 3、将约束规则添加到适当的控件当中。（注意：控件不需要再设置 frame ）。
+ 1. 将项目中的需要进行的 AutoLayout 的控件关闭。属性：translatesAutoresizingMaskIntoConstraints 注意：是需要进行 AutoLayout 的控件，不是直接关闭这个 view 的即可。
+ 2. 创建 1 个 NSLayoutConstraint 对象。设置约束规则。
+ 3. 激活约束，调用 NSLayoutConstraint 当中的 + (void)activateConstraints:(NSArray<NSLayoutConstraint *> 方法
  */
 /*
  需求：在控制器中添加 2 个 view, 1 个蓝色，1 个红色
-    1、2 个 view 高度永远相同，高度为 50
-    2、红色 view 和蓝色 view 右边对齐
-    3、蓝色 view 距父控件左边、右边、上边间距相同。均为30
-    4、蓝色 view 距离红色 view 间距固定。均为 30
-    5、红色 view 的左边和父控件的中点对齐。（红色的 view 是蓝色的 view 的一半）
+    1. 2 个 view 高度永远相同，高度为 50
+    2. 红色 view 和蓝色 view 右边对齐
+    3. 蓝色 view 距父控件左边、右边、上边间距相同。均为30
+    4. 蓝色 view 距离红色 view 间距固定。均为 30
+    5. 红色 view 的左边和父控件的中点对齐。（红色的 view 是蓝色的 view 的一半）
  设置思路：
-    1、创建蓝色 view ，设置高度为 50，距左边、右边、上边间距为 30 。
-    2、创建红色 view ，设置高度与宽度与蓝色 view 一致，上间距为 30。右边的间距为 30
-    3、选择设置红色 view 宽度的那一个 constraints 。点击右边栏中的 size inspectors 。选择 multiplier 倍数，选择 0.5 即可。
+    1. 创建蓝色 view ，设置高度为 50，距左边、右边、上边间距为 30 。
+    2. 创建红色 view ，设置高度与宽度与蓝色 view 一致，上间距为 30。右边的间距为 30
+    3. 选择设置红色 view 宽度的那一个 constraints 。点击右边栏中的 size inspectors 。选择 multiplier 倍数，选择 0.5 即可。
  */
 @interface ViewController ()
 @property(nonatomic, weak) UIView *blueView;
@@ -65,8 +65,7 @@
     NSLayoutConstraint *blueTop = [NSLayoutConstraint constraintWithItem:self.blueView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:fatherView attribute:NSLayoutAttributeTop multiplier:1 constant:blueDefaultMargin];
     NSLayoutConstraint *blueleft = [NSLayoutConstraint constraintWithItem:self.blueView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:fatherView attribute:NSLayoutAttributeLeft multiplier:1 constant:blueDefaultMargin];
     NSLayoutConstraint *blueRight = [NSLayoutConstraint constraintWithItem:self.blueView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:fatherView attribute:NSLayoutAttributeRight multiplier:1 constant:-blueDefaultMargin];
-    NSArray<NSLayoutConstraint *> *arr = @[blueTop, blueleft, blueRight];
-    [fatherView addConstraints:arr];
+    [NSLayoutConstraint activateConstraints:@[blueTop, blueleft, blueRight]];
 }
 /**
  设置红色 view 的 AutoLayout
@@ -78,8 +77,6 @@
     NSLayoutConstraint *redTop = [NSLayoutConstraint constraintWithItem:self.redView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:brotherView attribute:NSLayoutAttributeBottom multiplier:1 constant:redDefaultMargin];
     NSLayoutConstraint *redRight = [NSLayoutConstraint constraintWithItem:self.redView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.redView.superview attribute:NSLayoutAttributeRight multiplier:1 constant:-redDefaultMargin];
     NSLayoutConstraint *redWidth = [NSLayoutConstraint constraintWithItem:self.redView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:brotherView attribute:NSLayoutAttributeWidth multiplier:0.5 constant:0];
-    NSArray<NSLayoutConstraint *> *constraints = @[redHeight, redWidth, redRight, redTop];
-    // 注意添加位置的关系
-    [self.view addConstraints:constraints];
+    [NSLayoutConstraint activateConstraints:@[redHeight, redWidth, redRight, redTop]];
 }
 @end
