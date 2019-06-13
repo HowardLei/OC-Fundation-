@@ -63,7 +63,6 @@
     headerFooterView.tag = section;
     return headerFooterView;
 }
-
 - (void)reloadTheDataWithHeaderView:(nonnull ITHeaderFooterView *)headerView {
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:headerView.tag] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
