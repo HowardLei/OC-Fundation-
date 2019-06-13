@@ -31,13 +31,15 @@
     ITHero *model = self.arr[indexPath.row];
     // 2、创建对象
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
-    // 2、为对象设置数据
+    // 3、返回设置好的对象
+    return cell;
+}
+- (void)tableView:(UITableView *)tableView willDisplayCell:(nonnull UITableViewCell *)cell forRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    // 为单元格设置数据
     cell.imageView.image = [UIImage imageNamed:model.icon];
     cell.textLabel.text = model.name;
     cell.detailTextLabel.text = model.intro;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    // 3、返回设置好的对象
-    return cell;
 }
 // 监听点击按钮的方法
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
