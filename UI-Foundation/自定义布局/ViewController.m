@@ -8,7 +8,6 @@
 #import "ViewController.h"
 #import "ITPhotoCell.h"
 #import "ITPhotoFlowLayout.h"
-#define HEIGHT 300
 
 @interface ViewController () <UICollectionViewDataSource>
 
@@ -28,7 +27,7 @@ static NSString *const ID = @"photo";
 - (void)createACollectionView {
     // 1、设置布局
     ITPhotoFlowLayout *flowLayout = [[ITPhotoFlowLayout alloc] init];
-    CGRect collectionViewFrame = CGRectMake(0, 200, CGRectGetWidth(self.view.bounds), HEIGHT);
+    CGRect collectionViewFrame = CGRectMake(0, 200, CGRectGetWidth(self.view.bounds), 300);
     // 2、设置 collectionView
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:collectionViewFrame collectionViewLayout:flowLayout];
     collectionView.backgroundColor = [UIColor blackColor];
